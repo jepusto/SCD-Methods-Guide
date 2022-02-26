@@ -1,5 +1,6 @@
 book_filename: "bookdown-demo"
 new_session: yes
+output_dir: "docs" # for gh-pages
 language:
   ui:
     chapter_name: "Chapter "
