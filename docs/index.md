@@ -1,5 +1,5 @@
 --- 
-title: "Effect Size Estimation and Synthesis of Single-Case Studies: A Methods Guide"
+title: "Effect Size Estimation and Synthesis of Single-Case Designs: A Methods Guide"
 author: "John M. Ferron, Lodi Lippen, Megan Kirby, Wendy Machalicek, James Pustejovsky, and Man Chen"
 date: "2022-02-25"
 site: bookdown::bookdown_site
