@@ -66,4 +66,4 @@ They can turn to Chapter 9, which introduces this approach and its assumptions, 
 
 ## Acknowledgements {-}
 
-We are grateful for the guidance from Katherine Taylor, who served as our project officer at the Institute of Education Sciences. We are also grateful for the suggestions and comments we received from the members of our external advisory panel: Jennifer Ledford, Joel Levin, Danny Swan, Tai Collins, Katie Wolfe, and Kimberly Vannest.
+We are grateful for the guidance from Katherine Taylor, who served as our project officer at the Institute of Education Sciences. We are also grateful for the suggestions and comments we received from the members of our external advisory panel: Jennifer Ledford, Joel Levin, Daniel Swan, Tai Collins, Katie Wolfe, and Kimberly Vannest.
