@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Effect Size Estimation and Synthesis of Single-Case Designs: A Methods Guide</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Effect Size Estimation and Synthesis of Single-Case Designs: A Methods Guide" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="jepusto/SCD-Methods-Guide" />
@@ -21,10 +20,9 @@
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
 
-<meta name="author" content="John M. Ferron, Lodi Lippen, Megan Kirby, Wendy Machalicek, James Pustejovsky, and Man Chen" />
 
 
-<meta name="date" content="2022-02-28" />
+<meta name="date" content="2023-11-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +31,6 @@
   
 
 <link rel="next" href="intro.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,33 +48,12 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -95,7 +71,14 @@ div.csl-indent {
 <li><a href="./">Synthesis of Single-Case Designs</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preamble</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Authors</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i>Disclaimer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#citation"><i class="fa fa-check"></i>Citation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#datasets"><i class="fa fa-check"></i>Datasets</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Approaches for Effect Size Estimation and Synthesis of Single-Case Designs</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a></li>
@@ -148,17 +131,59 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="header">
 <h1 class="title">Effect Size Estimation and Synthesis of Single-Case Designs: A Methods Guide</h1>
-<p class="author"><em>John M. Ferron, Lodi Lippen, Megan Kirby, Wendy Machalicek, James Pustejovsky, and Man Chen</em></p>
-<p class="date"><em>2022-02-28</em></p>
+<p class="date"><em>November 13, 2023</em></p>
 </div>
-<div id="preamble" class="section level1 unnumbered">
-<h1>Preamble</h1>
-<p>Title page</p>
-<p>Prepared for IES acknowledgement</p>
-<p>Prepared by authors</p>
-<p>Contract no</p>
-<p>Advisory board</p>
+<div id="authors" class="section level1 unnumbered hasAnchor">
+<h1>Authors<a href="index.html#authors" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>John M. Ferron, Megan Kirby, and Lodi Lipien
+<br>
+<em>University of South Florida</em></p>
+<p>James Pustejovsky, Man Chen, and Paulina Grekov
+<br>
+<em>University of Wisconsin - Madison</em></p>
+<p>Wendy Machalicek
+<br>
+<em>University of Oregon</em></p>
+<div id="disclaimer" class="section level2 unnumbered hasAnchor">
+<h2>Disclaimer<a href="index.html#disclaimer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>This report was supported by the Institute of Education Sciences, U.S. Department of Education, through Grant R324U190002 to the University of Oregon. The opinions expressed are those of the authors and do not represent views of the Institute or the U.S. Department of Education.</em></p>
+</div>
+<div id="citation" class="section level2 unnumbered hasAnchor">
+<h2>Citation<a href="index.html#citation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This report is in the public domain. While permission to reprint this publication is not necessary, it should be cited as:</p>
+<blockquote>
+<p>Ferron, J. M., Kirby, M., Lippen, L., Pustejovsky, J. E., Chen, M., Grekov, P., &amp; Machalicek, W. (2023). Effect Size Estimation and Synthesis of Single-Case Designs: A Methods Guide. Institute of Education Sciences. U.S. Department of Education. Washington, DC. Retrieved from <a href="https://jepusto.github.io/SCD-Methods-Guide/" class="uri">https://jepusto.github.io/SCD-Methods-Guide/</a></p>
+</blockquote>
+</div>
+<div id="preface" class="section level2 unnumbered hasAnchor">
+<h2>Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We developed the <em>Methods Guide</em> to support educational researchers interested in estimating effect size measures and synthesizing findings from single-case design studies.
+To do so, we aim to do two things: (a) provide guidance and decision rules to simplify the process of selecting effect size estimation and synthesis methods and (b) illustrate the step-by-step application of appropriate methods using readily available tools.
+The guide is not meant to cover all effect size methods that have been proposed for single-case design studies, nor is it meant to summarize all of the research on effect size estimation and synthesis of single-case research.
+Rather, it is meant to provide easy-to-follow decision rules, along with step-by-step instructions and illustrations of user-friendly tools, so that researchers aiming to conduct a synthesis involving single-case studies are more readily able to do so.</p>
+<p>The guide is organized so that researchers can go immediately to the sections and chapters that are relevant to their immediate task, rather than having to read the guide sequentially from start to finish.
+The first chapter provides background and a flow chart (also shown below) to help researchers select among three broad approaches to synthesizing results from single-case research.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="images/flowchart_SynthesizingResults.png" alt="Approaches to synthesizing findings from single-case research" width="100%" />
+<p class="caption">
+Figure 0.1: Approaches to synthesizing findings from single-case research
+</p>
+</div>
+<p>Those interested in synthesizing both single-case and group design studies should consider the design-comparable effect size approach and start by reading Chapter 2, which introduces this approach and its assumptions.
+They can then turn to one of the more detailed chapters providing step-by-step illustrations of how to estimate design comparable effect sizes with a user-friendly app (Chapter 3 if there are no trends, Chapter 4 if there are trends only in the treatment phases, or Chapter 5 if there are trends in both the baseline and treatment phases).</p>
+<p>Those interested in synthesizing single-case design studies that share a common outcome, and particularly if they are interested in examining changes in the effect over time, should consider the multilevel modeling approach and read Chapter 6, which introduces this approach and its assumptions.
+They can then turn to one of the more detailed chapters providing step-by-step instructions along with illustrations of how to estimate multilevel models to synthesize single-case data with a user-friendly app (Chapter 7 if there are no trends, or Chapter 8 if there are trends).</p>
+<p>Finally, those interested in synthesizing single-case design studies where the outcome measures vary across cases, and especially if they are interested in examining how the size of the effect varies from case to case, should consider the case-specific effect size approach.
+They can turn to Chapter 9, which introduces this approach and its assumptions, and Chapter 10, which provides step-by-step instructions along with illustration of how to estimate case-specific effect sizes with a user-friendly app.</p>
+</div>
+<div id="datasets" class="section level2 unnumbered hasAnchor">
+<h2>Datasets<a href="index.html#datasets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="acknowledgements" class="section level2 unnumbered hasAnchor">
+<h2>Acknowledgements<a href="index.html#acknowledgements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We are grateful for the guidance from Katherine Taylor, who served as our project officer at the Institute of Education Sciences. We are also grateful for the suggestions and comments we received from the members of our external advisory panel: Jennifer Ledford, Joel Levin, Danny Swan, Tai Collins, Katie Wolfe, and Kimberly Vannest.</p>
 
+</div>
 </div>
             </section>
 
@@ -220,20 +245,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

@@ -26,3 +26,5 @@ es-estimation-homogeneity-of-variance
 es-estimation-normality
 es-estimation-appropriate-structural-model
 modeling-options-for-design-comparable-effect-size-estimation
+authors-and-affiliations
+fig:unnamed-chunk-2
