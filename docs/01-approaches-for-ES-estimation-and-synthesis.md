@@ -125,7 +125,7 @@ If the outcome is measured the same way across cases, and there is interest in h
 
 
 <div class="figure">
-<img src="images/Synthesis-flow-chart.png" alt="Flow chart showing the approach for synthesizing effect evidence based on the types of studies being examined and whether the outcome variable is common across cases."  />
+<img src="images/Synthesis-flow-chart.png" alt="Flow chart showing the approach for synthesizing effect evidence based on the types of studies being examined and whether the outcome variable is common across cases." width="616" />
 <p class="caption">(\#fig:synthesis-flow-chart)Flow chart showing the approach for synthesizing effect evidence based on the types of studies being examined and whether the outcome variable is common across cases.</p>
 </div>
 
