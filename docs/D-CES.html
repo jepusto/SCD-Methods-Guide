@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Introduction to Design-Comparable Effect Sizes | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Introduction to Design-Comparable Effect Sizes | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="jepusto/SCD-Methods-Guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Introduction to Design-Comparable Effect Sizes | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+
+
+<meta name="date" content="2023-11-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Synthesis of Single-Case Designs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Authors</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i>Disclaimer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#citation"><i class="fa fa-check"></i>Citation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#datasets"><i class="fa fa-check"></i>Datasets</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Approaches for Effect Size Estimation and Synthesis of Single-Case Designs (the old version DO NOT USE)</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#purpose-of-the-methods-guide"><i class="fa fa-check"></i><b>1.2</b> Purpose of the Methods Guide</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#study-quality"><i class="fa fa-check"></i><b>1.3</b> Study Quality</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#selecting-an-approach-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.4</b> Selecting an Approach for Effect Estimation and Synthesis</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#design-comparable-effect-sizes"><i class="fa fa-check"></i><b>1.4.1</b> Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#case-specific-effect-sizes"><i class="fa fa-check"></i><b>1.4.2</b> Case-Specific Effect Sizes</a></li>
+<li class="chapter" data-level="1.4.3" data-path="intro.html"><a href="intro.html#multilevel-modeling-of-individual-participant-interrupted-time-series-data"><i class="fa fa-check"></i><b>1.4.3</b> Multilevel Modeling of Individual Participant Interrupted Time-Series Data</a></li>
+<li class="chapter" data-level="1.4.4" data-path="intro.html"><a href="intro.html#summary-of-options-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.4.4</b> Summary of Options for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="1.4.5" data-path="intro.html"><a href="intro.html#limitations-in-selecting-an-approach-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.4.5</b> Limitations in Selecting an Approach for Effect Estimation and Synthesis</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#structure-of-the-methods-guide"><i class="fa fa-check"></i><b>1.5</b> Structure of the Methods Guide</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="D-CES.html"><a href="D-CES.html"><i class="fa fa-check"></i><b>2</b> Introduction to Design-Comparable Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="D-CES.html"><a href="D-CES.html#background-1"><i class="fa fa-check"></i><b>2.1</b> Background</a></li>
+<li class="chapter" data-level="2.2" data-path="D-CES.html"><a href="D-CES.html#when-to-use-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>2.2</b> When to Use Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="2.3" data-path="D-CES.html"><a href="D-CES.html#general-definition-of-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>2.3</b> General Definition of Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="2.4" data-path="D-CES.html"><a href="D-CES.html#what-we-assume-when-we-synthesize-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>2.4</b> What We Assume When We Synthesize Design-Comparable Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="D-CES.html"><a href="D-CES.html#what-we-assume-when-we-estimate-design-comparable-effect-size"><i class="fa fa-check"></i><b>2.4.1</b> What We Assume When We Estimate Design-Comparable Effect Size</a></li>
+<li class="chapter" data-level="2.4.2" data-path="D-CES.html"><a href="D-CES.html#normality"><i class="fa fa-check"></i><b>2.4.2</b> Normality</a></li>
+<li class="chapter" data-level="2.4.3" data-path="D-CES.html"><a href="D-CES.html#homogeneity-of-variance"><i class="fa fa-check"></i><b>2.4.3</b> Homogeneity of Variance</a></li>
+<li class="chapter" data-level="2.4.4" data-path="D-CES.html"><a href="D-CES.html#appropriate-structural-model"><i class="fa fa-check"></i><b>2.4.4</b> Appropriate Structural Model</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="D-CES.html"><a href="D-CES.html#modeling-options-for-design-comparable-effect-size-estimation"><i class="fa fa-check"></i><b>2.5</b> Modeling Options for Design-comparable Effect Size Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="D-CES" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Introduction to Design-Comparable Effect Sizes<a href="D-CES.html#D-CES" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter provides background on design-comparable effect sizes, describes when to use them, and explains the key assumptions behind their use.
+We highlight both the assumptions for using design-comparable effect sizes in meta-analytic synthesis and the assumptions for estimation of these effect sizes from primary study data.
+We then describe available options for estimating design-comparable effect sizes.
+These options allow for different assumptions regarding trends in baseline or treatment phases and different assumptions about the variation in the treatment effect across cases.
+This chapter concludes with a set of decision rules for selecting among the options for design-comparable effect sizes.</p>
+<div id="background-1" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Background<a href="D-CES.html#background-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Design-comparable effect sizes are effect size indices for single case studies that are on the same metric as effect size indices used in group comparison studies <span class="citation">(<a href="#ref-Hedges2012ABk">Hedges et al., 2012</a>, <a href="#ref-Hedges2012MB">2013</a>; <a href="#ref-Pustejovsky2014design">Pustejovsky et al., 2014</a>; <a href="#ref-Shadish2013d">Shadish et al., 2014</a>; <a href="#ref-Swaminathan2014effect">Swaminathan et al., 2014</a>; <a href="#ref-VandenNoortgate2008multilevel">Van den Noortgate &amp; Onghena, 2008</a>)</span>. These design-comparable effect sizes are valuable in a variety of synthesis contexts, particularly those that involve both single-case design (SCD) and group comparison studies. However, these methods also have several limitations.</p>
+<p>First, design-comparable effect sizes rely on an estimate of the variance between participants, requiring at least three distinct participants for estimation.
+This constrains their use to SCDs involving multiple participants (e.g., multiple baseline design across participants) or close replications of SCDs, each of which has a single participant (e.g., ABAB design replicated across several students).
+Further, existing research on design-comparable effect size methods is only available for multiple baseline, multiple probe, or replicated treatment reversal designs.
+Researchers have yet to develop extensions for alternating treatment designs and other types of SCDs. However, ongoing research is likely to increase the designs for which design-comparable effect sizes can be estimated.</p>
+<p>A second conceptual limitation is that design-comparable effect sizes produce a single summary effect size per outcome–which represents an <em>average</em> effect across participants–just as between-group design study effect sizes are summaries of average effects across participants.
+As a result, the design-comparable effect size might conceal heterogeneity of effects across participants in an SCD. Meta-analytic researchers are then limited to moderator analyses focused on study-level characteristics; it is not feasible to examine potential moderators that vary across cases in a study or across time points within a case.</p>
+<p>A third limitation is that design-comparable effect sizes are based on a hierarchical model that involves specific assumptions about the distribution of outcomes measured in the study.
+Developing a reasonable model requires care and attention to the plausibility of its assumptions.
+It is not a trivial or automatic process (as effect size calculations for between-group experimental designs are sometimes treated). Moreover, for some types of outcomes, the distributional assumptions of the model may be inappropriate, which further limits the applicability of the design-comparable effect size.</p>
+<p>To address these methodological limitations, we use this chapter to provide researchers with guidance on the selection and use of design-comparable effect size estimates. We describe six of the most common modeling options and provide guidance on how to select among these options when calculating design-comparable effect size for use in a research synthesis.</p>
+</div>
+<div id="when-to-use-design-comparable-effect-sizes" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> When to Use Design-Comparable Effect Sizes<a href="D-CES.html#when-to-use-design-comparable-effect-sizes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When choosing an effect size for single-case design data, researchers should begin by considering the broader purpose for computing effect sizes. In some cases, researchers may want to synthesize results across different types of studies, as in a comprehensive synthesis of all studies conducted on a topic. For example, researchers conducting a meta-analysis might include all studies examining the effects of social skills interventions on the social and academic outcomes of elementary-aged students with disabilities. In some areas of education research, it is likely that the literature identified for synthesis includes both group and single-case experimental studies. To average the effect across studies with different designs, researchers must pick an effect size index that has a comparable interpretation for each of the included designs <span class="citation">(<a href="#ref-Hedges2012ABk">Hedges et al., 2012</a>, <a href="#ref-Hedges2012MB">2013</a>; <a href="#ref-Pustejovsky2014design">Pustejovsky et al., 2014</a>; <a href="#ref-shadish2015Role">Shadish et al., 2015</a>)</span>. For exactly this purpose, methodologists developed the design-comparable effect size for SCDs, providing an effect size on a common metric by answering the question, “<em>What would the standardized mean difference effect size be if one could somehow perform a between-group randomized experiment based on the same population of participants, intervention protocol, and outcome measures</em>?”</p>
+</div>
+<div id="general-definition-of-design-comparable-effect-sizes" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> General Definition of Design-Comparable Effect Sizes<a href="D-CES.html#general-definition-of-design-comparable-effect-sizes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To understand the logic of the design-comparable effect size, it is helpful to consider how effect sizes are defined in group design studies. In a between-groups randomized experiment comparing a treatment condition (Tx) to a control condition (C) for a specified population, researchers commonly summarize results using the standardized mean difference effect size index. In Equation <a href="D-CES.html#eq:SMD-group">(2.1)</a>, we define this effect size parameter as
+<span class="math display" id="eq:SMD-group">\[\begin{equation}
+\tag{2.1}
+\delta = \frac{\mu_{Tx} - \mu_C}{\sigma_C},
+\end{equation}\]</span>
+where <span class="math inline">\(\mu_{Tx}\)</span> is the average outcome if the entire population received the treatment condition, <span class="math inline">\(\mu_C\)</span> is the average outcome if the entire population received the control condition, and <span class="math inline">\(\sigma_C\)</span> is the standard deviation of the outcome if the entire population received the control condition.
+The effect size may be estimated by substituting sample means and sample standard deviations in place of the corresponding population quantities <span class="citation">(<a href="#ref-Borenstein2009effect">Borenstein, 2009</a>)</span>, or by pooling sample standard deviations across the intervention and control conditions under the assumption that the population variance is equal. Alternately, the mean difference in the numerator of the effect size can be estimated based on a statistical model, such as an analysis of covariance that adjusts for between-group differences in baseline characteristics <span class="citation">(<a href="#ref-taylor2022Promoting">Taylor et al., 2022</a>)</span>. Researchers often apply the Hedges <span class="math inline">\(g\)</span> small-sample correction, which reduces the bias of the effect size estimator that arises from estimating <span class="math inline">\(\sigma_C\)</span> based on a limited number of observations <span class="citation">(<a href="#ref-Hedges1981distribution">Hedges, 1981</a>)</span>.</p>
+<p>Using data from a multiple baseline, multiple probe, or replicated treatment reversal design, the design-comparable effect size for SCDs aims to estimate the same quantity as the standardized mean difference from a between-groups experiment. This task poses challenges because the data from such SCDs involve repeated measurements taken over time. To precisely define the design-comparable effect size, researchers must therefore be specific about the timing of both intervention implementation and outcome assessment. Hypothetically, if a between-groups experiment uses the same study procedures as the SCD, researchers would still need to determine and specify <em>when to begin intervention and when to collect outcome data</em>. Furthering this example, suppose that the SCD takes place over times <span class="math inline">\(t=1,...,T\)</span>. In our hypothetical between-groups experiment, intervention starts at time <span class="math inline">\(A\)</span> for <span class="math inline">\(1 \leq A &lt; T\)</span> and collection of outcome data for all participants occurs at time <span class="math inline">\(B\)</span> for <span class="math inline">\(A &lt; B\)</span>.
+The standardized mean difference from such an experiment would contrast the average outcome at time <span class="math inline">\(B\)</span> if the entire population had started intervention at time <span class="math inline">\(A\)</span> [i.e., <span class="math inline">\(\mu_B(A)\)</span>] to the average outcome at time <span class="math inline">\(B\)</span> if the entire population had remained in baseline through time <span class="math inline">\(B\)</span> and then started intervention later at time <span class="math inline">\(T\)</span> [i.e., <span class="math inline">\(\mu_B(T)\)</span>]. The standardized mean difference would then correspond to
+<span class="math display" id="eq:SMD-SCD">\[\begin{equation}
+\tag{2.2}
+\delta_{AB} = \frac{\mu_B(A) - \mu_B(T)}{\sigma_B(T)},
+\end{equation}\]</span>
+where <span class="math inline">\(\mu_B(A)\)</span> is the average outcome at follow-up time <span class="math inline">\(B\)</span> if the entire population were to receive the intervention at time <span class="math inline">\(A\)</span>. Then, <span class="math inline">\(\mu_B(T)\)</span> is the average outcome at follow-up time <span class="math inline">\(B\)</span> if the entire population were to receive the intervention at time <span class="math inline">\(T\)</span>. Finally, <span class="math inline">\(\sigma_B(T)\)</span> is the standard deviation of the outcome at follow-up time <span class="math inline">\(B\)</span> if the entire population were to receive the intervention at time <span class="math inline">\(T\)</span>.
+Note that <span class="math inline">\(\mu_B(T)\)</span> corresponds to the average outcome under the control condition (<span class="math inline">\(\mu_C\)</span>, above), because participants would not yet have received intervention as of time <span class="math inline">\(B\)</span>. Similarly <span class="math inline">\(\sigma_B(T)\)</span> is the analogue of <span class="math inline">\(\sigma_C\)</span>, the standard deviation of the outcome under the control condition because participants would not yet have received the intervention as of time <span class="math inline">\(B\)</span>.</p>
+<p><span class="citation">Pustejovsky et al. (<a href="#ref-Pustejovsky2014design">2014</a>)</span> described a strategy for estimating <span class="math inline">\(\delta_AB\)</span> using data from an SCD study. Broadly, the strategy involves specifying a multilevel model for the data, estimating the component quantities <span class="math inline">\(\mu_B(A)\)</span>, <span class="math inline">\(\mu_B(T)\)</span>, and <span class="math inline">\(\sigma_B(T)\)</span> based on the specified model, and applying a small-sample correction analogous to Hedges <span class="math inline">\(g\)</span>. However, because of the need to estimate the standard deviation of the outcome across the participant population [<span class="math inline">\(\sigma_B(T)\)</span>], this strategy only works if the SCD study includes data from <em>multiple</em> participants. The approach involves a multilevel model for the data because SCDs involve repeated measurements collected for each of several participants. The first level of the model describes the pattern of repeated measurements over time nested within a given participant and the second level of the model describes how the first-level parameters vary across participants. As a result, the model involves deconstructing <span class="math inline">\(\sigma_B(T)\)</span> into two components: within-participant variation and between-participant variation. This process is not typically possible in a between-groups randomized experiment unless researchers collect repeated outcome measures for each participant.</p>
+</div>
+<div id="what-we-assume-when-we-synthesize-design-comparable-effect-sizes" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> What We Assume When We Synthesize Design-Comparable Effect Sizes<a href="D-CES.html#what-we-assume-when-we-synthesize-design-comparable-effect-sizes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The motivation for using the design-comparable effect size δ from SCD studies is strongest when researchers intend to synthesize SCD and group design studies in the same meta-analysis. If assumptions needed for synthesis are not reasonably met, it may be more appropriate to analyze the SCD and group design studies separately. Then, researchers may want to consider alternative effect size metrics for the SCD studies. For this reason, this chapter presents the broader synthesis assumptions prior to the specific assumptions needed for estimating design-comparable effect sizes.</p>
+<p>The random effects model is the predominant statistical model for synthesizing effect sizes across studies. With this statistical model, we do not assume that the population effect size estimated in one study is identical to the population effect size estimated from another study. Rather, we assume that the effect size estimated for Study <span class="math inline">\(j\)</span> may differ from the effect size estimated for Study <span class="math inline">\(k\)</span> (e.g., <span class="math inline">\(\sigma_j \ne \sigma_k\)</span>). There are several general frameworks for explaining why the effect size may vary from one study to the next. One such framework posits that differences can arise from variation across studies in the units, treatments, observing operations, and settings [UTOS; <span class="citation">Becker (<a href="#ref-Becker_1996">1996</a>)</span>]. The inclusion and exclusion criteria for the meta-analysis can be set up to constrain (but not completely eliminate) the variation from study to study on these dimensions. Use of a random effects model for the summary meta-analysis and the exploration of moderators of the treatment effects is warranted because some degree of variation in effects is anticipated.</p>
+<p>There are several different ways to understand the assumptions underlying the random effects model. One way is to imagine that the included studies in a synthesis represent a random sample from a super-population of possible studies on the topic of interest. In a Bayesian framework, the model can also be motivated by the assumption of exchangeability, meaning that the effect size of studies included in a synthesis are on a common metric that permits judgements of similarity and that their relative magnitude cannot be systematically predicted a priori <span class="citation">(<a href="#ref-higgins2009reevaluation">Higgins et al., 2009</a>)</span>. For brevity, we refer to both suppositions (i.e., the super-population and Bayesian motivations) as the exchangeability assumption. Crucially, the exchangeability assumption depends on the effect size metric used for synthesis; for a given set of studies, the assumption may be reasonable for one effect size metric but unreasonable for another.</p>
+<p>Thus far, we have defined the standardized mean difference metric (<span class="math inline">\(\delta\)</span>) for design-comparable effect sizes for SCDs. Therefore, we now consider the exchangeability of <span class="math inline">\(\delta s\)</span>. When intending to synthesize a set of studies where there is considerable variation among the study outcomes, sampled units, or treatments (i.e., they differ greatly from one another on one or more of these UTOS characteristics), then the <span class="math inline">\(\delta s\)</span> from these studies are likely not exchangeable. In contrast, when there is similarity in the UTOS, exchangeability is more reasonable. As an example, for the standardized mean difference metric, exchangeability is more plausible when one study’s population of participants closely mirrors the participant population characteristics from another study (i.e., similar, if not same, inclusion criteria). Further, when the populations are similar and studies use the exact same operational measure of the dependent variable, we can assume that the distribution of outcomes in the control condition has similar variance. Alternatively, if the two studies drew from populations with very different characteristics so that the disbursement of the study results (distribution of the dependent variable) varied widely, an intervention that produces identical effects on the scale of the dependent variable would have quite different effect sizes on the scale of the standardized mean difference. When populations are distinctly different, the exchangeability assumption is less tenable. Thus, we encourage researchers to examine the studies they plan to include in their synthesis for the potential lack of exchangeability.</p>
+<p>Researchers can explore this aspect of the exchangeability assumption by examining the sampling methods and measurement procedures of the included studies. When subsets of studies use the same operational measure of the dependent variable, the between-participant (case) variance in those studies can be compared. To illustrate the exploration of between-case variability, consider the sampling procedures used in the following two studies extracted from <span class="citation">Datchuk et al. (<a href="#ref-datchuk2020Level">2020</a>)</span> that examined the effect of interventions on writing performance as measured by correct word sequences (CWS). In one study, the sample consisted of three 7-year-old White males identified by their teachers as struggling with writing <span class="citation">(<a href="#ref-parker2012Application">Parker et al., 2012</a>)</span>. In the other study <span class="citation">(<a href="#ref-stotz2008Effects">Stotz et al., 2008</a>)</span>, the sample comprised three 10-year-old students who exhibited poor writing skills. The first student was a Black male identified with an emotional disturbance, the second student was a White male identified with a specific learning disability, and the third student was a White female identified with a specific learning disability. Presented with this information, we then seek to answer the following questions: (a) Are these samples similar enough to satisfy the exchangeability assumption with the standardized mean difference metric? (b) Might the second sample with variation in differences in participant characteristics (age, race, gender, and educational disability category), be so much more variable in writing performance that it is not reasonable to use the standardized mean difference metric to judge similarity of effects across both studies?</p>
+<p>In the first study <span class="citation">(<a href="#ref-parker2012Application">Parker et al., 2012</a>)</span>, the mean number of CWS during baseline for the three participants were <span class="math inline">\(8.29\)</span>, <span class="math inline">\(15.0\)</span>, and <span class="math inline">\(10.8\)</span>. In the second study <span class="citation">(<a href="#ref-stotz2008Effects">Stotz et al., 2008</a>)</span>, participants’ mean CWS baseline levels were <span class="math inline">\(14.6\)</span>, <span class="math inline">\(29.1\)</span>, and <span class="math inline">\(22.1\)</span>. In Study 1, the between-case variation, as indexed by the standard deviation (SD) of the three baseline means, is <span class="math inline">\(3.4\)</span>, whereas the between-case SD is <span class="math inline">\(7.3\)</span> in Study 2. Now we must consider whether this difference is large enough to distort the design-comparable effect size.</p>
+<p>To address our questions, we first consider the raw score effect size for each study by specifying a multilevel model that assumes no trends in baseline or treatment phases, and variation in the effect across cases. In Study 1, the shift in the expected number of CWS when moving from baseline to intervention, or raw score effect size, is <span class="math inline">\(10.7\)</span>. In Study 2, the CWS raw score effect size is <span class="math inline">\(9.6\)</span>, about 1.1 times smaller than the raw score effect size for Study 1. Next, we consider the design-comparable effect size computed using the same model used for the raw score effect size. The design-comparable effect size is <span class="math inline">\(0.962\)</span> for Study 1 and <span class="math inline">\(0.827\)</span> for Study 2; the effect size for Study 1 is approximately 1.2 times greater than Study 2, like the ratio of the observed raw score effect sizes.</p>
+<p>We anticipate that future research will provide guidance regarding how much difference in sampling (and resulting between-case variability) researchers can accommodate without creating notable problems for the synthesis of design-comparable effect sizes. Similarly, researchers will continue to investigate, and hopefully establish consensus about, the degree to which differences among outcomes and treatments between studies are tolerable to have confidence in their effect size results. Until then, we suggest that meta-analysts be aware of the underlying exchangeability assumption (that the effect sizes expressed on a given metric are exchangeable across studies) and be forthright and transparent about their findings when reporting results of their synthesis.</p>
+<p>If the differences in the units, treatments, observing operations, and settings between the SCD studies and the group studies are much larger than the differences among either the SCD or group studies, it may be preferable to meta-analyze the SCD and group studies separately. Conversely, if the differences are negligible from one set of studies to the next, the exchangeability assumption is more tenable, and attention can be turned to the assumptions necessary to estimate the design-comparable effect size.</p>
+<div id="what-we-assume-when-we-estimate-design-comparable-effect-size" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> What We Assume When We Estimate Design-Comparable Effect Size<a href="D-CES.html#what-we-assume-when-we-estimate-design-comparable-effect-size" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Design-comparable effect sizes for SCD studies rely on multilevel models. Estimation is based on several key assumptions, including distributional assumptions about the errors. The models assume that observations for each case are normally distributed around the case-specific trend line, and the variation of observations around the trend line is homogeneous from one phase to the next and from one case to the next. In addition, there are assumptions about the underlying structural model, including whether there are trends in phases. Below, we explain these assumptions in greater detail and provide exemplars of each.</p>
+</div>
+<div id="normality" class="section level3 hasAnchor" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Normality<a href="D-CES.html#normality" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Use of design-comparable effect sizes assumes that the experimental observations are normally distributed around the case-specific trend lines. The data may be consistent with this assumption of normality, but not always. For example, <span class="citation">Ota &amp; DuPaul (<a href="#ref-ota2002Task">2002</a>)</span> utilized a multiple baseline design across three participants to examine the effects of a math software intervention with a game component on the off-task behaviors of students with attention-deficit hyperactivity disorder (ADHD). To examine the normality assumption, we extracted the study data using Webplot Digitizer <span class="citation">(<a href="#ref-rohatgi2015Webplotdigitizer">Rohatgi, 2015</a>)</span> and present it in Figure <a href="D-CES.html#fig:Ota-DuPaul-2002">2.1</a>. When examining the baseline phases, observations appear to be distributed somewhat normally around the baseline means, with a pooled skewness value near zero (<span class="math inline">\(sk = 0.15\)</span>) and a pooled kurtosis value near zero (<span class="math inline">\(ku = -0.77\)</span>). However, we observe non-normality in the treatment phases because the outcome is a percentage that has remained near the floor of 0% for much of the treatment phase (<span class="math inline">\(sk = 1.86\)</span>; <span class="math inline">\(ku = 4.99\)</span>).</p>
+<div class="figure"><span style="display:block;" id="fig:Ota-DuPaul-2002"></span>
+<img src="images/Ota-DuPaul-2002.png" alt="Multiple baseline design across three participants (Ota \&amp; DuPaul, 2002)" width="75%" />
+<p class="caption">
+Figure 2.1: Multiple baseline design across three participants (Ota &amp; DuPaul, 2002)
+</p>
+</div>
+<p>With count-based variables, we often anticipate some departures from the traditional normality assumption. These departures tend to be more pronounced when a count variable has a phase mean close to zero. Departures from the traditional normality assumption are more pronounced when a percentage variable has a phase mean close to either end of the <span class="math inline">\(0\%-100\%\)</span> range. These situations are common in published SCDs because the quality of an SCD study is often judged on the stability and level of observations in baseline and treatment phases. For example, if researchers design an intervention to increase a non-reversible behavior (e.g., academic skill), it would be ideal to only recruit participants without the target skill in their repertoire so that observations in the baseline phase reflect such-they would have baseline observations at or near 0. Conversely, an SCD recommendation for behavior-reduction interventions is to seek low rates or non-occurrence of the target behavior in the treatment phase, communicating that the intervention effectively led to the amelioration or extinction of a problem behavior. However, distributions may more closely align with the normality assumption when treatment phase counts are higher than 0, or the percentage variable has a mean closer to <span class="math inline">\(50\%\)</span>. Available evidence indicates that design-comparable effect sizes can tolerate a moderate degree of non-normality for relatively simple model specifications <span class="citation">(<a href="#ref-Chen_Chen_Yang_Chiang_Hsieh_Cheng_Ding_Wu_Peng_2023">Chen et al., 2023</a>)</span>. However, additional research is needed to determine how much non-normality can be present before there are substantial consequences for the design-comparable effect size.</p>
+</div>
+<div id="homogeneity-of-variance" class="section level3 hasAnchor" number="2.4.3">
+<h3><span class="header-section-number">2.4.3</span> Homogeneity of Variance<a href="D-CES.html#homogeneity-of-variance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In addition to assuming normality, the illustrations of design-comparable effect size estimation provided in this guide all assume that the within-case variation is homogeneous across phases and cases within a study. Although assumptions of homogeneity across cases and phases may be reasonable, there are situations when researchers should not assume homogeneity of variance.
+Consider again the <span class="citation">Ota &amp; DuPaul (<a href="#ref-ota2002Task">2002</a>)</span> study, with the multiple baseline design graphs in Figure <a href="D-CES.html#fig:Ota-DuPaul-2002">2.1</a>. Results of our visual analysis suggest that the variance differs between the baseline and treatment phases, with less variation in the treatment phase as the percentage of off-task behaviors decreased and approached 0 (i.e., extinction). With count-based variables (e.g., raw counts or counts converted to percentages), variability often depends on the variable mean. Thus, treatments that shift the mean tend to change the variance. If studies have unstructured baselines, substantial variability is common. If there is tight experimental control in the intervention phase (e.g., researchers predict and control for interventionist/peer attention, strong treatment fidelity), we might expect some reduction in variance. With studies like these, where the variance differs between the baseline and treatment phases, we recommend estimating a more complex multilevel model that yields separate variance estimates for the two phases rather than assuming homogeneity across phases. Such models are feasible to estimate using the tools presented in subsequent chapters, but are beyond the scope of the guide. Until future research provides more concrete guidance about the best ways to proceed when encountering between-case heterogeneity, meta-analysts must remain aware of their assumptions and transparent about analytic decisions when reporting methods and results.</p>
+<p>Upon discovering substantial violations to the normality or homogeneity assumptions, we encourage researchers to consider whether violations to the exchangeability assumption needed for synthesis are also present. For example, imagine that meta-analysts interested in synthesizing the effects of oral narrative interventions select a multiple baseline design study that has all cases reporting baseline observations consistently at or near 0. It is likely that both the normality and homogeneity assumptions are violated for this study. It is also likely that the outcome used in the hypothetical study differs greatly from the outcomes used in the included group design studies. This leads to questions about the exchangeability of the effect sizes. In such circumstances, we advise against trying to force the computation of a design-comparable effect size and the synthesis of SCD and group design studies together. A more appropriate synthesis option may be to meta-analyze the SCD and group design studies separately, allowing for the use of a more appropriate effect size metric for the SCD studies separate from that used for the group design studies. However, we expect that normality and homogeneity of variance assumption violations will often be more modest (or non-existent) than in the above example, so that researchers can continue to entertain the use of the design-comparable effect size.</p>
+</div>
+<div id="appropriate-structural-model" class="section level3 hasAnchor" number="2.4.4">
+<h3><span class="header-section-number">2.4.4</span> Appropriate Structural Model<a href="D-CES.html#appropriate-structural-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The estimation of design-comparable effect sizes requires assumptions about the structural model for the data series collected in the SCD. Ideally, these assumptions are based on content expertise, knowledge of the intervention domain, and understanding of the dependent variable(s) under review. The assumptions also rely on visual analysis and calculation of descriptive statistics from the studies. Regarding baseline trend, given our knowledge and understanding of the behavior(s), context(s), and participants included in the studies, we can assume one of three things: no trend in baseline, a linear trend in baseline, or some form of nonlinear trend. Similarly, we can use the same knowledge to make assumptions about data trends in the treatment phase: no trend, linear trend, or nonlinear trend. Furthermore, we can make assumptions about the parameters defining the baseline trajectory (e.g., level and slope) and the change in trajectory with treatment (e.g., the change in level and change in slope)–they either differ across cases within the study, or we can assume that some of these parameters are the same across cases. Purposeful consideration of our included SCDs is likely to lead to more accurate effect size estimation. If we do not select a structural model consistent with our data, we can expect biased design-comparable effect size estimates.</p>
+<div class="figure"><span style="display:block;" id="fig:Rodgers-2020"></span>
+<img src="images/Rodgers-2020.png" alt="Multiple Baseline Across Participants (Rodgers et al., 2020)" width="75%" />
+<p class="caption">
+Figure 2.2: Multiple Baseline Across Participants (Rodgers et al., 2020)
+</p>
+</div>
+<p>As an example, we present the study of a writing intervention for post-secondary adults with intellectual and developmental disabilities that targeted the improvement of sentence construction <span class="citation">(<a href="#ref-rodgers2021Effects">Rodgers et al., 2021</a>)</span>. Figure <a href="D-CES.html#fig:Rodgers-2020">2.2</a> is a graphical depiction of the study design and outcome data. Visual analysis of the baseline phases suggests potential baseline trends in accurate writing sequences. Therefore, it would be appropriate to specify a model that assumes a trend in baseline.
+For participant Denny, our visual analysis of observed correct writing sequences suggests an increasing baseline trend, represented by the solid line in Figure <a href="D-CES.html#fig:Rodgers-2020-Denny">2.3</a> (estimated using ordinary least squares regression). In contrast, if we selected a baseline model assuming no trend, Denny’s projected baseline of no trend is considerably different than the projected baseline assuming a linear trend. (In Figure <a href="D-CES.html#fig:Rodgers-2020-Denny">2.3</a>, note the difference between the dotted lines representing the baseline trends projected through the treatment phase). The effect estimate would be larger if we did not model the baseline trend in Figure <a href="D-CES.html#fig:Rodgers-2020-Denny">2.3</a> because the observed treatment values are further above the projection based on no trend than the projection based on trend. Thus, assumptions about trends have consequences for the effect size estimates.</p>
+<div class="figure"><span style="display:block;" id="fig:Rodgers-2020-Denny"></span>
+<img src="images/Rodgers-2020-Denny.jpg" alt="Hypothesized and Projected Baselines for Denny (Rodgers et al., 2020)" width="75%" />
+<p class="caption">
+Figure 2.3: Hypothesized and Projected Baselines for Denny (Rodgers et al., 2020)
+</p>
+</div>
+<p>To select an appropriate structural model, we recommend that meta-analysts start by carefully considering the discipline or intervention under study for the research synthesis, including but not limited to the outcome of interest, the participants included in the studies, and what prior research says about what can be expected regarding trends in absence of intervention and data trends in the treatment phase. For example, a review of research on the use of positive behavioral interventions and supports (PBIS) over time show some efficacy in the reduction of both in-school and out-of-school student suspensions for Black students and students with disabilities <span class="citation">(see <a href="#ref-Gage_Beahm_Kaplan_MacSuga-Gage_Lee_2020">Gage et al., 2020</a> for a review)</span>. Using this as a basis for understanding the nature of the interventions, contexts, and populations, we can reasonably assume future PBIS research would report similar responses to the interventions if the research contexts are similar. However, rather than make such a broad assumption without verifying it, we recommend that meta-analysts visually analyze all data for studies included in the synthesis and consider the degree to which the data from the studies are reasonably consistent with prior expectations. If data from the studies are consistent with trend expectations (e.g., a learning curve associated with the development of a new skill), these assumptions can be used to select among the design-comparable effect size modeling options. Misalignment between a priori assumptions and actual observations across the studies’ included data is likely to compromise the degree of confidence that we place in estimating effect sizes. If substantial inconsistencies exist between researchers’ expectations for and actual observations of study data, results from any single modeling option become more suspect. In these situations, we encourage researchers to estimate the effects for each of the competing sets of trend assumptions to provide information on the sensitivity of the findings to the modeling decisions.</p>
+</div>
+</div>
+<div id="modeling-options-for-design-comparable-effect-size-estimation" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Modeling Options for Design-comparable Effect Size Estimation<a href="D-CES.html#modeling-options-for-design-comparable-effect-size-estimation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>After meta-analysts consider the tenability of the exchangeability assumption, we suggest consideration of normality and homogeneity of variance assumptions. If violations to these distributional assumptions are severe, researchers should reconsider whether the SCD and group design study outcomes are similar enough to assume exchangeability and warrant synthesis using the standardized mean difference effect size metric. If outcomes are substantially different across design types, it may be more reasonable to meta-analyze the SCD and group design studies separately and to use a different effect size metric for the SCD studies. When outcomes appear more similar and violations are not too severe, we suggest meta-analysts proceed with the design-comparable effect sizes and note findings. In their decision to proceed with design-comparable effect sizes, researchers should describe the range of characteristics of the SCD as well as the predominant SCD used in the area of synthesis. For example, do most SCD studies in the research area tend to use reversal designs (e.g., ABAB designs) or do studies predominantly use designs of multiple baseline and/or multiple probe across participants? When synthesizing reversal designs with design-comparable effect sizes, researchers are currently limited to models that assume stability (i.e., no trend). For multiple baseline or multiple probe designs, a variety of trend assumptions are feasible such as linear or quadratic.</p>
+<p>When the synthesis includes predominantly multiple baseline and/or multiple probe designs, researchers should state their expectations about trends given their understanding of the participants, context, and outcome under study. We also recommend they visually inspect the graphs of the data from the primary studies, analyzing them for consistency with the trend expectations. Based on these considerations, it is helpful to determine which of the following sets of trend assumptions are most reasonable for the set of studies to be synthesized: (a) no trends in baseline or treatment phases, (b) no trends in baseline, but trends in treatment phases, or (c) trends in baseline and differential trends in treatment. After clarifying the trend assumptions, researchers next need to clarify assumptions about variability in treatment effect across cases (e.g., Is the treatment effect expected to be the same for each case or are between-participant differences anticipated in the response to intervention?). Again, we rely heavily on logic models for the area of research and visual analyses of primary study data to determine if these data are reasonably consistent with the expectations.</p>
+<p>Figure <a href="D-CES.html#fig:DC-ES-flow-chart">2.4</a> arranges these considerations into a series of decision rules that researchers can use to select from one of six common models for design-comparable effect sizes. Although there are other possibilities for specifying a design-comparable effect size estimation model, these six models cover a wide range of scenarios that can be estimated with the <em>scdhlm</em> software application <span class="citation">(<a href="#ref-pustejovsky2021scdhlm">Pustejovsky et al., 2021</a>)</span>. In addition, we included models that have received the most attention in the methodological literature, as well as those that have been applied in meta-analyses of single-case data.</p>
+<div class="figure"><span style="display:block;" id="fig:DC-ES-flow-chart"></span>
+<img src="images/DC-ES-flow-chart.png" alt="Flow Chart for the Selection of Design-comparable Effect Sizes" width="100%" />
+<p class="caption">
+Figure 2.4: Flow Chart for the Selection of Design-comparable Effect Sizes
+</p>
+</div>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-Becker_1996" class="csl-entry">
+Becker, B. J. (1996). The generalizability of empirical research results. In <em>Intellectual talent: Psychometric and social issues</em> (pp. 362–383). Johns Hopkins University Press.
+</div>
+<div id="ref-Borenstein2009effect" class="csl-entry">
+Borenstein, M. (2009). Effect sizes for continuous data. In H. M. Cooper, L. V. Hedges, &amp; J. C. Valentine (Eds.), <em>The <span>Handbook</span> of <span>Research Synthesis</span> and <span>Meta-Analysis</span></em> (pp. 221–236). <span>Russell Sage Foundation</span>.
+</div>
+<div id="ref-Chen_Chen_Yang_Chiang_Hsieh_Cheng_Ding_Wu_Peng_2023" class="csl-entry">
+Chen, L.-T., Chen, Y.-K., Yang, T.-R., Chiang, Y.-S., Hsieh, C.-Y., Cheng, C., Ding, Q.-W., Wu, P.-J., &amp; Peng, C.-Y. J. (2023). Examining the normality assumption of a design-comparable effect size in single-case designs. <em>Behavior Research Methods</em>. <a href="https://doi.org/10.3758/s13428-022-02035-8">https://doi.org/10.3758/s13428-022-02035-8</a>
+</div>
+<div id="ref-datchuk2020Level" class="csl-entry">
+Datchuk, S. M., Wagner, K., &amp; Hier, B. O. (2020). Level and <span>Trend</span> of <span>Writing Sequences</span>: <span>A Review</span> and <span>Meta-Analysis</span> of <span>Writing Interventions</span> for <span>Students With Disabilities</span>. <em>Exceptional Children</em>, <em>86</em>(2), 174–192. <a href="https://doi.org/10.1177/0014402919873311">https://doi.org/10.1177/0014402919873311</a>
+</div>
+<div id="ref-Gage_Beahm_Kaplan_MacSuga-Gage_Lee_2020" class="csl-entry">
+Gage, N. A., Beahm, L., Kaplan, R., MacSuga-Gage, A. S., &amp; Lee, A. (2020). Using positive behavioral interventions and supports to reduce school suspensions. <em>Beyond Behavior</em>, <em>29</em>(3), 132–140. <a href="https://doi.org/10.1177/1074295620950611">https://doi.org/10.1177/1074295620950611</a>
+</div>
+<div id="ref-Hedges1981distribution" class="csl-entry">
+Hedges, L. V. (1981). Distribution theory for <span>Glass</span>’s estimator of effect size and related estimators. <em>Journal of Educational Statistics</em>, <em>6</em>(2), 107–128.
+</div>
+<div id="ref-Hedges2012ABk" class="csl-entry">
+Hedges, L. V., Pustejovsky, J. E., &amp; Shadish, W. R. (2012). A standardized mean difference effect size for single case designs. <em>Research Synthesis Methods</em>, <em>3</em>, 224–239. <a href="https://doi.org/10.1002/jrsm.1052">https://doi.org/10.1002/jrsm.1052</a>
+</div>
+<div id="ref-Hedges2012MB" class="csl-entry">
+Hedges, L. V., Pustejovsky, J. E., &amp; Shadish, W. R. (2013). A standardized mean difference effect size for multiple baseline designs across individuals. <em>Research Synthesis Methods</em>. <a href="https://doi.org/10.1002/jrsm.1086">https://doi.org/10.1002/jrsm.1086</a>
+</div>
+<div id="ref-higgins2009reevaluation" class="csl-entry">
+Higgins, J. P. T., Thompson, S. G., &amp; Spiegelhalter, D. J. (2009). A re-evaluation of random-effects meta-analysis. <em>Journal of the Royal Statistical Society: Series A (Statistics in Society)</em>, <em>172</em>(1), 137–159. <a href="https://doi.org/10.1111/j.1467-985X.2008.00552.x">https://doi.org/10.1111/j.1467-985X.2008.00552.x</a>
+</div>
+<div id="ref-ota2002Task" class="csl-entry">
+Ota, K. R., &amp; DuPaul, G. J. (2002). Task engagement and mathematics performance in children with attention-deficit hyperactivity disorder: <span>Effects</span> of supplemental computer instruction. <em>School Psychology Quarterly</em>, <em>17</em>(3), 242–257. <a href="https://doi.org/10.1521/scpq.17.3.242.20881">https://doi.org/10.1521/scpq.17.3.242.20881</a>
+</div>
+<div id="ref-parker2012Application" class="csl-entry">
+Parker, D. C., Dickey, B. N., Burns, M. K., &amp; McMaster, K. L. (2012). An <span>Application</span> of <span>Brief Experimental Analysis</span> with <span>Early Writing</span>. <em>Journal of Behavioral Education</em>, <em>21</em>(4), 329–349. <a href="https://doi.org/10.1007/s10864-012-9151-3">https://doi.org/10.1007/s10864-012-9151-3</a>
+</div>
+<div id="ref-pustejovsky2021scdhlm" class="csl-entry">
+Pustejovsky, J. E., Chen, M., &amp; Hamilton, B. (2021). <em>Scdhlm: <span>A</span> web-based calculator for between-case standardized mean differences</em>.
+</div>
+<div id="ref-Pustejovsky2014design" class="csl-entry">
+Pustejovsky, J. E., Hedges, L. V., &amp; Shadish, W. R. (2014). Design-comparable effect sizes in multiple baseline designs: <span>A</span> general modeling framework. <em>Journal of Educational and Behavioral Statistics</em>, <em>39</em>(5), 368–393. <a href="https://doi.org/10.3102/1076998614547577">https://doi.org/10.3102/1076998614547577</a>
+</div>
+<div id="ref-rodgers2021Effects" class="csl-entry">
+Rodgers, D. B., Datchuk, S. M., &amp; Rila, A. L. (2021). Effects of a <span>Text-Writing Fluency Intervention</span> for <span>Postsecondary Students</span> with <span>Intellectual</span> and <span>Developmental Disabilities</span>. <em>Exceptionality</em>, <em>29</em>(4), 310–325. <a href="https://doi.org/10.1080/09362835.2020.1850451">https://doi.org/10.1080/09362835.2020.1850451</a>
+</div>
+<div id="ref-rohatgi2015Webplotdigitizer" class="csl-entry">
+Rohatgi, A. (2015). <em>Webplotdigitizer</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.32375">https://doi.org/10.5281/zenodo.32375</a>
+</div>
+<div id="ref-shadish2015Role" class="csl-entry">
+Shadish, W. R., Hedges, L. V., Horner, R. H., &amp; Odom, S. L. (2015). <em>The <span>Role</span> of <span>Between-Case Effect Size</span> in <span>Conducting</span>, <span>Interpreting</span>, and <span>Summarizing Single-Case Research</span></em> (NCER 2015-002; p. 109). <span>National Center for Education Research, Institute of Education Sciences, U.S. Department of Education</span>.
+</div>
+<div id="ref-Shadish2013d" class="csl-entry">
+Shadish, W. R., Hedges, L. V., &amp; Pustejovsky, J. E. (2014). Analysis and meta-analysis of single-case designs with a standardized mean difference statistic: <span>A</span> primer and applications. <em>Journal of School Psychology</em>, <em>52</em>(2), 123–147. <a href="https://doi.org/10.1016/j.jsp.2013.11.005">https://doi.org/10.1016/j.jsp.2013.11.005</a>
+</div>
+<div id="ref-stotz2008Effects" class="csl-entry">
+Stotz, K. E., Itoi, M., Konrad, M., &amp; Alber-Morgan, S. R. (2008). Effects of <span class="nocase">Self-graphing</span> on <span>Written Expression</span> of <span>Fourth Grade Students</span> with <span>High-Incidence Disabilities</span>. <em>Journal of Behavioral Education</em>, <em>17</em>(2), 172–186. <a href="https://doi.org/10.1007/s10864-007-9055-9">https://doi.org/10.1007/s10864-007-9055-9</a>
+</div>
+<div id="ref-Swaminathan2014effect" class="csl-entry">
+Swaminathan, H., Rogers, H. J., &amp; Horner, R. H. (2014). An effect size measure and bayesian analysis of single-case designs. <em>Journal of School Psychology</em>, <em>52</em>(2), 213–230. <a href="https://doi.org/10.1016/j.jsp.2013.12.002">https://doi.org/10.1016/j.jsp.2013.12.002</a>
+</div>
+<div id="ref-taylor2022Promoting" class="csl-entry">
+Taylor, J. A., Pigott, T., &amp; Williams, R. (2022). Promoting <span>Knowledge Accumulation About Intervention Effects</span>: <span>Exploring Strategies</span> for <span>Standardizing Statistical Approaches</span> and <span>Effect Size Reporting</span>. <em>Educational Researcher</em>, <em>51</em>(1), 72–80. <a href="https://doi.org/10.3102/0013189X211051319">https://doi.org/10.3102/0013189X211051319</a>
+</div>
+<div id="ref-VandenNoortgate2008multilevel" class="csl-entry">
+Van den Noortgate, W., &amp; Onghena, P. (2008). A multilevel meta-analysis of single-subject experimental design studies. <em>Evidence-Based Communication Assessment and Intervention</em>, <em>2</em>(3), 142–151. <a href="https://doi.org/10.1080/17489530802505362">https://doi.org/10.1080/17489530802505362</a>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["SCD-Methods-Guide.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

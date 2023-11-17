@@ -1,5 +1,5 @@
 --- 
-title: "Effect Size Estimation and Synthesis of Single-Case Designs: A Methods Guide"
+title: "Methods Guide for Effect Estimation and Synthesis of Single-Case Studies"
 date: "`r format.Date(Sys.Date(), format = '%B %d, %Y')`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
