@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2023-11-17" />
+<meta name="date" content="2023-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,6 +51,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -130,6 +132,19 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="D-CES.html"><a href="D-CES.html#modeling-options-for-design-comparable-effect-size-estimation"><i class="fa fa-check"></i><b>2.5</b> Modeling Options for Design-comparable Effect Size Estimation</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html"><i class="fa fa-check"></i><b>3</b> Illustration of Design-Comparable Effect Sizes When No Trends Are Assumed</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies"><i class="fa fa-check"></i><b>3.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="3.2" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#details-of-the-no-trend-models-for-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>3.2</b> Details of the No Trend Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="3.3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies"><i class="fa fa-check"></i><b>3.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-1-multiple-baseline-study-by-case1992improving"><i class="fa fa-check"></i><b>3.3.1</b> Example 1: Multiple Baseline Study by <span class="citation">Case et al. (1992)</span></a></li>
+<li class="chapter" data-level="3.3.2" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-2-multiple-baseline-study-by-peltier2020effects"><i class="fa fa-check"></i><b>3.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Peltier et al. (2020)</span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-3-replicated-abab-design-by-lambert2006effects"><i class="fa fa-check"></i><b>3.3.3</b> Example 3: Replicated ABAB Design by <span class="citation">Lambert et al. (2006)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-group-studies"><i class="fa fa-check"></i><b>3.4</b> Estimating the Design-Comparable Effect Size for the Group Studies</a></li>
+<li class="chapter" data-level="3.5" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#analyzing-the-effect-sizes"><i class="fa fa-check"></i><b>3.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -163,7 +178,7 @@ div.csl-indent {
 <div id="background" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Background<a href="intro.html#background" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Educational decisions at the state, district, school, and student level are now expected to be informed by empirical evidence <span class="citation">(<a href="#ref-2014Council"><span>“Council for <span>Exceptional Children</span>,”</span> 2014</a>; <a href="#ref-whatworksclearinghouse2020What">What Works Clearinghouse, 2020</a>)</span>.
-These expectations create a major need for synthesis, or the integration of research findings from multiple, existing sources of evidence—including findings from single-case designs (SCDs). <span class="citation">(<a href="#ref-cooper2010Research">Cooper, 2010</a>; <a href="#ref-pustejovsky2017Research">Pustejovsky &amp; Ferron, 2017</a>)</span>y developments in education related to the documentation of evidence-based practices.
+These expectations create a major need for synthesis, or the integration of research findings from multiple, existing sources of evidence—including findings from single-case designs (SCDs). <span class="citation">(<a href="#ref-cooper2010Research">H. M. Cooper, 2010</a>; <a href="#ref-pustejovsky2017Research">Pustejovsky &amp; Ferron, 2017</a>)</span>y developments in education related to the documentation of evidence-based practices.
 The first is the expanded use of SCD research methods across varying disciplines over the last 50 years, in both general and special education contexts <span class="citation">(<a href="#ref-kratochwill2013SingleCase">Kratochwill et al., 2013</a>)</span>.
 Although the history of SCD methodology is beyond our present scope, innovations in design have expanded the use of SCDs across a range of professional fields, moving beyond SCD’s quasi-experimental and behavior analysis origins <span class="citation">(see <a href="#ref-kratochwill2013SingleCase">Kratochwill et al., 2013</a> for more detailed information on the history of SCD)</span>.
 Over the past 20 years, researchers’ commitment to using rigorous procedures to identify evidence-based educational practices affirms not only the importance of randomized control trials (RCTs), but the effectiveness and efficiency of SCD.</p>
@@ -197,7 +212,7 @@ Thus, through the use of this methods guide, we aim to: (a) provide guidance and
 </div>
 <div id="study-quality" class="section level2 hasAnchor" number="1.3">
 <h2><span class="header-section-number">1.3</span> Study Quality<a href="intro.html#study-quality" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Conducting a research synthesis (whether of group design studies, SCDs, or both) involves several stages, starting with formulating the research aims, specifying inclusion criteria, conducting a systematic search, and screening for eligible studies <span class="citation">(<a href="#ref-cooper2010Research">Cooper, 2010</a>; <a href="#ref-pustejovsky2017Research">Pustejovsky &amp; Ferron, 2017</a>)</span>.
+<p>Conducting a research synthesis (whether of group design studies, SCDs, or both) involves several stages, starting with formulating the research aims, specifying inclusion criteria, conducting a systematic search, and screening for eligible studies <span class="citation">(<a href="#ref-cooper2010Research">H. M. Cooper, 2010</a>; <a href="#ref-pustejovsky2017Research">Pustejovsky &amp; Ferron, 2017</a>)</span>.
 Additionally, before carrying out effect size calculations or meta-analysis, it is critical to consider the methodological quality and potential biases of studies to be included in the synthesis.
 To assist researchers in doing so, several distinct sets of standards are available for SCD studies <span class="citation">(e.g., <a href="#ref-kratochwill2013SingleCase">Kratochwill et al., 2013</a>; <a href="#ref-reichow2018Development">Reichow et al., 2018</a>; <a href="#ref-tate2016SingleCase">Tate et al., 2016</a>; <a href="#ref-zimmerman2018Singlecase">Zimmerman et al., 2018</a>)</span>.
 After assessing methodological quality, researchers can use one of two strategies to guide the estimation and synthesis of effect sizes.

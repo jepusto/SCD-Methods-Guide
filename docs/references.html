@@ -22,14 +22,14 @@
 
 
 
-<meta name="date" content="2023-11-17" />
+<meta name="date" content="2023-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="D-CES.html"/>
+<link rel="prev" href="illustrate-D-CES.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -51,6 +51,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -130,6 +132,19 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="D-CES.html"><a href="D-CES.html#modeling-options-for-design-comparable-effect-size-estimation"><i class="fa fa-check"></i><b>2.5</b> Modeling Options for Design-comparable Effect Size Estimation</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html"><i class="fa fa-check"></i><b>3</b> Illustration of Design-Comparable Effect Sizes When No Trends Are Assumed</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies"><i class="fa fa-check"></i><b>3.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="3.2" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#details-of-the-no-trend-models-for-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>3.2</b> Details of the No Trend Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="3.3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies"><i class="fa fa-check"></i><b>3.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-1-multiple-baseline-study-by-case1992improving"><i class="fa fa-check"></i><b>3.3.1</b> Example 1: Multiple Baseline Study by <span class="citation">Case et al. (1992)</span></a></li>
+<li class="chapter" data-level="3.3.2" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-2-multiple-baseline-study-by-peltier2020effects"><i class="fa fa-check"></i><b>3.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Peltier et al. (2020)</span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-3-replicated-abab-design-by-lambert2006effects"><i class="fa fa-check"></i><b>3.3.3</b> Example 3: Replicated ABAB Design by <span class="citation">Lambert et al. (2006)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-group-studies"><i class="fa fa-check"></i><b>3.4</b> Estimating the Design-Comparable Effect Size for the Group Studies</a></li>
+<li class="chapter" data-level="3.5" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#analyzing-the-effect-sizes"><i class="fa fa-check"></i><b>3.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -165,10 +180,19 @@ Becker, B. J. (1996). The generalizability of empirical research results. In <em
 Beretvas, S. N., &amp; Chung, H. (2008). A review of meta-analyses of single-subject experimental designs: <span>Methodological</span> issues and practice. <em>Evidence-Based Communication Assessment and Intervention</em>, <em>2</em>(3), 129–141. <a href="https://doi.org/10.1080/17489530802446302">https://doi.org/10.1080/17489530802446302</a>
 </div>
 <div class="csl-entry">
-Borenstein, M. (2009). Effect sizes for continuous data. In H. M. Cooper, L. V. Hedges, &amp; J. C. Valentine (Eds.), <em>The <span>Handbook</span> of <span>Research Synthesis</span> and <span>Meta-Analysis</span></em> (pp. 221–236). <span>Russell Sage Foundation</span>.
+Borenstein, M. (2009). Effect sizes for continuous data. In H. M. Cooper, L. V. Hedges, &amp; J. C. Valentine (Eds.), <em>The <span>Handbook</span> of <span>Research Synthesis</span> and <span>Meta-Analysis</span></em> (pp. 221–235). <span>Russell Sage Foundation</span>.
+</div>
+<div class="csl-entry">
+Borenstein, M. (2019). Effect sizes for continuous data. In H. M. Cooper, L. V. Hedges, &amp; J. C. Valentine (Eds.), <em>The <span>Handbook</span> of <span>Research Synthesis</span> and <span>Meta-Analysis</span></em>. <span>Russell Sage Foundation</span>.
+</div>
+<div class="csl-entry">
+Borenstein, M., Hedges, L. V., Higgins, J. P. T., &amp; Rothstein, H. R. (2021). <em>Introduction to <span>Meta-Analysis</span></em>. <span>John Wiley &amp; Sons, Ltd</span>.
 </div>
 <div class="csl-entry">
 Bowman-Perrott, L., Burke, M. D., Zaini, S., Zhang, N., &amp; Vannest, K. (2016). Promoting <span>Positive Behavior Using</span> the <span>Good Behavior Game</span>: <span>A Meta-Analysis</span> of <span>Single-Case Research</span>. <em>Journal of Positive Behavior Interventions</em>, <em>18</em>(3), 180–190. <a href="https://doi.org/10.1177/1098300715592355">https://doi.org/10.1177/1098300715592355</a>
+</div>
+<div class="csl-entry">
+Case, L. P., Harris, K. R., &amp; Graham, S. (1992). Improving the <span>Mathematical Problem-Solving Skills</span> of <span>Students</span> with <span>Learning Disabilities</span>: <span>Self-Regulated Strategy Development</span>. <em>The Journal of Special Education</em>, <em>26</em>(1), 1–19. <a href="https://doi.org/10.1177/002246699202600101">https://doi.org/10.1177/002246699202600101</a>
 </div>
 <div class="csl-entry">
 Center, B. A., Skiba, R. J., &amp; Casey, A. (1985). A methodology for the quantitative synthesis of intra-subject design research. <em>The Journal of Special Education</em>, <em>19</em>(4), 387.
@@ -178,6 +202,9 @@ Chen, L.-T., Chen, Y.-K., Yang, T.-R., Chiang, Y.-S., Hsieh, C.-Y., Cheng, C., D
 </div>
 <div class="csl-entry">
 Cooper, H. M. (2010). <em>Research <span>Synthesis</span> and <span>Meta-Analysis</span></em> (4th ed.). <span>SAGE Publications</span>.
+</div>
+<div class="csl-entry">
+Cooper, H., Hedges, L. V., &amp; Valentine, J. C. (2019). <em>The handbook of research synthesis and meta-analysis</em>. Russell Sage Foundation.
 </div>
 <div class="csl-entry">
 Council for <span>Exceptional Children</span>: <span>Standards</span> for <span>Evidence-Based Practices</span> in <span>Special Education</span>. (2014). <em>TEACHING Exceptional Children</em>, <em>46</em>(6), 206–212. <a href="https://doi.org/10.1177/0040059914531389">https://doi.org/10.1177/0040059914531389</a>
@@ -195,6 +222,9 @@ Gingerich, W. J. (1984). Meta-analysis of applied time-series data. <em>The Jour
 Hedges, L. V. (1981). Distribution theory for <span>Glass</span>’s estimator of effect size and related estimators. <em>Journal of Educational Statistics</em>, <em>6</em>(2), 107–128.
 </div>
 <div class="csl-entry">
+Hedges, L. V. (2007). Effect sizes in cluster-randomized designs. <em>Journal of Educational and Behavioral Statistics</em>, <em>32</em>(4), 341–370. <a href="https://doi.org/10.3102/1076998606298043">https://doi.org/10.3102/1076998606298043</a>
+</div>
+<div class="csl-entry">
 Hedges, L. V., &amp; Olkin, I. (1985). <em>Statistical <span>Methods</span> for <span>Meta-Analysis</span></em>. <span>Academic Press</span>.
 </div>
 <div class="csl-entry">
@@ -204,10 +234,19 @@ Hedges, L. V., Pustejovsky, J. E., &amp; Shadish, W. R. (2012). A standardized m
 Hedges, L. V., Pustejovsky, J. E., &amp; Shadish, W. R. (2013). A standardized mean difference effect size for multiple baseline designs across individuals. <em>Research Synthesis Methods</em>. <a href="https://doi.org/10.1002/jrsm.1086">https://doi.org/10.1002/jrsm.1086</a>
 </div>
 <div class="csl-entry">
+Hedges, L. V., &amp; Vevea, J. L. (1998). Fixed- and random-effects models in meta-analysis. <em>Psychological Methods</em>, <em>3</em>(4), 486–504. <a href="https://doi.org/10.1037/1082-989X.3.4.486">https://doi.org/10.1037/1082-989X.3.4.486</a>
+</div>
+<div class="csl-entry">
 Higgins, J. P. T., Thompson, S. G., &amp; Spiegelhalter, D. J. (2009). A re-evaluation of random-effects meta-analysis. <em>Journal of the Royal Statistical Society: Series A (Statistics in Society)</em>, <em>172</em>(1), 137–159. <a href="https://doi.org/10.1111/j.1467-985X.2008.00552.x">https://doi.org/10.1111/j.1467-985X.2008.00552.x</a>
 </div>
 <div class="csl-entry">
+Hutchinson, N. L. (1993). Effects of <span>Cognitive Strategy Instruction</span> on <span>Algebra Problem Solving</span> of <span>Adolescents</span> with <span>Learning Disabilities</span>. <em>Learning Disability Quarterly</em>, <em>16</em>(1), 34–63. <a href="https://doi.org/10.2307/1511158">https://doi.org/10.2307/1511158</a>
+</div>
+<div class="csl-entry">
 Jamshidi, L., Heyvaert, M., Declercq, L., Fernández-Castilla, B., Ferron, J. M., Moeyaert, M., Beretvas, S. N., Onghena, P., &amp; Van den Noortgate, W. (2018). Methodological quality of meta-analyses of single-case experimental studies. <em>Research in Developmental Disabilities</em>, <em>79</em>, 97–115. <a href="https://doi.org/10.1016/j.ridd.2017.12.016">https://doi.org/10.1016/j.ridd.2017.12.016</a>
+</div>
+<div class="csl-entry">
+Konstantopoulos, S., &amp; Hedges, L. V. (2019). Statistically analyzing effect sizes: Fixed-and random-effects models. In H. Cooper Harris &amp; J. C. Valentine (Eds.), <em>The handbook of research synthesis and meta-analysis</em> (3rd Edition, pp. 246–280). Russell Sage Foundation.
 </div>
 <div class="csl-entry">
 Kratochwill, T. R., Hitchcock, J. H., Horner, R. H., Levin, J. R., Odom, S. L., Rindskopf, D. M., &amp; Shadish, W. R. (2013). Single-<span>Case Intervention Research Design Standards</span>. <em>Remedial and Special Education</em>, <em>34</em>(1), 26–38. <a href="https://doi.org/10.1177/0741932512452794">https://doi.org/10.1177/0741932512452794</a>
@@ -217,6 +256,9 @@ Kratochwill, T. R., Hitchcock, J., Horner, R. H., Levin, J. R., Odom, S. L., Rin
 </div>
 <div class="csl-entry">
 Kratochwill, T. R., Horner, R. H., Levin, J. R., Machalicek, W., Ferron, J., &amp; Johnson, A. (2021). Single-case design standards: <span>An</span> update and proposed upgrades. <em>Journal of School Psychology</em>, <em>89</em>, 91–105. <a href="https://doi.org/10.1016/j.jsp.2021.10.006">https://doi.org/10.1016/j.jsp.2021.10.006</a>
+</div>
+<div class="csl-entry">
+Lambert, M. C., Cartledge, G., Heward, W. L., &amp; Lo, Y. (2006). Effects of response cards on disruptive behavior and academic responding during math lessons by fourth-grade urban students. <em>Journal of Positive Behavior Interventions</em>, <em>8</em>(2), 88.
 </div>
 <div class="csl-entry">
 Maggin, D. M., Barton, E., Reichow, B., Lane, K., &amp; Shogren, K. A. (2021). Commentary on the <span><em>What Works Clearinghouse Standards</em></span><span> <em>and</em> </span><span><em>Procedures Handbook</em></span> (v. 4.1) for the <span>Review</span> of <span>Single-Case Research</span>. <em>Remedial and Special Education</em>, 074193252110513. <a href="https://doi.org/10.1177/07419325211051317">https://doi.org/10.1177/07419325211051317</a>
@@ -240,6 +282,9 @@ Ota, K. R., &amp; DuPaul, G. J. (2002). Task engagement and mathematics performa
 Parker, D. C., Dickey, B. N., Burns, M. K., &amp; McMaster, K. L. (2012). An <span>Application</span> of <span>Brief Experimental Analysis</span> with <span>Early Writing</span>. <em>Journal of Behavioral Education</em>, <em>21</em>(4), 329–349. <a href="https://doi.org/10.1007/s10864-012-9151-3">https://doi.org/10.1007/s10864-012-9151-3</a>
 </div>
 <div class="csl-entry">
+Peltier, C., Sinclair, T. E., Pulos, J. M., &amp; Suk, A. (2020). Effects of <span>Schema-Based Instruction</span> on <span>Immediate</span>, <span>Generalized</span>, and <span>Combined Structured Word Problems</span>. <em>The Journal of Special Education</em>, <em>54</em>(2), 101–112. <a href="https://doi.org/10.1177/0022466919883397">https://doi.org/10.1177/0022466919883397</a>
+</div>
+<div class="csl-entry">
 Pustejovsky, J. E. (2018). Using response ratios for meta-analyzing single-case designs with behavioral outcomes. <em>Journal of School Psychology</em>, <em>68</em>, 99–112. <a href="https://doi.org/10.1016/j.jsp.2018.02.003">https://doi.org/10.1016/j.jsp.2018.02.003</a>
 </div>
 <div class="csl-entry">
@@ -252,7 +297,13 @@ Pustejovsky, J. E., &amp; Ferron, J. (2017). Research <span>Synthesis</span> and
 Pustejovsky, J. E., Hedges, L. V., &amp; Shadish, W. R. (2014). Design-comparable effect sizes in multiple baseline designs: <span>A</span> general modeling framework. <em>Journal of Educational and Behavioral Statistics</em>, <em>39</em>(5), 368–393. <a href="https://doi.org/10.3102/1076998614547577">https://doi.org/10.3102/1076998614547577</a>
 </div>
 <div class="csl-entry">
+Pustejovsky, J. E., &amp; Tipton, E. (2021). Meta-analysis with robust variance estimation: Expanding the range of working models. <em>Prevention Science</em>. <a href="https://doi.org/10.1007/s11121-021-01246-3">https://doi.org/10.1007/s11121-021-01246-3</a>
+</div>
+<div class="csl-entry">
 Reichow, B., Barton, E. E., &amp; Maggin, D. M. (2018). Development and applications of the single-case design risk of bias tool for evaluating single-case design research study reports. <em>Research in Developmental Disabilities</em>, <em>79</em>, 53–64. <a href="https://doi.org/10.1016/j.ridd.2018.05.008">https://doi.org/10.1016/j.ridd.2018.05.008</a>
+</div>
+<div class="csl-entry">
+Rice, K., Higgins, J. P. T., &amp; Lumley, T. (2018). A re-evaluation of fixed effect(s) meta-analysis. <em>Journal of the Royal Statistical Society Series A: Statistics in Society</em>, <em>181</em>(1), 205–227. <a href="https://doi.org/10.1111/rssa.12275">https://doi.org/10.1111/rssa.12275</a>
 </div>
 <div class="csl-entry">
 Rodgers, D. B., Datchuk, S. M., &amp; Rila, A. L. (2021). Effects of a <span>Text-Writing Fluency Intervention</span> for <span>Postsecondary Students</span> with <span>Intellectual</span> and <span>Developmental Disabilities</span>. <em>Exceptionality</em>, <em>29</em>(4), 310–325. <a href="https://doi.org/10.1080/09362835.2020.1850451">https://doi.org/10.1080/09362835.2020.1850451</a>
@@ -285,6 +336,9 @@ Tate, R. L., Perdices, M., Rosenkoetter, U., Togher, L., McDonald, S., Shadish, 
 Taylor, J. A., Pigott, T., &amp; Williams, R. (2022). Promoting <span>Knowledge Accumulation About Intervention Effects</span>: <span>Exploring Strategies</span> for <span>Standardizing Statistical Approaches</span> and <span>Effect Size Reporting</span>. <em>Educational Researcher</em>, <em>51</em>(1), 72–80. <a href="https://doi.org/10.3102/0013189X211051319">https://doi.org/10.3102/0013189X211051319</a>
 </div>
 <div class="csl-entry">
+Van den Noortgate, W., López-López, J. A., Marı́n-Martı́nez, F., &amp; Sánchez-Meca, J. (2013). Three-level meta-analysis of dependent effect sizes. <em>Behavior Research Methods</em>, <em>45</em>, 576–594. <a href="https://doi.org/10.3758/s13428-012-0261-6">https://doi.org/10.3758/s13428-012-0261-6</a>
+</div>
+<div class="csl-entry">
 Van den Noortgate, W., &amp; Onghena, P. (2008). A multilevel meta-analysis of single-subject experimental design studies. <em>Evidence-Based Communication Assessment and Intervention</em>, <em>2</em>(3), 142–151. <a href="https://doi.org/10.1080/17489530802505362">https://doi.org/10.1080/17489530802505362</a>
 </div>
 <div class="csl-entry">
@@ -301,12 +355,18 @@ Zimmerman, K. N., Ledford, J. R., Severini, K. E., Pustejovsky, J. E., Barton, E
 </div>
 </div>
 </div>
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="D-CES.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="illustrate-D-CES.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
