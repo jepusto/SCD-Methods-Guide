@@ -1,6 +1,8 @@
+```{r, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.retina = 2)
+```
 
-
-# Approaches for Estimation and Synthesis of Single-Case Studies
+# Approaches for Estimation and Synthesis of Single-Case Studies {#intro}
 
 This chapter provides the background and purpose for the Methods Guide for Effect Estimation and Synthesis of Single-Case Studies. 
 We provide an overview of the three major approaches for effect size estimation and synthesis of single-case studies: 
@@ -11,7 +13,7 @@ We describe the general motivation and rationale for each approach and provide a
 Subsequent chapters in this guide provide more detailed illustrations of the three major approaches. 
 
 ## Background
-Educational decisions made at the state, district, school, and student levels are expected to be informed by empirical evidence [@cook2014council; @WWC2022].
+Educational decisions made at the state, district, school, and student levels are expected to be informed by empirical evidence [@cook2014council; @whatworksclearinghouse2020What].
 These expectations create a compelling need for synthesis, or the integration of research findings from multiple, existing sources of evidence—including findings from single-case designs (SCDs).
 The need for methods to synthesis findings from SCDs is all the greater because some educational disciplines have historically relied upon this methodology to collect evidence about interventions, such that the bulk of available evidence about some interventions comes from SCDs.
 
@@ -36,7 +38,7 @@ However, even contemporary reviews frequently fail to use appropriate methods fo
 Thus, there remains a need for guidance about how to select and apply methods for synthesizing SCD research results.
 
 Effect size measures are a valuable complement to visual analysis for the interpretation of single-case research results and are a key input in two of the available approaches for meta-analytic synthesis of SCDs: case-specific and design-comparable effect size estimation methods.
-Researchers have a variety of technically sound effect size metrics to select from when interpreting SCD findings, but relatively few published meta-analyses use design-comparable effect sizes, multilevel modeling, or more advanced case-specific effect sizes [cf. @barton2017TechnologyAided; @jamshidi2018Methodological; @Maggin2017meta].
+Researchers have a variety of technically sound effect size metrics to select from when interpreting SCD findings, but relatively few published meta-analyses use design-comparable effect sizes, multilevel modeling, or more advanced case-specific effect sizes [cf. @barton2017TechnologyAided; @jamshidi2018Methodological; @Maggin2017meta-analysis].
 One reason for their lack of widespread use by researchers may be the conceptual and procedural complexity associated with advances in effect size measures and meta-analysis techniques.
 The complexity of data extraction and calculation of effect sizes for SCDs may also hinder a more rapid uptake of effect size estimation methods. 
 In addition, researchers may lack software tools for effect size estimation for single-case studies when using some common statistical packages such as SPSS and SAS [@odom2018Betweencase; @Shadish2013d; @shadish2015Role].
@@ -50,21 +52,21 @@ Through the use of this methods guide, we aim to
 (b) illustrate the step-by-step application of appropriate methods using readily available tools, such as web-based software to calculate case-specific effect sizes or design-comparable effect sizes for SCD studies.
 
 ## Study Quality
-Conducting a research synthesis—composed of group design studies, SCDs, or both—involves several stages: formulating the research aims, specifying inclusion criteria, conducting a systematic search, and screening for eligible studies (Cooper, 2010; Pustejovsky & Ferron, 2017). 
+Conducting a research synthesis—composed of group design studies, SCDs, or both—involves several stages: formulating the research aims, specifying inclusion criteria, conducting a systematic search, and screening for eligible studies [@cooper2010Research; @pustejovsky2017Research].
 Additionally, before carrying out effect size calculations or meta-analysis, it is critical to consider the methodological quality and potential biases of studies one includes in the synthesis. 
-Several distinct sets of standards are available for SCD studies to assist researchers with assessing methodological quality (e.g., Kratochwill et al., 2013, 2021; Reichow et al., 2018; Tate et al., 2016; Zimmerman et al., 2018). 
-
+Several distinct sets of standards are available for SCD studies to assist researchers with assessing methodological quality [e.g., @kratochwill2013SingleCase; @kratochwill2021Singlecase; @reichow2018Development; @tate2016SingleCase; @zimmerman2018Singlecase].
 After examining the methodological quality of studies eligible for inclusion in a review, researchers can use one of two strategies to guide their estimation and synthesis of effect sizes. 
 One strategy incorporates consideration of study quality as an inclusion criterion. 
 Researchers can screen studies and exclude low-quality studies so that the synthesis is based on a subset of studies with quality deemed adequate or high enough that outcome(s) can be attributed to the intervention.
-For example, the What Works Clearinghouse (2022) indicates that for researchers to include an SCD study in a meta-analysis, the study must meet minimum design criteria (e.g., a multiple baseline study has at least three temporally spaced opportunities for the effect to be demonstrated, along with phases of at least three observations) and must provide minimum evidence of experimental control over extraneous factors (e.g., baselines do not document a therapeutic trend). 
-Other screening approaches that rely on visual analysis have also been suggested (Kratochwill et al., 2021; Maggin et al., 2021).
+For example, the @WWC2022 indicates that for researchers to include an SCD study in a meta-analysis, the study must meet minimum design criteria (e.g., a multiple baseline study has at least three temporally spaced opportunities for the effect to be demonstrated, along with phases of at least three observations) and must provide minimum evidence of experimental control over extraneous factors (e.g., baselines do not document a therapeutic trend). 
+Other screening approaches that rely on visual analysis have also been suggested [@kratochwill2021Singlecase; @maggin2021Commentary].
 Alternatively, researchers can use broader inclusion criteria, but then carefully code for aspects of study quality, so that they can examine study quality codes as potential moderators in a meta-analysis. 
 With this approach, researchers can estimate effect sizes for studies of varying degrees of quality and empirically explore whether the variation in effect size across studies is dependent on aspects of study quality. 
 
 We assume that researchers who use this methods guide will have already selected a method to assess study quality and an approach for incorporating those assessments into their synthesis.
 Thus, we do not focus on SCD study quality assessment methods, but rather provide guidelines that researchers can apply to a collection of studies meeting their inclusion criteria, which potentially include study quality.
 In this guide we focus on the final stages of a research synthesis—those involving questions of how to select a method for estimating effects, how to compute effect size estimates (or otherwise prepare data for synthesis), and how to synthesize findings in the form of effect size estimates or individual-level data. 
+
 ## Selecting an Approach for Effect Estimation and Synthesis
 To select an approach for estimating and synthesizing effects from SCDs, researchers should first reflect on the research aims that motivate their synthesis. 
 In some contexts, researchers’ primary aims may be summarizing evidence to arrive at statements about the average efficacy of a class of interventions. 
@@ -121,10 +123,9 @@ The choice between the latter two is related to the measurement of the dependent
 Where there is interest in variability in effects across cases and over time, researchers should consider multilevel modeling of the raw data series, so long as the outcome is measured consistently across cases. 
 However, if the aim is to examine how effects vary across the cases but the outcome measurements are non-equivalent and cannot be easily equated, then researchers should consider the options for estimating and synthesizing case-specific effect sizes.
 
-<div class="figure">
-<img src="images/flowchart_SynthesizingResults.png" alt="Approaches to Synthesizing Results from Single-Case Research" width="716" />
-<p class="caption">(\#fig:synthesis-flow-chart)Approaches to Synthesizing Results from Single-Case Research</p>
-</div>
+```{r synthesis-flow-chart, fig.cap = "Approaches to Synthesizing Results from Single-Case Research"}
+knitr::include_graphics("images/flowchart_SynthesizingResults.png")
+```
 
 ## Limitations in Selecting an Approach for Effect Estimation and Synthesis
 We emphasize that Figure \@ref(fig:synthesis-flow-chart) presents a heuristic, simplified procedure for selecting among the three general approaches to effect size estimation and synthesis, which cannot and does not cover every possible research context.

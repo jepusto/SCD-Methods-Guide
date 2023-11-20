@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Approaches for Estimation and Synthesis of Single-Case Studies | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Approaches for Estimation and Synthesis of Single-Case Studies | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="jepusto/SCD-Methods-Guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Approaches for Estimation and Synthesis of Single-Case Studies | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+
+
+<meta name="date" content="2023-11-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="D-CES.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Synthesis of Single-Case Designs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Authors</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i>Disclaimer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#citation"><i class="fa fa-check"></i>Citation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#datasets"><i class="fa fa-check"></i>Datasets</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Approaches for Effect Size Estimation and Synthesis of Single-Case Designs (the old version DO NOT USE)</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#purpose-of-the-methods-guide"><i class="fa fa-check"></i><b>1.2</b> Purpose of the Methods Guide</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#study-quality"><i class="fa fa-check"></i><b>1.3</b> Study Quality</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#selecting-an-approach-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.4</b> Selecting an Approach for Effect Estimation and Synthesis</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#design-comparable-effect-sizes"><i class="fa fa-check"></i><b>1.4.1</b> Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#case-specific-effect-sizes"><i class="fa fa-check"></i><b>1.4.2</b> Case-Specific Effect Sizes</a></li>
+<li class="chapter" data-level="1.4.3" data-path="intro.html"><a href="intro.html#multilevel-modeling-of-individual-participant-interrupted-time-series-data"><i class="fa fa-check"></i><b>1.4.3</b> Multilevel Modeling of Individual Participant Interrupted Time-Series Data</a></li>
+<li class="chapter" data-level="1.4.4" data-path="intro.html"><a href="intro.html#summary-of-options-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.4.4</b> Summary of Options for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="1.4.5" data-path="intro.html"><a href="intro.html#limitations-in-selecting-an-approach-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.4.5</b> Limitations in Selecting an Approach for Effect Estimation and Synthesis</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#structure-of-the-methods-guide"><i class="fa fa-check"></i><b>1.5</b> Structure of the Methods Guide</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="approaches-for-estimation-and-synthesis-of-single-case-studies.html"><a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html"><i class="fa fa-check"></i><b>2</b> Approaches for Estimation and Synthesis of Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="approaches-for-estimation-and-synthesis-of-single-case-studies.html"><a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#background-1"><i class="fa fa-check"></i><b>2.1</b> Background</a></li>
+<li class="chapter" data-level="2.2" data-path="approaches-for-estimation-and-synthesis-of-single-case-studies.html"><a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#purpose-of-the-methods-guide-1"><i class="fa fa-check"></i><b>2.2</b> Purpose of the Methods Guide</a></li>
+<li class="chapter" data-level="2.3" data-path="approaches-for-estimation-and-synthesis-of-single-case-studies.html"><a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#study-quality-1"><i class="fa fa-check"></i><b>2.3</b> Study Quality</a></li>
+<li class="chapter" data-level="2.4" data-path="approaches-for-estimation-and-synthesis-of-single-case-studies.html"><a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#design-comparable-effect-sizes-1"><i class="fa fa-check"></i><b>2.4</b> Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="2.5" data-path="approaches-for-estimation-and-synthesis-of-single-case-studies.html"><a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#case-specific-effect-sizes-1"><i class="fa fa-check"></i><b>2.5</b> Case-Specific Effect Sizes</a></li>
+<li class="chapter" data-level="2.6" data-path="approaches-for-estimation-and-synthesis-of-single-case-studies.html"><a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#multilevel-modeling-of-individual-participant-interrupted-time-series-data-1"><i class="fa fa-check"></i><b>2.6</b> Multilevel Modeling of Individual Participant Interrupted Time-Series Data</a></li>
+<li class="chapter" data-level="2.7" data-path="approaches-for-estimation-and-synthesis-of-single-case-studies.html"><a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#summary-of-options-for-effect-estimation-and-synthesis-1"><i class="fa fa-check"></i><b>2.7</b> Summary of Options for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="2.8" data-path="approaches-for-estimation-and-synthesis-of-single-case-studies.html"><a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#limitations-in-selecting-an-approach-for-effect-estimation-and-synthesis-1"><i class="fa fa-check"></i><b>2.8</b> Limitations in Selecting an Approach for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="2.9" data-path="approaches-for-estimation-and-synthesis-of-single-case-studies.html"><a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#structure-of-the-methods-guide-1"><i class="fa fa-check"></i><b>2.9</b> Structure of the Methods Guide</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="D-CES.html"><a href="D-CES.html"><i class="fa fa-check"></i><b>3</b> Introduction to Design-Comparable Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="D-CES.html"><a href="D-CES.html#background-2"><i class="fa fa-check"></i><b>3.1</b> Background</a></li>
+<li class="chapter" data-level="3.2" data-path="D-CES.html"><a href="D-CES.html#when-to-use-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>3.2</b> When to Use Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="3.3" data-path="D-CES.html"><a href="D-CES.html#general-definition-of-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>3.3</b> General Definition of Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="3.4" data-path="D-CES.html"><a href="D-CES.html#what-we-assume-when-we-synthesize-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>3.4</b> What We Assume When We Synthesize Design-Comparable Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="D-CES.html"><a href="D-CES.html#what-we-assume-when-we-estimate-design-comparable-effect-size"><i class="fa fa-check"></i><b>3.4.1</b> What We Assume When We Estimate Design-Comparable Effect Size</a></li>
+<li class="chapter" data-level="3.4.2" data-path="D-CES.html"><a href="D-CES.html#normality"><i class="fa fa-check"></i><b>3.4.2</b> Normality</a></li>
+<li class="chapter" data-level="3.4.3" data-path="D-CES.html"><a href="D-CES.html#homogeneity-of-variance"><i class="fa fa-check"></i><b>3.4.3</b> Homogeneity of Variance</a></li>
+<li class="chapter" data-level="3.4.4" data-path="D-CES.html"><a href="D-CES.html#appropriate-structural-model"><i class="fa fa-check"></i><b>3.4.4</b> Appropriate Structural Model</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="D-CES.html"><a href="D-CES.html#modeling-options-for-design-comparable-effect-size-estimation"><i class="fa fa-check"></i><b>3.5</b> Modeling Options for Design-comparable Effect Size Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html"><i class="fa fa-check"></i><b>4</b> Illustration of Design-Comparable Effect Sizes When No Trends Are Assumed</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies"><i class="fa fa-check"></i><b>4.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="4.2" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#details-of-the-no-trend-models-for-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>4.2</b> Details of the No Trend Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="4.3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies"><i class="fa fa-check"></i><b>4.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-1-multiple-baseline-study-by-case1992improving"><i class="fa fa-check"></i><b>4.3.1</b> Example 1: Multiple Baseline Study by <span class="citation">Case et al. (1992)</span></a></li>
+<li class="chapter" data-level="4.3.2" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-2-multiple-baseline-study-by-peltier2020effects"><i class="fa fa-check"></i><b>4.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Peltier et al. (2020)</span></a></li>
+<li class="chapter" data-level="4.3.3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-3-replicated-abab-design-by-lambert2006effects"><i class="fa fa-check"></i><b>4.3.3</b> Example 3: Replicated ABAB Design by <span class="citation">Lambert et al. (2006)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-group-studies"><i class="fa fa-check"></i><b>4.4</b> Estimating the Design-Comparable Effect Size for the Group Studies</a></li>
+<li class="chapter" data-level="4.5" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#analyzing-the-effect-sizes"><i class="fa fa-check"></i><b>4.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="approaches-for-estimation-and-synthesis-of-single-case-studies" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Approaches for Estimation and Synthesis of Single-Case Studies<a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#approaches-for-estimation-and-synthesis-of-single-case-studies" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter provides the background and purpose for the Methods Guide for Effect Estimation and Synthesis of Single-Case Studies.
+We provide an overview of the three major approaches for effect size estimation and synthesis of single-case studies:
+(a) design-comparable effect sizes,
+(b) multilevel modeling of raw individual participant interrupted time-series data, and
+(c) case-specific effect sizes.
+We describe the general motivation and rationale for each approach and provide a series of decision rules to guide researchers in their selection.
+Subsequent chapters in this guide provide more detailed illustrations of the three major approaches.</p>
+<div id="background-1" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Background<a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#background-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Educational decisions made at the state, district, school, and student levels are expected to be informed by empirical evidence <span class="citation">(<a href="#ref-cook2014council">Cook et al., 2014</a>; <a href="#ref-WWC2022">What Works Clearinghouse, 2020a</a>)</span>.
+These expectations create a compelling need for synthesis, or the integration of research findings from multiple, existing sources of evidence—including findings from single-case designs (SCDs).
+The need for methods to synthesis findings from SCDs is all the greater because some educational disciplines have historically relied upon this methodology to collect evidence about interventions, such that the bulk of available evidence about some interventions comes from SCDs.</p>
+<p>This methods guide responds to three key developments in educational research related to the documentation of evidence-based practices.
+The first is the expanded use of SCD research methods across disciplines over the last 50 years in both general and special education contexts <span class="citation">(<a href="#ref-Kratochwill2014Visual">L. Kratochwill Thomas R. &amp; Swoboda, 2014</a>)</span>.
+Although the history of SCD methodology is outside our present scope, SCD design innovations have allowed researchers to advance its use beyond quasi-experimental and behavior analysis origins <span class="citation">(see <a href="#ref-Kratochwill2014Visual">L. Kratochwill Thomas R. &amp; Swoboda, 2014</a> for more detailed information on the history of SCD)</span>.
+Over the past 20 years, researchers’ commitment to using rigorous procedures to identify evidence-based educational practices affirms not only the importance of randomized control trials (RCTs), but also the utility and efficiency of SCDs.</p>
+<p>The second key development in education research is the emergence of effect size measures and synthesis methods for use with SCD and other interrupted time-series data <span class="citation">(<a href="#ref-shadish2015Role">Shadish et al., 2015</a>; <a href="#ref-Swaminathan2014effect">Swaminathan et al., 2014</a>)</span>.
+Interest in the synthesis of SCDs is long-standing <span class="citation">(e.g., <a href="#ref-Center1985methodology">Center et al., 1985</a>; <a href="#ref-Gingerich1984meta">Gingerich, 1984</a>; <a href="#ref-White1987some">White, 1987</a>)</span>, with methods arising concurrently with the meta-analyses of group design research becoming more statistically rigorous and sophisticated <span class="citation">(<a href="#ref-hedges1985statistical">Hedges &amp; Olkin, 1985</a>; <a href="#ref-shadish2015metaanalytic">Shadish &amp; Lecy, 2015</a>)</span>.
+The interest and intensity of methodological research focused on SCDs has increased over time, resulting in a substantial expansion in the diversity, flexibility, and accessibility of available analytic methods.
+The current state of SCD effect size estimation methods can be categorized into three strands:
+(a) approaches that summarize the effect for each case and then synthesize these case-specific effect sizes <span class="citation">(e.g., <a href="#ref-pustejovsky2018Using">Pustejovsky, 2018</a>)</span>,
+(b) methods that use multi-level models to analyze the raw or standardized data from one or multiple SCD studies <span class="citation">(<a href="#ref-VandenNoortgate2008multilevel">Van den Noortgate &amp; Onghena, 2008</a>)</span>, and
+(c) techniques that use design-comparable effect size metrics <span class="citation">(<a href="#ref-Hedges2012ABk">Hedges et al., 2012</a>, <a href="#ref-Hedges2012MB">2013</a>; <a href="#ref-Pustejovsky2014design">Pustejovsky et al., 2014</a>; <a href="#ref-Shadish2013d">Shadish et al., 2014</a>; <a href="#ref-Swaminathan2014effect">Swaminathan et al., 2014</a>)</span>.
+We organize the present methods guide around these three broad methodological strands.</p>
+<p>The third development in education research is the increased use of systematic review and meta-analysis procedures to identify and affirm evidence-based practices in education <span class="citation">(<a href="#ref-Beretvas2008review">Beretvas &amp; Chung, 2008</a>; <a href="#ref-Shadish2007methods">Shadish &amp; Rindskopf, 2007</a>)</span>.
+In examining the production of systematic reviews and meta-analyses of SCDs from 1985 to 2009, <span class="citation">Maggin et al. (<a href="#ref-maggin2011Quantitative">2011</a>)</span> found a marked increase in such products between 2000 and 2009.
+Similarly, <span class="citation">Jamshidi et al. (<a href="#ref-jamshidi2018Methodological">2018</a>)</span> found increasing production through 2015, as well as improvements in the quality of published reviews.
+However, even contemporary reviews frequently fail to use appropriate methods for combining findings across studies <span class="citation">(<a href="#ref-jamshidi2018Methodological">Jamshidi et al., 2018</a>)</span>.
+Thus, there remains a need for guidance about how to select and apply methods for synthesizing SCD research results.</p>
+<p>Effect size measures are a valuable complement to visual analysis for the interpretation of single-case research results and are a key input in two of the available approaches for meta-analytic synthesis of SCDs: case-specific and design-comparable effect size estimation methods.
+Researchers have a variety of technically sound effect size metrics to select from when interpreting SCD findings, but relatively few published meta-analyses use design-comparable effect sizes, multilevel modeling, or more advanced case-specific effect sizes <span class="citation">(cf. <a href="#ref-barton2017TechnologyAided">Barton et al., 2017</a>; <a href="#ref-jamshidi2018Methodological">Jamshidi et al., 2018</a>; <a href="#ref-Maggin2017meta"><strong>Maggin2017meta?</strong></a>)</span>.
+One reason for their lack of widespread use by researchers may be the conceptual and procedural complexity associated with advances in effect size measures and meta-analysis techniques.
+The complexity of data extraction and calculation of effect sizes for SCDs may also hinder a more rapid uptake of effect size estimation methods.
+In addition, researchers may lack software tools for effect size estimation for single-case studies when using some common statistical packages such as SPSS and SAS <span class="citation">(<a href="#ref-odom2018Betweencase">Odom et al., 2018</a>; <a href="#ref-Shadish2013d">Shadish et al., 2014</a>; <a href="#ref-shadish2015Role">Shadish et al., 2015</a>)</span>.</p>
+</div>
+<div id="purpose-of-the-methods-guide-1" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Purpose of the Methods Guide<a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#purpose-of-the-methods-guide-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The purpose of this methods guide is to improve educational researchers’ practice of estimating effect size measures and synthesizing findings from SCDs.
+We recognize that no single method is ideal for all research goals.
+Furthermore, methods that have the most to offer can be complex and may appear difficult to carry out.
+Through the use of this methods guide, we aim to
+(a) provide guidance and decision rules to simplify the process of selecting effect size estimation and synthesis methods, and
+(b) illustrate the step-by-step application of appropriate methods using readily available tools, such as web-based software to calculate case-specific effect sizes or design-comparable effect sizes for SCD studies.</p>
+</div>
+<div id="study-quality-1" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Study Quality<a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#study-quality-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Conducting a research synthesis—composed of group design studies, SCDs, or both—involves several stages: formulating the research aims, specifying inclusion criteria, conducting a systematic search, and screening for eligible studies (Cooper, 2010; Pustejovsky &amp; Ferron, 2017).
+Additionally, before carrying out effect size calculations or meta-analysis, it is critical to consider the methodological quality and potential biases of studies one includes in the synthesis.
+Several distinct sets of standards are available for SCD studies to assist researchers with assessing methodological quality (e.g., Kratochwill et al., 2013, 2021; Reichow et al., 2018; Tate et al., 2016; Zimmerman et al., 2018).</p>
+<p>After examining the methodological quality of studies eligible for inclusion in a review, researchers can use one of two strategies to guide their estimation and synthesis of effect sizes.
+One strategy incorporates consideration of study quality as an inclusion criterion.
+Researchers can screen studies and exclude low-quality studies so that the synthesis is based on a subset of studies with quality deemed adequate or high enough that outcome(s) can be attributed to the intervention.
+For example, the What Works Clearinghouse (2022) indicates that for researchers to include an SCD study in a meta-analysis, the study must meet minimum design criteria (e.g., a multiple baseline study has at least three temporally spaced opportunities for the effect to be demonstrated, along with phases of at least three observations) and must provide minimum evidence of experimental control over extraneous factors (e.g., baselines do not document a therapeutic trend).
+Other screening approaches that rely on visual analysis have also been suggested (Kratochwill et al., 2021; Maggin et al., 2021).
+Alternatively, researchers can use broader inclusion criteria, but then carefully code for aspects of study quality, so that they can examine study quality codes as potential moderators in a meta-analysis.
+With this approach, researchers can estimate effect sizes for studies of varying degrees of quality and empirically explore whether the variation in effect size across studies is dependent on aspects of study quality.</p>
+<p>We assume that researchers who use this methods guide will have already selected a method to assess study quality and an approach for incorporating those assessments into their synthesis.
+Thus, we do not focus on SCD study quality assessment methods, but rather provide guidelines that researchers can apply to a collection of studies meeting their inclusion criteria, which potentially include study quality.
+In this guide we focus on the final stages of a research synthesis—those involving questions of how to select a method for estimating effects, how to compute effect size estimates (or otherwise prepare data for synthesis), and how to synthesize findings in the form of effect size estimates or individual-level data.
+## Selecting an Approach for Effect Estimation and Synthesis
+To select an approach for estimating and synthesizing effects from SCDs, researchers should first reflect on the research aims that motivate their synthesis.
+In some contexts, researchers’ primary aims may be summarizing evidence to arrive at statements about the average efficacy of a class of interventions.
+In other circumstances, researchers might be interested in understanding variation in effects and the extent to which such variation is associated with participants’ characteristics, specific intervention features, or other contextual factors.
+When summarization is a priority, researchers may find it more useful to use design-comparable effect sizes that describe average effects.
+If individual-level variation is the focus, then approaches using case-specific effect sizes or multilevel modeling may be more advantageous.</p>
+<p>Another overarching consideration for selecting a synthesis approach pertains to the features of the included studies.
+Quantitative synthesis requires choosing an effect size metric that permits comparisons of the magnitude of effects across individual participants and studies.
+Consequently, the extent to which eligible studies use different types of designs or different outcome measures constrains how effects from those studies can be described or compared.
+For instance, if all eligible studies in the review used multiple baseline designs across participants (or another common type of SCD), then several different synthesis approaches are feasible.
+In contrast, if eligible studies include both single-case and group design studies (e.g., small randomized experiments, each with a single pre-test and a single post-test), researchers may seek a synthesis approach that permits comparisons across both design types.
+If all eligible studies used SCDs with very similar methods for assessing the dependent variable, then synthesis based on multilevel modeling of raw data is possible.
+In contrast, if eligible studies used non-equivalent assessments, then researchers may need to use a synthesis approach based on case-specific effect sizes that are suitable for comparison across studies involving different assessments.
+These two broad considerations—the aims of the synthesis and the features of eligible studies—should guide the selection of an approach for synthesis of SCDs.
+We now detail how the three broad synthesis approaches fit within these considerations.</p>
+</div>
+<div id="design-comparable-effect-sizes-1" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Design-Comparable Effect Sizes<a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#design-comparable-effect-sizes-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In some situations, researchers aim to synthesize the evidence for intervention effectiveness using both single-case and group design studies.
+For example, a meta-analysis by Wood et al. (2018) analyzed 22 single-case and between-group studies to examine the effects of text-to-speech and other read-aloud tools on reading comprehension outcomes for students with reading disabilities.
+The authors used the standardized mean difference to estimate read-aloud intervention effects in the group design studies and a comparable standardized mean difference to estimate effects from the included SCD research, resulting in an overall average weighted effect size of d= 0.35, 95% confidence interval (CI) [0.14, 0.56].
+Because the purpose of the study involved the comparison and averaging of effects across single-case and group designs, it was critical that Wood et al. (2018) used an effect size metric that is theoretically comparable across the designs.
+Researchers should select from the design-comparable effect size options (e.g., accounting for the absence or presence of baseline trends) when the aim is to compare and synthesize effects across eligible SCD and group design studies (Hedges et al., 2012; 2013; Pustejovsky et al., 2014; Shadish et al., 2014; Swaminathan et al., 2014; Van den Noortgate &amp; Onghena, 2008).
+However, if researchers aim to synthesize findings from only SCD studies (i.e., not to integrate findings across single-case and group design studies), it may be feasible and preferable to use other options, such as synthesizing effects using case-specific effect sizes or multilevel modeling.</p>
+</div>
+<div id="case-specific-effect-sizes-1" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Case-Specific Effect Sizes<a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#case-specific-effect-sizes-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In addition to averaging effects across studies, researchers may also be interested in exploring variation in treatment effects by categorical differences or individual participant characteristics (e.g., Do effects vary across settings? Are effects consistent across ethnic and racial groups?).
+When included studies use different outcome measures (e.g., included studies report outcomes measured on different scales such as a rate per session, occurrence/count, or ratio), it is important for researchers to use an effect size metric and synthesis approach that accounts for such.
+For example, Bowman-Perrott et al. (2016) examined five potential moderators (emotional and behavioral disorder risk status, reinforcement frequency, target behaviors, intervention format, and grade level) in their synthesis of 21 SCDs to obtain an overall effect of the Good Behavior Game in promoting positive behavior in the classroom.
+Results of their meta-analysis suggested that the intervention was more effective in reducing problem behaviors among students with or at risk for emotional and behavioral disorders.
+Another meta-analysis by Mason et al. (2016) first calculated and aggregated the effect sizes across all included studies, and then investigated the moderating effects of participant characteristics, targeted outcomes, and implementation components on the efficacy of video self-modeling, in which a learner with disabilities watches a video of a model engaged in targeted skills or tasks.
+They found that intervention effects were stronger for younger participants with autism spectrum disorders compared to those not identified as autistic or having an autism spectrum disorder.</p>
+<p>Because these syntheses focused on investigating variation across individuals in the effect of treatment, it was important that the effect size estimation and synthesis approach produced effect estimates for each individual participant (rather than a study-level summary effect estimate).
+Design-comparable effect size options are not viable for studying within-participant effects or variation in effects between individuals within the study because these effect sizes produce estimates at the study level (i.e., the effect averaged across the cases), not the individual level.
+Furthermore, outcome measures differed widely among studies included in the aforementioned reviews, so the researchers needed an individual-level effect size metric that was not scale-dependent (e.g., not based on simple raw score mean differences).
+When included studies use outcome measurements that cannot simply be re-scaled to be equivalent, case-specific effect size estimation and synthesis options may be best suited.
+However, the case-specific effect size options are not viable for meta-analysts wanting a single overall effect size after synthesizing both single-case design and group design studies because case-specific effects are not comparable to group design effects.</p>
+</div>
+<div id="multilevel-modeling-of-individual-participant-interrupted-time-series-data-1" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Multilevel Modeling of Individual Participant Interrupted Time-Series Data<a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#multilevel-modeling-of-individual-participant-interrupted-time-series-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When a set of SCDs use the same or very similar outcome measures with the aim of studying the variation in effects over time within and between individuals, the multilevel modeling approach should be considered.
+For example, Datchuk et al. (2020) meta-analyzed 15 single-case studies totaling 79 students to examine the effects of an intervention on the level and trend in correct writing sequences per minute for students with disabilities.
+The researchers found that effect sizes were greater when students received intervention for longer durations (i.e., there was a positive effect on the trend) and that this temporal change in effect was more pronounced with younger students.
+In contexts like this, we suggest researchers avoid a meta-analytic approach that relies on a single effect size estimate for a study (e.g., design-comparable effect sizes) or even a single effect estimate for a case (e.g., case-specific effect sizes) and consider options for multilevel modeling of individual participant data series instead.</p>
+</div>
+<div id="summary-of-options-for-effect-estimation-and-synthesis-1" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Summary of Options for Effect Estimation and Synthesis<a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#summary-of-options-for-effect-estimation-and-synthesis-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The flow chart in Figure <a href="intro.html#fig:synthesis-flow-chart">1.1</a> illustrates a set of heuristic decision rules for selecting among the three general approaches to synthesizing results from single-case research.
+If the primary purpose of one’s research is to integrate findings from both single-case and group-design studies, researchers should consider design-comparable effect sizes, contextually noting that effects are likely to be different for group design studies than from SCD studies (Chen &amp; Pustejovsky, 2022).
+Alternately, if the researchers plan to only include SCD studies, then they can use two other approaches (i.e., multilevel modeling and case-specific effect sizes).
+The choice between the latter two is related to the measurement of the dependent variable.
+Where there is interest in variability in effects across cases and over time, researchers should consider multilevel modeling of the raw data series, so long as the outcome is measured consistently across cases.
+However, if the aim is to examine how effects vary across the cases but the outcome measurements are non-equivalent and cannot be easily equated, then researchers should consider the options for estimating and synthesizing case-specific effect sizes.</p>
+<div class="figure"><span style="display:block;" id="fig:synthesis-flow-chart"></span>
+<img src="images/flowchart_SynthesizingResults.png" alt="Approaches to Synthesizing Results from Single-Case Research" width="716" />
+<p class="caption">
+Figure 1.1: Approaches to Synthesizing Results from Single-Case Research
+</p>
+</div>
+</div>
+<div id="limitations-in-selecting-an-approach-for-effect-estimation-and-synthesis-1" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> Limitations in Selecting an Approach for Effect Estimation and Synthesis<a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#limitations-in-selecting-an-approach-for-effect-estimation-and-synthesis-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We emphasize that Figure <a href="intro.html#fig:synthesis-flow-chart">1.1</a> presents a heuristic, simplified procedure for selecting among the three general approaches to effect size estimation and synthesis, which cannot and does not cover every possible research context.
+We anticipate and acknowledge that there will be situations where researchers’ aims and contexts differ from those we have described and thus do not align perfectly with one of our primary approaches to estimating and synthesizing single-case effect sizes.
+For example, researchers who are synthesizing findings from a set of SCDs may wish to compare their results to a previously published meta-analysis of group design studies, but not to investigate individual-level variation in treatment effects.
+They might therefore elect to use design-comparable effect sizes even though they are not formally integrating results from group design studies within their review.</p>
+<p>A further possibility is that researchers might elect to use multiple approaches to synthesis to address different aims or research questions.
+For example, consider a project in which researchers have identified both single-case and group design studies.
+They might want to integrate findings across design types while also exploring the variation in effects among individuals.
+In this scenario, researchers could estimate design-comparable effect sizes for their first aim and case-specific effect sizes from the subset of SCDs for their second aim.</p>
+<p>We also acknowledge that situations may arise that fall between those we described for case-specific effect sizes and those for multilevel modeling of the raw data series.
+For example, researchers may want to examine how effects vary over time and across cases, using studies with different outcomes.
+For this purpose, the researchers will need to identify and apply extensions of the primary approaches we present in this guide.
+For example, the researchers could either standardize the raw data before estimating a multilevel model, or they could synthesize case-specific effect sizes using multiple standardized effects for each case (e.g., an effect that indexes the immediate shift in level, and another effect that indexes a change in slope).
+In this guide, we aim to address what we perceive to be the most common scenarios, rather than conduct an exhaustive review of all possibilities.</p>
+<p>Finally, we anticipate that the heuristic guidance we provide here will need to be refined over time as further methodological innovations become available.
+We anticipate that research presently underway will provide even more meta-analytic options, with implications for how to select an approach for synthesis. At some point it may be possible to compute case-specific effect sizes that are also design-comparable, or it may be possible to standardize the data for multilevel models in a way that leads to parameter estimates from the model that correspond to design-comparable effect estimates.
+When such methods become available, some distinctions made here will become artificial.
+However, even as methodology continues to advance, researchers need guidance that acknowledges the complexity of research purposes and contexts and is dynamic in its accommodation of such variation, while also being concrete and straightforward enough for widespread implementation.
+To support the uptake of advanced methods for meta-analytic synthesis by educational researchers, the remainder of this guide follows the proposed heuristics for selecting among the three major approaches to effect size estimation and synthesis.</p>
+</div>
+<div id="structure-of-the-methods-guide-1" class="section level2 hasAnchor" number="2.9">
+<h2><span class="header-section-number">2.9</span> Structure of the Methods Guide<a href="approaches-for-estimation-and-synthesis-of-single-case-studies.html#structure-of-the-methods-guide-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We divide this guide into three major sections:
+(a) design-comparable effect size estimation and synthesis,
+(b) multilevel modeling, and
+(c) case-specific effect size estimation and synthesis to estimate and synthesize effects.
+Each section is independent; they are not in a particular chronological order, nor do they build upon each other.
+Rather, we expect those using this guide to follow the decision rules in Figure 1.1 to determine which approach is most appropriate for them, and then reference the corresponding relevant section.</p>
+<p>We divide each section into chapters.
+Each initial chapter introduces the specific approach to synthesizing results from SCD research, its assumptions, and determination for use.
+We then provide additional decision rules for selecting among the specific techniques and options available within a given broad approach.
+This is followed by an illustration where we:</p>
+<ol style="list-style-type: decimal">
+<li><p>Describe the purposes for estimating and synthesizing effects, and the available data.</p></li>
+<li><p>Demonstrate how to use the decision rules in Figure 1.1, along with the additional decision rules specific to the initial section chapter, to arrive at the option being illustrated.</p></li>
+<li><p>Present the illustrated data to show how it needs to be structured for the analysis.</p></li>
+<li><p>Provide a step-by-step illustration of how to estimate and synthesize effects using readily available analysis tools.</p></li>
+</ol>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-barton2017TechnologyAided" class="csl-entry">
+Barton, E. E., Pustejovsky, J. E., Maggin, D. M., &amp; Reichow, B. (2017). Technology-<span>Aided Instruction</span> and <span>Intervention</span> for <span>Students With ASD</span>: <span>A Meta-Analysis Using Novel Methods</span> of <span>Estimating Effect Sizes</span> for <span>Single-Case Research</span>. <em>Remedial and Special Education</em>, <em>38</em>(6), 371–386. <a href="https://doi.org/10.1177/0741932517729508">https://doi.org/10.1177/0741932517729508</a>
+</div>
+<div id="ref-Beretvas2008review" class="csl-entry">
+Beretvas, S. N., &amp; Chung, H. (2008). A review of meta-analyses of single-subject experimental designs: <span>Methodological</span> issues and practice. <em>Evidence-Based Communication Assessment and Intervention</em>, <em>2</em>(3), 129–141. <a href="https://doi.org/10.1080/17489530802446302">https://doi.org/10.1080/17489530802446302</a>
+</div>
+<div id="ref-Center1985methodology" class="csl-entry">
+Center, B. A., Skiba, R. J., &amp; Casey, A. (1985). A methodology for the quantitative synthesis of intra-subject design research. <em>The Journal of Special Education</em>, <em>19</em>(4), 387.
+</div>
+<div id="ref-cook2014council" class="csl-entry">
+Cook, B., Buysse, V., Klingner, J., Landrum, T., McWilliam, R., Tankersley, M., &amp; Test, D. (2014). Council for exceptional children: Standards for evidence-based practices in special education. <em>Teaching Exceptional Children</em>, <em>46</em>(6), 206.
+</div>
+<div id="ref-Gingerich1984meta" class="csl-entry">
+Gingerich, W. J. (1984). Meta-analysis of applied time-series data. <em>The Journal of Applied Behavioral Science</em>, <em>20</em>(1), 71–79. <a href="https://doi.org/10.1177/002188638402000113">https://doi.org/10.1177/002188638402000113</a>
+</div>
+<div id="ref-hedges1985statistical" class="csl-entry">
+Hedges, L. V., &amp; Olkin, I. (1985). <em>Statistical <span>Methods</span> for <span>Meta-Analysis</span></em>. <span>Academic Press</span>.
+</div>
+<div id="ref-Hedges2012ABk" class="csl-entry">
+Hedges, L. V., Pustejovsky, J. E., &amp; Shadish, W. R. (2012). A standardized mean difference effect size for single case designs. <em>Research Synthesis Methods</em>, <em>3</em>, 224–239. <a href="https://doi.org/10.1002/jrsm.1052">https://doi.org/10.1002/jrsm.1052</a>
+</div>
+<div id="ref-Hedges2012MB" class="csl-entry">
+Hedges, L. V., Pustejovsky, J. E., &amp; Shadish, W. R. (2013). A standardized mean difference effect size for multiple baseline designs across individuals. <em>Research Synthesis Methods</em>. <a href="https://doi.org/10.1002/jrsm.1086">https://doi.org/10.1002/jrsm.1086</a>
+</div>
+<div id="ref-jamshidi2018Methodological" class="csl-entry">
+Jamshidi, L., Heyvaert, M., Declercq, L., Fernández-Castilla, B., Ferron, J. M., Moeyaert, M., Beretvas, S. N., Onghena, P., &amp; Van den Noortgate, W. (2018). Methodological quality of meta-analyses of single-case experimental studies. <em>Research in Developmental Disabilities</em>, <em>79</em>, 97–115. <a href="https://doi.org/10.1016/j.ridd.2017.12.016">https://doi.org/10.1016/j.ridd.2017.12.016</a>
+</div>
+<div id="ref-Kratochwill2014Visual" class="csl-entry">
+Kratochwill, L., Thomas R., &amp; Swoboda, C. M. (2014). Visual analysis of single-case intervention research: Conceptual and methodological issues. In T. R. Kratochwill &amp; J. R. Levin (Eds.), <em>Single-case intervention research: Methodological and statistical advances</em> (pp. 91–125). American Psychological Association. https://doi.org/<a href="https://doi.org/10.1037/14376-004">https://doi.org/10.1037/14376-004</a>
+</div>
+<div id="ref-maggin2011Quantitative" class="csl-entry">
+Maggin, D. M., O’Keeffe, B. V., &amp; Johnson, A. H. (2011). A <span>Quantitative Synthesis</span> of <span>Methodology</span> in the <span>Meta-Analysis</span> of <span>Single-Subject Research</span> for <span>Students</span> with <span>Disabilities</span>: 1985. <em>Exceptionality</em>, <em>19</em>(2), 109–135. <a href="https://doi.org/10.1080/09362835.2011.565725">https://doi.org/10.1080/09362835.2011.565725</a>
+</div>
+<div id="ref-odom2018Betweencase" class="csl-entry">
+Odom, S. L., Barton, E. E., Reichow, B., Swaminathan, H., &amp; Pustejovsky, J. E. (2018). Between-case standardized effect size analysis of single case designs: <span>Examination</span> of the two methods. <em>Research in Developmental Disabilities</em>, <em>79</em>, 88–96. <a href="https://doi.org/10.1016/j.ridd.2018.05.009">https://doi.org/10.1016/j.ridd.2018.05.009</a>
+</div>
+<div id="ref-pustejovsky2018Using" class="csl-entry">
+Pustejovsky, J. E. (2018). Using response ratios for meta-analyzing single-case designs with behavioral outcomes. <em>Journal of School Psychology</em>, <em>68</em>, 99–112. <a href="https://doi.org/10.1016/j.jsp.2018.02.003">https://doi.org/10.1016/j.jsp.2018.02.003</a>
+</div>
+<div id="ref-Pustejovsky2014design" class="csl-entry">
+Pustejovsky, J. E., Hedges, L. V., &amp; Shadish, W. R. (2014). Design-comparable effect sizes in multiple baseline designs: <span>A</span> general modeling framework. <em>Journal of Educational and Behavioral Statistics</em>, <em>39</em>(5), 368–393. <a href="https://doi.org/10.3102/1076998614547577">https://doi.org/10.3102/1076998614547577</a>
+</div>
+<div id="ref-shadish2015Role" class="csl-entry">
+Shadish, W. R., Hedges, L. V., Horner, R. H., &amp; Odom, S. L. (2015). <em>The <span>Role</span> of <span>Between-Case Effect Size</span> in <span>Conducting</span>, <span>Interpreting</span>, and <span>Summarizing Single-Case Research</span></em> (NCER 2015-002; p. 109). <span>National Center for Education Research, Institute of Education Sciences, U.S. Department of Education</span>.
+</div>
+<div id="ref-Shadish2013d" class="csl-entry">
+Shadish, W. R., Hedges, L. V., &amp; Pustejovsky, J. E. (2014). Analysis and meta-analysis of single-case designs with a standardized mean difference statistic: <span>A</span> primer and applications. <em>Journal of School Psychology</em>, <em>52</em>(2), 123–147. <a href="https://doi.org/10.1016/j.jsp.2013.11.005">https://doi.org/10.1016/j.jsp.2013.11.005</a>
+</div>
+<div id="ref-shadish2015metaanalytic" class="csl-entry">
+Shadish, W. R., &amp; Lecy, J. D. (2015). The meta-analytic big bang. <em>Research Synthesis Methods</em>, <em>6</em>(3), 246–264. <a href="https://doi.org/10.1002/jrsm.1132">https://doi.org/10.1002/jrsm.1132</a>
+</div>
+<div id="ref-Shadish2007methods" class="csl-entry">
+Shadish, W. R., &amp; Rindskopf, D. M. (2007). Methods for evidence-based practice: <span>Quantitative</span> synthesis of single-subject designs. <em>New Directions for Evaluation</em>, <em>113</em>(113), 95–109. <a href="https://doi.org/10.1002/ev.217">https://doi.org/10.1002/ev.217</a>
+</div>
+<div id="ref-Swaminathan2014effect" class="csl-entry">
+Swaminathan, H., Rogers, H. J., &amp; Horner, R. H. (2014). An effect size measure and bayesian analysis of single-case designs. <em>Journal of School Psychology</em>, <em>52</em>(2), 213–230. <a href="https://doi.org/10.1016/j.jsp.2013.12.002">https://doi.org/10.1016/j.jsp.2013.12.002</a>
+</div>
+<div id="ref-VandenNoortgate2008multilevel" class="csl-entry">
+Van den Noortgate, W., &amp; Onghena, P. (2008). A multilevel meta-analysis of single-subject experimental design studies. <em>Evidence-Based Communication Assessment and Intervention</em>, <em>2</em>(3), 142–151. <a href="https://doi.org/10.1080/17489530802505362">https://doi.org/10.1080/17489530802505362</a>
+</div>
+<div id="ref-WWC2022" class="csl-entry">
+What Works Clearinghouse. (2020a). <em>What <span class="nocase">Works Clearinghouse Procedures and Standards Handbook</span></em> (Version 5.0). <span>U.S. Department of Education, Institute of Education Sciences, National Center for Education Evaluation and Regional Assistance.</span>
+</div>
+<div id="ref-White1987some" class="csl-entry">
+White, O. R. (1987). Some comments concerning "<span>The</span> quantitative synthesis of single-subject research". <em>Remedial and Special Education</em>, <em>8</em>(2), 34–39. <a href="https://doi.org/10.1177/074193258700800207">https://doi.org/10.1177/074193258700800207</a>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="D-CES.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["SCD-Methods-Guide.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
