@@ -1,4 +1,6 @@
-
+```{r, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.retina = 2)
+```
 
 # Approaches for Estimation and Synthesis of Single-Case Studies {#intro}
 
@@ -121,10 +123,9 @@ The choice between the latter two is related to the measurement of the dependent
 Where there is interest in variability in effects across cases and over time, researchers should consider multilevel modeling of the raw data series, so long as the outcome is measured consistently across cases. 
 However, if the aim is to examine how effects vary across the cases but the outcome measurements are non-equivalent and cannot be easily equated, then researchers should consider the options for estimating and synthesizing case-specific effect sizes.
 
-<div class="figure">
-<img src="images/flowchart_SynthesizingResults.png" alt="Approaches to Synthesizing Results from Single-Case Research" width="716" />
-<p class="caption">(\#fig:synthesis-flow-chart)Approaches to Synthesizing Results from Single-Case Research</p>
-</div>
+```{r synthesis-flow-chart, fig.cap = "Approaches to Synthesizing Results from Single-Case Research"}
+knitr::include_graphics("images/flowchart_SynthesizingResults.png")
+```
 
 ## Limitations in Selecting an Approach for Effect Estimation and Synthesis
 We emphasize that Figure \@ref(fig:synthesis-flow-chart) presents a heuristic, simplified procedure for selecting among the three general approaches to effect size estimation and synthesis, which cannot and does not cover every possible research context.

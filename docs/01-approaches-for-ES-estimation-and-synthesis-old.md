@@ -1,6 +1,6 @@
 
 
-# Approaches for Effect Size Estimation and Synthesis of Single-Case Designs (the old version DO NOT USE) {#intro}
+# Approaches for Effect Size Estimation and Synthesis of Single-Case Designs (the old version DO NOT USE)
 
 This chapter provides the background and purpose for this methods guide. It also gives an overview of the three major approaches for estimation and synthesis of single-case studies: 
 
