@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2023-11-18" />
+<meta name="date" content="2023-11-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -145,6 +145,18 @@ div.csl-indent {
 <li class="chapter" data-level="3.4" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-group-studies"><i class="fa fa-check"></i><b>3.4</b> Estimating the Design-Comparable Effect Size for the Group Studies</a></li>
 <li class="chapter" data-level="3.5" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#analyzing-the-effect-sizes"><i class="fa fa-check"></i><b>3.5</b> Analyzing the Effect Sizes</a></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html"><i class="fa fa-check"></i><b>4</b> Illustration of Design-Comparable Effect Sizes When Assuming Only Trends in The Treatment Phases</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies-1"><i class="fa fa-check"></i><b>4.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="4.2" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#details-of-the-models-for-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>4.2</b> Details of the Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="4.3" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies-1"><i class="fa fa-check"></i><b>4.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#example-1-multiple-baselise-study-by-gunning2003psychological"><i class="fa fa-check"></i><b>4.3.1</b> Example 1: Multiple Baselise Study by <span class="citation">Gunning &amp; Espie (2003)</span></a></li>
+<li class="chapter" data-level="4.3.2" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#example-2-multiple-baseline-study-by-delemere2018parentimplemented"><i class="fa fa-check"></i><b>4.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Delemere &amp; Dounavi (2018)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#estimating-the-design-comparable-effect-size-for-the-group-studies-1"><i class="fa fa-check"></i><b>4.4</b> Estimating the Design-Comparable Effect Size for the Group Studies</a></li>
+<li class="chapter" data-level="4.5" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#analyzing-the-effect-sizes-1"><i class="fa fa-check"></i><b>4.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -180,7 +192,7 @@ This chapter concludes with a set of decision rules for selecting among the opti
 This constrains their use to SCDs involving multiple participants (e.g., multiple baseline design across participants) or close replications of SCDs, each of which has a single participant (e.g., ABAB design replicated across several students).
 Further, existing research on design-comparable effect size methods is only available for multiple baseline, multiple probe, or replicated treatment reversal designs.
 Researchers have yet to develop extensions for alternating treatment designs and other types of SCDs. However, ongoing research is likely to increase the designs for which design-comparable effect sizes can be estimated.</p>
-<p>A second conceptual limitation is that design-comparable effect sizes produce a single summary effect size per outcome–which represents an <em>average</em> effect across participants–just as between-group design study effect sizes are summaries of average effects across participants.
+<p>A second conceptual limitation is that design-comparable effect sizes produce a single summary effect size per outcome—which represents an <em>average</em> effect across participants—just as between-group design study effect sizes are summaries of average effects across participants.
 As a result, the design-comparable effect size might conceal heterogeneity of effects across participants in an SCD. Meta-analytic researchers are then limited to moderator analyses focused on study-level characteristics; it is not feasible to examine potential moderators that vary across cases in a study or across time points within a case.</p>
 <p>A third limitation is that design-comparable effect sizes are based on a hierarchical model that involves specific assumptions about the distribution of outcomes measured in the study.
 Developing a reasonable model requires care and attention to the plausibility of its assumptions.
@@ -244,7 +256,7 @@ Consider again the <span class="citation">Ota &amp; DuPaul (<a href="#ref-ota200
 </div>
 <div id="appropriate-structural-model" class="section level3 hasAnchor" number="2.4.4">
 <h3><span class="header-section-number">2.4.4</span> Appropriate Structural Model<a href="D-CES.html#appropriate-structural-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The estimation of design-comparable effect sizes requires assumptions about the structural model for the data series collected in the SCD. Ideally, these assumptions are based on content expertise, knowledge of the intervention domain, and understanding of the dependent variable(s) under review. The assumptions also rely on visual analysis and calculation of descriptive statistics from the studies. Regarding baseline trend, given our knowledge and understanding of the behavior(s), context(s), and participants included in the studies, we can assume one of three things: no trend in baseline, a linear trend in baseline, or some form of nonlinear trend. Similarly, we can use the same knowledge to make assumptions about data trends in the treatment phase: no trend, linear trend, or nonlinear trend. Furthermore, we can make assumptions about the parameters defining the baseline trajectory (e.g., level and slope) and the change in trajectory with treatment (e.g., the change in level and change in slope)–they either differ across cases within the study, or we can assume that some of these parameters are the same across cases. Purposeful consideration of our included SCDs is likely to lead to more accurate effect size estimation. If we do not select a structural model consistent with our data, we can expect biased design-comparable effect size estimates.</p>
+<p>The estimation of design-comparable effect sizes requires assumptions about the structural model for the data series collected in the SCD. Ideally, these assumptions are based on content expertise, knowledge of the intervention domain, and understanding of the dependent variable(s) under review. The assumptions also rely on visual analysis and calculation of descriptive statistics from the studies. Regarding baseline trend, given our knowledge and understanding of the behavior(s), context(s), and participants included in the studies, we can assume one of three things: no trend in baseline, a linear trend in baseline, or some form of nonlinear trend. Similarly, we can use the same knowledge to make assumptions about data trends in the treatment phase: no trend, linear trend, or nonlinear trend. Furthermore, we can make assumptions about the parameters defining the baseline trajectory (e.g., level and slope) and the change in trajectory with treatment (e.g., the change in level and change in slope)—they either differ across cases within the study, or we can assume that some of these parameters are the same across cases. Purposeful consideration of our included SCDs is likely to lead to more accurate effect size estimation. If we do not select a structural model consistent with our data, we can expect biased design-comparable effect size estimates.</p>
 <div class="figure"><span style="display:block;" id="fig:Rodgers-2020"></span>
 <img src="images/Rodgers-2020.png" alt="Multiple Baseline Across Participants (Rodgers et al., 2020)" width="75%" />
 <p class="caption">
