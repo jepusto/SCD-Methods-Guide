@@ -87,19 +87,19 @@ We now detail how the three broad synthesis approaches fit within these consider
 
 ## Design-Comparable Effect Sizes
 In some situations, researchers aim to synthesize the evidence for intervention effectiveness using both single-case and group design studies. 
-For example, a meta-analysis by Wood et al. (2018) analyzed 22 single-case and between-group studies to examine the effects of text-to-speech and other read-aloud tools on reading comprehension outcomes for students with reading disabilities. 
+For example, a meta-analysis by @wood2018Does analyzed 22 single-case and between-group studies to examine the effects of text-to-speech and other read-aloud tools on reading comprehension outcomes for students with reading disabilities. 
 The authors used the standardized mean difference to estimate read-aloud intervention effects in the group design studies and a comparable standardized mean difference to estimate effects from the included SCD research, resulting in an overall average weighted effect size of d= 0.35, 95% confidence interval (CI) [0.14, 0.56].
-Because the purpose of the study involved the comparison and averaging of effects across single-case and group designs, it was critical that Wood et al. (2018) used an effect size metric that is theoretically comparable across the designs. 
-Researchers should select from the design-comparable effect size options (e.g., accounting for the absence or presence of baseline trends) when the aim is to compare and synthesize effects across eligible SCD and group design studies (Hedges et al., 2012; 2013; Pustejovsky et al., 2014; Shadish et al., 2014; Swaminathan et al., 2014; Van den Noortgate & Onghena, 2008). 
+Because the purpose of the study involved the comparison and averaging of effects across single-case and group designs, it was critical that @wood2018Does used an effect size metric that is theoretically comparable across the designs. 
+Researchers should select from the design-comparable effect size options (e.g., accounting for the absence or presence of baseline trends) when the aim is to compare and synthesize effects across eligible SCD and group design studies [@Hedges2012ABk; @Hedges2012MB; @Pustejovsky2014design; @Shadish2013d; @Swaminathan2014effect; @VandenNoortgate2008multilevel].
 However, if researchers aim to synthesize findings from only SCD studies (i.e., not to integrate findings across single-case and group design studies), it may be feasible and preferable to use other options, such as synthesizing effects using case-specific effect sizes or multilevel modeling.
 
 
 ## Case-Specific Effect Sizes
 In addition to averaging effects across studies, researchers may also be interested in exploring variation in treatment effects by categorical differences or individual participant characteristics (e.g., Do effects vary across settings? Are effects consistent across ethnic and racial groups?). 
 When included studies use different outcome measures (e.g., included studies report outcomes measured on different scales such as a rate per session, occurrence/count, or ratio), it is important for researchers to use an effect size metric and synthesis approach that accounts for such. 
-For example, Bowman-Perrott et al. (2016) examined five potential moderators (emotional and behavioral disorder risk status, reinforcement frequency, target behaviors, intervention format, and grade level) in their synthesis of 21 SCDs to obtain an overall effect of the Good Behavior Game in promoting positive behavior in the classroom. 
+For example, @bowman-perrott2016Promoting examined five potential moderators (emotional and behavioral disorder risk status, reinforcement frequency, target behaviors, intervention format, and grade level) in their synthesis of 21 SCDs to obtain an overall effect of the Good Behavior Game in promoting positive behavior in the classroom. 
 Results of their meta-analysis suggested that the intervention was more effective in reducing problem behaviors among students with or at risk for emotional and behavioral disorders.
-Another meta-analysis by Mason et al. (2016) first calculated and aggregated the effect sizes across all included studies, and then investigated the moderating effects of participant characteristics, targeted outcomes, and implementation components on the efficacy of video self-modeling, in which a learner with disabilities watches a video of a model engaged in targeted skills or tasks. 
+Another meta-analysis by @Mason_Davis_Ayres_Davis_Mason_2016 first calculated and aggregated the effect sizes across all included studies, and then investigated the moderating effects of participant characteristics, targeted outcomes, and implementation components on the efficacy of video self-modeling, in which a learner with disabilities watches a video of a model engaged in targeted skills or tasks. 
 They found that intervention effects were stronger for younger participants with autism spectrum disorders compared to those not identified as autistic or having an autism spectrum disorder.
 
 Because these syntheses focused on investigating variation across individuals in the effect of treatment, it was important that the effect size estimation and synthesis approach produced effect estimates for each individual participant (rather than a study-level summary effect estimate). 
@@ -111,13 +111,13 @@ However, the case-specific effect size options are not viable for meta-analysts 
 
 ## Multilevel Modeling of Individual Participant Interrupted Time-Series Data
 When a set of SCDs use the same or very similar outcome measures with the aim of studying the variation in effects over time within and between individuals, the multilevel modeling approach should be considered.
-For example, Datchuk et al. (2020) meta-analyzed 15 single-case studies totaling 79 students to examine the effects of an intervention on the level and trend in correct writing sequences per minute for students with disabilities.
+For example, @datchuk2020Level meta-analyzed 15 single-case studies totaling 79 students to examine the effects of an intervention on the level and trend in correct writing sequences per minute for students with disabilities.
 The researchers found that effect sizes were greater when students received intervention for longer durations (i.e., there was a positive effect on the trend) and that this temporal change in effect was more pronounced with younger students.
 In contexts like this, we suggest researchers avoid a meta-analytic approach that relies on a single effect size estimate for a study (e.g., design-comparable effect sizes) or even a single effect estimate for a case (e.g., case-specific effect sizes) and consider options for multilevel modeling of individual participant data series instead. 
 
 ## Summary of Options for Effect Estimation and Synthesis
 The flow chart in Figure \@ref(fig:synthesis-flow-chart) illustrates a set of heuristic decision rules for selecting among the three general approaches to synthesizing results from single-case research. 
-If the primary purpose of one’s research is to integrate findings from both single-case and group-design studies, researchers should consider design-comparable effect sizes, contextually noting that effects are likely to be different for group design studies than from SCD studies (Chen & Pustejovsky, 2022).
+If the primary purpose of one’s research is to integrate findings from both single-case and group-design studies, researchers should consider design-comparable effect sizes, contextually noting that effects are likely to be different for group design studies than from SCD studies @Chen_Pustejovsky_2022.
 Alternately, if the researchers plan to only include SCD studies, then they can use two other approaches (i.e., multilevel modeling and case-specific effect sizes). 
 The choice between the latter two is related to the measurement of the dependent variable. 
 Where there is interest in variability in effects across cases and over time, researchers should consider multilevel modeling of the raw data series, so long as the outcome is measured consistently across cases. 
@@ -157,7 +157,7 @@ We divide this guide into three major sections:
 (b) multilevel modeling, and 
 (c) case-specific effect size estimation and synthesis to estimate and synthesize effects. 
 Each section is independent; they are not in a particular chronological order, nor do they build upon each other. 
-Rather, we expect those using this guide to follow the decision rules in Figure 1.1 to determine which approach is most appropriate for them, and then reference the corresponding relevant section. 
+Rather, we expect those using this guide to follow the decision rules in Figure \@ref(fig:synthesis-flow-chart) to determine which approach is most appropriate for them, and then reference the corresponding relevant section. 
 
 We divide each section into chapters. 
 Each initial chapter introduces the specific approach to synthesizing results from SCD research, its assumptions, and determination for use.
@@ -166,7 +166,7 @@ This is followed by an illustration where we:
 
 1. Describe the purposes for estimating and synthesizing effects, and the available data.
 
-2. Demonstrate how to use the decision rules in Figure 1.1, along with the additional decision rules specific to the initial section chapter, to arrive at the option being illustrated.
+2. Demonstrate how to use the decision rules in Figure \@ref(fig:synthesis-flow-chart), along with the additional decision rules specific to the initial section chapter, to arrive at the option being illustrated.
 
 3. Present the illustrated data to show how it needs to be structured for the analysis.
 
