@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Introduction to Multilevel Modeling of Raw Participant Data | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Introduction to Multilevel Modeling of Raw Participant Data | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="jepusto/SCD-Methods-Guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Introduction to Multilevel Modeling of Raw Participant Data | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+
+
+<meta name="date" content="2023-11-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="illustrate-D-CES-Btrends.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Synthesis of Single-Case Designs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Authors</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i>Disclaimer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#citation"><i class="fa fa-check"></i>Citation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#datasets"><i class="fa fa-check"></i>Datasets</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Approaches for Estimation and Synthesis of Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#purpose-of-the-methods-guide"><i class="fa fa-check"></i><b>1.2</b> Purpose of the Methods Guide</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#study-quality"><i class="fa fa-check"></i><b>1.3</b> Study Quality</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#selecting-an-approach-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.4</b> Selecting an Approach for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#design-comparable-effect-sizes"><i class="fa fa-check"></i><b>1.5</b> Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#case-specific-effect-sizes"><i class="fa fa-check"></i><b>1.6</b> Case-Specific Effect Sizes</a></li>
+<li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#multilevel-modeling-of-individual-participant-interrupted-time-series-data"><i class="fa fa-check"></i><b>1.7</b> Multilevel Modeling of Individual Participant Interrupted Time-Series Data</a></li>
+<li class="chapter" data-level="1.8" data-path="intro.html"><a href="intro.html#summary-of-options-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.8</b> Summary of Options for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="1.9" data-path="intro.html"><a href="intro.html#limitations-in-selecting-an-approach-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.9</b> Limitations in Selecting an Approach for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="1.10" data-path="intro.html"><a href="intro.html#structure-of-the-methods-guide"><i class="fa fa-check"></i><b>1.10</b> Structure of the Methods Guide</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="D-CES.html"><a href="D-CES.html"><i class="fa fa-check"></i><b>2</b> Introduction to Design-Comparable Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="D-CES.html"><a href="D-CES.html#background-1"><i class="fa fa-check"></i><b>2.1</b> Background</a></li>
+<li class="chapter" data-level="2.2" data-path="D-CES.html"><a href="D-CES.html#when-to-use-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>2.2</b> When to Use Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="2.3" data-path="D-CES.html"><a href="D-CES.html#general-definition-of-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>2.3</b> General Definition of Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="2.4" data-path="D-CES.html"><a href="D-CES.html#what-we-assume-when-we-synthesize-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>2.4</b> What We Assume When We Synthesize Design-Comparable Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="D-CES.html"><a href="D-CES.html#what-we-assume-when-we-estimate-design-comparable-effect-size"><i class="fa fa-check"></i><b>2.4.1</b> What We Assume When We Estimate Design-Comparable Effect Size</a></li>
+<li class="chapter" data-level="2.4.2" data-path="D-CES.html"><a href="D-CES.html#normality"><i class="fa fa-check"></i><b>2.4.2</b> Normality</a></li>
+<li class="chapter" data-level="2.4.3" data-path="D-CES.html"><a href="D-CES.html#homogeneity-of-variance"><i class="fa fa-check"></i><b>2.4.3</b> Homogeneity of Variance</a></li>
+<li class="chapter" data-level="2.4.4" data-path="D-CES.html"><a href="D-CES.html#appropriate-structural-model"><i class="fa fa-check"></i><b>2.4.4</b> Appropriate Structural Model</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="D-CES.html"><a href="D-CES.html#modeling-options-for-design-comparable-effect-size-estimation"><i class="fa fa-check"></i><b>2.5</b> Modeling Options for Design-comparable Effect Size Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html"><i class="fa fa-check"></i><b>3</b> Illustration of Design-Comparable Effect Sizes When No Trends Are Assumed</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies"><i class="fa fa-check"></i><b>3.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="3.2" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#details-of-the-no-trend-models-for-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>3.2</b> Details of the No Trend Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="3.3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies"><i class="fa fa-check"></i><b>3.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-1-multiple-baseline-study-by-case1992improving"><i class="fa fa-check"></i><b>3.3.1</b> Example 1: Multiple Baseline Study by <span class="citation">Case et al. (1992)</span></a></li>
+<li class="chapter" data-level="3.3.2" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-2-multiple-baseline-study-by-peltier2020effects"><i class="fa fa-check"></i><b>3.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Peltier et al. (2020)</span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-3-replicated-abab-design-by-lambert2006effects"><i class="fa fa-check"></i><b>3.3.3</b> Example 3: Replicated ABAB Design by <span class="citation">Lambert et al. (2006)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-group-studies"><i class="fa fa-check"></i><b>3.4</b> Estimating the Design-Comparable Effect Size for the Group Studies</a></li>
+<li class="chapter" data-level="3.5" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#analyzing-the-effect-sizes"><i class="fa fa-check"></i><b>3.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html"><i class="fa fa-check"></i><b>4</b> Illustration of Design-Comparable Effect Sizes When Assuming Only Trends in The Treatment Phases</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies-1"><i class="fa fa-check"></i><b>4.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="4.2" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#details-of-the-models-for-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>4.2</b> Details of the Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="4.3" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies-1"><i class="fa fa-check"></i><b>4.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#example-1-multiple-baselise-study-by-gunning2003psychological"><i class="fa fa-check"></i><b>4.3.1</b> Example 1: Multiple Baselise Study by <span class="citation">Gunning &amp; Espie (2003)</span></a></li>
+<li class="chapter" data-level="4.3.2" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#example-2-multiple-baseline-study-by-delemere2018parentimplemented"><i class="fa fa-check"></i><b>4.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Delemere &amp; Dounavi (2018)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#estimating-the-design-comparable-effect-size-for-the-group-studies-1"><i class="fa fa-check"></i><b>4.4</b> Estimating the Design-Comparable Effect Size for the Group Studies</a></li>
+<li class="chapter" data-level="4.5" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#analyzing-the-effect-sizes-1"><i class="fa fa-check"></i><b>4.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html"><i class="fa fa-check"></i><b>5</b> Illustration of Design-Comparable Effect Sizes When Assuming Trends in Baseline and Different Trends in Treatment</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies-2"><i class="fa fa-check"></i><b>5.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="5.2" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#details-of-the-models-for-design-comparable-effect-sizes-1"><i class="fa fa-check"></i><b>5.2</b> Details of the Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="5.3" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies-2"><i class="fa fa-check"></i><b>5.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#example-1-multiple-probe-study-by-datchuk2016writing"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Multiple Probe Study by @<span class="citation">Datchuk (2016)</span></a></li>
+<li class="chapter" data-level="5.3.2" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#example-2-multiple-baseline-study-by-rodgers2021effects"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Rodgers et al. (2021)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#estimating-the-design-comparable-effect-size-for-the-group-study"><i class="fa fa-check"></i><b>5.4</b> Estimating the Design-Comparable Effect Size for the Group Study</a></li>
+<li class="chapter" data-level="5.5" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#analyzing-the-effect-sizes-2"><i class="fa fa-check"></i><b>5.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="raw-data.html"><a href="raw-data.html"><i class="fa fa-check"></i><b>6</b> Introduction to Multilevel Modeling of Raw Participant Data</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="raw-data.html"><a href="raw-data.html#background-2"><i class="fa fa-check"></i><b>6.1</b> Background</a></li>
+<li class="chapter" data-level="6.2" data-path="raw-data.html"><a href="raw-data.html#when-to-use-multilevel-models-of-the-raw-data"><i class="fa fa-check"></i><b>6.2</b> When to Use Multilevel Models of the Raw Data</a></li>
+<li class="chapter" data-level="6.3" data-path="raw-data.html"><a href="raw-data.html#what-we-assume-with-multilevel-models-of-the-raw-data"><i class="fa fa-check"></i><b>6.3</b> What We Assume with Multilevel Models of the Raw Data</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="raw-data.html"><a href="raw-data.html#within-case-model-assumptions"><i class="fa fa-check"></i><b>6.3.1</b> Within-Case Model Assumptions</a></li>
+<li class="chapter" data-level="6.3.2" data-path="raw-data.html"><a href="raw-data.html#case-similarity-assumptions"><i class="fa fa-check"></i><b>6.3.2</b> Case Similarity Assumptions</a></li>
+<li class="chapter" data-level="6.3.3" data-path="raw-data.html"><a href="raw-data.html#study-similarity-assumptions"><i class="fa fa-check"></i><b>6.3.3</b> Study Similarity Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="raw-data.html"><a href="raw-data.html#comparison-to-other-synthesis-approaches"><i class="fa fa-check"></i><b>6.4</b> Comparison to Other Synthesis Approaches</a></li>
+<li class="chapter" data-level="6.5" data-path="raw-data.html"><a href="raw-data.html#multilevel-modeling-options-for-synthesizing-single-case-research"><i class="fa fa-check"></i><b>6.5</b> Multilevel Modeling Options for Synthesizing Single-Case Research</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="raw-data" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Introduction to Multilevel Modeling of Raw Participant Data<a href="raw-data.html#raw-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter provides background on multilevel modeling of the raw data from studies included in a synthesis of SCDs.
+We describe when this approach is useful, then discuss various types of study outcomes (e.g., continuous, count, and percentage-based), corresponding assumptions (e.g., within-phase trends, normality), and modeling options for synthesizing findings using multilevel models of raw, individual participant data.
+We conclude this chapter by providing a set of decision rules for meta-analysts to use when selecting among the currently available multilevel modeling options for synthesis of SCDs.</p>
+<div id="background-2" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Background<a href="raw-data.html#background-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The use of multilevel models to analyze and synthesize effects from single-case studies is based on the recognition that the raw data often have a hierarchical data structure.
+Initially, two-level models were developed for data from single-case design (SCD) studies with multiple participants, such as multiple baseline designs, where observations are nested within cases <span class="citation">(<a href="#ref-Ferron_Bell_Hess_Rendina-Gobioff_Hibbard_2009">J. M. Ferron et al., 2009</a>; <a href="#ref-Shadish_Kyse_Rindskopf_2013">Shadish et al., 2013</a>; <a href="#ref-van2003combining">Van den Noortgate &amp; Onghena, 2003</a>)</span>.
+To conduct syntheses across multiple studies, researchers have expanded upon these methods to allow for three-level models where individual observations are nested within cases and cases are nested in studies <span class="citation">(<a href="#ref-Moeyaert_Ugille_Ferron_Beretvas_VandenNoortgate_2014">Moeyaert, Ugille, et al., 2014</a>; <a href="#ref-Moeyaert_Ferron_Beretvas_VandenNoortgate_2014">Moeyaert, Ferron, et al., 2014</a>; <a href="#ref-Owens_Ferron_2012">Owens &amp; Ferron, 2012</a>; <a href="#ref-VandenNoortgate2008multilevel">Van den Noortgate &amp; Onghena, 2008</a>)</span>.</p>
+<p>The multilevel modeling approach is valuable when the outcome and time variables are operationalized in a common way across the cases and studies and when the researchers are interested in how treatment effects vary across cases or change over time.
+However, because this approach entails analyzing data from multiple studies using a single multilevel model, it is limited to contexts where a common model is consistent with the logic model for the area of research and the included data.
+In this chapter, we describe when researchers should elect to use multilevel modeling of the raw data and the assumptions involved in using this approach for effect estimation and synthesis.
+We then provide a set of the most common modeling options, along with a decision-making guide for selecting among the various multilevel modeling options (e.g., when there are/not baseline trends).</p>
+</div>
+<div id="when-to-use-multilevel-models-of-the-raw-data" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> When to Use Multilevel Models of the Raw Data<a href="raw-data.html#when-to-use-multilevel-models-of-the-raw-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When researchers are synthesizing the literature in an area, the purpose or aims of the synthesis should guide their methodological choices.
+In some situations, researchers may want to explore the degree to which the effect changes over time.
+Yet, information about variation in intervention effect over time is lost when a single value is used to summarize the effect for a case (as with case-specific effect sizes) or for a full study (as with design-comparable effect sizes).
+Using a multilevel model of the raw data allows researchers to retain and examine this information.
+Researchers should also consider multilevel models if the study’s aim is to document the time it takes for an intervention to have an effect or whether the effects decay over time.
+However, as we detail in the next section, the multilevel modeling approach assumes a common model for all cases in the included studies.
+Thus, multilevel modeling of the raw data is only viable when time is scaled the same way across studies and the outcomes are operationalized either
+(a) in the same way for each study or
+(b) in way that is similar enough to allow the outcome of any study to be equated, scaled, or standardized so that it matches the outcome for the other studies (e.g., converting all latency outcomes to minutes).
+See <span class="citation">Moeyaert et al. (<a href="#ref-Moeyaert_Ugille_Ferron_Beretvas_VandenNoortgate_2013">2013</a>)</span> for more details on standardizing and the efficacy of doing so.</p>
+<p>When the outcome operationalizations are so disparate that the outcomes follow different probability distributions in different studies, it may be unreasonable to standardize the raw data and thus infeasible to use multilevel modeling.
+For example, consider two different study outcomes: “A” is the elapsed time from the beginning of a routine until the first disruptive behavior (latency), and “B” is the number of occurrences of the disruptive behavior during the routine (count).
+Outcome A might follow a normal distribution and Outcome B might follow a Poisson distribution.
+In a situation like this, the statistical models for each outcome are different, and we would not advise the use of a multilevel modeling approach.
+For this guide, we will focus on situations where the outcome is the same across cases and studies.</p>
+</div>
+<div id="what-we-assume-with-multilevel-models-of-the-raw-data" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> What We Assume with Multilevel Models of the Raw Data<a href="raw-data.html#what-we-assume-with-multilevel-models-of-the-raw-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are several assumptions underlying the multilevel modeling approach to the synthesis of single-case data.
+The overarching assumption is that a specific multilevel model describes the process by which the raw data were generated.
+If we have observations nested in cases, and those cases are nested within studies, we assume a specific three-level model.
+The first level represents a model for within-case observations.
+At this level, we make assumptions about the presence or absence of trends within each phase and about the deviations of individual observations from the trend lines (e.g., normally or Poisson distributed).
+Different ways of modeling the distributions allow for different choices in the effect size metric (e.g., standardized mean difference versus log response ratio).
+The second level of the model accounts for variation in the trend lines and effect sizes between cases within a study (e.g., some cases may have a lower baseline average level of responding, or a larger shift in responding with intervention).
+Within the level-2 model, there are also distributional assumptions made, such as assuming the baseline levels for cases are normally distributed around some across-case average baseline level.
+Finally, the third level of the model accounts for variation between studies in the average baseline trend lines and effect sizes.
+Again, the level-3 model is specified with the typical assumption that the parameters of these average study trajectories are normally distributed around the parameters of the overall across-study average trajectory.
+In the following sections, we more fully define and elaborate on the underlying assumptions for multilevel modeling of raw single-case data.</p>
+<div id="within-case-model-assumptions" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Within-Case Model Assumptions<a href="raw-data.html#within-case-model-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The within-case model accounts for the variation in the outcome measurements over time within a case.
+We must model the distribution of the observations around the trend lines, specify the trend line for each phase, and choose the effect size metric on which to quantify changes due to intervention (e.g., changes in level and/or trend between baseline and intervention phases).
+When specifying the distribution of observations around the trend line, we consider several characteristics: distribution shape (e.g., normal versus some non-normal distribution), whether deviations from the trend line are independently distributed or serially dependent, and whether the variance is homogeneous or heterogeneous across the study (e.g., when the baseline phase variance is larger than that of the treatment phase).
+When specifying the trend lines, we consider the presence of trends and whether they are linear or follow some non-linear form.</p>
+<p>When making decisions about modeling the shape of the distribution of observations around the trend line, normality is the simplest and most common assumption <span class="citation">(e.g., <a href="#ref-Declercq_et_al_2019">Declercq et al., 2019</a>; <a href="#ref-Moeyaert_Ferron_Beretvas_VandenNoortgate_2014">Moeyaert, Ferron, et al., 2014</a>; <a href="#ref-van2003combining">Van den Noortgate &amp; Onghena, 2003</a>)</span>, and leads to estimation via linear mixed models (LMMs).
+In some contexts, assuming a normal distribution aligns well with the single-case data.
+However, there are circumstances where it may not be appropriate to make such an assumption.
+For example, when an SCD study outcome is a count variable with a low mean for one of the phases (e.g., frequency of a target behavior having a treatment phase mean at or near zero), a non-normal distribution like a Poisson, quasi-Poisson<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>, or negative binomial may be more appropriate <span class="citation">(e.g., <a href="#ref-Declercq_et_al_2019">Declercq et al., 2019</a>; <a href="#ref-Li_Luo_Baek_Thompson_Lam_2023">Li et al., 2023</a>; <a href="#ref-Shadish_Kyse_Rindskopf_2013">Shadish et al., 2013</a>)</span>.</p>
+<p>In other circumstances, the study outcome may be a percentage (e.g., the percentage of academically engaged time) with a phase mean that is close to the minimum (0%) or maximum (100%).
+When a study phase mean for a percentage variable is near the minimum or maximum value possible, the resulting non-normal distribution might be better approximated with a binomial, quasi-binomial<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>, or beta-binomial distribution <span class="citation">(<a href="#ref-Li_Luo_Baek_Thompson_Lam_2023">Li et al., 2023</a>; <a href="#ref-Shadish_Kyse_Rindskopf_2013">Shadish et al., 2013</a>)</span>.
+Models involving non-normal probability distributions are known as generalized linear mixed models (GLMMs).</p>
+<p>With GLMMs for non-normal distributions, it is common to use other effect size metrics that describe change in percentage or multiplicative terms.
+Outcomes measured as counts and proportions have bounded ranges: counts must be non-negative and proportions must be between zero and one.
+For such outcomes, additive changes may not generalize well because of floor or ceiling effects.
+For instance, a case with an average baseline latency of 20 seconds cannot logically experience a 25 second decrease in latency.
+In contrast, percentage or multiplicative changes are less constrained when outcome scales are bounded.
+Following the previous example, a case with an average baseline latency of 20 seconds can experience a 10% decrease or a 99% decrease in latency or could experience an increase of 2.2 times the baseline level.
+In GLMMs for count outcomes, it is common to specify the model in terms of the natural logarithm of the expected outcome (using a log link function), so intervention effects are quantified as log response ratios.
+In GLMMs for proportion outcomes, it is common to specify the model in terms of the log of the odds of the expected outcome (using a logistic link function), so that intervention effects are quantified as log odds ratios.</p>
+<p>As an example, consider a multiple baseline study by <span class="citation">Ota &amp; DuPaul (<a href="#ref-ota2002Task">2002</a>)</span> that examined the impact of a mathematics software intervention on the percentage of intervals where students were off task.
+Figure <a href="raw-data.html#fig:otadupaul">6.1</a> presents the <span class="citation">Ota &amp; DuPaul (<a href="#ref-ota2002Task">2002</a>)</span> study data.
+During baseline phases, observations appear somewhat normally distributed around the baseline means, with a pooled skewness value near 0 (<em>sk</em> = 0.15) and a pooled kurtosis value near 0 (<em>ku</em> = -0.77).
+However, non-normality is present in the treatment phases because the outcome occurs near the floor (0%) for much of the phase (<em>sk</em> = 1.86; <em>ku</em> = 4.99).</p>
+<div class="figure"><span style="display:block;" id="fig:otadupaul"></span>
+<img src="images/Ota.DuPaul2002.png" alt="Multiple Baseline Design Across Three Participants (Ota &amp; DuPaul, 2002)" width="420" />
+<p class="caption">
+Figure 6.1: Multiple Baseline Design Across Three Participants (Ota &amp; DuPaul, 2002)
+</p>
+</div>
+<p>There is some research suggesting that the simpler multilevel models based on the normality assumption (i.e., LMMs) can produce unbiased average effect estimates and accurate inferences, even when the data are not strictly normal <span class="citation">(<a href="#ref-Declercq_et_al_2019">Declercq et al., 2019</a>; <a href="#ref-Joo_Ferron_2019">Joo &amp; Ferron, 2019</a>)</span>.
+However, at some point the departures can become so severe that methods accounting for non-normality (i.e., GLMMs) appear preferable.
+We expect that future research will better define the point at which researchers should move to these more complex models with non-normal probability distributions.
+We also anticipate that future research will further define the sample sizes (i.e., series lengths, number of cases, number of studies) needed for estimation of the more complex GLMMs.</p>
+<p>The decision about an appropriate distributional model for the outcomes is closely related to the metric on which effect sizes are measured within the model.
+Typical LMMs have parameters that describe additive changes in the outcome.
+As a result, the parameters that describe intervention effects share the same units as the outcome scale.
+For instance, if the outcome variable is a measure of latency in seconds, then an LMM will describe effect sizes in terms of additive shifts in latency, such as an immediate decrease of 20 seconds or (if the model includes linear trends in the treatment phase) a reduction of 4 seconds per intervention session.</p>
+<p>In addition to making decisions about an appropriate shape for the distribution and an appropriate effect size metric, meta-analysts must decide whether the deviations from the trend line are independently distributed or serially dependent.
+If researchers assume serial dependency, they next decide how to model the serial dependence.
+The most commonly assumed model for serial dependence in SCD studies is a first-order autoregressive model.
+There is a long history of debate about the prevalence of serial dependence in single-case data <span class="citation">(see <a href="#ref-matyas1997Serial">Matyas &amp; Greenwood, 1997</a>; <a href="#ref-Shadish_Sullivan_2011">Shadish &amp; Sullivan, 2011</a>)</span>.
+Research suggests that the impact of modeling and not modeling serial dependence depends on whether the statistical model is a single-level model (i.e., a regression for a single-case), a two-level model (e.g., a multilevel model for a single multiple baseline study having four cases), or a three-level model (e.g., a multilevel model of raw data extracted from 10 multiple baseline studies).
+For single-level models where serial dependence is present, a failure to model it does not bias the regression coefficient providing the point estimate of the treatment effect.
+However, not modeling serial dependence in a regression model can bias the standard error (SE), leading to substantial problems when making inferences about the treatment effect <span class="citation">(<a href="#ref-Ferron_2002">J. Ferron, 2002</a>; <a href="#ref-Greenwood_Matyas_1990">Greenwood &amp; Matyas, 1990</a>)</span>.
+Two-level models not accounting for serial dependence have less severe inferential problems than single-level models, but some problems still persist <span class="citation">(<a href="#ref-Ferron_Bell_Hess_Rendina-Gobioff_Hibbard_2009">J. M. Ferron et al., 2009</a>)</span>.
+However, for three-level models, the choice about modeling potential serial dependence appears to have minimal, if any, impact on the treatment effect estimates or inferences <span class="citation">(<a href="#ref-Joo_Ferron_Moeyaert_Beretvas_VandenNoortgate_2019">Joo et al., 2019</a>; <a href="#ref-Petit-Bois_2014">Petit-Bois, 2014</a>)</span>.
+Furthermore, for two- and three-level models, inferential techniques such as robust variance estimation can be applied to provide some protection against mis-specified assumptions regarding error dependence.
+Because we are focusing on the application of multilevel models for synthesizing across studies (three-level models) in this methods guide, we will use the simpler models that assume independence in our illustrations.</p>
+<p>Next, when specifying the model for the distribution of observations around the trend line, the researchers must consider the degree to which the variability in those observations across phases is consistent (homogeneous) or different (heterogeneous).
+In GLMMs of count data, the variance is assumed to depend on the outcome level.
+However, for models assuming a normal distribution, it is typically assumed that the variance does not depend on the outcome level.
+In Figure <a href="raw-data.html#fig:otadupaul">6.1</a>, one might question not only the normality assumption (as previously noted), but also the difference in variance between the two phases (i.e., less variance in the treatment phases than the baseline phases).
+When using models that assume a normal distribution of the outcomes, researchers can specify either that the variance is equal across phases or that the variance differs between the phases.
+The simpler homogeneous variance assumption may be a reasonable choice.
+Simulation research has demonstrated that when the Kenward Roger method was used for inference, the simpler model provided unbiased treatment effect estimates and accurate confidence intervals even when the treatment phase variance was up to four times that of the baseline variance <span class="citation">(<a href="#ref-Joo_Ferron_Moeyaert_Beretvas_VandenNoortgate_2019">Joo et al., 2019</a>)</span>.
+We anticipate that future research will help to provide more concrete guidance as to when changes in variance are substantial enough to warrant use of more complex models that assume heterogeneity.</p>
+<p>Finally, the within-case model specifies the form of the growth trajectory for each phase.
+The simplest trajectory is one without trend, but researchers can specify linear or non-linear trends within the multilevel modeling framework <span class="citation">(e.g., <a href="#ref-Hembry_Bunuan_Beretvas_Ferron_VandenNoortgate_2015">Hembry et al., 2015</a>; <a href="#ref-Rindskopf_2014">Rindskopf, 2014</a>; <a href="#ref-Swan_Pustejovsky_2018">Swan &amp; Pustejovsky, 2018</a>)</span>.
+However, because the resulting effect estimates can vary substantially based on the modeling of trends, we encourage researchers to think carefully about the participants, outcomes, and contexts of the studies they are synthesizing.
+We also encourage researchers to visually analyze the data from each included SCD study. If visual inspection of the data reveals patterns generally consistent with expectations (e.g., the logic model and visual analysis both suggest baseline and treatment phase trends), then the researcher should specify the multilevel model to be consistent with the logic model and the raw data.
+Alternatively, when there is ambiguity about the appropriate model for the growth trajectory for the baseline and/or treatment phase, we suggest researchers estimate and contrast alternative plausible models to document the sensitivity of the effect estimate and inferences relative to the specification of the growth trajectory.</p>
+</div>
+<div id="case-similarity-assumptions" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Case Similarity Assumptions<a href="raw-data.html#case-similarity-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>At level-2 of the multilevel model, we make assumptions about case similarity within a study.
+Generally, if we assume that the outcome for one case follows a normal distribution, we assume that the outcome for all cases within the study follows a normal distribution.
+Similarly, if we assume that the level-1 errors for one case are independent and homogenous, we assume that the errors for all cases are independent and homogeneous; and if we assume that trends are absent within a case, we assume a within-case model without trends is appropriate for all cases.</p>
+<p>In addition to assuming that the within-case model is appropriate for generalization across all cases, researchers must make assumptions related to the within-case model parameters.
+Researchers must decide which parameters in the within-case model are the same for all cases and which parameters vary randomly across cases.
+Typically, the within-case variance parameters are assumed to be the same for each case (e.g., the session-to-session outcome variation for one case equals the session-to-session variation in the outcome for any other case).
+In contrast, we typically assume that the regression coefficients (e.g., the change in level and slope parameters that index the treatment effect) vary from case to case and that these regression coefficients are normally distributed across the cases.
+Indeed, if the aims of the synthesis include investigating heterogeneity of treatment effects across participants, then using a model in which the regression coefficients vary across cases may be critical for addressing research questions of interest.
+Finally, for the regression coefficients that vary, we must consider whether they also covary.
+For example, if cases with lower baseline levels tend to show smaller treatment effects, there would be covariation between the coefficients. It is possible to specify multilevel models that assume covariation and models that do not.</p>
+<p>We encourage researchers to consider the plausibility of the case similarity assumptions prior to jumping into a multilevel modeling application.
+At this time, methodological research is limited regarding the degree to which the case similarity assumptions can be violated, and thus it is not clear when more complex models and estimation approaches are preferable.
+<span class="citation">Baek &amp; Ferron (<a href="#ref-baek_Ferron_2020">2020</a>)</span> provide a method for relaxing the assumption that the within-case variance is constant across cases within a study.
+They also show that differences in the within-case variance can often be tolerated by models that assume homogeneity.
+For the illustrations in this methods guide, we assume that within-case variances are equal across cases, and that the regression coefficients that vary follow normal distributions.
+We anticipate that future research will continue to develop alternatives and guidance for contexts where these assumptions are not tenable.</p>
+</div>
+<div id="study-similarity-assumptions" class="section level3 hasAnchor" number="6.3.3">
+<h3><span class="header-section-number">6.3.3</span> Study Similarity Assumptions<a href="raw-data.html#study-similarity-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>At the third level of the multilevel model, we make assumptions about the similarity of the studies regarding the parameters at both of the first and second levels of the model.
+In terms of the model for observations nested within cases, we need to make assumptions about the similarity of distributions and variances.
+Typically, multilevel models and GLMMs assume that all outcomes from all studies follow a single distributional family (e.g., normal, negative binomial, beta-binomial).
+Furthermore, for linear mixed models, we typically assume that the session-to-session variation in the outcome is constant not only across the cases within each study, but also across all cases in all included studies.
+Analogously, for GLMMs involving distributions with dispersion parameters (such as the quasi-Poisson or negative binomial), we typically assume that the dispersion is constant across all cases in all included studies.</p>
+<p>Regarding the regression coefficients of the case-specific model, if we assume the baseline level varies randomly across cases within one study, we assume that the baseline levels vary randomly across cases in all studies.
+Similarly, if we assume that the treatment effect varies randomly across cases in one study, we assume that the treatment effect varies randomly across cases in all studies, and if covariation is assumed among the random effects in one study, covariation is assumed for all studies.</p>
+<p>In addition to assuming that the general between-case model is appropriate for generalization across all studies, researchers must make assumptions related to the between-case model parameters (i.e., which parameters are the same for all studies and which parameters vary randomly across studies).
+Typically, the between-case variance parameters are assumed to be the same for each study. Consequently, there is an assumption of homogeneity across studies in the variation (and covariation) between cases.
+In contrast, we typically assume that the regression coefficients (e.g., the across case average change in level and slope parameters) vary from study to study and that these coefficients are normally distributed across the studies.</p>
+<p>As with the previous sets of assumptions, we encourage researchers to consider the plausibility of the study similarity assumptions prior to applying a multilevel model.
+For example, if the participant sampling methods for one study are markedly different from the sampling methods of another study (e.g., homogeneous versus heterogeneous purposive sampling), the assumption of equal between-case variance has likely been violated.
+Similarly, if studies use heterogeneous approaches to measuring outcomes, such as widely varying observation session lengths, the assumption of common within-case variance may be implausible.
+Hopefully, future research will provide guidance about the degree to which multilevel models can tolerate some violation of these assumptions.</p>
+</div>
+</div>
+<div id="comparison-to-other-synthesis-approaches" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Comparison to Other Synthesis Approaches<a href="raw-data.html#comparison-to-other-synthesis-approaches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Compared to the other broad approaches to synthesis of single-case studies, the assumptions involved in the raw data synthesis approach have some commonalities and some unique features.
+Both the raw data synthesis approach and design-comparable effect size syntheses are based on multilevel modeling, as the latter entails specifying a separate multilevel model for the data from each study to estimate a study-level summary effect size on a scale-free metric.
+The resulting design-comparable effect size can then be compared to the effect size from a between-group design.
+Thus, both approaches require making assumptions about case similarity within a study.
+Further, we have recommended using a common model specification when estimating design-comparable effect sizes, similar to how the raw data synthesis approach requires specifying a model that captures the form of time trends across all included studies.
+However, synthesis of design-comparable effect sizes does not involve study similarity assumptions (such as homogeneity of outcome variance) to the same extent as the raw data synthesis approach.
+Of course, along with additional assumptions, the raw data synthesis model also provides richer descriptions of the distribution of and variation in effects—not only variation across studies, but also variation across cases within studies and variation over time.</p>
+<p>In contrast to the design-comparable effect size approach and the raw data synthesis approach, syntheses of case-specific effect size indices do not entail as extensive a set of assumptions about case similarity.
+Rather, the case-specific effect size approach avoids making case similarity assumptions about regression coefficients or session-to-session outcome variation, and instead focuses on estimating a summary effect size index for each case.
+Because no case similarity assumptions are made, it is more difficult to accommodate complex data features such as time trends and autocorrelation than it is with multilevel modeling.
+Thus, synthesis using case-specific effect size indices loses some flexibility but gains a degree of simplicity by avoiding the need to make so many assumptions.</p>
+</div>
+<div id="multilevel-modeling-options-for-synthesizing-single-case-research" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Multilevel Modeling Options for Synthesizing Single-Case Research<a href="raw-data.html#multilevel-modeling-options-for-synthesizing-single-case-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We summarize in this section the decisions to be made when choosing a specific multilevel model for synthesizing single-case research.
+For the studies included in the synthesis, we suggest that meta-analysts first attend to the operationalization of the outcome variable(s).
+For multilevel modeling of the raw data across studies, recall that outcomes must be operationalized in the same way, or in a manner similar enough so that all included study outcomes can be transformed or standardized so they consistently use the same unit of measurement.
+In considering the outcome, it is also important to determine if assuming a normal distribution is reasonable.
+If assuming normality is reasonable, the meta-analyst can turn to LMMs for estimation.
+However, if it is not reasonable to assume normality (as with some count-based variables), then the meta-analyst should consider GLMMs.
+Additionally, when using GLMM for non-normal data, they must consider the most appropriate probability distribution for modeling the outcome (e.g., Poison, quasi-Poisson, or negative binomial).</p>
+<p>Regardless of whether the meta-analyst is assuming normality and working with a LMM or assuming some non-normal distribution and working with a GLMM, the next major decision to make is whether to model trends.
+We suggest researchers base their decision on:
+(a) the logic model underlying the research to be synthesized, considering what is known about the participants, outcome, intervention, and setting; and
+(b) visual analysis of the data from each of the studies being synthesized.</p>
+<p>Regardless of whether trends are included, there are several further considerations they must make to fully define the variances and covariances that will be estimated.
+For example, they will need to specify the deviations of observations from the trend line as either autocorrelated or independent.
+They will also need to specify whether the variance in the deviations from the trend line remains constant or changes over the course of the study.
+Finally, beyond the within-case assumptions of variability, the meta-analyst must determine if it is reasonable to assume homogeneity of within-case variance across all cases in all included studies, and whether between-case variance terms are homogeneous across studies.</p>
+<p>If the meta-analyst specifies the model to include trends, their list of considerations is slightly longer.
+Not only do they consider the assumptions about the variances and covariances, as done with a model assuming no trends, but the meta-analyst must now address questions about the trends and measurement of time.
+More specifically, they must make decisions about whether there are trends in either or both baseline and treatment phases, whether the intervention affects the trend, and whether the trends are linear or nonlinear.
+Additionally, they must make assumptions about the time variable.
+For example, in one study context it may be assumed that slopes are attributed to maturation over time and the time variable is measured in calendar days.
+Conversely, in another study context, the researchers may attribute the within-case treatment phase slope to time exposed to the intervention, and the time variable may be measured on a scale defined as “sessions.”
+Because meta-analysts must use the same multilevel model when conducting a synthesis of all included studies, they need to be consistent in how they approach the definition of the time variable.
+Finally, meta-analysts must determine when the effect should be indexed in the treatment phase, leading to decisions about how to center the time variable in the multilevel model.
+When centering or rescaling a time variable, meta-analysts effectively move the zero on the time scale so that it corresponds to the time at which they want to estimate the treatment effect.
+For example, a researcher who wants to estimate the immediate intervention effect will center time so that zero corresponds to the first treatment phase observation, whereas a researcher who wants to estimate the effect five sessions into intervention would center time so that zero corresponds to the fifth treatment phase observation.</p>
+<p>In Figure <a href="raw-data.html#fig:mlmapproach">6.2</a>, we arrange these considerations into a series of decision rules that researchers can use to select between LMMs and GLMMs, and models with and without trends.
+Recent methodological research has started to develop more concrete guidance on the most appropriate modeling and estimation choices in contexts where non-normality is assumed and GLMMs are more appropriate <span class="citation">(<a href="#ref-Li_Luo_Baek_Thompson_Lam_2023">Li et al., 2023</a>)</span>.
+However, for the purposes of this guide, we illustrate the application of multilevel models for study contexts where it is reasonable to assume normality and thus LMMs are appropriate.
+We first consider the application of LMMs when expecting no trends (Chapter 7), and then address the more complex situation when anticipating trends (Chapter 8).</p>
+<div class="figure"><span style="display:block;" id="fig:mlmapproach"></span>
+<img src="images/flowchart_MLMApproach.png" alt="Flow Chart for the Selection of Multilevel Modeling Approach" width="1176" />
+<p class="caption">
+Figure 6.2: Flow Chart for the Selection of Multilevel Modeling Approach
+</p>
+</div>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-baek_Ferron_2020" class="csl-entry">
+Baek, E., &amp; Ferron, J. J. M. (2020). Modeling heterogeneity of the level-1 error covariance matrix in multilevel models for single-case data. <em>Methodology</em>, <em>16</em>(2), 166–185. <a href="https://doi.org/10.5964/meth.2817">https://doi.org/10.5964/meth.2817</a>
+</div>
+<div id="ref-Declercq_et_al_2019" class="csl-entry">
+Declercq, L., Jamshidi, L., Fernández-Castilla, B., Beretvas, S. N., Moeyaert, M., Ferron, J. M., &amp; Van den Noortgate, W. (2019). Analysis of single-case experimental count data using the linear mixed effects model: A simulation study. <em>Behavior Research Methods</em>, <em>51</em>(6), 2477–2497. <a href="https://doi.org/10.3758/s13428-018-1091-y">https://doi.org/10.3758/s13428-018-1091-y</a>
+</div>
+<div id="ref-Ferron_2002" class="csl-entry">
+Ferron, J. (2002). Reconsidering the use of the general linear model with single-case data. <em>Behavior Research Methods, Instruments, &amp; Computers</em>, <em>34</em>(3), 324–331. <a href="https://doi.org/10.3758/BF03195459">https://doi.org/10.3758/BF03195459</a>
+</div>
+<div id="ref-Ferron_Bell_Hess_Rendina-Gobioff_Hibbard_2009" class="csl-entry">
+Ferron, J. M., Bell, B. A., Hess, M. R., Rendina-Gobioff, G., &amp; Hibbard, S. T. (2009). Making treatment effect inferences from multiple-baseline data: The utility of multilevel modeling approaches. <em>Behavior Research Methods</em>, <em>41</em>(2), 372–384. <a href="https://doi.org/10.3758/BRM.41.2.372">https://doi.org/10.3758/BRM.41.2.372</a>
+</div>
+<div id="ref-Greenwood_Matyas_1990" class="csl-entry">
+Greenwood, K. M., &amp; Matyas, T. A. (1990). Problems with the application of interrupted time series analysis for brief single-subject data. <em>Behavioral Assessment</em>, <em>12</em>(3), 355–370.
+</div>
+<div id="ref-Hembry_Bunuan_Beretvas_Ferron_VandenNoortgate_2015" class="csl-entry">
+Hembry, I., Bunuan, R., Beretvas, S. N., Ferron, J. M., &amp; Van den Noortgate, W. (2015). Estimation of a nonlinear intervention phase trajectory for multiple-baseline design data. <em>The Journal of Experimental Education</em>, <em>83</em>(4), 514–546. <a href="https://doi.org/10.1080/00220973.2014.907231">https://doi.org/10.1080/00220973.2014.907231</a>
+</div>
+<div id="ref-Joo_Ferron_2019" class="csl-entry">
+Joo, S.-H., &amp; Ferron, J. M. (2019). Application of the within- and between-series estimators to non-normal multiple-baseline data: Maximum likelihood and bayesian approaches. <em>Multivariate Behavioral Research</em>, <em>54</em>(5), 666–689. <a href="https://doi.org/10.1080/00273171.2018.1564877">https://doi.org/10.1080/00273171.2018.1564877</a>
+</div>
+<div id="ref-Joo_Ferron_Moeyaert_Beretvas_VandenNoortgate_2019" class="csl-entry">
+Joo, S.-H., Ferron, J. M., Moeyaert, M., Beretvas, S. N., &amp; Van den Noortgate, W. (2019). Approaches for specifying the level-1 error structure when synthesizing single-case data. <em>The Journal of Experimental Education</em>, <em>87</em>(1), 55–74. <a href="https://doi.org/10.1080/00220973.2017.1409181">https://doi.org/10.1080/00220973.2017.1409181</a>
+</div>
+<div id="ref-Li_Luo_Baek_Thompson_Lam_2023" class="csl-entry">
+Li, H., Luo, W., Baek, E., Thompson, C. G., &amp; Lam, K. H. (2023). Multilevel modeling in single-case studies with count and proportion data: A demonstration and evaluation. <em>Psychological Methods</em>, No Pagination Specified–No Pagination Specified. <a href="https://doi.org/10.1037/met0000607">https://doi.org/10.1037/met0000607</a>
+</div>
+<div id="ref-matyas1997Serial" class="csl-entry">
+Matyas, T. A., &amp; Greenwood, K. M. (1997). Serial dependency in single case time series. In <em>Design and analysis of single-case research</em> (pp. 215–243). Erlbaum.
+</div>
+<div id="ref-Moeyaert_Ferron_Beretvas_VandenNoortgate_2014" class="csl-entry">
+Moeyaert, M., Ferron, J. M., Beretvas, S. N., &amp; Van den Noortgate, W. (2014). From a single-level analysis to a multilevel analysis of single-case experimental designs. <em>Journal of School Psychology</em>, <em>52</em>(2), 191–211. <a href="https://doi.org/10.1016/j.jsp.2013.11.003">https://doi.org/10.1016/j.jsp.2013.11.003</a>
+</div>
+<div id="ref-Moeyaert_Ugille_Ferron_Beretvas_VandenNoortgate_2014" class="csl-entry">
+Moeyaert, M., Ugille, M., Ferron, J. M., Beretvas, S. N., &amp; Noortgate, W. V. den. (2014). Three-level analysis of single-case experimental data: Empirical validation. <em>The Journal of Experimental Education</em>, <em>82</em>(1), 1–21. <a href="https://doi.org/10.1080/00220973.2012.745470">https://doi.org/10.1080/00220973.2012.745470</a>
+</div>
+<div id="ref-Moeyaert_Ugille_Ferron_Beretvas_VandenNoortgate_2013" class="csl-entry">
+Moeyaert, M., Ugille, M., Ferron, J. M., Beretvas, S. N., &amp; Van den Noortgate, W. (2013). The three-level synthesis of standardized single-subject experimental data: A monte carlo simulation study. <em>Multivariate Behavioral Research</em>, <em>48</em>(5), 719–748. <a href="https://doi.org/10.1080/00273171.2013.816621">https://doi.org/10.1080/00273171.2013.816621</a>
+</div>
+<div id="ref-ota2002Task" class="csl-entry">
+Ota, K. R., &amp; DuPaul, G. J. (2002). Task engagement and mathematics performance in children with attention-deficit hyperactivity disorder: <span>Effects</span> of supplemental computer instruction. <em>School Psychology Quarterly</em>, <em>17</em>(3), 242–257. <a href="https://doi.org/10.1521/scpq.17.3.242.20881">https://doi.org/10.1521/scpq.17.3.242.20881</a>
+</div>
+<div id="ref-Owens_Ferron_2012" class="csl-entry">
+Owens, C. M., &amp; Ferron, J. M. (2012). Synthesizing single-case studies: A monte carlo examination of a three-level meta-analytic model. <em>Behavior Research Methods</em>, <em>44</em>(3), 795–805. <a href="https://doi.org/10.3758/s13428-011-0180-y">https://doi.org/10.3758/s13428-011-0180-y</a>
+</div>
+<div id="ref-Petit-Bois_2014" class="csl-entry">
+Petit-Bois, M. (2014). <em>A monte carlo study: The consequences of the misspecification of the level-1 error structure</em> [PhD thesis]. <a href="https://scholarcommons.usf.edu/etd/5341">https://scholarcommons.usf.edu/etd/5341</a>
+</div>
+<div id="ref-Rindskopf_2014" class="csl-entry">
+Rindskopf, D. (2014). Nonlinear bayesian analysis for single case designs. <em>Journal of School Psychology</em>, <em>52</em>(2), 179–189. <a href="https://doi.org/10.1016/j.jsp.2013.12.003">https://doi.org/10.1016/j.jsp.2013.12.003</a>
+</div>
+<div id="ref-Shadish_Kyse_Rindskopf_2013" class="csl-entry">
+Shadish, W. R., Kyse, E. N., &amp; Rindskopf, D. M. (2013). Analyzing data from single-case designs using multilevel models: New applications and some agenda items for future research. <em>Psychological Methods</em>, <em>18</em>(3), 385–405. <a href="https://doi.org/10.1037/a0032964">https://doi.org/10.1037/a0032964</a>
+</div>
+<div id="ref-Shadish_Sullivan_2011" class="csl-entry">
+Shadish, W. R., &amp; Sullivan, K. J. (2011). Characteristics of single-case designs used to assess intervention effects in 2008. <em>Behavior Research Methods</em>, <em>43</em>(4), 971–980. <a href="https://doi.org/10.3758/s13428-011-0111-y">https://doi.org/10.3758/s13428-011-0111-y</a>
+</div>
+<div id="ref-Swan_Pustejovsky_2018" class="csl-entry">
+Swan, D. M., &amp; Pustejovsky, J. E. (2018). A gradual effects model for single-case designs. <em>Multivariate Behavioral Research</em>, <em>53</em>(4), 574–593. <a href="https://doi.org/10.1080/00273171.2018.1466681">https://doi.org/10.1080/00273171.2018.1466681</a>
+</div>
+<div id="ref-van2003combining" class="csl-entry">
+Van den Noortgate, W., &amp; Onghena, P. (2003). Combining single-case experimental data using hierarchical linear models. <em>School Psychology Quarterly</em>, <em>18</em>(3), 325. <a href="https://doi.org/10.1521/scpq.18.3.325.22577">https://doi.org/10.1521/scpq.18.3.325.22577</a>
+</div>
+<div id="ref-VandenNoortgate2008multilevel" class="csl-entry">
+Van den Noortgate, W., &amp; Onghena, P. (2008). A multilevel meta-analysis of single-subject experimental design studies. <em>Evidence-Based Communication Assessment and Intervention</em>, <em>2</em>(3), 142–151. <a href="https://doi.org/10.1080/17489530802505362">https://doi.org/10.1080/17489530802505362</a>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="4">
+<li id="fn4"><p>Strictly speaking, the quasi-Poisson is not a true probability distribution but rather only an approximation. However, it functions in effectively the same way as probability distributions such as the Poisson or negative binomial when developing a statistical model for count outcomes.<a href="raw-data.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Similar to the quasi-Poisson, the quasi-binomial is not a true probability distribution but rather only an approximation.<a href="raw-data.html#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="illustrate-D-CES-Btrends.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["SCD-Methods-Guide.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
