@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Illustration of Design-Comparable Effect Sizes When Assuming Only Trends in The Treatment Phases | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Illustration of Design-Comparable Effect Sizes When Assuming Only Trends in The Treatment Phases | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
   <meta property="og:type" content="book" />
@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="illustrate-D-CES.html"/>
-<link rel="next" href="references.html"/>
+<link rel="next" href="illustrate-D-CES-Btrends.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -56,10 +56,6 @@
 
 
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -158,6 +154,18 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#estimating-the-design-comparable-effect-size-for-the-group-studies-1"><i class="fa fa-check"></i><b>4.4</b> Estimating the Design-Comparable Effect Size for the Group Studies</a></li>
 <li class="chapter" data-level="4.5" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#analyzing-the-effect-sizes-1"><i class="fa fa-check"></i><b>4.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html"><i class="fa fa-check"></i><b>5</b> Illustration of Design-Comparable Effect Sizes When Assuming Trends in Baseline and Different Trends in Treatment</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies-2"><i class="fa fa-check"></i><b>5.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="5.2" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#details-of-the-models-for-design-comparable-effect-sizes-1"><i class="fa fa-check"></i><b>5.2</b> Details of the Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="5.3" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies-2"><i class="fa fa-check"></i><b>5.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#example-1-multiple-probe-study-by-datchuk2016writing"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Multiple Probe Study by @<span class="citation">Datchuk (2016)</span></a></li>
+<li class="chapter" data-level="5.3.2" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#example-2-multiple-baseline-study-by-rodgers2021effects"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Rodgers et al. (2021)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#estimating-the-design-comparable-effect-size-for-the-group-study"><i class="fa fa-check"></i><b>5.4</b> Estimating the Design-Comparable Effect Size for the Group Study</a></li>
+<li class="chapter" data-level="5.5" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#analyzing-the-effect-sizes-2"><i class="fa fa-check"></i><b>5.5</b> Analyzing the Effect Sizes</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -325,9 +333,9 @@ Figure 4.9: Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.
 <p>For this data set, the a priori identified model provides trajectories that fit the data reasonably well, and thus we proceed to the <em>Effect size</em> tab (Figure <a href="illustrate-D-CES-Ttrends.html#fig:Gunning-2003-ES">4.10</a>). There are two sliders in the <em>Hypothetical experimental parameters</em> section above the effect size estimates output: <em>Initial treatment time</em> and <em>Follow-up time</em>. The numbers on each slider refer to the sessions or time points in the data series. Although the app populates times automatically, researchers can manipulate them manually to obtain an effect size estimate at a desired point in time. For models with trends in the baseline phase, it matters where we set the initial time. However, for models without baseline trends, only the distance between the two slider values matters.</p>
 <p>We imagine a relatively typical SCD study with a baseline of 5; therefore, we use the sliding scale to set the <em>Initial treatment time</em> for the <span class="citation">Gunning &amp; Espie (<a href="#ref-gunning2003Psychological">2003</a>)</span> study to 5 to represent the last session before initiation of the treatment. Next, we estimate the treatment effect 10 observations into treatment and move the <em>Follow-up time</em> slider to the 15th observation. Given these Model 4 specifications for <span class="citation">Gunning &amp; Espie (<a href="#ref-gunning2003Psychological">2003</a>)</span>, we find that the estimated between-case standardized mean difference 10 observations into treatment is -1.12 with a standard error (SE) of 0.34 and <span class="math inline">\(95\%\)</span> confidence interval (CI) [-1.80, -0.45].</p>
 <div class="figure"><span style="display:block;" id="fig:Gunning-2003-ES"></span>
-<img src="images/app.ES.model4_GunningEspie2003.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 4 Specification for Gunning &amp; Espie (2003)" width="75%" height="75%" />
+<img src="images/app.ES.model4_GunningEspie2003.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 4 Estimate for Gunning &amp; Espie (2003)" width="75%" height="75%" />
 <p class="caption">
-Figure 4.10: Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 4 Specification for Gunning &amp; Espie (2003)
+Figure 4.10: Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 4 Estimate for Gunning &amp; Espie (2003)
 </p>
 </div>
 <p>Now, if we lacked confidence in the a priori decision to select Model 4 and wanted to explore the Model 3 fit, we can re-run the study data without returning to the <em>Load</em> tab. Instead, we go directly to the <em>Model</em> tab to change our specification. To obtain Model 3, we remove (uncheck) <em>change in level</em> and <em>change in linear trend</em> as random effects, constraining the change in level and change in trend from baseline to treatment to be the same for each case. For Model 3, the estimated effect size is -1.10 with an SE of 0.17 and <span class="math inline">\(95\%\)</span> CI [-1.43, -0.76]. In this case, for the <span class="citation">Gunning &amp; Espie (<a href="#ref-gunning2003Psychological">2003</a>)</span> study, the effect size estimates for both Models are similar. However, with the more restrictive assumptions of Model 3, the CI is narrower. If we had used a model that allowed a change in level to vary randomly, but required a fixed slope change, the estimated effect size would be -1.07 with an SE of 0.28 and 95% CI [-1.63, -0.51].</p>
@@ -578,7 +586,7 @@ What Works Clearinghouse. (2020b). <em>What <span>Works Clearinghouse Standards 
         </div>
       </div>
 <a href="illustrate-D-CES.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="illustrate-D-CES-Btrends.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

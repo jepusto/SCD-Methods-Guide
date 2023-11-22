@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Illustration of Design-Comparable Effect Sizes When Assuming Trends in Baseline and Different Trends in Treatment | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Illustration of Design-Comparable Effect Sizes When Assuming Trends in Baseline and Different Trends in Treatment | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="jepusto/SCD-Methods-Guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Illustration of Design-Comparable Effect Sizes When Assuming Trends in Baseline and Different Trends in Treatment | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+
+
+<meta name="date" content="2023-11-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="illustrate-D-CES-Ttrends.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Synthesis of Single-Case Designs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Authors</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i>Disclaimer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#citation"><i class="fa fa-check"></i>Citation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#datasets"><i class="fa fa-check"></i>Datasets</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Approaches for Estimation and Synthesis of Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#purpose-of-the-methods-guide"><i class="fa fa-check"></i><b>1.2</b> Purpose of the Methods Guide</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#study-quality"><i class="fa fa-check"></i><b>1.3</b> Study Quality</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#selecting-an-approach-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.4</b> Selecting an Approach for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#design-comparable-effect-sizes"><i class="fa fa-check"></i><b>1.5</b> Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#case-specific-effect-sizes"><i class="fa fa-check"></i><b>1.6</b> Case-Specific Effect Sizes</a></li>
+<li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#multilevel-modeling-of-individual-participant-interrupted-time-series-data"><i class="fa fa-check"></i><b>1.7</b> Multilevel Modeling of Individual Participant Interrupted Time-Series Data</a></li>
+<li class="chapter" data-level="1.8" data-path="intro.html"><a href="intro.html#summary-of-options-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.8</b> Summary of Options for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="1.9" data-path="intro.html"><a href="intro.html#limitations-in-selecting-an-approach-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.9</b> Limitations in Selecting an Approach for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="1.10" data-path="intro.html"><a href="intro.html#structure-of-the-methods-guide"><i class="fa fa-check"></i><b>1.10</b> Structure of the Methods Guide</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="D-CES.html"><a href="D-CES.html"><i class="fa fa-check"></i><b>2</b> Introduction to Design-Comparable Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="D-CES.html"><a href="D-CES.html#background-1"><i class="fa fa-check"></i><b>2.1</b> Background</a></li>
+<li class="chapter" data-level="2.2" data-path="D-CES.html"><a href="D-CES.html#when-to-use-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>2.2</b> When to Use Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="2.3" data-path="D-CES.html"><a href="D-CES.html#general-definition-of-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>2.3</b> General Definition of Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="2.4" data-path="D-CES.html"><a href="D-CES.html#what-we-assume-when-we-synthesize-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>2.4</b> What We Assume When We Synthesize Design-Comparable Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="D-CES.html"><a href="D-CES.html#what-we-assume-when-we-estimate-design-comparable-effect-size"><i class="fa fa-check"></i><b>2.4.1</b> What We Assume When We Estimate Design-Comparable Effect Size</a></li>
+<li class="chapter" data-level="2.4.2" data-path="D-CES.html"><a href="D-CES.html#normality"><i class="fa fa-check"></i><b>2.4.2</b> Normality</a></li>
+<li class="chapter" data-level="2.4.3" data-path="D-CES.html"><a href="D-CES.html#homogeneity-of-variance"><i class="fa fa-check"></i><b>2.4.3</b> Homogeneity of Variance</a></li>
+<li class="chapter" data-level="2.4.4" data-path="D-CES.html"><a href="D-CES.html#appropriate-structural-model"><i class="fa fa-check"></i><b>2.4.4</b> Appropriate Structural Model</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="D-CES.html"><a href="D-CES.html#modeling-options-for-design-comparable-effect-size-estimation"><i class="fa fa-check"></i><b>2.5</b> Modeling Options for Design-comparable Effect Size Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html"><i class="fa fa-check"></i><b>3</b> Illustration of Design-Comparable Effect Sizes When No Trends Are Assumed</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies"><i class="fa fa-check"></i><b>3.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="3.2" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#details-of-the-no-trend-models-for-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>3.2</b> Details of the No Trend Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="3.3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies"><i class="fa fa-check"></i><b>3.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-1-multiple-baseline-study-by-case1992improving"><i class="fa fa-check"></i><b>3.3.1</b> Example 1: Multiple Baseline Study by <span class="citation">Case et al. (1992)</span></a></li>
+<li class="chapter" data-level="3.3.2" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-2-multiple-baseline-study-by-peltier2020effects"><i class="fa fa-check"></i><b>3.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Peltier et al. (2020)</span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-3-replicated-abab-design-by-lambert2006effects"><i class="fa fa-check"></i><b>3.3.3</b> Example 3: Replicated ABAB Design by <span class="citation">Lambert et al. (2006)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-group-studies"><i class="fa fa-check"></i><b>3.4</b> Estimating the Design-Comparable Effect Size for the Group Studies</a></li>
+<li class="chapter" data-level="3.5" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#analyzing-the-effect-sizes"><i class="fa fa-check"></i><b>3.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html"><i class="fa fa-check"></i><b>4</b> Illustration of Design-Comparable Effect Sizes When Assuming Only Trends in The Treatment Phases</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies-1"><i class="fa fa-check"></i><b>4.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="4.2" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#details-of-the-models-for-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>4.2</b> Details of the Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="4.3" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies-1"><i class="fa fa-check"></i><b>4.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#example-1-multiple-baselise-study-by-gunning2003psychological"><i class="fa fa-check"></i><b>4.3.1</b> Example 1: Multiple Baselise Study by <span class="citation">Gunning &amp; Espie (2003)</span></a></li>
+<li class="chapter" data-level="4.3.2" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#example-2-multiple-baseline-study-by-delemere2018parentimplemented"><i class="fa fa-check"></i><b>4.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Delemere &amp; Dounavi (2018)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#estimating-the-design-comparable-effect-size-for-the-group-studies-1"><i class="fa fa-check"></i><b>4.4</b> Estimating the Design-Comparable Effect Size for the Group Studies</a></li>
+<li class="chapter" data-level="4.5" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#analyzing-the-effect-sizes-1"><i class="fa fa-check"></i><b>4.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html"><i class="fa fa-check"></i><b>5</b> Illustration of Design-Comparable Effect Sizes When Assuming Trends in Baseline and Different Trends in Treatment</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies-2"><i class="fa fa-check"></i><b>5.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="5.2" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#details-of-the-models-for-design-comparable-effect-sizes-1"><i class="fa fa-check"></i><b>5.2</b> Details of the Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="5.3" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies-2"><i class="fa fa-check"></i><b>5.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#example-1-multiple-probe-study-by-datchuk2016writing"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Multiple Probe Study by @<span class="citation">Datchuk (2016)</span></a></li>
+<li class="chapter" data-level="5.3.2" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#example-2-multiple-baseline-study-by-rodgers2021effects"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Rodgers et al. (2021)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#estimating-the-design-comparable-effect-size-for-the-group-study"><i class="fa fa-check"></i><b>5.4</b> Estimating the Design-Comparable Effect Size for the Group Study</a></li>
+<li class="chapter" data-level="5.5" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#analyzing-the-effect-sizes-2"><i class="fa fa-check"></i><b>5.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="illustrate-D-CES-Btrends" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Illustration of Design-Comparable Effect Sizes When Assuming Trends in Baseline and Different Trends in Treatment<a href="illustrate-D-CES-Btrends.html#illustrate-D-CES-Btrends" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Chapter 5 illustrates the computation of design-comparable effect sizes in contexts where one assumes time trends in baseline and that the treatment will lead to changes in both the level and slope of the time trends. We demonstrate the calculations using data from a multiple probe study, a multiple baseline study, and a group study. For the single-case studies, we provide step-by-step instructions for selecting design-comparable effect sizes and estimating them using the <em>scdhlm</em> app. We also discuss estimating the effect size for the group study and synthesizing the effect sizes across the group and single-case studies.</p>
+<p>In this chapter, we describe how researchers can compute design-comparable effect sizes and synthesize results using models that assume baseline time trends and a treatment effect that has an immediate impact on the level of the outcome, along with an effect on the trend—assumptions that correspond to Models 5 and 6 from Figure <a href="D-CES.html#fig:DC-ES-flow-chart">2.4</a>. For illustrative purposes, we calculate effect sizes and synthesize findings from three studies of interventions designed to improve writing skills for students with learning disabilities, including a multiple probe study, a multiple baseline study, and a group design study. The multiple probe study by <span class="citation">Datchuk (<a href="#ref-datchuk2016Writing">2016</a>)</span> investigated intervention effects on the writing behavior of four adolescents with writing difficulties. The multiple baseline study by <span class="citation">Rodgers et al. (<a href="#ref-rodgers2021Effects">2021</a>)</span> investigated the effects of a writing intervention for four postsecondary students with intellectual and developmental disabilities. Finally, the group study by <span class="citation">Hebert et al. (<a href="#ref-hebert2018Writing">2018</a>)</span> investigated the effects of a writing intervention for 61 fourth and fifth grade students designated as struggling readers (i.e., at least one grade level behind their peers).</p>
+<p>For this hypothetical synthesis, we choose to use a design-comparable effect size to aggregate effects across these study designs. We organize the procedures into four stages: (1) selecting a design-comparable effect size for the SCD studies, (2) estimating the design-comparable effect size using the <em>scdhlm</em> application, a web-based calculator for design-comparable effect sizes <span class="citation">(<a href="#ref-pustejovsky2021scdhlm">Pustejovsky et al., 2021</a>)</span>, (3) estimating the effect size for the group study, and (4) synthesizing the effect sizes across the SCD and group studies. Because well-developed effect size estimation methods for group studies are illustrated elsewhere <span class="citation">(<a href="#ref-borenstein2021introduction">Borenstein et al., 2021</a>; <a href="#ref-cooper2019handbook">H. Cooper et al., 2019</a>)</span>, we concentrate primarily on the first two steps.</p>
+<div id="selecting-a-design-comparable-effect-size-for-the-single-case-studies-2" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Selecting a Design-Comparable Effect Size for the Single-Case Studies<a href="illustrate-D-CES-Btrends.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We use the decision rules in Figure <a href="D-CES.html#fig:DC-ES-flow-chart">2.4</a> to select an appropriate design-comparable effect size for the SCD studies. To do this, we consider the characteristics of the population, the context, and the outcome of interest. We make predictions about the type of trends we expect to see in the baseline and treatment phases, and we reflect on the rationale for our expectations. Based on our prior research and experience with this population, we hypothesize that the outcome variable of student writing quality may have baseline phase trends. For example, some students may show slight positive trends because of practice effects, others may show a deteriorating trend in absence of writing feedback, or students’ baseline observations may portray little to no trend at all in absence of intervention. Despite expected variability in the baseline phase, we do expect a noticeable positive shift in the level of responding early in the treatment phase, followed by a gradual increase in writing quality over time. Because we are assuming the presence of trends in both baseline and treatment phases, we tentatively consider Model 5 or Model 6 (see Figure <a href="D-CES.html#fig:DC-ES-flow-chart">2.4</a>) to estimate the included study effect sizes. We make the choice between Model 5 and Model 6 based on our logic model and a priori expectation that the treatment effect will not vary across cases (Model 5) or that the treatment effect could vary across cases (Model 6). Based on the different writing abilities of the participants, as well as their unique learning histories and abilities, we anticipate some across-case variation in effects. Thus, we tentatively choose Model 6 as most consistent with our understanding of this context.</p>
+<p>Next, we visually analyze the graphs from the SCD studies to see if our initial assumptions are reasonable considering the data. Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-raw-2016">5.1</a> shows the data we extracted from <span class="citation">Datchuk (<a href="#ref-datchuk2016Writing">2016</a>)</span>, and Figure <a href="illustrate-D-CES-Btrends.html#fig:Rodgers-raw-2021">5.2</a> shows the data we extracted from <span class="citation">Rodgers et al. (<a href="#ref-rodgers2021Effects">2021</a>)</span>.
+<!-- MC: Although it seems that Rodgers et al. was first published online in 2020. I changed the year to 2021 when it was published in the journal. -->
+In viewing the graphs, we examine the extent to which the data are reasonably consistent with the homogeneity and normality assumptions underlying the models for design-comparable effect sizes. Note that in Figures <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-raw-2016">5.1</a> and <a href="illustrate-D-CES-Btrends.html#fig:Rodgers-raw-2021">5.2</a>, we see similar between-case variation and similar variation across phases within a case and can conclude that our homogeneity assumptions are reasonable. In addition, we do not detect the presence of outlying values or clear departures from normality. Consequently, our initial decision to use design-comparable effect sizes appears to be a reasonable choice.</p>
+<p>During visual analysis of the primary study graphs, we now need to determine the appropriateness of choosing a model with baseline trends. Consistent with our expectations, the typical baseline pattern across cases in Figures <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-raw-2016">5.1</a> and <a href="illustrate-D-CES-Btrends.html#fig:Rodgers-raw-2021">5.2</a> does exhibit a trend. For example, Richard and Danyell (Figure 5.1) and all cases in Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-raw-2016">5.1</a> (except Denny) appear to have a decline in writing skills performance in baseline, as indicated by a downward trend in the data. However, the baseline trends for Nathan and Kendrick (Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-raw-2016">5.1</a>) are less clear or appear to be increasing (e.g., Denny in Figure <a href="illustrate-D-CES-Btrends.html#fig:Rodgers-raw-2021">5.2</a>). Because the typical pattern across the two SCD studies is consistent with our trend expectations, we proceed with an assumption of baseline trends.</p>
+<p>Next, we conduct a similar visual analysis of the treatment phases. For most of the cases, we see an immediate shift in performance along with a change in the trend. Richard, Danyell, and Kendrick (Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-raw-2016">5.1</a>) show an improvement in writing skills that generally increases over time in treatment (i.e., positive trend lines). Brett, Steve, and Denny (Figure <a href="illustrate-D-CES-Btrends.html#fig:Rodgers-raw-2021">5.2</a>) show a similar pattern of increasing improvement in writing skills. Because the design-comparable effect size assumes a common model across cases and estimates an average effect across the cases, we find it best to select a model that is consistent with the typical and expected pattern. Thus, it appears reasonable to proceed with a model that assumes a trend in baseline and a different trend in the treatment phases (i.e., Model 5 or Model 6 from Figure <a href="D-CES.html#fig:DC-ES-flow-chart">2.4</a>).</p>
+<div class="figure"><span style="display:block;" id="fig:Datchuk-raw-2016"></span>
+<img src="images/Datchuk2016.png" alt="Multiple Probe Data Extracted from Datchuk (2016)" width="75%" height="75%" />
+<p class="caption">
+Figure 5.1: Multiple Probe Data Extracted from Datchuk (2016)
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:Rodgers-raw-2021"></span>
+<img src="images/Rodgers2020.png" alt="Multiple Baseline Data Extracted from Rodgers et al. (2021)" width="75%" height="75%" />
+<p class="caption">
+Figure 5.2: Multiple Baseline Data Extracted from Rodgers et al. (2021)
+</p>
+</div>
+</div>
+<div id="details-of-the-models-for-design-comparable-effect-sizes-1" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Details of the Models for Design-Comparable Effect Sizes<a href="illustrate-D-CES-Btrends.html#details-of-the-models-for-design-comparable-effect-sizes-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To differentiate between Model 5 and Model 6, we provide a formal specification of each. For both Model 5 and Model 6, we write the within-case (level-1) model as:
+<span class="math display" id="eq:M5M6-L1">\[\begin{equation}
+\tag{5.1}
+Y_{ij} = \beta_{0j} + \beta_{1j}Tx_{ij} + \beta_{2j} (Time_{ij}-B)+ \beta_{3j}Tx_{ij}\times((Time_{ij}-k_j)-(B-A)) + e_{ij},
+\end{equation}\]</span>
+where <span class="math inline">\(Y_{ij}\)</span> is the score on the outcome variable <span class="math inline">\(Y\)</span> at measurement occasion <span class="math inline">\(i\)</span> for case <span class="math inline">\(j\)</span>, <span class="math inline">\(Tx_{ij}\)</span> is dummy coded with a value of 0 for baseline observations and a value of 1 for the treatment observations, <span class="math inline">\(Time_{ij}\)</span> is the time-point for measurement occasion <span class="math inline">\(i\)</span> for case <span class="math inline">\(j\)</span>, <span class="math inline">\(B\)</span> is a centering constant that defines the focal follow up time for defining the effect size, <span class="math inline">\(k_j\)</span> is the last time-point before case <span class="math inline">\(j\)</span> begins their treatment phase, and <span class="math inline">\(B-A\)</span> corresponds to the treatment duration (i.e., the number of time points the case has been in intervention at the focal time). <span class="math inline">\(\beta_{1j}\)</span> indexes the raw score treatment effect for case <span class="math inline">\(j\)</span>, which is the distance between the treatment phase trend line and the extended baseline phase trend line at the focal follow-up time. In addition, this model includes <span class="math inline">\(\beta_{0j}\)</span>, which corresponds to the expected baseline value for case <span class="math inline">\(j\)</span> at the focal follow up time <span class="math inline">\(B\)</span>, <span class="math inline">\(\beta_{2j}\)</span> is the slope of the baseline phase, and <span class="math inline">\(\beta_{3j}\)</span> is the change in slope that occurs with intervention (i.e., the difference between the treatment and baseline phase slopes for case <span class="math inline">\(j\)</span>). Finally, the error (<span class="math inline">\(e_{ij}\)</span>) is time- and case-specific, assumed to be normally distributed, and first-order autoregressive with variance <span class="math inline">\(\sigma_e^2\)</span>.</p>
+<div class="figure"><span style="display:block;" id="fig:Datchuk-2016-Danyell"></span>
+<img src="images/Datchuk2016_Danyell.png" alt="Illustration of Treatment Effect 5 Observations into Treatment for Danyell (Datchuk, 2016)" width="75%" height="75%" />
+<p class="caption">
+Figure 5.3: Illustration of Treatment Effect 5 Observations into Treatment for Danyell (Datchuk, 2016)
+</p>
+</div>
+<p>As shown in Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-2016-Danyell">5.3</a>,
+<!-- MC: Not sure if Figure 5.3 is what Figure 32 in the word doc refers to. -->
+the size of the raw score treatment effect depends on its measurement time (i.e., the raw score effect size depends on the focal time selected). It becomes important for researchers to determine the time at which the effect should be estimated because: (a) the raw score effect size varies over time in the treatment phase, and (b) it is estimated specifically after a specific treatment duration [i.e., when <span class="math inline">\((Time_{ij}-k_j)-(B-A)=0\)</span>]. To choose a focal time, we find it helpful to review the SCD research literature and examine the treatment phase lengths of the extant studies. It is also helpful to consider the duration of the treatment in the group design studies, because such studies typically index the treatment effect immediately after completing the intervention. Generally, We we do not want to avoid extrapolate extrapolating much beyond the length of the actual treatment for most cases.</p>
+<p>For this illustration we choose to estimate the effect 12 observations into treatment because the group design study <span class="citation">(<a href="#ref-hebert2018Writing">Hebert et al., 2018</a>)</span> had 12 intervention sessions. Further, the SCD studies in this area—particularly the two we are using in this chapter—tend to have at least 12 treatment observations (with the exception of Denny in Figure <a href="illustrate-D-CES-Btrends.html#fig:Rodgers-raw-2021">5.2</a>, who has 10 treatment observations).</p>
+<p>For Model 5, we write the between-case model as:
+<span class="math display" id="eq:M5-L2-intercept">\[\begin{equation}
+\tag{5.2}
+\beta_{0j} = \gamma_{00} + u_{0j}
+\end{equation}\]</span>
+<span class="math display" id="eq:M5-L2-slope-trt">\[\begin{equation}
+\tag{5.3}
+\beta_{1j} = \gamma_{10}
+\end{equation}\]</span>
+<span class="math display" id="eq:M5-L2-slope-time">\[\begin{equation}
+\tag{5.4}
+\beta_{2j} = \gamma_{20} + u_{2j}
+\end{equation}\]</span>
+<span class="math display" id="eq:M5-L2-slope-interaction">\[\begin{equation}
+\tag{5.5}
+\beta_{3j} = \gamma_{30}
+\end{equation}\]</span>
+where <span class="math inline">\(\gamma_{00}\)</span> is the across-case average value of the outcome at time zero (0) based on a linear projection of the average baseline trajectory to the focal follow-up time <span class="math inline">\(B\)</span> and <span class="math inline">\(u_{0j}\)</span> is a case-specific error, which accounts for variation between cases in their expected baseline levels at time point <span class="math inline">\(B\)</span>. Thus, <span class="math inline">\(\sigma_{u_0}^2\)</span> corresponds to the projected between-case variance at the focal time if the cases remained in baseline. The across-case average baseline slope is <span class="math inline">\(\gamma_{20}\)</span>, and the corresponding error term (<span class="math inline">\(u_{2j}\)</span>) allows this slope to vary across cases. We assume that the errors in these equations (<span class="math inline">\(u_{0j}\)</span> and <span class="math inline">\(u_{2j}\)</span>)) are distributed multivariate normal with covariance <span class="math inline">\(\Sigma_u\)</span>. The across-case average raw score treatment effect at the focal time is <span class="math inline">\(\gamma_{10}\)</span> and the across-case average change in slope with intervention is <span class="math inline">\(\gamma_{30}\)</span>. We assume these effects to be the same for each case in Model 5, so we do not include error terms in Equations <a href="illustrate-D-CES-Btrends.html#eq:M5-L2-slope-trt">(5.3)</a> and <a href="illustrate-D-CES-Btrends.html#eq:M5-L2-slope-interaction">(5.5)</a>.</p>
+<p>We define the design-comparable effect size at the focal time as the raw score treatment effect at the focal time <span class="math inline">\(\gamma_{10}\)</span> divided by a standard deviation (SD) that is comparable to the SD used to standardize mean differences in the group design studies. Compared to the models discussed in previous chapters, the added complexity of Models 5 and 6 makes researchers’ choice of time points more consequential. Specifically, when we assume that the baseline slopes vary, we assume that the between-case variability changes with time. Thus, the design-comparable effect size will depend on both the duration of the treatment and the projected baseline between-case variability at the follow-up time. It may also be helpful to acknowledge the assumed heterogeneity across time in the SCD studies and to consider a sensitivity analysis that would examines the extent to which the design-comparable effect size depends on the between-case variance estimation time point. The assumed heterogeneity poses a lesser threat for the synthesis if there is little variation between the design-comparable effect size and the different choices for when to estimate the between-case variance. lead to relatively little variation in the design-comparable effect size estimate.</p>
+<p>With these caveats in mind, and using the model specification given in Equations <a href="illustrate-D-CES-Btrends.html#eq:M5M6-L1">(5.1)</a>-<a href="illustrate-D-CES-Btrends.html#eq:M5-L2-slope-interaction">(5.5)</a>, we define the design-comparable effect size as:
+<span class="math display" id="eq:M5-SMD">\[\begin{equation}
+\tag{5.6}
+\delta = \frac{\gamma_{10}}{\sqrt{\sigma_{u_0}^2 + \sigma_e^2}},
+\end{equation}\]</span>
+where <span class="math inline">\(\sigma_{u_0}^2\)</span> corresponds to the between-case-variance in expected baseline levels at the target time <span class="math inline">\(B\)</span>. The numerator of the effect size corresponds to the average effect of receiving treatment for duration <span class="math inline">\(B-A\)</span>, where both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are constants specified by the meta-analyst. Therefore, one can interpret this effect size as describing the effect in a hypothetical study where all cases start intervention after time <span class="math inline">\(A\)</span> and where outcomes are assessed at the focal follow-up time <span class="math inline">\(B\)</span> <span class="citation">(see <a href="#ref-Pustejovsky2014design">Pustejovsky et al., 2014</a> for more details on this interpretation)</span>.</p>
+<p>The specification of Model 6 is like Model 5, but we add error terms (<span class="math inline">\(u_{1j}\)</span> and <span class="math inline">\(u_{3j}\)</span>) to the equations to account for between-case variation in the treatment effect and between-case variation in the change in slopes with intervention. More specifically:
+<span class="math display" id="eq:M6-L1">\[\begin{equation}
+\tag{5.7}
+Y_{ij} = \beta_{0j} + \beta_{1j}Tx_{ij} + \beta_{2j} (Time_{ij}-B)+ \beta_{3j}Tx_{ij}\times((Time_{ij}-k_j)-(B-A)) + e_{ij}
+\end{equation}\]</span>
+<span class="math display" id="eq:M6-L2-intercept">\[\begin{equation}
+\tag{5.8}
+\beta_{0j} = \gamma_{00} + u_{0j}
+\end{equation}\]</span>
+<span class="math display" id="eq:M6-L2-slope-trt">\[\begin{equation}
+\tag{5.9}
+\beta_{1j} = \gamma_{10} + u_{1j}
+\end{equation}\]</span>
+<span class="math display" id="eq:M6-L2-slope-time">\[\begin{equation}
+\tag{5.10}
+\beta_{2j} = \gamma_{20} + u_{2j}
+\end{equation}\]</span>
+<span class="math display" id="eq:M6-L2-slope-interaction">\[\begin{equation}
+\tag{5.11}
+\beta_{3j} = \gamma_{30} + u_{3j}
+\end{equation}\]</span></p>
+<p>The added error terms contribute to variability under the intervention condition. However, because the SD used to standardize the design-comparable effect size is based on the variability in the absence of intervention, the definition of the design-comparable effect size for the Model 6 definition matches that of for Model 5. Like Model 5, the choice of the focal time will impact the design-comparable effect size, not only because it impacts influences the raw score treatment effect <span class="math inline">\(\gamma_{10}\)</span>, but also because it impacts influences the between-case variance.</p>
+<p>For the purposes of this chapter, we tentatively select Model 6 based on our a priori considerations and illustrate the estimation of design-comparable effect sizes for these data. We also provide a contrast of Model 6 results compared to Model 5 specifications. This contrast is useful for several reasons, including that it provides an additional way for us to examine the empirical support for the model we have chosen (e.g., visual analyses of the implied trajectories for Model 6 may fit the raw data better than those for Model 5). In addition, by contrasting the results of both models, we can examine the sensitivity of our effect size estimates to the model chosen (e.g., whether we assume the effect size varies across cases may have little to no effect on the design-comparable effect size). Finally, contrasting model results allows us to illustrate a method of selecting between models in circumstances where a priori information is not sufficient to inform the choice between specifications.</p>
+<p>Before illustrating the estimation of the design-comparable effect size for our SCD studies, we emphasize that there are other variations of these models with slopes in both baseline and treatment phases. For example, if we remove the error term from Equation <a href="illustrate-D-CES-Btrends.html#eq:M5-L2-slope-time">(5.4)</a> or Equation <a href="illustrate-D-CES-Btrends.html#eq:M6-L2-slope-time">(5.10)</a>, we constrain the model so that all cases have the same baseline slope. Constraining the slopes to be equal across cases makes the between-case variance homogeneous across time, which simplifies the definition of the design-comparable effect size. We could also consider removing the error term from Equation <a href="illustrate-D-CES-Btrends.html#eq:M6-L2-slope-interaction">(5.11)</a>, which would constrain the change in slopes to be equal across the cases. Yet another possible variation is to remove the main treatment effect (i.e., remove the term <span class="math inline">\(β_1j\)</span> Tx_ijfrom Equation <a href="illustrate-D-CES-Btrends.html#eq:M5M6-L1">(5.1)</a> or Equation <a href="illustrate-D-CES-Btrends.html#eq:M6-L1">(5.7)</a>). In the latter example, by removing the main effect for treatment, we constrain the model so there is no immediate shift in level with intervention, but only a change in the slope of the trend line. For this chapter, we illustrate models that correspond to either assuming the effect of the treatment is constant across cases (Model 5) or the that the treatment effect can vary across cases in trajectories’ magnitudes of level and slope change (Model 6).</p>
+</div>
+<div id="estimating-the-design-comparable-effect-size-for-the-single-case-studies-2" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Estimating the Design-Comparable Effect Size for the Single-Case Studies<a href="illustrate-D-CES-Btrends.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-1-multiple-probe-study-by-datchuk2016writing" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Example 1: Multiple Probe Study by @<span class="citation">Datchuk (<a href="#ref-datchuk2016Writing">2016</a>)</span><a href="illustrate-D-CES-Btrends.html#example-1-multiple-probe-study-by-datchuk2016writing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can estimate a design-comparable effect size for Models 5 or 6, as well as the other models suggested in Figure <a href="D-CES.html#fig:DC-ES-flow-chart">2.4</a>, using a web-based calculator for design-comparable effect sizes <span class="citation">(<a href="#ref-pustejovsky2021scdhlm">Pustejovsky et al., 2021</a>)</span>, which is available at <a href="https://jepusto.shinyapps.io/scdhlm" class="uri">https://jepusto.shinyapps.io/scdhlm</a>. In using this application, we recommend that researchers have a data file that aligns with the format expected by the application, as shown in Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-2016-load">5.5</a> for the SCD study by <span class="citation">Datchuk (<a href="#ref-datchuk2016Writing">2016</a>)</span>. To use this app, the data file must be saved as an Excel file (.xlsx), comma delimited file (.csv), or text file (.txt). In addition, the data must include columns for the <em>case identifier</em>, <em>phase identifier</em>, <em>session number</em>, and <em>outcome</em>. We illustrate this arrangement in Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-2016-excel">5.4</a> for the <span class="citation">Datchuk (<a href="#ref-datchuk2016Writing">2016</a>)</span> study. For the <em>phase identifier</em>, we have used “baseline” to indicate baseline observations and “treatment” to indicate intervention observations. Researchers can also elect to use another labeling scheme if it clearly distinguishes between baseline and intervention conditions (e.g., 0 to indicate baseline observations and 1 to indicate intervention observations). Although the data format for the phase identifier variable is flexible (text or numeric), the <em>scdhlm</em> app requires use of only numerical values for the <em>session number</em> and <em>outcome</em> variables. Additionally, we recommend that users arrange their data by first case (i.e., enter all the rows of data for the first case before any of the rows of data for the second case), followed by <em>session number</em>.</p>
+<div class="figure"><span style="display:block;" id="fig:Datchuk-2016-excel"></span>
+<img src="images/Datchuk2016_Danyell.png" alt="Snapshot of Spreadsheet Containing Extracted Datchuk (2016) Data" width="75%" height="75%" />
+<p class="caption">
+Figure 5.4: Snapshot of Spreadsheet Containing Extracted Datchuk (2016) Data
+</p>
+</div>
+<p>After starting the app, we use the <em>Load</em> tab to load the data file, as illustrated in Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-2016-load">5.5</a>. The data file could be a .txt or .csv file that includes one dataset or could be an .xlsx file that has either one spreadsheet (e.g., a data set for one study), or multiple spreadsheets (one spreadsheet for each of several studies). If using an .xlsx file with multiple spreadsheets, we can select the spreadsheet containing the data for the study of interest from the <em>Load</em> tab. Then, we use the drop-down menus on the right of the screen to indicate the study design (<em>Treatment Reversal</em> or <em>Multiple Baseline/Multiple Probe across participants</em>) and define which variables in the data set correspond to the case identifier, <em>phase identifier</em>, session, and <em>outcome</em> (see Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-2016-load">5.5</a>).</p>
+<p>After loading the data, we use the Inspect tab to ensure that the raw data were imported correctly and mapped to their corresponding variable names (Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-2016-inspect-data">5.6</a>). In addition, we can use the <em>Inspect</em> tab to view a graph of the data (Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-2016-inspect-graph">5.7</a>). At this point, we recommend that researchers compare these data with the graphed data from the original study to ensure the study data uploaded to the app correctly. Later, we can check these graphed data for consistency with the tentatively selected model for the design-comparable effect size.</p>
+<div class="figure"><span style="display:block;" id="fig:Datchuk-2016-load"></span>
+<img src="images/app.load_Datchuk2016.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab for Datchuk (2016)" width="75%" height="75%" />
+<p class="caption">
+Figure 5.5: Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab for Datchuk (2016)
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:Datchuk-2016-inspect-data"></span>
+<img src="images/app.inspect.data_Datchuk2016.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within the Inspect Tab for Datchuk (2016)" width="75%" height="75%" />
+<p class="caption">
+Figure 5.6: Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within the Inspect Tab for Datchuk (2016)
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:Datchuk-2016-inspect-graph"></span>
+<img src="images/app.inspect.graph_Datchuk2016.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Graph Display within the Inspect Tab for Datchuk (2016)" width="75%" height="75%" />
+<p class="caption">
+Figure 5.7: Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Graph Display within the Inspect Tab for Datchuk (2016)
+</p>
+</div>
+<p>After data inspection, we go to the Model tab to specify the model for the design-comparable effect size. Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-2016-model6">5.8</a> shows the specification for Model 6 (i.e., the model that assumes trends in baseline, different trends in treatment, and an effect that varies across cases). Starting with specification of the <em>Baseline phase</em>, we select <em>linear trend</em> under <em>Type of time trend</em> because we assume the presence of linear time trends in the baseline phases. We then include <em>level</em> and <em>linear trend</em> as fixed effects to enable model estimation for an across-case average linear trend line for the baseline phase. To allow the intercepts of the trend lines to vary from case to case, we select the option to include <em>level</em> as a random effect. We also include <em>linear trend</em> as a random effect to allow the baseline trends to vary across cases.</p>
+<p>After <em>Baseline phase</em> model specification, we attend to the specification of the <em>Treatment phase</em>. For <em>Type of time trend</em>, we select <em>change in linear trend</em> because we assume trends differ across phases. We then elect to include <em>change in level</em> and <em>change in linear trend</em> as fixed effects to allow the across-case average trend line for the treatment phase to differ from the across-case average baseline phase trend line, in both level and slope. We also check the boxes to include <em>change in level</em> and <em>change in linear trend</em> as random effects to allow the changes in trend lines from baseline to treatment phase to vary across cases. Note the app allows us to make different potential assumptions about the correlation structure of the session-level errors. Shown are the default options of autoregressive and constant variance across phases. These defaults match the model presented in Equations <a href="illustrate-D-CES-Btrends.html#eq:M5M6-L1">(5.1)</a> and <a href="illustrate-D-CES-Btrends.html#eq:M6-L1">(5.7)</a> and were used because they seem appropriate for this data set.</p>
+<div class="figure"><span style="display:block;" id="fig:Datchuk-2016-model6"></span>
+<img src="images/app.model.model6_Datchuk2016.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 6 Specification for Datchuk (2016)" width="75%" height="75%" />
+<p class="caption">
+Figure 5.8: Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 6 Specification for Datchuk (2016)
+</p>
+</div>
+<p>For this data set, we see that our a priori identified model provides trajectories that fit the data reasonably well. Thus, we proceed to the <em>Effect Size</em> tab, as shown in Figure (fig:Datchuk-2016-ES). On the <em>Effect Size</em> tab screen, there are two sliders—<em>Initial treatment time</em> and <em>Follow-up time</em>. Moving these, we can change the size of the effect size to specify how far into treatment we want to estimate an effect. In our example, we use the default slider value of 9 for the <em>Initial treatment time</em>, which corresponds with the time point after which we would introduce treatment in a hypothetical study (were each case to begin the treatment phase at the same time). Next, because we want to estimate the treatment effect 12 observations into the treatment phase, we set the second slider (<em>Follow-up time</em>) to 21. This number corresponds to the 12th observation of a treatment phase that started immediately after observation 9. Following these specifications, the design-comparable effect size estimate for this study is 1.48, with a standard error (SE) of 0.98, and <span class="math inline">\(95\%\)</span> confidence interval (CI) [-0.65, 3.62].</p>
+<div class="figure"><span style="display:block;" id="fig:Datchuk-2016-ES"></span>
+<img src="images/app.ES.model6_Datchuk2016.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 6 Estimate for Datchuk (2016)" width="75%" height="75%" />
+<p class="caption">
+Figure 5.9: Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 6 Estimate for Datchuk (2016)
+</p>
+</div>
+<p>The additional information reported on the <em>Effect size</em> tab (Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-2016-ES">5.9</a>) includes estimates of other quantities from the model and information about the model specification and assumptions used in calculating the design-comparable effect size. The reported degrees of freedom are used in making a small-sample correction to the effect size estimate, analogous to the Hedges’ <span class="math inline">\(g\)</span> correction used with group designs <span class="citation">(<a href="#ref-Hedges1981distribution">Hedges, 1981</a>)</span>. Larger estimated degrees of freedom mean that the denominator of the design-comparable effect size is more precisely estimated, and that the small-sample correction is less consequential. Conversely, small degrees of freedom indicates that the denominator of the effect size is imprecisely estimated, and that the small-sample correction is more consequential. The reported autocorrelation is the estimate of the correlation between errors at the first level of the model for the same case that differ by one time-point (or session), based on a first-order autoregressive model. The reported intra-class correlation is an estimate of the between-case variance of the outcome as a proportion of the total variation in the outcome (including both between-case and within-case variance) as of the selected <em>Follow-up time</em>. Larger values of the intra-class correlation indicate that more of the variation in the outcome is between participants. The remaining information in the output (<em>Study design</em>, <em>Estimation method</em>, <em>Baseline specification</em>, <em>Treatment specification</em>, <em>Initial treatment time</em>, <em>Follow-up time</em>) describes the model specification and assumptions used in the effect size calculations. The app includes this information to allow for reproducibility of the calculations.</p>
+<p>Having obtained our main design-comparable effect size estimate based on Model 6, we also want to check its sensitivity to our selected time at which we estimate the between-case variability. To do so, we move the sliders on the <em>Effect Size</em> tab so that the <em>Initial treatment time</em> slider is now set to 5, corresponding to the time of the last baseline observation in our hypothetical experiment. We change the <em>Follow-up time</em> to 17, which keeps the duration of the treatment at 12 observations. After making these changes, the design-comparable effect size is an estimated 1.34 with an SE of 0.91 and <span class="math inline">\(95\%\)</span> CI [-.69, 3.37]. The sensitivity of the design-comparable effect size estimate to our choice of when to estimate the between-case variance demonstrates a potential challenge of using design-comparable effect sizes in contexts where it is assumed that the baseline slopes vary across cases.</p>
+<p>If our a priori arguments for selecting Model 6 were tenuous, or if some members of our research team thought we should consider Model 5, we can do so by going back to the <em>Model</em> tab and changing our specification. Specifically, under the specification of the <em>Treatment phase</em>, we uncheck the boxes to exclude <em>change in level</em> and <em>change in linear trend</em> as random effects. By removing those two random effects, we constrain the treatment effect to be the same for all cases (i.e., the change in level and change in linear trend is the same for each case). We keep all other modeling options the same as Model 6 (e.g., time sliders). In Figure <a href="illustrate-D-CES-Btrends.html#fig:Datchuk-2016-model5">5.10</a>, we can see that the simpler, more restrictive Model 5 specification has a slightly less desirable fit for the trend lines than those of Model 6. The estimated design-comparable effect size for Model 5 is 1.41, with an SE of 0.64, and <span class="math inline">\(95\%\)</span> CI [-0.09, 2.92]. Ultimately, if we had remaining SCD studies to be included in our synthesis, we would hold off selecting between Models 5 and 6 until fit was examined for the data from each of the SCD studies.</p>
+<div class="figure"><span style="display:block;" id="fig:Datchuk-2016-model5"></span>
+<img src="images/app.model.model5_Datchuk2016.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 5 Specification for Datchuk (2016)" width="75%" height="75%" />
+<p class="caption">
+Figure 5.10: Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 5 Specification for Datchuk (2016)
+</p>
+</div>
+</div>
+<div id="example-2-multiple-baseline-study-by-rodgers2021effects" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Example 2: Multiple Baseline Study by <span class="citation">Rodgers et al. (<a href="#ref-rodgers2021Effects">2021</a>)</span><a href="illustrate-D-CES-Btrends.html#example-2-multiple-baseline-study-by-rodgers2021effects" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After estimating the design-comparable effect size for the first SCD study by <span class="citation">Datchuk (<a href="#ref-datchuk2016Writing">2016</a>)</span>, we repeat these steps for all remaining single-case studies in our synthesis. For our second SCD study <span class="citation">(<a href="#ref-rodgers2021Effects">Rodgers et al., 2021</a>)</span>, we run through this same sequence of steps:
+1. Load the data.
+2. Inspect the data in both tabular and graphic form.
+3. Specify our selected model for the data (i.e., Model 6 for this illustration).
+4. Estimate the design-comparable effect size.</p>
+<p>As shown in Figure <a href="illustrate-D-CES-Btrends.html#fig:Rodgers-2021-model6">5.11</a>, the Model 6 estimated trajectories fit the data reasonably well. After completing step 2, we proceed with use of Model 6 for the <span class="citation">Rodgers et al. (<a href="#ref-rodgers2021Effects">2021</a>)</span> dataset (step 3) and then start the process of estimating the design-comparable effect size (step 4). On the <em>Effect Size</em> tab, we need to make choices about the initial treatment time and follow-up time-points. Locating the shortest baseline (Brett), we leave the <em>Initial treatment time</em> slider at the default value of 9—the last baseline observation for Brett. We set the <em>Follow-up time</em> slider to 21, so that the treatment duration for the hypothetical study is 12 and consistent with the time specification for the previous SCD study <span class="citation">(<a href="#ref-datchuk2016Writing">Datchuk, 2016</a>)</span>. After defining the times, the resulting design-comparable effect size estimate is 0.76 with an SE of 0.74 and <span class="math inline">\(95\%\)</span> CI [-1.36, 2.88]. Finally, to check the sensitivity of our estimate to our specified times for between-case variability, we change the values of the <em>Initial treatment time</em> and <em>Follow-up time</em> sliders to 5 and 17, respectively. The resulting design-comparable effect size changes to 0.90 with an SE of 0.75 and <span class="math inline">\(95\%\)</span> CI [-1.06, 2.87].</p>
+<div class="figure"><span style="display:block;" id="fig:Rodgers-2021-model6"></span>
+<img src="images/app.model.model6_Rodgers2020.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 6 Specification for Rodgers (2021)" width="75%" height="75%" />
+<p class="caption">
+Figure 5.11: Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 6 Specification for Rodgers (2021)
+</p>
+</div>
+<p>If our a priori arguments for selecting Model 6 were tenuous, or if some members of our research team thought we should consider Model 5, we can do so by going back to the <em>Model</em> tab for each of our SCD studies and changing our specification. Specifically, under the specification of the <em>Treatment phase</em>, we uncheck the boxes where we had previously included random effects for <em>change in level</em> and <em>change in linear trend</em>. By removing those two random effects, we constrain the treatment effect to be the same for all cases (i.e., the change in level and change in linear trend is the same for each case). We keep all other modeling options the same. We show the Model 5 specification for the <span class="citation">Rodgers et al. (<a href="#ref-rodgers2021Effects">2021</a>)</span> study in Figure <a href="illustrate-D-CES-Btrends.html#fig:Rodgers-2021-model5">5.12</a>. With the more restrictive model, the fit of the trend lines is similar but not quite as good compared to those in the originally specified Model 6. For Model 5, the estimated design-comparable effect size is 0.46, with an SE of 0.40 and <span class="math inline">\(95\%\)</span> CI [-0.39, 1.31]. Across the included SCD studies, if the fit is similar across models or is better for the model selected a priori, then it is preferable for researchers to use the one that best aligns with their logic model. For this illustration, we move forward with the Model 6 estimates because this model is most consistent with our a priori expectations, and the resulting fit is similar to or slightly better than its Model 5 contrast.</p>
+<div class="figure"><span style="display:block;" id="fig:Rodgers-2021-model5"></span>
+<img src="images/app.model.model5_Rodgers2020.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 5 Specification for Rodgers (2021)" width="75%" height="75%" />
+<p class="caption">
+Figure 5.12: Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 5 Specification for Rodgers (2021)
+</p>
+</div>
+</div>
+</div>
+<div id="estimating-the-design-comparable-effect-size-for-the-group-study" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Estimating the Design-Comparable Effect Size for the Group Study<a href="illustrate-D-CES-Btrends.html#estimating-the-design-comparable-effect-size-for-the-group-study" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>After estimating the design-comparable effect size for each SCD in the synthesis, we estimate the design-comparable effect size for each included group study. Details on estimating standardized mean difference effect sizes from group studies are readily available from a variety of sources, including Chapter 12 of <em>The Handbook on Research Synthesis and Meta-Analysis</em> <span class="citation">(<a href="#ref-Borenstein2019effect">Borenstein, 2019</a>)</span>, books <span class="citation">(e.g., <a href="#ref-borenstein2021introduction">Borenstein et al., 2021</a>)</span> and journal articles <span class="citation">(e.g., <a href="#ref-Hedges1981distribution">Hedges, 1981</a>, <a href="#ref-Hedges2007effect">2007</a>)</span>. We therefore omit the details of the effect size calculations for the group design study in this example.</p>
+<p><span class="citation">Hebert et al. (<a href="#ref-hebert2018Writing">2018</a>)</span> reported a randomized-control trial examining the impact of a writing intervention for 51 fourth and fifth grade students. The researchers randomly assigned the students to an informational text writing intervention (<span class="math inline">\(n = 32\)</span>) or to a control group (<span class="math inline">\(n = 29\)</span>), in which students focused on mathematics writing so that the total amount of writing time was controlled. While the <span class="citation">Hebert et al. (<a href="#ref-hebert2018Writing">2018</a>)</span> study included various outcome data, we focus on the proximal measure of student ability to write informational text using simple description. To measure the effect, we calculate Hedges’ <span class="math inline">\(g\)</span>, which corrects for small sample size bias, using the adjusted mean difference between groups controlling for the pretest writing assessment and student characteristics. The resulting effect size estimate is 0.62, with an SE of 0.22.</p>
+</div>
+<div id="analyzing-the-effect-sizes-2" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Analyzing the Effect Sizes<a href="illustrate-D-CES-Btrends.html#analyzing-the-effect-sizes-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As a final step, we synthesize the effect sizes across both the SCD and group design studies. Depending on the researchers’ goals of the synthesis, a variety of options are available: (a) creating graphical displays that show the effect size and CIs for each study, (b) averaging the effect sizes and then creating a CI for the overall average effect, (c) examining the extent of variation in effect sizes across studies, (d) exploring potential moderators of the effect, and (e) examining the effect sizes for evidence of publication bias. Because the use of design-comparable effect size for the single-case studies produces effect size estimates that are in the same metric as the commonly used standardized mean difference effect sizes from group studies, researchers can accomplish these goals using the methods developed for group studies. Details on these methods are readily available elsewhere <span class="citation">(e.g., <a href="#ref-borenstein2021introduction">Borenstein et al., 2021</a>; <a href="#ref-cooper2019handbook">H. Cooper et al., 2019</a>)</span>. We illustrate the pooling of the effect sizes from our studies here using a fixed effect meta-analysis, consistent with the approach used in What Works Clearinghouse intervention reports <span class="citation">(<a href="#ref-whatworksclearinghouse2020What">What Works Clearinghouse, 2020b</a>)</span>.</p>
+<p>Table <a href="illustrate-D-CES-Btrends.html#tab:ES-est-chapter5">5.1</a> reports the effect size estimates, SEs, and fixed effect meta-analysis calculations for the example studies. The top panel uses the design-comparable effect size results for SCD studies based on Model 6. As a sensitivity analysis, the bottom panel presents the results based on Model 5. Note that the effect size estimate from the group design study is the same in both panels. In fixed effect meta-analysis, the overall average effect size estimate is a weighted average of the individual studies’ effect size estimates, with weights proportional to the inverse of the sampling variance (squared SE) of each effect size estimate.
+Column C of Table <a href="illustrate-D-CES-Btrends.html#tab:ES-est-chapter5">5.1</a> reports the inverse variance weight assigned to each of the studies, with the percentage of the total weight listed in parentheses. For the analysis based on Model 6, the effect size estimate from the group design study receives <span class="math inline">\(88\%\)</span> of the total weight, while the effect size estimates from the single-case studies receive <span class="math inline">\(4\%\)</span> and <span class="math inline">\(8\%\)</span> of the total weight, respectively. The total inverse variance weight is 23.5. The overall average effect size estimate is 0.67 with an SE of 0.21<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> and an approximate <span class="math inline">\(95\%\)</span> CI [0.26, 1.08]. The <em>Q</em>-test for heterogeneity is not significant, <span class="math inline">\(Q(2) = 0.75\)</span>, <span class="math inline">\(p = .69\)</span>, indicating that the evidence is consistent with the possibility that all the studies provide estimates of the same true effect size.</p>
+<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:ES-est-chapter5">Table 5.1: </span>Fixed Effect Meta-Analysis Calculations for
+Example Writing Intervention Studies
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Study
+</th>
+<th style="text-align:center;">
+Effect Size Estimate (A)
+</th>
+<th style="text-align:center;">
+Standard Error (B)
+</th>
+<th style="text-align:center;">
+Inverse-variance Weight (%) (C)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="4">
+<td colspan="4" style="border-bottom: 0;">
+<strong>Model 6</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
+Datchuk (2016)
+</td>
+<td style="text-align:center;">
+1.48
+</td>
+<td style="text-align:center;">
+0.98
+</td>
+<td style="text-align:center;">
+1.04 (4.4)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
+Rodgers et al. (2020)
+</td>
+<td style="text-align:center;">
+0.76
+</td>
+<td style="text-align:center;">
+0.74
+</td>
+<td style="text-align:center;">
+1.82 (7.8)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
+Hebert et al. (2018)
+</td>
+<td style="text-align:center;">
+0.62
+</td>
+<td style="text-align:center;">
+0.22
+</td>
+<td style="text-align:center;">
+20.66 (87.8)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
+Fixed effect meta-analysis
+</td>
+<td style="text-align:center;">
+0.67
+</td>
+<td style="text-align:center;">
+0.21
+</td>
+<td style="text-align:center;">
+25.53 (100)
+</td>
+</tr>
+<tr grouplength="4">
+<td colspan="4" style="border-bottom: 0;">
+<strong>Model 5</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
+Datchuk (2016)
+</td>
+<td style="text-align:center;">
+1.41
+</td>
+<td style="text-align:center;">
+0.46
+</td>
+<td style="text-align:center;">
+2.44 (8.3)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
+Rodgers et al. (2020)
+</td>
+<td style="text-align:center;">
+0.46
+</td>
+<td style="text-align:center;">
+0.40
+</td>
+<td style="text-align:center;">
+6.25 (21.3)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
+Hebert et al. (2018)
+</td>
+<td style="text-align:center;">
+0.62
+</td>
+<td style="text-align:center;">
+0.22
+</td>
+<td style="text-align:center;">
+20.66 (70.4)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
+Fixed effect meta-analysis
+</td>
+<td style="text-align:center;">
+0.65
+</td>
+<td style="text-align:center;">
+0.18
+</td>
+<td style="text-align:center;">
+29.35 (100)
+</td>
+</tr>
+</tbody>
+</table>
+<p>The bottom panel of Table <a href="illustrate-D-CES-Btrends.html#tab:ES-est-chapter5">5.1</a> reports the same calculations using the Model 5 design-comparable effect size estimates for the two SCD studies. For both <span class="citation">Datchuk (<a href="#ref-datchuk2016Writing">2016</a>)</span> and <span class="citation">Rodgers et al. (<a href="#ref-rodgers2021Effects">2021</a>)</span>, Model 5 effect sizes appear to be more precisely estimated and therefore receive more weight in the fixed effect meta-analysis (<span class="math inline">\(8\%\)</span> and <span class="math inline">\(21\%\)</span>, respectively). The overall average effect size based on Model 5 is quite like the average effect size based on Model 6, but is somewhat more precisely estimated, with an SE of 0.18 and a <span class="math inline">\(95\%\)</span> CI [0.29, 1.01], due to the smaller SEs in the SCD studies.</p>
+<p>In fixed effect meta-analysis, the overall average effect size estimate is a summary of the effect size estimates across the included studies, which are treated as fixed. The SE and CI in fixed effect meta-analysis consider the uncertainty in the process of estimating the effect size estimates in each of the individual studies. However, they do not provide a basis for generalization beyond the included studies because the fixed meta-analysis does not account for uncertainty in the process of identifying studies for inclusion in the meta-analysis <span class="citation">(<a href="#ref-konstantopoulos2019statistically">Konstantopoulos &amp; Hedges, 2019</a>; <a href="#ref-Rice_Higgins_Lumley_2018">Rice et al., 2018</a>)</span>. When conducting syntheses of larger bodies of literature—and especially of studies with heterogeneous populations, design features, or dependent effect sizes—researchers will often prefer to use random effects models <span class="citation">(<a href="#ref-Hedges_Vevea_1998">Hedges &amp; Vevea, 1998</a>)</span> or their further extensions <span class="citation">(<a href="#ref-PustejovskyTipton2021">Pustejovsky &amp; Tipton, 2021</a>; <a href="#ref-van2013three">Van den Noortgate et al., 2013</a>)</span>.</p>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-Borenstein2019effect" class="csl-entry">
+Borenstein, M. (2019). Effect sizes for continuous data. In H. M. Cooper, L. V. Hedges, &amp; J. C. Valentine (Eds.), <em>The <span>Handbook</span> of <span>Research Synthesis</span> and <span>Meta-Analysis</span></em>. <span>Russell Sage Foundation</span>.
+</div>
+<div id="ref-borenstein2021introduction" class="csl-entry">
+Borenstein, M., Hedges, L. V., Higgins, J. P. T., &amp; Rothstein, H. R. (2021). <em>Introduction to <span>Meta-Analysis</span></em>. <span>John Wiley &amp; Sons, Ltd</span>.
+</div>
+<div id="ref-cooper2019handbook" class="csl-entry">
+Cooper, H., Hedges, L. V., &amp; Valentine, J. C. (2019). <em>The handbook of research synthesis and meta-analysis</em>. Russell Sage Foundation.
+</div>
+<div id="ref-datchuk2016Writing" class="csl-entry">
+Datchuk, S. M. (2016). Writing <span>Simple Sentences</span> and <span>Descriptive Paragraphs</span>: <span>Effects</span> of an <span>Intervention</span> on <span>Adolescents</span> with <span>Writing Difficulties</span>. <em>Journal of Behavioral Education</em>, <em>25</em>(2), 166–188. <a href="https://doi.org/10.1007/s10864-015-9236-x">https://doi.org/10.1007/s10864-015-9236-x</a>
+</div>
+<div id="ref-hebert2018Writing" class="csl-entry">
+Hebert, M., Bohaty, J. J., Nelson, J. R., &amp; Roehling, J. V. (2018). Writing informational text using provided information and text structures: An intervention for upper elementary struggling writers. <em>Reading and Writing</em>, <em>31</em>(9), 2165–2190. <a href="https://doi.org/10.1007/s11145-018-9841-x">https://doi.org/10.1007/s11145-018-9841-x</a>
+</div>
+<div id="ref-Hedges1981distribution" class="csl-entry">
+Hedges, L. V. (1981). Distribution theory for <span>Glass</span>’s estimator of effect size and related estimators. <em>Journal of Educational Statistics</em>, <em>6</em>(2), 107–128.
+</div>
+<div id="ref-Hedges2007effect" class="csl-entry">
+Hedges, L. V. (2007). Effect sizes in cluster-randomized designs. <em>Journal of Educational and Behavioral Statistics</em>, <em>32</em>(4), 341–370. <a href="https://doi.org/10.3102/1076998606298043">https://doi.org/10.3102/1076998606298043</a>
+</div>
+<div id="ref-Hedges_Vevea_1998" class="csl-entry">
+Hedges, L. V., &amp; Vevea, J. L. (1998). Fixed- and random-effects models in meta-analysis. <em>Psychological Methods</em>, <em>3</em>(4), 486–504. <a href="https://doi.org/10.1037/1082-989X.3.4.486">https://doi.org/10.1037/1082-989X.3.4.486</a>
+</div>
+<div id="ref-konstantopoulos2019statistically" class="csl-entry">
+Konstantopoulos, S., &amp; Hedges, L. V. (2019). Statistically analyzing effect sizes: Fixed-and random-effects models. In H. Cooper Harris &amp; J. C. Valentine (Eds.), <em>The handbook of research synthesis and meta-analysis</em> (3rd Edition, pp. 246–280). Russell Sage Foundation.
+</div>
+<div id="ref-pustejovsky2021scdhlm" class="csl-entry">
+Pustejovsky, J. E., Chen, M., &amp; Hamilton, B. (2021). <em>Scdhlm: <span>A</span> web-based calculator for between-case standardized mean differences</em>.
+</div>
+<div id="ref-Pustejovsky2014design" class="csl-entry">
+Pustejovsky, J. E., Hedges, L. V., &amp; Shadish, W. R. (2014). Design-comparable effect sizes in multiple baseline designs: <span>A</span> general modeling framework. <em>Journal of Educational and Behavioral Statistics</em>, <em>39</em>(5), 368–393. <a href="https://doi.org/10.3102/1076998614547577">https://doi.org/10.3102/1076998614547577</a>
+</div>
+<div id="ref-PustejovskyTipton2021" class="csl-entry">
+Pustejovsky, J. E., &amp; Tipton, E. (2021). Meta-analysis with robust variance estimation: Expanding the range of working models. <em>Prevention Science</em>. <a href="https://doi.org/10.1007/s11121-021-01246-3">https://doi.org/10.1007/s11121-021-01246-3</a>
+</div>
+<div id="ref-Rice_Higgins_Lumley_2018" class="csl-entry">
+Rice, K., Higgins, J. P. T., &amp; Lumley, T. (2018). A re-evaluation of fixed effect(s) meta-analysis. <em>Journal of the Royal Statistical Society Series A: Statistics in Society</em>, <em>181</em>(1), 205–227. <a href="https://doi.org/10.1111/rssa.12275">https://doi.org/10.1111/rssa.12275</a>
+</div>
+<div id="ref-rodgers2021Effects" class="csl-entry">
+Rodgers, D. B., Datchuk, S. M., &amp; Rila, A. L. (2021). Effects of a <span>Text-Writing Fluency Intervention</span> for <span>Postsecondary Students</span> with <span>Intellectual</span> and <span>Developmental Disabilities</span>. <em>Exceptionality</em>, <em>29</em>(4), 310–325. <a href="https://doi.org/10.1080/09362835.2020.1850451">https://doi.org/10.1080/09362835.2020.1850451</a>
+</div>
+<div id="ref-van2013three" class="csl-entry">
+Van den Noortgate, W., López-López, J. A., Marı́n-Martı́nez, F., &amp; Sánchez-Meca, J. (2013). Three-level meta-analysis of dependent effect sizes. <em>Behavior Research Methods</em>, <em>45</em>, 576–594. <a href="https://doi.org/10.3758/s13428-012-0261-6">https://doi.org/10.3758/s13428-012-0261-6</a>
+</div>
+<div id="ref-whatworksclearinghouse2020What" class="csl-entry">
+What Works Clearinghouse. (2020b). <em>What <span>Works Clearinghouse Standards Handbook</span></em> (Version 4.1). <span>U.S. Department of Education, Institute of Education Sciences, National Center for Education Evaluation and Regional Assistance.</span>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>The SE of the overall effect size is the square root of the inverse of the total weight.<a href="illustrate-D-CES-Btrends.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="illustrate-D-CES-Ttrends.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["SCD-Methods-Guide.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
