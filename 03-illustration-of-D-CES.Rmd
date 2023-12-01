@@ -30,17 +30,17 @@ We also consider other case examples. In Figure \@ref(fig:Peltier-2020), Gary's 
 
 Next, focusing on the treatment phases, we conduct similar analyses. In Figures \@ref(fig:Case-1992) and \@ref(fig:Lambert-2006), where there is an immediate shift in performance and no trend in the treatment phases, we find patterns that match our hypothesized treatment trend expectations. In Figure \@ref(fig:Peltier-2020), we again see a typical pattern where the shift in performance is immediate and stable over time. While here there are a few exceptions where cases appear to have a decline in performance toward the end of the intervention phase (e.g., Andy and Ellie), we find it best to select a model consistent with the typical and expected pattern. We proceed with a model that assumes no trend in baseline and treatment phases (i.e., Model 1 or Model 2 from Figure \@ref(fig:DC-ES-flow-chart)) because the design-comparable effect sizes assume a common model across cases and estimate an average effect across cases.
 
-```{r Case-1992, out.width = "75%", out.height = "75%", fig.cap = "Multiple Baseline Data Extracted from Case et al. (1992)"}
+```{r Case-1992, out.width = "50%", fig.cap = "Multiple Baseline Data Extracted from Case et al. (1992)"}
 # Figure 3.1
 knitr::include_graphics("images/Case1992.png")
 ```
 
-```{r Peltier-2020, out.width = "75%", out.height = "75%", fig.cap = "Multiple Baseline Data Extracted from Peltier et al. (2020)"}
+```{r Peltier-2020, out.width = "50%", out.height = "75%", fig.cap = "Multiple Baseline Data Extracted from Peltier et al. (2020)"}
 # Figure 3.2
 knitr::include_graphics("images/Peltier2020.png")
 ```
 
-```{r Lambert-2006, out.width = "75%", out.height = "75%", fig.cap = "Replicated ABAB Data Extracted from Lambert et al. (2006)"}
+```{r Lambert-2006, out.width = "50%", out.height = "75%", fig.cap = "Replicated ABAB Data Extracted from Lambert et al. (2006)"}
 # Figure 3.3
 knitr::include_graphics("images/Lambert2006.png")
 ```
@@ -103,24 +103,24 @@ Because we tentatively selected Model 2 based on our a priori considerations, we
 
 ### Example 1: Multiple Baseline Study by @case1992Improving
 
-We can estimate design-comparable effect sizes for all models suggested in Figure \@ref(fig:Peltier-Asher-2020), using a web-based calculator for design-comparable effect sizes (_scdhlm_; @pustejovsky2021scdhlm). The scdhlm app is available at https://jepusto.shinyapps.io/scdhlm/. To use this app, researchers must store their dataset in an Excel file (.xlsx), comma delimited file (.csv), or text file (.txt). In addition, we recommend that users inspect their data to ensure the inclusion of the following variables: case identifier, phase identifier, session number, and the outcome. Although not required, researchers may want to arrange the data columns by order of variable appearance in the app. 
-We show this arrangement for the @case1992Improving study in Figure \ref(fig:Excel-Case-1992). There, we demonstrate the following order of column headers with case identifier representing data in the first column, followed by variables in this order (left-to-right): phase identifier, session number, and the outcomes in the fourth column. Researchers have the flexibility to use any labeling scheme that clearly distinguishes between baseline and intervention conditions. For example, for the phase identifier, one can use $b$ or 0 to indicate baseline observations and $i$ or 1 to indicate intervention observations. However, the app requires that numerical values be used for both session number and outcome. Finally, we recommend that users arrange the data first by case (i.e., enter all the rows of data for the first case before any of the rows of data for the second case) and then by session number.
+We can estimate design-comparable effect sizes for all models suggested in Figure \@ref(fig:Peltier-Asher-2020), using a web-based calculator for design-comparable effect sizes (_scdhlm_\; @pustejovsky2021scdhlm). The scdhlm app is available at https://jepusto.shinyapps.io/scdhlm/. To use this app, researchers must store their dataset in an Excel file (.xlsx), comma delimited file (.csv), or text file (.txt). In addition, we recommend that users inspect their data to ensure the inclusion of the following variables: case identifier, phase identifier, session number, and the outcome. Although not required, researchers may want to arrange the data columns by order of variable appearance in the app. 
+We show this arrangement for the @case1992Improving study in Figure \@ref(fig:Excel-Case-1992). There, we demonstrate the following order of column headers with case identifier representing data in the first column, followed by variables in this order (left-to-right): phase identifier, session number, and the outcomes in the fourth column. Researchers have the flexibility to use any labeling scheme that clearly distinguishes between baseline and intervention conditions. For example, for the phase identifier, one can use $b$ or 0 to indicate baseline observations and $i$ or 1 to indicate intervention observations. However, the app requires that numerical values be used for both session number and outcome. Finally, we recommend that users arrange the data first by case (i.e., enter all the rows of data for the first case before any of the rows of data for the second case) and then by session number.
 
-```{r Excel-Case-1992, out.width = "75%", out.height = "75%", fig.cap = "Illustration of Treatment Effect for Asher (Peltier et al., 2020)"}
+```{r Excel-Case-1992, out.width = "50%", out.height = "75%", fig.cap = "Illustration of Treatment Effect for Asher (Peltier et al., 2020)"}
 # Figure 3.5
 knitr::include_graphics("images/excel_Case1992.jpeg")
 ```
 
-After starting the app, we use the Load tab to load the data file, as illustrated in Figure \ref(fig:Load-Case-1992). As mentioned previously, the data file can be a .txt or .csv file that includes one dataset, or an Excel (.xlsx) file that has either one (e.g., a data set for one study) or multiple spreadsheets (one spreadsheet for each of several studies). If using a .xlsx file with multiple spreadsheets, the _scdhlm_ app allows us to select the spreadsheet containing the data for the study of interest from the _Load_ tab. Then, we use the drop-down menus on the right of the screen to indicate the study design (_treatment reversal_ versus _Multiple Baseline/Multiple Probe across participants_) and which variables in the data set correspond to the case identifier, phase identifier, session, and outcome (see Figure \ref(fig:Load-Case-1992)).
+After starting the app, we use the Load tab to load the data file, as illustrated in Figure \@ref(fig:Load-Case-1992). As mentioned previously, the data file can be a .txt or .csv file that includes one dataset, or an Excel (.xlsx) file that has either one (e.g., a data set for one study) or multiple spreadsheets (one spreadsheet for each of several studies). If using a .xlsx file with multiple spreadsheets, the _scdhlm_ app allows us to select the spreadsheet containing the data for the study of interest from the _Load_ tab. Then, we use the drop-down menus on the right of the screen to indicate the study design (_treatment reversal_ versus _Multiple Baseline/Multiple Probe across participants_) and which variables in the data set correspond to the case identifier, phase identifier, session, and outcome (see Figure \@ref(fig:Load-Case-1992)).
 
-```{r Load-Case-1992, out.width = "75%", fig.cap = "Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab"}
+```{r Load-Case-1992, out.width = "50%", fig.cap = "Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab"}
 # Figure 3.6
 knitr::include_graphics("images/app.load_Case1992.jpeg")
 ```
 
-After loading our data, we use the _Inspect_ tab to ensure the accurate import of raw data into the app and assigned variable names are accurate (Figure \ref(fig:Inspect-Case-1992)). In addition, we can use the _Inspect_ tab to view a graph of the data (Figure \ref(fig:Graph-Case-1992)). We recommend that researchers compare these data with the graphed data from the original studies to ensure accuracy in uploading the data and specifying the design and variable names on the _Load_ tab. Check the graphed data again for consistency with the (tentatively) selected model for the design-comparable effect size.
+After loading our data, we use the _Inspect_ tab to ensure the accurate import of raw data into the app and assigned variable names are accurate (Figure \@ref(fig:Inspect-Case-1992)). In addition, we can use the _Inspect_ tab to view a graph of the data (Figure \@ref(fig:Graph-Case-1992)). We recommend that researchers compare these data with the graphed data from the original studies to ensure accuracy in uploading the data and specifying the design and variable names on the _Load_ tab. Check the graphed data again for consistency with the (tentatively) selected model for the design-comparable effect size.
 
-```{r Inspect-Case-1992, out.width = "75%", out.height = "75%", fig.cap = "Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within Inspect Tab for Case et al. (1992)"}
+```{r Inspect-Case-1992, out.width = "50%", out.height = "75%", fig.cap = "Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within Inspect Tab for Case et al. (1992)"}
 # Figure 3.7
 knitr::include_graphics("images/app.inspect.data_Case1992.jpeg")
 ```
@@ -130,7 +130,7 @@ knitr::include_graphics("images/app.inspect.data_Case1992.jpeg")
 knitr::include_graphics("images/app.inspect.graph_Case1992.jpeg")
 ```
 
-After inspecting the data, we next specify the model for the design-comparable effect size using the _Model_ tab. Figure \@ref(fig:Model2-Case-1992) shows our specification for Model 2 (i.e., the model that assumes no trends and an effect that varies across cases). The specification process begins with the selection of trend type for the baseline phase. For this example, under _Type of time trend_, we select _level_ because we assume no time trends in the baseline phases. Then, we opt to include _level_ as a fixed effect and check the box to enable the model estimation of the average baseline level (i.e., $\gamma_{00}$ from Equation \@ref(eq:M2-intercept). 
+After inspecting the data, we next specify the model for the design-comparable effect size using the _Model_ tab. Figure \@ref(fig:Model2-Case-1992) shows our specification for Model 2 (i.e., the model that assumes no trends and an effect that varies across cases). The specification process begins with the selection of trend type for the baseline phase. For this example, under _Type of time trend_, we select _level_ because we assume no time trends in the baseline phases. Then, we opt to include _level_ as a fixed effect and check the box to enable the model estimation of the average baseline level (i.e., $\gamma_{00}$ from Equation \@ref(eq:M2-intercept)). 
 <!-- MC: I corrected the Equation number. James, please double check.-->
 We also include _level_ as a random effect, so that the baseline level can vary from case to case. Focusing on the treatment phase next, we select _change in level_ as the _Type of time trend_, because we assume that the treatment will only change the level of the outcome (not trend) and include _change in level_ as a fixed effect. As a fixed effect, we can obtain an estimate of the average shift in level between baseline and treatment phases (i.e., $\gamma_{10}$ from Equation \@ref(eq:M2-slope).
 <!-- MC: I corrected the Equation number. James, please double check.-->
@@ -138,7 +138,7 @@ Finally, we choose to include _change in level_ as a random effect to allow the 
 
 At the bottom of the screen, the _scdhlm_ app provides a graph of the data with trend lines based on the specified model. We recommend that users inspect this graph to ensure that the trend lines fit the data reasonably well. If the trend lines do not fit the data well, a question about model selection arises. For example, we find the baseline trend line for Abernathy is relatively high compared to their actual baseline observations. However, other model specifications (e.g., Model 1 shown later) did not improve the fit of Abernathy’s baseline trend line. So, we decide to proceed with estimation because most other trend lines look appropriate, and the model is consistent with our a priori expectations. Throughout this process, researchers should maintain a high standard for transparency in decision-making when reporting methods and results. 
 
-```{r Model2-Case-1992, out.width = "75%", fig.cap = "Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 2 Specification for Case et al. (1992)"}
+```{r Model2-Case-1992, out.width = "50%", fig.cap = "Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 2 Specification for Case et al. (1992)"}
 # Figure 3.9
 knitr::include_graphics("images/app.model.model2_Case1992.png")
 ```
@@ -156,7 +156,7 @@ knitr::include_graphics("images/app.ES.model2_Case1992.jpeg")
 
 If our a priori arguments for selecting Model 2 were weak, or we wanted to consider Model 1, we can easily compute the results of a different model by going back to the _Model_ tab and changing our specification. The only difference is that Model 1 does not include _change in level_ as a random effect for the treatment phase. For illustration purposes, we present Model 1 specification results for this study in Figure \@ref(fig:Model1-Case-1992). As before, we keep the _level_ option selected as the _Type of time trend_ for the baseline phase, as both a fixed effect and a random effect. In the treatment phase, we keep _change in level_ as the _Type of time trend_ but select only _change in level_ as a fixed effect. The Model 1 trend lines fit similarly to those from Model 2; the Model 1 design-comparable effect size is 2.59 with an SE of 0.41 and $95\%$ CI [1.76, 3.42]. This suggests that the effect size estimate is not sensitive to our decision about whether the treatment effect varies across cases. Despite this information, we proceed with the Model 2 estimate because it is consistent with our expectations for the research in this area. 
 
-```{r Model1-Case-1992, out.width = "75%", out.height = "75%", fig.cap = "Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 1 Specification for Case et al. (1992)"}
+```{r Model1-Case-1992, out.width = "50%", out.height = "75%", fig.cap = "Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 1 Specification for Case et al. (1992)"}
 # Figure 3.11
 knitr::include_graphics("images/app.model.model1_Case1992.png")
 ```
@@ -171,7 +171,7 @@ We now have a design-comparable effect size for the first single-case study by @
 
 After performing these steps, we found that the estimated model trajectories for the Model 2 specification fit the @peltier2020Effects data well, as shown in Figure \@ref(fig:Model2-Peltier-2020). For the @peltier2020Effects study, the design-comparable effect size is 2.95 with an SE of 0.28 and $95\%$ CI [2.42, 3.53]. We then estimated the effect for Model 1 (i.e., we remove the check next to _change in level_ under _include random effect_), which is the more restrictive model that does not allow the treatment effect to vary across cases. Model 1 produced a design-comparable effect size estimate of 2.83 with an SE of 0.24 and $95\%$ CI [2.34, 3.31], like the Model 2 design-comparable effect size. 
 
-```{r Model2-Peltier-2020, out.width = "75%", out.height = "75%", fig.cap = "Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 2 Specification for Peltier et al. (2020)"}
+```{r Model2-Peltier-2020, out.width = "50%", out.height = "75%", fig.cap = "Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 2 Specification for Peltier et al. (2020)"}
 # Figure 3.12
 knitr::include_graphics("images/app.model.model2_Peltier2020.png")
 ```
@@ -182,7 +182,7 @@ For the third SCD study, we illustrate use of the _scdhlm_ app using data from a
 
 After specifying the model, we view the Effect size tab to obtain the design-comparable effect size (see Figure \@ref(fig:Model2-Lambert-2006)). For @lambert2006effects, the estimated Model 2 design-comparable effect size is 6.37 with an SE of 0.39 and $95\%$ CI [5.60, 7.14]. Like the previous SCD studies, we also estimate the effect for Model 1, which is the more restrictive model that does not allow the treatment effect to vary across cases. Model 1 produces an estimate of 6.34 with an SE of 0.37 and $95\%$ CI [5.61, 7.08], a similar result to the Model 2 design-comparable effect size. 
 
-```{r Model2-Lambert-2006, out.width = "75%", out.height = "75%", fig.cap = "Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 2 Specification for Lambert et al. (2006)"}
+```{r Model2-Lambert-2006, out.width = "50%", out.height = "75%", fig.cap = "Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 2 Specification for Lambert et al. (2006)"}
 # Figure 3.13
 knitr::include_graphics("images/app.model.model2_Lambert2006.png")
 ```
