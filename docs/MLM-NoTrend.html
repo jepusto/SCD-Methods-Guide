@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Illustration of Multilevel Modeling When No Trends Are Assumed | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Illustration of Multilevel Modeling When No Trends Are Assumed | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="jepusto/SCD-Methods-Guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Illustration of Multilevel Modeling When No Trends Are Assumed | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+
+
+<meta name="date" content="2023-12-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="MLM-raw-data.html"/>
+<link rel="next" href="MLM-Trend.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Synthesis of Single-Case Designs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Authors</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i>Disclaimer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#citation"><i class="fa fa-check"></i>Citation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#datasets"><i class="fa fa-check"></i>Datasets</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Approaches for Estimation and Synthesis of Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#purpose-of-the-methods-guide"><i class="fa fa-check"></i><b>1.2</b> Purpose of the Methods Guide</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#study-quality"><i class="fa fa-check"></i><b>1.3</b> Study Quality</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#selecting-an-approach-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.4</b> Selecting an Approach for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#design-comparable-effect-sizes"><i class="fa fa-check"></i><b>1.5</b> Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#case-specific-effect-sizes"><i class="fa fa-check"></i><b>1.6</b> Case-Specific Effect Sizes</a></li>
+<li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#multilevel-modeling-of-individual-participant-interrupted-time-series-data"><i class="fa fa-check"></i><b>1.7</b> Multilevel Modeling of Individual Participant Interrupted Time-Series Data</a></li>
+<li class="chapter" data-level="1.8" data-path="intro.html"><a href="intro.html#summary-of-options-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.8</b> Summary of Options for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="1.9" data-path="intro.html"><a href="intro.html#limitations-in-selecting-an-approach-for-effect-estimation-and-synthesis"><i class="fa fa-check"></i><b>1.9</b> Limitations in Selecting an Approach for Effect Estimation and Synthesis</a></li>
+<li class="chapter" data-level="1.10" data-path="intro.html"><a href="intro.html#structure-of-the-methods-guide"><i class="fa fa-check"></i><b>1.10</b> Structure of the Methods Guide</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="D-CES.html"><a href="D-CES.html"><i class="fa fa-check"></i><b>2</b> Introduction to Design-Comparable Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="D-CES.html"><a href="D-CES.html#background-1"><i class="fa fa-check"></i><b>2.1</b> Background</a></li>
+<li class="chapter" data-level="2.2" data-path="D-CES.html"><a href="D-CES.html#when-to-use-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>2.2</b> When to Use Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="2.3" data-path="D-CES.html"><a href="D-CES.html#general-definition-of-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>2.3</b> General Definition of Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="2.4" data-path="D-CES.html"><a href="D-CES.html#what-we-assume-when-we-synthesize-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>2.4</b> What We Assume When We Synthesize Design-Comparable Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="D-CES.html"><a href="D-CES.html#what-we-assume-when-we-estimate-design-comparable-effect-size"><i class="fa fa-check"></i><b>2.4.1</b> What We Assume When We Estimate Design-Comparable Effect Size</a></li>
+<li class="chapter" data-level="2.4.2" data-path="D-CES.html"><a href="D-CES.html#normality"><i class="fa fa-check"></i><b>2.4.2</b> Normality</a></li>
+<li class="chapter" data-level="2.4.3" data-path="D-CES.html"><a href="D-CES.html#homogeneity-of-variance"><i class="fa fa-check"></i><b>2.4.3</b> Homogeneity of Variance</a></li>
+<li class="chapter" data-level="2.4.4" data-path="D-CES.html"><a href="D-CES.html#appropriate-structural-model"><i class="fa fa-check"></i><b>2.4.4</b> Appropriate Structural Model</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="D-CES.html"><a href="D-CES.html#modeling-options-for-design-comparable-effect-size-estimation"><i class="fa fa-check"></i><b>2.5</b> Modeling Options for Design-comparable Effect Size Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html"><i class="fa fa-check"></i><b>3</b> Illustration of Design-Comparable Effect Sizes When No Trends Are Assumed</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies"><i class="fa fa-check"></i><b>3.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="3.2" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#details-of-the-no-trend-models-for-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>3.2</b> Details of the No Trend Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="3.3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies"><i class="fa fa-check"></i><b>3.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-1-multiple-baseline-study-by-case1992improving"><i class="fa fa-check"></i><b>3.3.1</b> Example 1: Multiple Baseline Study by <span class="citation">Case et al. (1992)</span></a></li>
+<li class="chapter" data-level="3.3.2" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-2-multiple-baseline-study-by-peltier2020effects"><i class="fa fa-check"></i><b>3.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Peltier et al. (2020)</span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#example-3-replicated-abab-design-by-lambert2006effects"><i class="fa fa-check"></i><b>3.3.3</b> Example 3: Replicated ABAB Design by <span class="citation">Lambert et al. (2006)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#estimating-the-design-comparable-effect-size-for-the-group-studies"><i class="fa fa-check"></i><b>3.4</b> Estimating the Design-Comparable Effect Size for the Group Studies</a></li>
+<li class="chapter" data-level="3.5" data-path="illustrate-D-CES.html"><a href="illustrate-D-CES.html#analyzing-the-effect-sizes"><i class="fa fa-check"></i><b>3.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html"><i class="fa fa-check"></i><b>4</b> Illustration of Design-Comparable Effect Sizes When Assuming Only Trends in The Treatment Phases</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies-1"><i class="fa fa-check"></i><b>4.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="4.2" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#details-of-the-models-for-design-comparable-effect-sizes"><i class="fa fa-check"></i><b>4.2</b> Details of the Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="4.3" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies-1"><i class="fa fa-check"></i><b>4.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#example-1-multiple-baselise-study-by-gunning2003psychological"><i class="fa fa-check"></i><b>4.3.1</b> Example 1: Multiple Baselise Study by <span class="citation">Gunning &amp; Espie (2003)</span></a></li>
+<li class="chapter" data-level="4.3.2" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#example-2-multiple-baseline-study-by-delemere2018parentimplemented"><i class="fa fa-check"></i><b>4.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Delemere &amp; Dounavi (2018)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#estimating-the-design-comparable-effect-size-for-the-group-studies-1"><i class="fa fa-check"></i><b>4.4</b> Estimating the Design-Comparable Effect Size for the Group Studies</a></li>
+<li class="chapter" data-level="4.5" data-path="illustrate-D-CES-Ttrends.html"><a href="illustrate-D-CES-Ttrends.html#analyzing-the-effect-sizes-1"><i class="fa fa-check"></i><b>4.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html"><i class="fa fa-check"></i><b>5</b> Illustration of Design-Comparable Effect Sizes When Assuming Trends in Baseline and Different Trends in Treatment</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#selecting-a-design-comparable-effect-size-for-the-single-case-studies-2"><i class="fa fa-check"></i><b>5.1</b> Selecting a Design-Comparable Effect Size for the Single-Case Studies</a></li>
+<li class="chapter" data-level="5.2" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#details-of-the-models-for-design-comparable-effect-sizes-1"><i class="fa fa-check"></i><b>5.2</b> Details of the Models for Design-Comparable Effect Sizes</a></li>
+<li class="chapter" data-level="5.3" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#estimating-the-design-comparable-effect-size-for-the-single-case-studies-2"><i class="fa fa-check"></i><b>5.3</b> Estimating the Design-Comparable Effect Size for the Single-Case Studies</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#example-1-multiple-probe-study-by-datchuk2016writing"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Multiple Probe Study by <span class="citation">Datchuk (2016)</span></a></li>
+<li class="chapter" data-level="5.3.2" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#example-2-multiple-baseline-study-by-rodgers2021effects"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Multiple Baseline Study by <span class="citation">Rodgers et al. (2021)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#estimating-the-design-comparable-effect-size-for-the-group-study"><i class="fa fa-check"></i><b>5.4</b> Estimating the Design-Comparable Effect Size for the Group Study</a></li>
+<li class="chapter" data-level="5.5" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#analyzing-the-effect-sizes-2"><i class="fa fa-check"></i><b>5.5</b> Analyzing the Effect Sizes</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html"><i class="fa fa-check"></i><b>6</b> Introduction to Multilevel Modeling of Raw Participant Data</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#background-2"><i class="fa fa-check"></i><b>6.1</b> Background</a></li>
+<li class="chapter" data-level="6.2" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#when-to-use-multilevel-models-of-the-raw-data"><i class="fa fa-check"></i><b>6.2</b> When to Use Multilevel Models of the Raw Data</a></li>
+<li class="chapter" data-level="6.3" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#what-we-assume-with-multilevel-models-of-the-raw-data"><i class="fa fa-check"></i><b>6.3</b> What We Assume with Multilevel Models of the Raw Data</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#within-case-model-assumptions"><i class="fa fa-check"></i><b>6.3.1</b> Within-Case Model Assumptions</a></li>
+<li class="chapter" data-level="6.3.2" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#case-similarity-assumptions"><i class="fa fa-check"></i><b>6.3.2</b> Case Similarity Assumptions</a></li>
+<li class="chapter" data-level="6.3.3" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#study-similarity-assumptions"><i class="fa fa-check"></i><b>6.3.3</b> Study Similarity Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#comparison-to-other-synthesis-approaches"><i class="fa fa-check"></i><b>6.4</b> Comparison to Other Synthesis Approaches</a></li>
+<li class="chapter" data-level="6.5" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#multilevel-modeling-options-for-synthesizing-single-case-research"><i class="fa fa-check"></i><b>6.5</b> Multilevel Modeling Options for Synthesizing Single-Case Research</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html"><i class="fa fa-check"></i><b>7</b> Illustration of Multilevel Modeling When No Trends Are Assumed</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#selecting-a-multilevel-model-for-the-single-case-studies"><i class="fa fa-check"></i><b>7.1</b> Selecting a Multilevel Model for the Single-Case Studies</a></li>
+<li class="chapter" data-level="7.2" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#details-of-the-no-trend-multilevel-model"><i class="fa fa-check"></i><b>7.2</b> Details of the No-Trend Multilevel Model</a></li>
+<li class="chapter" data-level="7.3" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#estimating-a-multilevel-model-for-the-behavior-specific-praise-studies"><i class="fa fa-check"></i><b>7.3</b> Estimating a Multilevel Model for the Behavior Specific Praise Studies</a></li>
+<li class="chapter" data-level="7.4" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#appendix"><i class="fa fa-check"></i><b>7.4</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#sas-code"><i class="fa fa-check"></i><b>7.4.1</b> SAS Code</a></li>
+<li class="chapter" data-level="7.4.2" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#r-code"><i class="fa fa-check"></i><b>7.4.2</b> R Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="MLM-Trend.html"><a href="MLM-Trend.html"><i class="fa fa-check"></i><b>8</b> Illustration of Multilevel Modeling When No Trends Are Assumed</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="MLM-Trend.html"><a href="MLM-Trend.html#selecting-a-multilevel-model-for-the-single-case-studies-1"><i class="fa fa-check"></i><b>8.1</b> Selecting a Multilevel Model for the Single-Case Studies</a></li>
+<li class="chapter" data-level="8.2" data-path="MLM-Trend.html"><a href="MLM-Trend.html#details-of-the-multilevel-model-with-trends"><i class="fa fa-check"></i><b>8.2</b> Details of the Multilevel Model with Trends</a></li>
+<li class="chapter" data-level="8.3" data-path="MLM-Trend.html"><a href="MLM-Trend.html#estimating-the-multilevel-model-for-the-included-writing-intervention-studies"><i class="fa fa-check"></i><b>8.3</b> Estimating the Multilevel Model for the Included Writing Intervention Studies</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html"><i class="fa fa-check"></i><b>9</b> Introduction to Case-Specific Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#background-3"><i class="fa fa-check"></i><b>9.1</b> Background</a></li>
+<li class="chapter" data-level="9.2" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#when-to-use-case-specific-effect-sizes"><i class="fa fa-check"></i><b>9.2</b> When to Use Case-Specific Effect Sizes</a></li>
+<li class="chapter" data-level="9.3" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-case-specific-effect-sizes"><i class="fa fa-check"></i><b>9.3</b> Assumptions and Limitations of Case-Specific Effect Sizes</a></li>
+<li class="chapter" data-level="9.4" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-nonoverlap-indices"><i class="fa fa-check"></i><b>9.4</b> Assumptions and Limitations of Nonoverlap Indices</a></li>
+<li class="chapter" data-level="9.5" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-standardized-mean-differences"><i class="fa fa-check"></i><b>9.5</b> Assumptions and Limitations of Standardized Mean Differences</a></li>
+<li class="chapter" data-level="9.6" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-percentage-change-indices-and-log-response-ratios"><i class="fa fa-check"></i><b>9.6</b> Assumptions and Limitations of Percentage Change Indices and Log Response Ratios</a></li>
+<li class="chapter" data-level="9.7" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-percent-of-goal-obtained"><i class="fa fa-check"></i><b>9.7</b> Assumptions and Limitations of Percent of Goal Obtained</a></li>
+<li class="chapter" data-level="9.8" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#case-specific-effect-size-options-for-synthesizing-single-case-research"><i class="fa fa-check"></i><b>9.8</b> Case-Specific Effect Size Options for Synthesizing Single-Case Research</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html"><i class="fa fa-check"></i><b>10</b> Application of Case-Specific Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#selecting-case-specific-effect-sizes-for-the-single-case-studies"><i class="fa fa-check"></i><b>10.1</b> Selecting Case-Specific Effect Sizes for the Single-Case Studies</a></li>
+<li class="chapter" data-level="10.2" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#estimating-the-case-specific-effect-sizes-for-the-included-aac-intervention-studies"><i class="fa fa-check"></i><b>10.2</b> Estimating the Case-Specific Effect Sizes for the Included AAC Intervention Studies</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#entering-the-data-into-excel"><i class="fa fa-check"></i><b>10.2.1</b> Entering the Data into Excel</a></li>
+<li class="chapter" data-level="10.2.2" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#accessing-the-app"><i class="fa fa-check"></i><b>10.2.2</b> Accessing the App</a></li>
+<li class="chapter" data-level="10.2.3" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#loading-the-data-into-the-app"><i class="fa fa-check"></i><b>10.2.3</b> Loading the Data into the App</a></li>
+<li class="chapter" data-level="10.2.4" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#defining-the-variable-within-the-app"><i class="fa fa-check"></i><b>10.2.4</b> Defining the Variable within the App</a></li>
+<li class="chapter" data-level="10.2.5" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#examining-the-graphs-within-the-app"><i class="fa fa-check"></i><b>10.2.5</b> Examining the Graphs within the App</a></li>
+<li class="chapter" data-level="10.2.6" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#estimating-the-effect-sizes-within-the-app"><i class="fa fa-check"></i><b>10.2.6</b> Estimating the Effect Sizes within the App</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#syntex-for-r"><i class="fa fa-check"></i><b>10.3</b> Syntex for R</a></li>
+<li class="chapter" data-level="10.4" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#examining-the-alignment-of-the-case-specific-effect-sizes-with-our-visual-analysis"><i class="fa fa-check"></i><b>10.4</b> Examining the Alignment of the Case-Specific Effect Sizes with our Visual Analysis</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#nap"><i class="fa fa-check"></i><b>10.4.1</b> NAP</a></li>
+<li class="chapter" data-level="10.4.2" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#smd-results"><i class="fa fa-check"></i><b>10.4.2</b> SMD Results</a></li>
+<li class="chapter" data-level="10.4.3" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#lrri-results"><i class="fa fa-check"></i><b>10.4.3</b> LRRi Results</a></li>
+<li class="chapter" data-level="10.4.4" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#pogomuparrow"><i class="fa fa-check"></i><b>10.4.4</b> PoGO<sub>M<span class="math inline">\(\uparrow\)</span></sub></a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#averaging-the-case-specific-effect-sizes"><i class="fa fa-check"></i><b>10.5</b> Averaging the Case-Specific Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#fixed-effects-meta-analysis"><i class="fa fa-check"></i><b>10.5.1</b> Fixed Effects Meta-Analysis</a></li>
+<li class="chapter" data-level="10.5.2" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#random-effects-meta-analysis"><i class="fa fa-check"></i><b>10.5.2</b> Random Effects Meta-Analysis</a></li>
+<li class="chapter" data-level="10.5.3" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#further-directions-for-synthesizing-case-specific-effect-sizes"><i class="fa fa-check"></i><b>10.5.3</b> Further Directions for Synthesizing Case-Specific Effect Sizes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="MLM-NoTrend" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Illustration of Multilevel Modeling When No Trends Are Assumed<a href="MLM-NoTrend.html#MLM-NoTrend" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><em>This chapter illustrates the application of multilevel models in contexts where one does not expect trends in either baseline or treatment phases. We provide instruction for using the MultiSCED app to specify and estimate the multilevel model to synthesize results from a set of single-case studies. We offer step-by-step instructions using data from four multiple baseline design studies examining methods to improve use of behavior-specific praise in classroom contexts.</em></p>
+<p>In this chapter, we illustrate the application of multilevel modeling in contexts where one does not expect time trends to occur for a set of single-case design (SCD) studies included in a synthesis. Multilevel models assume that the analysis focuses on the same outcome for each case in each study. In addition to this assumption, the multilevel model explored in this chapter is specified based on the prediction that the dependent variable for each case has a stable level throughout the baseline and treatment phases and that introduction of treatment may result in an immediate shift in the level of the dependent variable.</p>
+<p>We present an example scenario where we want to synthesize evidence from several SCD studies that examine intervention effects on the improvement of behavior specific praise (BSP) used by educational staff (e.g., teachers or aides). It is of note that while all studies are implemented by educational staff in English, they took place in different countries (e.g., U.S. and Ghana) and included different intervention ingredients. Due to the paucity of research investigating the effects of BSP implemented by educators (teachers or teacher assistants) in school settings, and the need to succinctly model this process, we limited our illustration to four multiple baseline (MB) design studies, described in further detail below.
+In one study, <span class="citation">Gage et al. (<a href="#ref-Gage2018">2018</a>)</span> examined the impact of one-on-one training coupled with emailed visual performance feedback on four first-year general education classroom teachers’ use of BSP with their students. In a second study, <span class="citation">Collier-Meek et al. (<a href="#ref-CollierMeek2017">2017</a>)</span> investigated whether prompts emailed daily to second and fifth grade classroom teachers would promote their use of BSP with students. The third study by <span class="citation">Sallese &amp; Vannest (<a href="#ref-Sallese_Vannest_2022">2022</a>)</span> examined the effects of a multicomponent (self-monitoring, performance feedback, goal setting, modeling, and action planning) teacher-led training program on the improvement of BSP used by four paraprofessionals with elementary students identified with specific learning disabilities or other health impairment. Finally, <span class="citation">Knochel et al. (<a href="#ref-knochel2021culturally">2021</a>)</span> studied how self-monitoring coupled with performance feedback affected the use of BSP by four classroom staff (who were also caregivers) assigned to work with students with autism spectrum disorder (ages 7-17 years).</p>
+<p>Synthesizing the data from these four studies involves estimating the average treatment effect on the scale of the outcome variable by modeling the outcome data for all cases in all studies. While our goal is feasible because each study examined the same outcome, the studies measured the BSP outcomes on different scales. More specifically, the included studies reported BSP frequencies using different time intervals (e.g., frequency per 10 minutes versus 15 minutes). To make the outcome comparable across the studies, we converted all frequencies to report a rate of BSP per 10 minutes. When the included studies had comparable outcomes, we chose to synthesize the results using the multilevel modeling approach (see the decision rules in Figure <a href="intro.html#fig:synthesis-flow-chart">1.1</a>). In this chapter, we break our illustration into two stages: (a) selecting a multilevel model for the studies, and (b) estimating the multilevel model using the MultiSCED app, a web-based calculator for conducting multilevel models of single-case studies <span class="citation">(<a href="#ref-Declercq2020">Declercq et al., 2020</a>)</span>.</p>
+<div id="selecting-a-multilevel-model-for-the-single-case-studies" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Selecting a Multilevel Model for the Single-Case Studies<a href="MLM-NoTrend.html#selecting-a-multilevel-model-for-the-single-case-studies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Using the decision rules in Figure <a href="MLM-raw-data.html#fig:mlmapproach">6.2</a> (see Chapter 6), we first select the general multilevel modeling approach. We must decide whether we can treat the outcome as a continuous variable that is normally distributed around the trend lines. With an outcome rate of BSP per 10 minutes, it would be reasonable to consider a generalized linear mixed model (GLMM) that does not assume normality. However, GLMMs are more complex than linear mixed models (LMMs) that assume normality, and there is limited evidence of GLMM utility for synthesizing SCD data. For this methods guide, we will examine our expectations about the outcome for the contexts studied. In addition, we will visually analyze the graphed raw outcome data for each case over time to gauge the severity of any violation to the normality assumption. If not too severe, we will proceed with using an LMM, which can produce unbiased estimates of treatment effects quantified as mean differences on the outcome scale, along with appropriate effect inferences in a variety of contexts where the outcome is not normally distributed [<span class="citation">Declercq et al. (<a href="#ref-Declercq2019">2019</a>)</span>; Joo_Ferron_2019]. In the future, we anticipate that methodological research will better clarify the relative merits of GLMMs versus LMMs and provide clearer guidance for researchers to select the best option for their models.</p>
+<p>After selecting our general multilevel modeling approach (i.e., LMM), we then use our prior knowledge and experience with the dependent variable to state our expectations for data patterns within and across phases and cases. Here, we anticipate that levels of BSP will be lower than desirable in baseline. However, we predict that some skills already exist within participants’ repertoires, so they will not occur at floor levels (i.e., we do not expect participants’ baselines to consist of consecutive values of zero). Conversely, we predict the frequencies to be further from zero and to more closely approximate a normal distribution after introducing the intervention.</p>
+<p>We present the graphs for all four MB studies in Figure <a href="MLM-NoTrend.html#fig:Gage-raw-2018">7.1</a> <span class="citation">(<a href="#ref-Gage2018">Gage et al., 2018</a>)</span>, Figure <a href="MLM-NoTrend.html#fig:CollierMeek-raw-2017">7.2</a> <span class="citation">(<a href="#ref-CollierMeek2017">Collier-Meek et al., 2017</a>)</span>, Figure <a href="MLM-NoTrend.html#fig:SalleseVannest-raw-2022">7.3</a> <span class="citation">(<a href="#ref-Sallese_Vannest_2022">Sallese &amp; Vannest, 2022</a>)</span>, and Figure <a href="MLM-NoTrend.html#fig:Knochel-raw-2021">7.4</a> <span class="citation">(<a href="#ref-knochel2021culturally">Knochel et al., 2021</a>)</span>. The graphs for the first three studies (Figures <a href="MLM-NoTrend.html#fig:Gage-raw-2018">7.1</a> - <a href="MLM-NoTrend.html#fig:SalleseVannest-raw-2022">7.3</a>) align with our expectations; none of the participants have notable floor effects. Except for two outlying values for Teacher 1 at the beginning of the baseline phase in Figure <a href="MLM-NoTrend.html#fig:CollierMeek-raw-2017">7.2</a>, the outcome distributions across cases appear relatively normal. However, in Figure <a href="MLM-NoTrend.html#fig:Knochel-raw-2021">7.4</a>, the baseline rate of BSP for two participants is zero, and a third participant has many baseline values of zero. Upon further inspection of the <span class="citation">Knochel et al. (<a href="#ref-knochel2021culturally">2021</a>)</span> study, we hypothesize that the intervention setting of Ghana and adult participants being caregivers (not professional educators) could account for lower levels of BSP in baseline. To better understand the degree to which the normality assumption was violated, we pooled the deviations from the phase means for each case in each study and estimated the skew and kurtosis of the distribution of the deviations. Resulting summary indices suggest moderate departures from normality in baseline (<span class="math inline">\(sk = 1.49\)</span>; <span class="math inline">\(ku = 6.35\)</span>), and approximately normal distributions during intervention (<span class="math inline">\(sk = 0.31\)</span>; <span class="math inline">\(ku = 1.22\)</span>). Because the distributions are not severely non-normal and prior evidence suggests that LMMs for SCD data can handle some non-normality in the outcomes <span class="citation">(<a href="#ref-Declercq2019">Declercq et al., 2019</a>; <a href="#ref-Joo_Ferron_2019">Joo &amp; Ferron, 2019</a>)</span>, we deem it appropriate to proceed with LMM for the purpose of illustrating multilevel modeling using MultiSCED.</p>
+<div class="figure"><span style="display:block;" id="fig:Gage-raw-2018"></span>
+<img src="images/Gage2018.png" alt="Effect of Intervention on the Rate of Behavior Specific Praise (Gage et al., 2018)" width="60%" />
+<p class="caption">
+Figure 7.1: Effect of Intervention on the Rate of Behavior Specific Praise (Gage et al., 2018)
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:CollierMeek-raw-2017"></span>
+<img src="images/CollierMeek2017.png" alt="Effect of Intervention on the Rate of Behavior Specific Praise (Collier-Meek et al., 2017)" width="60%" />
+<p class="caption">
+Figure 7.2: Effect of Intervention on the Rate of Behavior Specific Praise (Collier-Meek et al., 2017)
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:SalleseVannest-raw-2022"></span>
+<img src="images/CollierMeek2017.png" alt="Effect of Intervention on the Rate of Behavior Specific Praise (Sallese &amp; Vannest, 2022)" width="60%" />
+<p class="caption">
+Figure 7.3: Effect of Intervention on the Rate of Behavior Specific Praise (Sallese &amp; Vannest, 2022)
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:Knochel-raw-2021"></span>
+<img src="images/Knochel2021.png" alt="Effect of Intervention on the Rate of Behavior Specific Praise (Knochel et al., 2021)" width="60%" />
+<p class="caption">
+Figure 7.4: Effect of Intervention on the Rate of Behavior Specific Praise (Knochel et al., 2021)
+</p>
+</div>
+<p>Next, we must decide whether to include trends in our model. We expect the BSP outcome for each case in each study to be relatively stable during baseline and not likely to systematically trend up or down in the absence of intervention. Visual inspections of the study graphs (see Figures <a href="MLM-NoTrend.html#fig:Gage-raw-2018">7.1</a>-<a href="MLM-NoTrend.html#fig:Knochel-raw-2021">7.4</a>) are largely consistent with our expectation. We discussed the baseline of Teacher 1 in Figure <a href="MLM-NoTrend.html#fig:CollierMeek-raw-2017">7.2</a>, and concluded the first two observations were more likely outliers than evidence of a systematic linear trend. Based on our understanding of the BSP outcome and visual inspection of the graphs which show no trend for most cases, it appears reasonable to use a multilevel model without baseline trends.</p>
+<p>Next, we turn to the treatment phases. We expect that the intervention will lead to an immediate shift in the rate of BSP and that participants will maintain this higher level throughout the treatment phase. In Figures <a href="MLM-NoTrend.html#fig:Gage-raw-2018">7.1</a> and <a href="MLM-NoTrend.html#fig:CollierMeek-raw-2017">7.2</a>, respectively, visual inspection of the treatment phases for <span class="citation">Gage et al. (<a href="#ref-Gage2018">2018</a>)</span> and <span class="citation">Collier-Meek et al. (<a href="#ref-CollierMeek2017">2017</a>)</span> reveals relatively stable responding, as anticipated. However, in the <span class="citation">Sallese &amp; Vannest (<a href="#ref-Sallese_Vannest_2022">2022</a>)</span> study (Figure <a href="MLM-NoTrend.html#fig:SalleseVannest-raw-2022">7.3</a>), upward trends appear for some of the participants as the rate of BSP increases over time in intervention (e.g., Mia). In Figure <a href="MLM-NoTrend.html#fig:Knochel-raw-2021">7.4</a> <span class="citation">(<a href="#ref-knochel2021culturally">Knochel et al., 2021</a>)</span>, we see that the rate of BSP for two participants (Kwame and Broda) increases with time spent in intervention (unlike the other participants who have relatively stable rates throughout treatment). Because multilevel modeling requires us to assume a common model (e.g., trends for all or no cases), we proceed with estimating a model that assumes no treatment phase trends. For the three cases that appear to have treatment phase trends, their contribution to the across-case average effect estimate will be based on their across-time average effect, not on their initial effect or final effect. In addition, by not modeling the trends for these few individuals, we anticipate this decision will impact their residuals (deviations of their observations from their trend lines) in a manner that potentially increases the within-case error variance and degree of autocorrelation. However, as previously noted, these models are relatively robust to small or moderate violations of the (co)variance assumptions.</p>
+<p>After selecting a model that assumes no trends, we turn next to an examination of the within-case variance using visual analysis of the graphed data and prior knowledge of the BSP outcome. In Figures <a href="MLM-NoTrend.html#fig:Gage-raw-2018">7.1</a>-<a href="MLM-NoTrend.html#fig:Knochel-raw-2021">7.4</a>, we note increased variation in participants’ treatment phase outcome data, as expected for an outcome variable reported as a rate. Thus, we anticipate increases in the rate of BSP will lead to an increase in the variance of BSP. For example, the change in variance is pronounced for the <span class="citation">Knochel et al. (<a href="#ref-knochel2021culturally">2021</a>)</span> participants (Figure <a href="MLM-NoTrend.html#fig:Knochel-raw-2021">7.4</a>). Their baseline levels are relatively low, and treatment phase levels are relatively high. To define the between-phase variance change more precisely, we pool the deviations across cases for each phase. The standard deviation (SD) for the baseline phase deviations is 1.52. The SD of treatment phase deviations is 3.17. While we could estimate a heterogeneous variance model, multilevel models that assume homogeneity can tolerate differences in variance of this magnitude <span class="citation">(<a href="#ref-Joo_et_al_2019">Joo et al., 2019</a>)</span>.</p>
+<p>In summary, our visual analyses of primary study data identified multiple potential violations to the assumptions of the basic LMM for SCD studies, like evidence of baseline phase non-normality, across-phase heterogeneity, and a few cases that present with treatment phase trends. Thus, the LMM we use in this chapter is surely simpler than the process that generated the real data under analysis. However, the multilevel model estimate of the across-case average treatment effect and the associated inferences (e.g., confidence interval, significance tests) are relatively robust to violations of the normality and homogeneity assumptions. In addition, our purpose is to increase accessibility by illustrating the use of the MultiSCED app, and this app is limited to LMMs and homogeneous variance assumptions. Thus, we proceed to illustrate the estimation of the no-trend LMM.</p>
+</div>
+<div id="details-of-the-no-trend-multilevel-model" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Details of the No-Trend Multilevel Model<a href="MLM-NoTrend.html#details-of-the-no-trend-multilevel-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The multilevel data structure has repeated observations that are nested within cases and cases that are nested within studies, and thus there is a model for the variation of observations within a case (level-1), a model for the variation between cases within a study (level-2), and a model for variation between studies (level-3). The formal specification of the no-trend within-case model (level-1) is:
+<span class="math display" id="eq:MLM-L1-noTrend">\[\begin{equation}
+\tag{7.1}
+Y_{ijk} = \beta_{0jk} + \beta_{1jk}Tx_{ijk} + e_{ijk},
+\end{equation}\]</span>
+where <span class="math inline">\(Y_ijk\)</span> is the outcome for variable <span class="math inline">\(Y\)</span> at measurement occasion <span class="math inline">\(i\)</span> for case <span class="math inline">\(j\)</span> of study <span class="math inline">\(k\)</span> and <span class="math inline">\(Tx_{ijk}\)</span> is dummy coded with a value of 0 for baseline phase observations and a value of 1 for treatment phase observations. The mean baseline level for case <span class="math inline">\(j\)</span> of study <span class="math inline">\(k\)</span> is <span class="math inline">\(\beta_{0j}\)</span> (see Figure <a href="MLM-NoTrend.html#fig:Knochel-Sacrament-2021">7.5</a> for an example visually depicting <span class="math inline">\(\beta_{0jk}\)</span> and <span class="math inline">\(\beta_{1jk}\)</span>). The raw score treatment effect for case <span class="math inline">\(j\)</span> of study <span class="math inline">\(k\)</span> is indexed by <span class="math inline">\(\beta_{1jk}\)</span>, which is the difference between the baseline and treatment phase outcome means. The error term, <span class="math inline">\(e_{ijk}\)</span>, is time-, case-, and study-specific. The error variance, <span class="math inline">\(\sigma_e^2\)</span>, is typically assumed to be independent and normally distributed; however, it is feasible for researchers to estimate a different variance structure for <span class="math inline">\(e_{ijk}\)</span>, such as first-order autoregressive or heterogeneous across phases <span class="citation">(<a href="#ref-Joo_et_al_2019">Joo et al., 2019</a>; <a href="#ref-Petit-Bois_2014">Petit-Bois, 2014</a>)</span>. Typically, the error variance <span class="math inline">\(\sigma_e^2\)</span> is treated as constant across all cases in all included studies.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
+<div class="figure"><span style="display:block;" id="fig:Knochel-Sacrament-2021"></span>
+<img src="images/Knochel2021_Sacrament.png" alt="Illustration of Treatment Effect for Sacrament (Knochel et al., 2021)" width="60%" />
+<p class="caption">
+Figure 7.5: Illustration of Treatment Effect for Sacrament (Knochel et al., 2021)
+</p>
+</div>
+<p>The between-case model (level-2) is:
+<span class="math display" id="eq:MLM-L2-Int-NoTrend">\[\begin{equation}
+\tag{7.2}
+\beta_{0jk} = \gamma_{00k} + u_{0jk}
+\end{equation}\]</span>
+<span class="math display" id="eq:MLM-L2-slope-NoTrend">\[\begin{equation}
+\tag{7.3}
+\beta_{1jk} = \gamma_{10k} + u_{1jk}
+\end{equation}\]</span>
+where <span class="math inline">\(\gamma_{00k}\)</span> is the across-case average baseline mean for study <span class="math inline">\(k\)</span>, and <span class="math inline">\(\gamma_{10k}\)</span> is the across-case average treatment effect for study <span class="math inline">\(k\)</span>. The case-specific errors, <span class="math inline">\(u_{0jk}\)</span> and <span class="math inline">\(u_{1jk}\)</span>, correspond to the deviations of case <span class="math inline">\(j\)</span> of study <span class="math inline">\(k\)</span> from the across-case average baseline level for study <span class="math inline">\(k\)</span> and the across-case average treatment effect for study <span class="math inline">\(k\)</span>. In the MultiSCED app, the case-specific errors (<span class="math inline">\(u_{0jk}\)</span> and <span class="math inline">\(u_{1jk}\)</span>) are assumed multivariate normal with covariance
+<span class="math inline">\(\Sigma_u = \begin{bmatrix} \sigma_{u_0}^2 &amp; \\ \sigma_{u_1u_0} &amp; \sigma_{u_1}^2 \\ \end{bmatrix}\)</span>,
+and this covariance matrix is assumed to be the same across all included studies. In some applications, an unstructured covariance matrix will be difficult to estimate with the limited number of cases available. A common alternative, which could be estimated using more general multilevel modeling software, is a diagonal covariance structure where the covariance is assumed to be zero
+<span class="math inline">\(\Sigma_u = \begin{bmatrix} \sigma_{u_0}^2 &amp; \\ 0 &amp; \sigma_{u_1}^2 \\ \end{bmatrix}\)</span>.</p>
+<p>The between-study model (level-3) is:
+<span class="math display" id="eq:MLM-L3-Int-NoTrend">\[\begin{equation}
+\tag{7.4}
+\gamma_{00k} = \theta_{000} + v_{00k}
+\end{equation}\]</span>
+<span class="math display" id="eq:MLM-L3-slope-NoTrend">\[\begin{equation}
+\tag{7.5}
+\gamma_{10k} = \theta_{100} + v_{10k}
+\end{equation}\]</span>
+where <span class="math inline">\(\theta_{000}\)</span> is the across-study average baseline mean and <span class="math inline">\(\theta_{100}\)</span> is the across-study average treatment effect. The study-specific errors, <span class="math inline">\(v_{00k}\)</span> and <span class="math inline">\(v_{10k}\)</span>, correspond to the deviations of study <span class="math inline">\(k\)</span> from the across-study average baseline level and the across-study average treatment effect. Within the MultiSCED app, the study-specific errors (<span class="math inline">\(v_{00k}\)</span> and <span class="math inline">\(v_{10k}\)</span>) are assumed to be multivariate normal with covariance
+<span class="math inline">\(\Sigma_v = \begin{bmatrix} \sigma_{v_{00}}^2 &amp; \\ \sigma_{v_{10}v_{00}} &amp; \sigma_{v_{10}}^2 \\ \end{bmatrix}\)</span>.
+In some contexts, an unstructured covariance matrix will be difficult to estimate with the limited number of studies available, so meta-analysts might prefer a simpler covariance structure (e.g., diagonal covariance structure), which could be estimated using more general multilevel modeling software.</p>
+<p>For the purposes of the methods guide, we dedicate the remainder of this chapter to illustrating the estimation of the multilevel model for the BSP studies using the MultiSCED app <span class="citation">(<a href="#ref-Declercq2019">Declercq et al., 2019</a>)</span>. This app limits users to LMMs and the basic covariance structures described in this section. Using this relatively simple model, we contrast the obtained results with the results of a more complex model that assumes heterogeneous variances across phases and autocorrelation. In doing so, we provide a way to examine the sensitivity of estimates and inferences to alternative covariance structure specifications. Researchers can estimate alternative covariance structures outside of the MultiSCED app using statistical software programs such as R or SAS (see the Appendix to this chapter).</p>
+</div>
+<div id="estimating-a-multilevel-model-for-the-behavior-specific-praise-studies" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Estimating a Multilevel Model for the Behavior Specific Praise Studies<a href="MLM-NoTrend.html#estimating-a-multilevel-model-for-the-behavior-specific-praise-studies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Using the web-based MultiSCED calculator <span class="citation">(<a href="#ref-Declercq2019">Declercq et al., 2019</a>)</span> for the multilevel modeling of SCD data, we can estimate the across-case average treatment effect, along with a standard error and confidence interval. The MultiSCED app is available at <a href="http://34.251.13.245/MultiSCED/" class="uri">http://34.251.13.245/MultiSCED/</a>. To use this app, researchers must save their dataset as a text file (.txt) or a comma-delimited file (.csv). We recommend that researchers first enter their data in Excel, and then save the Excel dataset as a tab-delimited text file.</p>
+<p>Figure <a href="MLM-NoTrend.html#fig:Excel-BSP">7.6</a> shows a screenshot of a portion of the original Excel spreadsheet containing the data extracted from our four BSP multiple baseline design studies. The spreadsheet contains five columns of data corresponding to the following five variables commonly used in multilevel modeling applications: (a) study identifier (i.e., Study), (b) case identifier (i.e., Case), (c) phase identifier (i.e., Phase), (d) point in time for which the outcome was measured (i.e., Session), and (e) outcome [i.e., Outcome (per 10 min)]. Because our model assumes no trends and no autocorrelation structure, we technically do not need the session variable, but it is acceptable to leave it in the dataset. In contrast, we do require the study identifier, case identifier, phase identifier, and outcome for specifying the model. With a more complex application including moderators of interest, additional columns should be included that contain values of potential moderating variables.</p>
+<p>To use the MultiSCED app, the session and outcome variables must be numerical values. However, the variables for study, case, and phase identifiers may be entered as alphanumeric (word labels) or numeric values. The app requires that we organize the spreadsheet rows using a long data format, where the value of the outcome at each time point for a specific case in a specific study is represented in a unique row of the dataset, with the rows sorted by study, case, and time point. For each study (e.g., <span class="math inline">\(S\)</span> in Figure <a href="MLM-NoTrend.html#fig:Excel-BSP">7.6</a>), we first arrange cases by baseline length (in order of shortest to longest baseline length). Then, we enter all observations for one case at a time, in order of time. After entering all data for the case with the shortest baseline, we enter data for the case with the second-shortest baseline, and so on for all cases within a particular study. We repeat the process for the remaining studies, with data from each successive study entered below the data from the previous study.</p>
+<div class="figure"><span style="display:block;" id="fig:Excel-BSP"></span>
+<img src="images/excel_BSP.png" alt="Screenshot of the Original Excel Spreadsheet Containing the BSP Data" width="60%" />
+<p class="caption">
+Figure 7.6: Screenshot of the Original Excel Spreadsheet Containing the BSP Data
+</p>
+</div>
+<p>After organizing the data within the Excel spreadsheet, we then save the Excel spreadsheet as a tab delimited text file (.txt). To do the same, one can follow the steps below.
+For Windows:</p>
+<ol style="list-style-type: decimal">
+<li>From the <em>File</em> menu, select <em>Save As</em>.</li>
+<li>Select <em>Browse</em> to select a folder where the spreadsheet will be saved.</li>
+<li>To save the spreadsheet, enter a file name in the corresponding field.</li>
+<li>Then use the <em>Save as Type</em> menu to select the option to save the file type as Text (Tab delimited) (*.txt).</li>
+<li>Finally, click <em>Save</em>.</li>
+</ol>
+<p>If there are multiple worksheets within the original Excel spreadsheet file, a pop-up message will appear to request permission to save only the active sheet. If this occurs, you can select OK to save the data file. We strongly recommend that researchers open the newly created tab delimited text file to ensure that the data are stored as expected. We present a screenshot of a portion of the resulting text file in Figure <a href="MLM-NoTrend.html#fig:txt-BSP">7.7</a>.</p>
+<p>For MacOS:</p>
+<ol style="list-style-type: decimal">
+<li>From the <em>File</em> menu, select <em>Save As</em>.</li>
+<li>Enter a file name in the <em>Save As</em> field.</li>
+<li>Select a location from the dropdown menu, <em>Where</em>, to save your spreadsheet.</li>
+<li>Then use the <em>File Format</em> menu to select the option to save your file type as Tab delimited Text (.txt).</li>
+<li>Finally, click <em>Save</em>.</li>
+</ol>
+<p>It is important to note here that an error message will appear if attempting to save a spreadsheet with multiple worksheets. A pop-up will inform the user that the workbook cannot be saved in the selected file format. If encountering this error, researchers should open a newly created file with one worksheet for the data needed in their analysis.</p>
+<div class="figure"><span style="display:block;" id="fig:txt-BSP"></span>
+<img src="images/raw_txt.file_BSP.png" alt="Screenshot of Saved Tab Delimited Text File" width="60%" />
+<p class="caption">
+Figure 7.7: Screenshot of Saved Tab Delimited Text File
+</p>
+</div>
+<p>After converting and saving our dataset as a tab delimited text file, we are prepared to use the MultiSCED app (<a href="http://34.251.13.245/MultiSCED/" class="uri">http://34.251.13.245/MultiSCED/</a>). Figure @(fig:MultiSCED-homepage) is a screenshot of the Home page for the MultiSCED app. At the top of the website, in the blue page header, there are several links to other pages on the website. In this header, the link <em>Home</em> is highlighted with a darker background than the other links on the menu bar, indicating that we are on the <em>Home</em> page. To access the MultiSCED application, we must navigate to the <em>Input</em> section of the site, by clicking on the <em>Input</em> link.</p>
+<div class="figure"><span style="display:block;" id="fig:MultiSCED-homepage"></span>
+<img src="images/multiSCED.homepage.png" alt="Screenshot of the Website Navigation Menu and Home Page of the MultiSCED App" width="60%" />
+<p class="caption">
+Figure 7.8: Screenshot of the Website Navigation Menu and Home Page of the MultiSCED App
+</p>
+</div>
+<p>A screenshot of the <em>Input</em> tab is shown in Figure <a href="MLM-NoTrend.html#fig:MultiSCED-input-datafile">7.9</a>. After navigating to the <em>Input</em> page, we find a sidebar menu with three additional links: <em>Data file</em>, <em>Variables</em>, and <em>Data summary</em>. We first select the option on the left to choose the <em>Data file</em>. While <em>Data file</em> is highlighted in dark blue (as in Figure <a href="MLM-NoTrend.html#fig:MultiSCED-input-datafile">7.9</a>), we can upload our dataset (.txt or .csv) by clicking the <em>Browse</em> button, selecting the folder where the data file is saved, and clicking <em>Open</em>. After doing so, two additional menus appear in the <em>Upload box</em> beneath the <em>Browse</em> button: <em>Separator character</em> and <em>Decimal character</em>. The default option for the <em>Separator character</em> is <em>tab</em>. We keep the default setting because we already saved the dataset as a tab delimited text file. However, if your file is saved as a .csv file, you can select <em>comma</em> under the <em>Separator character</em> dropdown menu. Regarding the <em>Decimal character</em> menu, the option for decimal representation defaults to dot, which is the standard choice in the U.S. However, for researchers located outside of the U.S. that use commas to mark decimals (e.g., EU countries), the setting will need to be changed from the default of dot to the comma option. We note here that researchers can use sample data to practice using the app. To access sample data, researchers should upload any file (which will not be used) and then click on the <em>Use testdata</em> checkbox. Sample data information will be automatically input into the <em>Variables</em> section which follows. After completing these actions, we transition to the <em>Variables</em> section of the <em>Input</em> page using the sidebar link on the left side of the screen.</p>
+<div class="figure"><span style="display:block;" id="fig:MultiSCED-input-datafile"></span>
+<img src="images/MultiSCED_input.datafile.png" alt="Screenshot of the Input Page of the MultiSCED App" width="60%" />
+<p class="caption">
+Figure 7.9: Screenshot of the Input Page of the MultiSCED App
+</p>
+</div>
+<p>As shown in Figure <a href="MLM-NoTrend.html#fig:MultiSCED-input-variables-BSP">7.10</a>, the <em>Variables</em> section appears on the left of the screen under <em>Data file</em>. When highlighted in dark blue, the <em>Variables</em> page has two primary sections: <em>Base variables</em> and <em>Moderator variables</em>. Using the drop-down menus in the <em>Base variables</em> section, we select our outcome variable from the <em>Response</em> menu (i.e., <em>Outcome per 10 min</em>), case identifier from the <em>Case</em> menu, study identifier from the <em>Study</em> menu, and phase identifier from the <em>Phase</em> variable. We also use the <em>Phase control group</em> drop-down menu to specify the value we used for baseline observations (i.e., <span class="math inline">\(b\)</span>) and specify our session variable from options in the <em>Time</em> drop-down menu (i.e., Session). Because we have no moderators and no trends in this illustration, we leave the moderator and time centering options unselected.</p>
+<div class="figure"><span style="display:block;" id="fig:MultiSCED-input-variables-BSP"></span>
+<img src="images/MultiSCED_input.variables_BSP.png" alt="Screenshot of the Variables Section on the Input Page of the MultiSCED App" width="60%" />
+<p class="caption">
+Figure 7.10: Screenshot of the Variables Section on the Input Page of the MultiSCED App
+</p>
+</div>
+<p>After specifying our variables, we navigate to the <em>Data summary</em> section, as shown in Figure <a href="MLM-NoTrend.html#fig:MultiSCED-input-datasummary-BSP">7.11</a>. At the top of this section, the app summarizes the data for each of the three levels in our model: the number of studies in our dataset (i.e., 4), the number of cases nested within these four studies (i.e., 15), and the total number of observations of the BSP outcome (i.e., 297) that are nested within the cases nested within the studies. These values correspond with what we know about our dataset.</p>
+<p>Next, we see blue checkboxes next to each variable under the column headers <em>Studies</em> (i.e., S, G, C, K) and <em>Cases</em> (e.g., S_Mia), These checkmarks indicate that the app automatically included our entire dataset in the analysis. This default is appropriate for the purpose of this methods guide, as we intend to demonstrate the process for synthesizing data across studies and simultaneously fitting a model to all cases and all studies. As an aside, the MultiSCED app allows for statistical models of a single case or for two-level models of cases nested within a single study. Thus, it provides the <em>(De)select all</em> option (see Figure <a href="MLM-NoTrend.html#fig:MultiSCED-input-datasummary-BSP">7.11</a>) to allow researchers to include only those studies and cases of interest in their analysis.</p>
+<div class="figure"><span style="display:block;" id="fig:MultiSCED-input-datasummary-BSP"></span>
+<img src="images/MultiSCED_input.datasummary_BSP.png" alt="Screenshot of the Data summary Section on the Input Page of the MultiSCED App" width="60%" />
+<p class="caption">
+Figure 7.11: Screenshot of the Data summary Section on the Input Page of the MultiSCED App
+</p>
+</div>
+<p>After examining the <em>Data summary</em>, we are ready to specify the multilevel model. To do so, we navigate to the <em>Model</em> page by clicking the link in the navigation header bar at the top of the screen. There are five sections to the <em>Model</em> page (see Figure <a href="MLM-NoTrend.html#fig:MultiSCED-modelspec-BSP">7.12</a> that represents the model post-specification).</p>
+<div class="figure"><span style="display:block;" id="fig:MultiSCED-modelspec-BSP"></span>
+<img src="images/MultiSCED_model.modelspec_BSP.png" alt="Screenshot of the Model Specification Section of the Model Page of the MultiSCED App" width="60%" />
+<p class="caption">
+Figure 7.12: Screenshot of the Model Specification Section of the Model Page of the MultiSCED App
+</p>
+</div>
+<p>Under the <em>Fixed effects</em> subsection, we want to keep the default <em>intercept</em> and <em>Phase</em> options selected. We do not check the boxes next to the <em>Session</em> and <em>Phase X Session</em> because our model does not include trends. Under the <em>Random effects</em> section, there is nothing checked by default. To define the model to match Equations <a href="MLM-NoTrend.html#eq:MLM-L1-noTrend">(7.1)</a>-<a href="MLM-NoTrend.html#eq:MLM-L3-slope-NoTrend">(7.5)</a>, we need to check each of the <em>intercept</em> and <em>Phase</em> options under the <em>Case level</em> and <em>Study level</em> subheadings. By checking the <em>intercept</em> box under <em>Case level</em>, we allow the baseline level to vary across cases within a study, and by checking the <em>Phase</em> box under <em>Case level</em>, we allow the treatment effect to vary across cases within a study. Similarly, under the <em>Study level</em> sub header, we allow the average study baseline level to vary across studies by checking the box next to <em>intercept</em>, and by checking the box next to <em>Phase</em>, we allow the average treatment effect for a study to vary across the studies.</p>
+<p>As we opt to include these <em>Case level</em> and <em>Study level</em> variables, our model specification automatically updates and appears on the right side of the screen. Under the <em>One-level model</em> equation, note that we did not opt to standardize the raw data using the root mean square error (RMSE) because the outcome scale across our studies was the same (see Figure <a href="MLM-NoTrend.html#fig:MultiSCED-modelspec-BSP">7.12</a> for the full model specification that matches the model defined by Equations <a href="MLM-NoTrend.html#eq:MLM-L1-noTrend">(7.1)</a>-<a href="MLM-NoTrend.html#eq:MLM-L3-slope-NoTrend">(7.5)</a>).</p>
+<p>In some situations, it may be difficult to estimate so many variances obtained from data extracted from a set of SCD studies. By removing some of the random effects (i.e., eliminating some of the checks under Random effects), researchers can analyze simpler models. Logic models for SCD data that expect baseline levels and treatment effects to vary across cases and studies align well with models that include the full set of variance components. Inclusion of a full set of variance components also aligns well with what researchers have typically used in methodological studies focused on evaluating the appropriateness of three-level models for single-case data <span class="citation">(<a href="#ref-Joo_et_al_2019">Joo et al., 2019</a>; <a href="#ref-Moeyaert_Ugille_Ferron_Beretvas_VandenNoortgate_2013">Moeyaert et al., 2013</a>; <a href="#ref-Owens_Ferron_2012">Owens &amp; Ferron, 2012</a>)</span>. Therefore, we encourage researchers to start by including those variance estimates that correspond with their defined model, and only simplify the variance structure to remove the error term(s) if estimation problems are encountered that suggest that some of the variance components may be 0 or close to zero. When exploring such modifications, researchers should use their best judgement to specify a model that is reasonably consistent with their logic model and with the data they are analyzing.</p>
+<p>After specifying our model, we finally navigate to the multilevel model results via the <em>Three-level analysis</em> link in the website header navigation menu at the top of the screen (as shown in Figure <a href="MLM-NoTrend.html#fig:MultiSCED-3level">7.13</a>). On the <em>Three-level analysis</em> page, the model we estimated appears on the left, alongside two tabbed sections, <em>Table</em> and <em>Plot</em>. The app defaults to the <em>Table</em> tab, where we find the model results under <em>Fixed effects</em> and <em>Random effects</em> sub headers. <em>Fixed effects</em> contains the average value for the baseline level (i.e., <em>Intercept</em>). For the <em>Intercept</em> variable shown in Figure <a href="MLM-NoTrend.html#fig:MultiSCED-3level">7.13</a>, the average baseline rate of BSP per 10 minutes is 2.54, with an SE of 0.60. The estimated average treatment effect across all cases and studies is 7.95, with an SE of 3.41. We can interpret this result to mean that on average, the participants engaged in approximately 8 more BSPs per 10 minutes following intervention. However, the <span class="math inline">\(p\)</span>-value for the treatment effect is .102, so we cannot be confident that the true mean effect of treatment differs from zero (i.e., we cannot reject the null hypothesis of no treatment effect).</p>
+<p>We next examine the results under the <em>Random effects</em> sub header, shown at the bottom of the screenshot in Figure <a href="MLM-NoTrend.html#fig:MultiSCED-3level">7.13</a>. The MultiSCED app reports the <em>Random effects</em> variance components as SDs. Unlike the fixed effects, which have been shown to be well estimated even with the small sample sizes typical of single-case research, the variance components are typically not well estimated. Rather, we expect that they were estimated with considerable bias due to the limited number of studies and cases in this example <span class="citation">(<a href="#ref-Moeyaert_Ugille_Ferron_Beretvas_VandenNoortgate_2013">Moeyaert et al., 2013</a>; <a href="#ref-Owens_Ferron_2012">Owens &amp; Ferron, 2012</a>)</span>. Furthermore, our examination of the data prior to modeling also suggested that we likely oversimplified our model by specifying an independent and homogeneous variance structure, which leads to even more bias in the estimated variance components <span class="citation">(<a href="#ref-Joo_et_al_2019">Joo et al., 2019</a>)</span>. Consequently, while we report these parameter estimates from our model as a conceptual illustration for the purpose of this methods guide, we do not suggest that users of the app give serious weight to the interpretation of the <em>Random effects</em> variance components unless they have a larger number of studies and greater confidence in the accuracy of the model specification.</p>
+<div class="figure"><span style="display:block;" id="fig:MultiSCED-3level"></span>
+<img src="images/MultiSCED_3level.png" alt="Screenshot of the Three-level analysis of the MultiSCED App" width="60%" />
+<p class="caption">
+Figure 7.13: Screenshot of the Three-level analysis of the MultiSCED App
+</p>
+</div>
+<p>Per the results reported under the <em>Random effects</em> sub header (shown above), the estimated SD of the observations around the case-specific phase means (i.e., <em>Residual</em>) is 2.96. We did not obtain separate estimates for baseline and treatment phases because we assumed a homogenous variance model. Next, examining the variability between cases nested within studies (i.e., <em>Study: Case</em>), we see that the estimated SD of the case-specific baseline levels is 1.80, the estimated SD of the case-specific treatment effects is 2.50, and the case-specific treatment effects are estimated to be correlated to the case-specific baseline levels by .15. The model results reporting the variability between studies (i.e., <em>Study</em>) estimated the SD of the study-specific average baseline levels as 0.47, the estimated study-specific average treatment effects SD is 6.66, and the estimated correlation between the study-specific average baseline levels and the study-specific average treatment effects is -.60.</p>
+<p>Although the MultiSCED app provides the overall results, its ability to estimate more complex models is limited. We need to use other tools if we want to examine sensitivity of our results under more complex models, such as models that allow for heterogeneity in the within-case variance between phases or models that allow for autocorrelation. We believe this question may be of interest for meta-analysts, so we moved outside of the MultiSCED app. Using SAS, we estimated a more complex model that allowed for both potential differences in within-case variance between phases and autocorrelation of successive observations. We also estimated a model where we assumed heterogeneity across phases and autocorrelation, but using a diagonal (versus unstructured) covariance matrix at level-2 and level-3. Table <a href="MLM-NoTrend.html#tab:ES-est-chapter7">7.1</a> reports estimates of the overall average effects based on each of our three model specifications. Although the latter two model details and their estimation are outside the scope of this methods guide, we provide the syntax in the Appendix for those interested.</p>
+<table class=" lightable-paper lightable-striped" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:ES-est-chapter7">Table 7.1: </span>Estimates Obtained Across Model Variations
+</caption>
+<thead>
+<tr>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="TRUE">
+Model
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="TRUE">
+Effect Estimate
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="TRUE">
+SE
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="TRUE">
+95% CI
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+</th>
+<th style="text-align:center;">
+</th>
+<th style="text-align:center;">
+LL
+</th>
+<th style="text-align:center;">
+UL
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Original specification
+</td>
+<td style="text-align:center;">
+7.95
+</td>
+<td style="text-align:center;">
+3.41
+</td>
+<td style="text-align:center;">
+-2.92
+</td>
+<td style="text-align:center;">
+18.83
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Within-case heterogeneity + autocorrelation
+</td>
+<td style="text-align:center;">
+7.94
+</td>
+<td style="text-align:center;">
+3.40
+</td>
+<td style="text-align:center;">
+-2.93
+</td>
+<td style="text-align:center;">
+18.81
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Within-case heterogeneity + autocorrelation + diagonal covariance matrices
+</td>
+<td style="text-align:center;">
+7.93
+</td>
+<td style="text-align:center;">
+3.38
+</td>
+<td style="text-align:center;">
+-2.87
+</td>
+<td style="text-align:center;">
+18.73
+</td>
+</tr>
+</tbody>
+</table>
+<p>Generally, we reach the same conclusion—the point estimate of the average treatment effect is similar across models, and we cannot rule out the possibility that the overall average effect is zero. Research shows treatment effect estimates and inferences from LMMs of SCD data are relatively robust to violations of distributional assumptions, particularly when they incorporate Kenward-Roger-based small sample size adjustments <span class="citation">(<a href="#ref-Joo_et_al_2019">Joo et al., 2019</a>; <a href="#ref-Moeyaert_Ugille_Ferron_Beretvas_VandenNoortgate_2013">Moeyaert et al., 2013</a>; <a href="#ref-Owens_Ferron_2012">Owens &amp; Ferron, 2012</a>)</span>. Therefore, we anticipated similarity in results across modeling options. In some contexts, however, the assumption violations will be more severe than what we encountered here. Relevant directions for future research include: (a) determining the point at which violations are severe enough and sample sizes large enough to warrant movement from LMMs to GLMMs, (b) identifying the most appropriate methods for specifying and estimating GLMMs, and (c) producing easy-to-use software to make GLMMs more readily accessible to single-case researchers.</p>
+</div>
+<div id="appendix" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Appendix<a href="MLM-NoTrend.html#appendix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sas-code" class="section level3 hasAnchor" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> SAS Code<a href="MLM-NoTrend.html#sas-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Original specification: a three-level model assuming independent, normally distributed session-level errors with homogeneous variance across phases and cases and unstructured covariance matrices at level-2 and level-3.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="MLM-NoTrend.html#cb1-1" tabindex="-1"></a>proc mixed covtest;</span>
+<span id="cb1-2"><a href="MLM-NoTrend.html#cb1-2" tabindex="-1"></a>class case study phase;</span>
+<span id="cb1-3"><a href="MLM-NoTrend.html#cb1-3" tabindex="-1"></a>model outcome <span class="ot">=</span> tx <span class="sc">/</span> s ddfm<span class="ot">=</span>kr cl;</span>
+<span id="cb1-4"><a href="MLM-NoTrend.html#cb1-4" tabindex="-1"></a>random intercept tx <span class="sc">/</span> sub<span class="ot">=</span>study type<span class="ot">=</span>un;</span>
+<span id="cb1-5"><a href="MLM-NoTrend.html#cb1-5" tabindex="-1"></a>random intercept tx <span class="sc">/</span> sub<span class="ot">=</span><span class="fu">case</span>(study) type<span class="ot">=</span>un;</span>
+<span id="cb1-6"><a href="MLM-NoTrend.html#cb1-6" tabindex="-1"></a>run;</span></code></pre></div>
+<p>Three-level model assuming heterogeneity across phases, a first-order autoregressive covariance structure within the case, and unstructured covariance matrices at level-2 and level-3.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="MLM-NoTrend.html#cb2-1" tabindex="-1"></a>proc mixed covtest;</span>
+<span id="cb2-2"><a href="MLM-NoTrend.html#cb2-2" tabindex="-1"></a>class case study phase;</span>
+<span id="cb2-3"><a href="MLM-NoTrend.html#cb2-3" tabindex="-1"></a>model outcome <span class="ot">=</span> tx <span class="sc">/</span> s ddfm<span class="ot">=</span>kr cl;</span>
+<span id="cb2-4"><a href="MLM-NoTrend.html#cb2-4" tabindex="-1"></a>random intercept tx <span class="sc">/</span> sub<span class="ot">=</span>study type<span class="ot">=</span>un;</span>
+<span id="cb2-5"><a href="MLM-NoTrend.html#cb2-5" tabindex="-1"></a>random intercept tx <span class="sc">/</span> sub<span class="ot">=</span><span class="fu">case</span>(study) type<span class="ot">=</span>un;</span>
+<span id="cb2-6"><a href="MLM-NoTrend.html#cb2-6" tabindex="-1"></a>repeated <span class="sc">/</span> sub<span class="ot">=</span><span class="fu">case</span>(study) group<span class="ot">=</span>phase type<span class="ot">=</span><span class="fu">ar</span>(<span class="dv">1</span>);</span>
+<span id="cb2-7"><a href="MLM-NoTrend.html#cb2-7" tabindex="-1"></a>run;</span></code></pre></div>
+<p>Three-level model assuming heterogeneity across phases, a first-order autoregressive covariance structure within the case, and diagonal covariance matrices at level-2 and level-3.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="MLM-NoTrend.html#cb3-1" tabindex="-1"></a>proc mixed covtest;</span>
+<span id="cb3-2"><a href="MLM-NoTrend.html#cb3-2" tabindex="-1"></a>class case study phase;</span>
+<span id="cb3-3"><a href="MLM-NoTrend.html#cb3-3" tabindex="-1"></a>model outcome <span class="ot">=</span> tx <span class="sc">/</span> s ddfm<span class="ot">=</span>kr cl;</span>
+<span id="cb3-4"><a href="MLM-NoTrend.html#cb3-4" tabindex="-1"></a>random intercept tx <span class="sc">/</span> sub<span class="ot">=</span>study;</span>
+<span id="cb3-5"><a href="MLM-NoTrend.html#cb3-5" tabindex="-1"></a>random intercept tx <span class="sc">/</span> sub<span class="ot">=</span><span class="fu">case</span>(study);</span>
+<span id="cb3-6"><a href="MLM-NoTrend.html#cb3-6" tabindex="-1"></a>repeated <span class="sc">/</span> sub<span class="ot">=</span><span class="fu">case</span>(study) group<span class="ot">=</span>phase type<span class="ot">=</span><span class="fu">ar</span>(<span class="dv">1</span>);</span>
+<span id="cb3-7"><a href="MLM-NoTrend.html#cb3-7" tabindex="-1"></a>run;</span></code></pre></div>
+</div>
+<div id="r-code" class="section level3 hasAnchor" number="7.4.2">
+<h3><span class="header-section-number">7.4.2</span> R Code<a href="MLM-NoTrend.html#r-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Original specification: a three-level model assuming independent, normally distributed session-level errors with homogeneous variance across phases and cases and unstructured covariance matrices at level-2 and level-3.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="MLM-NoTrend.html#cb4-1" tabindex="-1"></a>model_homog_unstructured <span class="ot">&lt;-</span> </span>
+<span id="cb4-2"><a href="MLM-NoTrend.html#cb4-2" tabindex="-1"></a>  <span class="fu">lme</span>(</span>
+<span id="cb4-3"><a href="MLM-NoTrend.html#cb4-3" tabindex="-1"></a>    <span class="at">fixed =</span> outcome <span class="sc">~</span> phase, </span>
+<span id="cb4-4"><a href="MLM-NoTrend.html#cb4-4" tabindex="-1"></a>    <span class="at">random =</span> <span class="sc">~</span> phase <span class="sc">|</span> study <span class="sc">/</span> case,</span>
+<span id="cb4-5"><a href="MLM-NoTrend.html#cb4-5" tabindex="-1"></a>    <span class="at">data =</span> BSP_dat,</span>
+<span id="cb4-6"><a href="MLM-NoTrend.html#cb4-6" tabindex="-1"></a>    <span class="at">method =</span> <span class="st">&quot;REML&quot;</span></span>
+<span id="cb4-7"><a href="MLM-NoTrend.html#cb4-7" tabindex="-1"></a>  ) </span>
+<span id="cb4-8"><a href="MLM-NoTrend.html#cb4-8" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="MLM-NoTrend.html#cb4-9" tabindex="-1"></a><span class="fu">summary</span>(model_homog_unstructured)</span>
+<span id="cb4-10"><a href="MLM-NoTrend.html#cb4-10" tabindex="-1"></a><span class="fu">intervals</span>(model_homog_unstructured, <span class="at">which =</span> <span class="st">&quot;fixed&quot;</span>)</span></code></pre></div>
+<p>Three-level model assuming heterogeneity across phases, a first-order autoregressive covariance structure within the case, and unstructured covariance matrices at level-2 and level-3.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="MLM-NoTrend.html#cb5-1" tabindex="-1"></a>model_heter_unstructured <span class="ot">&lt;-</span> </span>
+<span id="cb5-2"><a href="MLM-NoTrend.html#cb5-2" tabindex="-1"></a>  <span class="fu">lme</span>(</span>
+<span id="cb5-3"><a href="MLM-NoTrend.html#cb5-3" tabindex="-1"></a>    <span class="at">fixed =</span> outcome <span class="sc">~</span> phase, </span>
+<span id="cb5-4"><a href="MLM-NoTrend.html#cb5-4" tabindex="-1"></a>    <span class="at">random =</span> <span class="sc">~</span> phase <span class="sc">|</span> study <span class="sc">/</span> case,</span>
+<span id="cb5-5"><a href="MLM-NoTrend.html#cb5-5" tabindex="-1"></a>    <span class="at">correlation =</span> <span class="fu">corAR1</span>(<span class="dv">0</span>, <span class="sc">~</span> <span class="dv">1</span> <span class="sc">|</span> study <span class="sc">/</span> case),</span>
+<span id="cb5-6"><a href="MLM-NoTrend.html#cb5-6" tabindex="-1"></a>    <span class="at">weights =</span> <span class="fu">varIdent</span>(<span class="at">form =</span> <span class="sc">~</span> <span class="dv">1</span> <span class="sc">|</span> phase),</span>
+<span id="cb5-7"><a href="MLM-NoTrend.html#cb5-7" tabindex="-1"></a>    <span class="at">data =</span> BSP_dat,</span>
+<span id="cb5-8"><a href="MLM-NoTrend.html#cb5-8" tabindex="-1"></a>    <span class="at">method =</span> <span class="st">&quot;REML&quot;</span></span>
+<span id="cb5-9"><a href="MLM-NoTrend.html#cb5-9" tabindex="-1"></a>  ) </span>
+<span id="cb5-10"><a href="MLM-NoTrend.html#cb5-10" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="MLM-NoTrend.html#cb5-11" tabindex="-1"></a><span class="fu">summary</span>(model_heter_unstructured)</span>
+<span id="cb5-12"><a href="MLM-NoTrend.html#cb5-12" tabindex="-1"></a><span class="fu">intervals</span>(model_heter_unstructured, <span class="at">which =</span> <span class="st">&quot;fixed&quot;</span>)</span></code></pre></div>
+<p>Three-level model assuming heterogeneity across phases, a first-order autoregressive covariance structure within the case, and diagonal covariance matrices at level-2 and level-3.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="MLM-NoTrend.html#cb6-1" tabindex="-1"></a>model_heter_diag <span class="ot">&lt;-</span> </span>
+<span id="cb6-2"><a href="MLM-NoTrend.html#cb6-2" tabindex="-1"></a>  <span class="fu">lme</span>(</span>
+<span id="cb6-3"><a href="MLM-NoTrend.html#cb6-3" tabindex="-1"></a>    <span class="at">fixed =</span> outcome <span class="sc">~</span> phase, </span>
+<span id="cb6-4"><a href="MLM-NoTrend.html#cb6-4" tabindex="-1"></a>    <span class="at">random =</span> <span class="fu">list</span>(</span>
+<span id="cb6-5"><a href="MLM-NoTrend.html#cb6-5" tabindex="-1"></a>      <span class="at">study =</span> <span class="fu">pdDiag</span>(<span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> phase),</span>
+<span id="cb6-6"><a href="MLM-NoTrend.html#cb6-6" tabindex="-1"></a>      <span class="at">case =</span> <span class="fu">pdDiag</span>(<span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> phase)</span>
+<span id="cb6-7"><a href="MLM-NoTrend.html#cb6-7" tabindex="-1"></a>    ),</span>
+<span id="cb6-8"><a href="MLM-NoTrend.html#cb6-8" tabindex="-1"></a>    <span class="at">correlation =</span> <span class="fu">corAR1</span>(<span class="dv">0</span>, <span class="sc">~</span> <span class="dv">1</span> <span class="sc">|</span> study<span class="sc">/</span>case),</span>
+<span id="cb6-9"><a href="MLM-NoTrend.html#cb6-9" tabindex="-1"></a>    <span class="at">weights =</span> <span class="fu">varIdent</span>(<span class="at">form =</span> <span class="sc">~</span> <span class="dv">1</span> <span class="sc">|</span> phase),</span>
+<span id="cb6-10"><a href="MLM-NoTrend.html#cb6-10" tabindex="-1"></a>    <span class="at">data =</span> BSP_dat,</span>
+<span id="cb6-11"><a href="MLM-NoTrend.html#cb6-11" tabindex="-1"></a>    <span class="at">method =</span> <span class="st">&quot;REML&quot;</span></span>
+<span id="cb6-12"><a href="MLM-NoTrend.html#cb6-12" tabindex="-1"></a>  ) </span>
+<span id="cb6-13"><a href="MLM-NoTrend.html#cb6-13" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="MLM-NoTrend.html#cb6-14" tabindex="-1"></a><span class="fu">summary</span>(model_diag)</span>
+<span id="cb6-15"><a href="MLM-NoTrend.html#cb6-15" tabindex="-1"></a><span class="fu">intervals</span>(model_diag, <span class="at">which =</span> <span class="st">&quot;fixed&quot;</span>)</span></code></pre></div>
+
+</div>
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-baek_Ferron_2020" class="csl-entry">
+Baek, E., &amp; Ferron, J. J. M. (2020). Modeling heterogeneity of the level-1 error covariance matrix in multilevel models for single-case data. <em>Methodology</em>, <em>16</em>(2), 166–185. <a href="https://doi.org/10.5964/meth.2817">https://doi.org/10.5964/meth.2817</a>
+</div>
+<div id="ref-CollierMeek2017" class="csl-entry">
+Collier-Meek, M. A., Fallon, L. M., &amp; DeFouw, E. R. (2017). Toward feasible implementation support: E-mailed prompts to promote teachers’ treatment integrity. <em>School Psychology Review</em>, <em>46</em>(4), 379–394. <a href="https://doi.org/10.17105/SPR-2017-0028.V46-4">https://doi.org/10.17105/SPR-2017-0028.V46-4</a>
+</div>
+<div id="ref-Declercq2020" class="csl-entry">
+Declercq, L., Cools, W., Beretvas, S. N., Moeyaert, M., Ferron, J. M., &amp; Van den Noortgate, W. (2020). MultiSCED: A tool for (meta-)analyzing single-case experimental data with multilevel modeling. <em>Behavior Research Methods</em>, <em>52</em>(1), 177–192. <a href="https://doi.org/10.3758/s13428-019-01216-2">https://doi.org/10.3758/s13428-019-01216-2</a>
+</div>
+<div id="ref-Declercq2019" class="csl-entry">
+Declercq, L., Jamshidi, L., Fernández-Castilla, B., Beretvas, S. N., Moeyaert, M., Ferron, J. M., &amp; Van den Noortgate, W. (2019). Analysis of single-case experimental count data using the linear mixed effects model: A simulation study. <em>Behavior Research Methods</em>, <em>51</em>(6), 2477–2497. <a href="https://doi.org/10.3758/s13428-018-1091-y">https://doi.org/10.3758/s13428-018-1091-y</a>
+</div>
+<div id="ref-Gage2018" class="csl-entry">
+Gage, N. A., Grasley-Boy, N. M., &amp; MacSuga-Gage, A. S. (2018). Professional development to increase teacher behavior-specific praise: A single-case design replication. <em>Psychology in the Schools</em>, <em>55</em>(3), 264–277. <a href="https://doi.org/10.1002/pits.22106">https://doi.org/10.1002/pits.22106</a>
+</div>
+<div id="ref-Joo_Ferron_2019" class="csl-entry">
+Joo, S.-H., &amp; Ferron, J. M. (2019). Application of the within- and between-series estimators to non-normal multiple-baseline data: Maximum likelihood and bayesian approaches. <em>Multivariate Behavioral Research</em>, <em>54</em>(5), 666–689. <a href="https://doi.org/10.1080/00273171.2018.1564877">https://doi.org/10.1080/00273171.2018.1564877</a>
+</div>
+<div id="ref-Joo_et_al_2019" class="csl-entry">
+Joo, S.-H., Ferron, J. M., Moeyaert, M., Beretvas, S. N., &amp; Van den Noortgate, W. (2019). Approaches for specifying the level-1 error structure when synthesizing single-case data. <em>The Journal of Experimental Education</em>, <em>87</em>(1), 55–74. <a href="https://doi.org/10.1080/00220973.2017.1409181">https://doi.org/10.1080/00220973.2017.1409181</a>
+</div>
+<div id="ref-knochel2021culturally" class="csl-entry">
+Knochel, A. E., Blair, K.-S. C., &amp; Sofarelli, R. (2021). Culturally focused classroom staff training to increase praise for students with autism spectrum disorder in ghana. <em>Journal of Positive Behavior Interventions</em>, <em>23</em>(2), 106–117.
+</div>
+<div id="ref-Moeyaert_Ugille_Ferron_Beretvas_VandenNoortgate_2013" class="csl-entry">
+Moeyaert, M., Ugille, M., Ferron, J. M., Beretvas, S. N., &amp; Van den Noortgate, W. (2013). The three-level synthesis of standardized single-subject experimental data: A monte carlo simulation study. <em>Multivariate Behavioral Research</em>, <em>48</em>(5), 719–748. <a href="https://doi.org/10.1080/00273171.2013.816621">https://doi.org/10.1080/00273171.2013.816621</a>
+</div>
+<div id="ref-Owens_Ferron_2012" class="csl-entry">
+Owens, C. M., &amp; Ferron, J. M. (2012). Synthesizing single-case studies: A monte carlo examination of a three-level meta-analytic model. <em>Behavior Research Methods</em>, <em>44</em>(3), 795–805. <a href="https://doi.org/10.3758/s13428-011-0180-y">https://doi.org/10.3758/s13428-011-0180-y</a>
+</div>
+<div id="ref-Petit-Bois_2014" class="csl-entry">
+Petit-Bois, M. (2014). <em>A monte carlo study: The consequences of the misspecification of the level-1 error structure</em> [PhD thesis]. <a href="https://scholarcommons.usf.edu/etd/5341">https://scholarcommons.usf.edu/etd/5341</a>
+</div>
+<div id="ref-Sallese_Vannest_2022" class="csl-entry">
+Sallese, M. R., &amp; Vannest, K. J. (2022). Effects of a manualized teacher-led coaching intervention on paraprofessional use of behavior-specific praise. <em>Remedial and Special Education</em>, <em>43</em>(1), 27–39. <a href="https://doi.org/10.1177/07419325211017298">https://doi.org/10.1177/07419325211017298</a>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="6">
+<li id="fn6"><p>In principle, this assumption could be relaxed, allowing for the error variance to differ from case to case or from study to study <span class="citation">(<a href="#ref-baek_Ferron_2020">E. Baek &amp; Ferron, 2020</a>)</span>. However, the MultiSCED app does not allow such models to be fit, and some evidence indicates that average treatment effect size estimates (i.e., change in level) and related inferences are relatively robust to this sort of violation of the homogeneity assumption <span class="citation">(<a href="#ref-baek_Ferron_2020">E. Baek &amp; Ferron, 2020</a>)</span>.<a href="MLM-NoTrend.html#fnref6" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="MLM-raw-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="MLM-Trend.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["SCD-Methods-Guide.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

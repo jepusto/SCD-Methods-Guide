@@ -4,13 +4,13 @@ knitr::opts_chunk$set(echo = FALSE, fig.retina = 2)
 
 # Approaches for Estimation and Synthesis of Single-Case Studies {#intro}
 
-This chapter provides the background and purpose for the Methods Guide for Effect Estimation and Synthesis of Single-Case Studies.
+_This chapter provides the background and purpose for the Methods Guide for Effect Estimation and Synthesis of Single-Case Studies.
 We provide an overview of the three major approaches for effect size estimation and synthesis of single-case studies: 
 (a) design-comparable effect sizes, 
 (b) multilevel modeling of raw individual participant interrupted time-series data, and 
 (c) case-specific effect sizes. 
 We describe the general motivation and rationale for each approach and provide a series of decision rules to guide researchers in their selection. 
-Subsequent chapters in this guide provide more detailed illustrations of the three major approaches. 
+Subsequent chapters in this guide provide more detailed illustrations of the three major approaches._ 
 
 ## Background
 Educational decisions made at the state, district, school, and student levels are expected to be informed by empirical evidence [@cook2014council; @whatworksclearinghouse2020What].

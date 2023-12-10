@@ -1,6 +1,6 @@
 --- 
 title: "Methods Guide for Effect Estimation and Synthesis of Single-Case Studies"
-date: "December 01, 2023"
+date: "December 09, 2023"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book

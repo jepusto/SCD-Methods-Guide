@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2023-12-01" />
+<meta name="date" content="2023-12-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="illustrate-D-CES-Btrends.html"/>
-<link rel="next" href="intro-case-specific-es.html"/>
+<link rel="next" href="MLM-NoTrend.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -55,6 +55,70 @@
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -167,55 +231,72 @@ div.csl-indent {
 <li class="chapter" data-level="5.4" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#estimating-the-design-comparable-effect-size-for-the-group-study"><i class="fa fa-check"></i><b>5.4</b> Estimating the Design-Comparable Effect Size for the Group Study</a></li>
 <li class="chapter" data-level="5.5" data-path="illustrate-D-CES-Btrends.html"><a href="illustrate-D-CES-Btrends.html#analyzing-the-effect-sizes-2"><i class="fa fa-check"></i><b>5.5</b> Analyzing the Effect Sizes</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="raw-data.html"><a href="raw-data.html"><i class="fa fa-check"></i><b>6</b> Introduction to Multilevel Modeling of Raw Participant Data</a>
+<li class="chapter" data-level="6" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html"><i class="fa fa-check"></i><b>6</b> Introduction to Multilevel Modeling of Raw Participant Data</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="raw-data.html"><a href="raw-data.html#background-2"><i class="fa fa-check"></i><b>6.1</b> Background</a></li>
-<li class="chapter" data-level="6.2" data-path="raw-data.html"><a href="raw-data.html#when-to-use-multilevel-models-of-the-raw-data"><i class="fa fa-check"></i><b>6.2</b> When to Use Multilevel Models of the Raw Data</a></li>
-<li class="chapter" data-level="6.3" data-path="raw-data.html"><a href="raw-data.html#what-we-assume-with-multilevel-models-of-the-raw-data"><i class="fa fa-check"></i><b>6.3</b> What We Assume with Multilevel Models of the Raw Data</a>
+<li class="chapter" data-level="6.1" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#background-2"><i class="fa fa-check"></i><b>6.1</b> Background</a></li>
+<li class="chapter" data-level="6.2" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#when-to-use-multilevel-models-of-the-raw-data"><i class="fa fa-check"></i><b>6.2</b> When to Use Multilevel Models of the Raw Data</a></li>
+<li class="chapter" data-level="6.3" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#what-we-assume-with-multilevel-models-of-the-raw-data"><i class="fa fa-check"></i><b>6.3</b> What We Assume with Multilevel Models of the Raw Data</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="raw-data.html"><a href="raw-data.html#within-case-model-assumptions"><i class="fa fa-check"></i><b>6.3.1</b> Within-Case Model Assumptions</a></li>
-<li class="chapter" data-level="6.3.2" data-path="raw-data.html"><a href="raw-data.html#case-similarity-assumptions"><i class="fa fa-check"></i><b>6.3.2</b> Case Similarity Assumptions</a></li>
-<li class="chapter" data-level="6.3.3" data-path="raw-data.html"><a href="raw-data.html#study-similarity-assumptions"><i class="fa fa-check"></i><b>6.3.3</b> Study Similarity Assumptions</a></li>
+<li class="chapter" data-level="6.3.1" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#within-case-model-assumptions"><i class="fa fa-check"></i><b>6.3.1</b> Within-Case Model Assumptions</a></li>
+<li class="chapter" data-level="6.3.2" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#case-similarity-assumptions"><i class="fa fa-check"></i><b>6.3.2</b> Case Similarity Assumptions</a></li>
+<li class="chapter" data-level="6.3.3" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#study-similarity-assumptions"><i class="fa fa-check"></i><b>6.3.3</b> Study Similarity Assumptions</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="raw-data.html"><a href="raw-data.html#comparison-to-other-synthesis-approaches"><i class="fa fa-check"></i><b>6.4</b> Comparison to Other Synthesis Approaches</a></li>
-<li class="chapter" data-level="6.5" data-path="raw-data.html"><a href="raw-data.html#multilevel-modeling-options-for-synthesizing-single-case-research"><i class="fa fa-check"></i><b>6.5</b> Multilevel Modeling Options for Synthesizing Single-Case Research</a></li>
+<li class="chapter" data-level="6.4" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#comparison-to-other-synthesis-approaches"><i class="fa fa-check"></i><b>6.4</b> Comparison to Other Synthesis Approaches</a></li>
+<li class="chapter" data-level="6.5" data-path="MLM-raw-data.html"><a href="MLM-raw-data.html#multilevel-modeling-options-for-synthesizing-single-case-research"><i class="fa fa-check"></i><b>6.5</b> Multilevel Modeling Options for Synthesizing Single-Case Research</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html"><i class="fa fa-check"></i><b>7</b> Introduction to Case-Specific Effect Sizes</a>
+<li class="chapter" data-level="7" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html"><i class="fa fa-check"></i><b>7</b> Illustration of Multilevel Modeling When No Trends Are Assumed</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#background-3"><i class="fa fa-check"></i><b>7.1</b> Background</a></li>
-<li class="chapter" data-level="7.2" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#when-to-use-case-specific-effect-sizes"><i class="fa fa-check"></i><b>7.2</b> When to Use Case-Specific Effect Sizes</a></li>
-<li class="chapter" data-level="7.3" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-case-specific-effect-sizes"><i class="fa fa-check"></i><b>7.3</b> Assumptions and Limitations of Case-Specific Effect Sizes</a></li>
-<li class="chapter" data-level="7.4" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-nonoverlap-indices"><i class="fa fa-check"></i><b>7.4</b> Assumptions and Limitations of Nonoverlap Indices</a></li>
-<li class="chapter" data-level="7.5" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-standardized-mean-differences"><i class="fa fa-check"></i><b>7.5</b> Assumptions and Limitations of Standardized Mean Differences</a></li>
-<li class="chapter" data-level="7.6" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-percentage-change-indices-and-log-response-ratios"><i class="fa fa-check"></i><b>7.6</b> Assumptions and Limitations of Percentage Change Indices and Log Response Ratios</a></li>
-<li class="chapter" data-level="7.7" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-percent-of-goal-obtained"><i class="fa fa-check"></i><b>7.7</b> Assumptions and Limitations of Percent of Goal Obtained</a></li>
-<li class="chapter" data-level="7.8" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#case-specific-effect-size-options-for-synthesizing-single-case-research"><i class="fa fa-check"></i><b>7.8</b> Case-Specific Effect Size Options for Synthesizing Single-Case Research</a></li>
+<li class="chapter" data-level="7.1" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#selecting-a-multilevel-model-for-the-single-case-studies"><i class="fa fa-check"></i><b>7.1</b> Selecting a Multilevel Model for the Single-Case Studies</a></li>
+<li class="chapter" data-level="7.2" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#details-of-the-no-trend-multilevel-model"><i class="fa fa-check"></i><b>7.2</b> Details of the No-Trend Multilevel Model</a></li>
+<li class="chapter" data-level="7.3" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#estimating-a-multilevel-model-for-the-behavior-specific-praise-studies"><i class="fa fa-check"></i><b>7.3</b> Estimating a Multilevel Model for the Behavior Specific Praise Studies</a></li>
+<li class="chapter" data-level="7.4" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#appendix"><i class="fa fa-check"></i><b>7.4</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#sas-code"><i class="fa fa-check"></i><b>7.4.1</b> SAS Code</a></li>
+<li class="chapter" data-level="7.4.2" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#r-code"><i class="fa fa-check"></i><b>7.4.2</b> R Code</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html"><i class="fa fa-check"></i><b>8</b> Application of Case-Specific Effect Sizes</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#selecting-case-specific-effect-sizes-for-the-single-case-studies"><i class="fa fa-check"></i><b>8.1</b> Selecting Case-Specific Effect Sizes for the Single-Case Studies</a></li>
-<li class="chapter" data-level="8.2" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#estimating-the-case-specific-effect-sizes-for-the-included-aac-intervention-studies"><i class="fa fa-check"></i><b>8.2</b> Estimating the Case-Specific Effect Sizes for the Included AAC Intervention Studies</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#entering-the-data-into-excel"><i class="fa fa-check"></i><b>8.2.1</b> Entering the Data into Excel</a></li>
-<li class="chapter" data-level="8.2.2" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#accessing-the-app"><i class="fa fa-check"></i><b>8.2.2</b> Accessing the App</a></li>
-<li class="chapter" data-level="8.2.3" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#loading-the-data-into-the-app"><i class="fa fa-check"></i><b>8.2.3</b> Loading the Data into the App</a></li>
-<li class="chapter" data-level="8.2.4" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#defining-the-variable-within-the-app"><i class="fa fa-check"></i><b>8.2.4</b> Defining the Variable within the App</a></li>
-<li class="chapter" data-level="8.2.5" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#examining-the-graphs-within-the-app"><i class="fa fa-check"></i><b>8.2.5</b> Examining the Graphs within the App</a></li>
-<li class="chapter" data-level="8.2.6" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#estimating-the-effect-sizes-within-the-app"><i class="fa fa-check"></i><b>8.2.6</b> Estimating the Effect Sizes within the App</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#syntex-for-r"><i class="fa fa-check"></i><b>8.3</b> Syntex for R</a></li>
-<li class="chapter" data-level="8.4" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#examining-the-alignment-of-the-case-specific-effect-sizes-with-our-visual-analysis"><i class="fa fa-check"></i><b>8.4</b> Examining the Alignment of the Case-Specific Effect Sizes with our Visual Analysis</a>
+<li class="chapter" data-level="8" data-path="MLM-Trend.html"><a href="MLM-Trend.html"><i class="fa fa-check"></i><b>8</b> Illustration of Multilevel Modeling When No Trends Are Assumed</a>
 <ul>
-<li class="chapter" data-level="8.4.1" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#nap"><i class="fa fa-check"></i><b>8.4.1</b> NAP</a></li>
-<li class="chapter" data-level="8.4.2" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#smd-results"><i class="fa fa-check"></i><b>8.4.2</b> SMD Results</a></li>
-<li class="chapter" data-level="8.4.3" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#lrri-results"><i class="fa fa-check"></i><b>8.4.3</b> LRRi Results</a></li>
-<li class="chapter" data-level="8.4.4" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#pogomuparrow"><i class="fa fa-check"></i><b>8.4.4</b> PoGO<sub>M<span class="math inline">\(\uparrow\)</span></sub></a></li>
+<li class="chapter" data-level="8.1" data-path="MLM-Trend.html"><a href="MLM-Trend.html#selecting-a-multilevel-model-for-the-single-case-studies-1"><i class="fa fa-check"></i><b>8.1</b> Selecting a Multilevel Model for the Single-Case Studies</a></li>
+<li class="chapter" data-level="8.2" data-path="MLM-Trend.html"><a href="MLM-Trend.html#details-of-the-multilevel-model-with-trends"><i class="fa fa-check"></i><b>8.2</b> Details of the Multilevel Model with Trends</a></li>
+<li class="chapter" data-level="8.3" data-path="MLM-Trend.html"><a href="MLM-Trend.html#estimating-the-multilevel-model-for-the-included-writing-intervention-studies"><i class="fa fa-check"></i><b>8.3</b> Estimating the Multilevel Model for the Included Writing Intervention Studies</a></li>
 </ul></li>
-<li class="chapter" data-level="8.5" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#averaging-the-case-specific-effect-sizes"><i class="fa fa-check"></i><b>8.5</b> Averaging the Case-Specific Effect Sizes</a>
+<li class="chapter" data-level="9" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html"><i class="fa fa-check"></i><b>9</b> Introduction to Case-Specific Effect Sizes</a>
 <ul>
-<li class="chapter" data-level="8.5.1" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#fixed-effects-meta-analysis"><i class="fa fa-check"></i><b>8.5.1</b> Fixed Effects Meta-Analysis</a></li>
-<li class="chapter" data-level="8.5.2" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#random-effects-meta-analysis"><i class="fa fa-check"></i><b>8.5.2</b> Random Effects Meta-Analysis</a></li>
-<li class="chapter" data-level="8.5.3" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#further-directions-for-synthesizing-case-specific-effect-sizes"><i class="fa fa-check"></i><b>8.5.3</b> Further Directions for Synthesizing Case-Specific Effect Sizes</a></li>
+<li class="chapter" data-level="9.1" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#background-3"><i class="fa fa-check"></i><b>9.1</b> Background</a></li>
+<li class="chapter" data-level="9.2" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#when-to-use-case-specific-effect-sizes"><i class="fa fa-check"></i><b>9.2</b> When to Use Case-Specific Effect Sizes</a></li>
+<li class="chapter" data-level="9.3" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-case-specific-effect-sizes"><i class="fa fa-check"></i><b>9.3</b> Assumptions and Limitations of Case-Specific Effect Sizes</a></li>
+<li class="chapter" data-level="9.4" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-nonoverlap-indices"><i class="fa fa-check"></i><b>9.4</b> Assumptions and Limitations of Nonoverlap Indices</a></li>
+<li class="chapter" data-level="9.5" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-standardized-mean-differences"><i class="fa fa-check"></i><b>9.5</b> Assumptions and Limitations of Standardized Mean Differences</a></li>
+<li class="chapter" data-level="9.6" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-percentage-change-indices-and-log-response-ratios"><i class="fa fa-check"></i><b>9.6</b> Assumptions and Limitations of Percentage Change Indices and Log Response Ratios</a></li>
+<li class="chapter" data-level="9.7" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#assumptions-and-limitations-of-percent-of-goal-obtained"><i class="fa fa-check"></i><b>9.7</b> Assumptions and Limitations of Percent of Goal Obtained</a></li>
+<li class="chapter" data-level="9.8" data-path="intro-case-specific-es.html"><a href="intro-case-specific-es.html#case-specific-effect-size-options-for-synthesizing-single-case-research"><i class="fa fa-check"></i><b>9.8</b> Case-Specific Effect Size Options for Synthesizing Single-Case Research</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html"><i class="fa fa-check"></i><b>10</b> Application of Case-Specific Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#selecting-case-specific-effect-sizes-for-the-single-case-studies"><i class="fa fa-check"></i><b>10.1</b> Selecting Case-Specific Effect Sizes for the Single-Case Studies</a></li>
+<li class="chapter" data-level="10.2" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#estimating-the-case-specific-effect-sizes-for-the-included-aac-intervention-studies"><i class="fa fa-check"></i><b>10.2</b> Estimating the Case-Specific Effect Sizes for the Included AAC Intervention Studies</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#entering-the-data-into-excel"><i class="fa fa-check"></i><b>10.2.1</b> Entering the Data into Excel</a></li>
+<li class="chapter" data-level="10.2.2" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#accessing-the-app"><i class="fa fa-check"></i><b>10.2.2</b> Accessing the App</a></li>
+<li class="chapter" data-level="10.2.3" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#loading-the-data-into-the-app"><i class="fa fa-check"></i><b>10.2.3</b> Loading the Data into the App</a></li>
+<li class="chapter" data-level="10.2.4" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#defining-the-variable-within-the-app"><i class="fa fa-check"></i><b>10.2.4</b> Defining the Variable within the App</a></li>
+<li class="chapter" data-level="10.2.5" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#examining-the-graphs-within-the-app"><i class="fa fa-check"></i><b>10.2.5</b> Examining the Graphs within the App</a></li>
+<li class="chapter" data-level="10.2.6" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#estimating-the-effect-sizes-within-the-app"><i class="fa fa-check"></i><b>10.2.6</b> Estimating the Effect Sizes within the App</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#syntex-for-r"><i class="fa fa-check"></i><b>10.3</b> Syntex for R</a></li>
+<li class="chapter" data-level="10.4" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#examining-the-alignment-of-the-case-specific-effect-sizes-with-our-visual-analysis"><i class="fa fa-check"></i><b>10.4</b> Examining the Alignment of the Case-Specific Effect Sizes with our Visual Analysis</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#nap"><i class="fa fa-check"></i><b>10.4.1</b> NAP</a></li>
+<li class="chapter" data-level="10.4.2" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#smd-results"><i class="fa fa-check"></i><b>10.4.2</b> SMD Results</a></li>
+<li class="chapter" data-level="10.4.3" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#lrri-results"><i class="fa fa-check"></i><b>10.4.3</b> LRRi Results</a></li>
+<li class="chapter" data-level="10.4.4" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#pogomuparrow"><i class="fa fa-check"></i><b>10.4.4</b> PoGO<sub>M<span class="math inline">\(\uparrow\)</span></sub></a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#averaging-the-case-specific-effect-sizes"><i class="fa fa-check"></i><b>10.5</b> Averaging the Case-Specific Effect Sizes</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#fixed-effects-meta-analysis"><i class="fa fa-check"></i><b>10.5.1</b> Fixed Effects Meta-Analysis</a></li>
+<li class="chapter" data-level="10.5.2" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#random-effects-meta-analysis"><i class="fa fa-check"></i><b>10.5.2</b> Random Effects Meta-Analysis</a></li>
+<li class="chapter" data-level="10.5.3" data-path="app-case-specific-es.html"><a href="app-case-specific-es.html#further-directions-for-synthesizing-case-specific-effect-sizes"><i class="fa fa-check"></i><b>10.5.3</b> Further Directions for Synthesizing Case-Specific Effect Sizes</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -239,13 +320,13 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="raw-data" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Introduction to Multilevel Modeling of Raw Participant Data<a href="raw-data.html#raw-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This chapter provides background on multilevel modeling of the raw data from studies included in a synthesis of SCDs.
+<div id="MLM-raw-data" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Introduction to Multilevel Modeling of Raw Participant Data<a href="MLM-raw-data.html#MLM-raw-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><em>This chapter provides background on multilevel modeling of the raw data from studies included in a synthesis of SCDs.
 We describe when this approach is useful, then discuss various types of study outcomes (e.g., continuous, count, and percentage-based), corresponding assumptions (e.g., within-phase trends, normality), and modeling options for synthesizing findings using multilevel models of raw, individual participant data.
-We conclude this chapter by providing a set of decision rules for meta-analysts to use when selecting among the currently available multilevel modeling options for synthesis of SCDs.</p>
+We conclude this chapter by providing a set of decision rules for meta-analysts to use when selecting among the currently available multilevel modeling options for synthesis of SCDs.</em></p>
 <div id="background-2" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Background<a href="raw-data.html#background-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">6.1</span> Background<a href="MLM-raw-data.html#background-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The use of multilevel models to analyze and synthesize effects from single-case studies is based on the recognition that the raw data often have a hierarchical data structure.
 Initially, two-level models were developed for data from single-case design (SCD) studies with multiple participants, such as multiple baseline designs, where observations are nested within cases <span class="citation">(<a href="#ref-Ferron_Bell_Hess_Rendina-Gobioff_Hibbard_2009">J. M. Ferron et al., 2009</a>; <a href="#ref-Shadish_Kyse_Rindskopf_2013">Shadish et al., 2013</a>; <a href="#ref-van2003combining">Van den Noortgate &amp; Onghena, 2003</a>)</span>.
 To conduct syntheses across multiple studies, researchers have expanded upon these methods to allow for three-level models where individual observations are nested within cases and cases are nested in studies <span class="citation">(<a href="#ref-Moeyaert_Ugille_Ferron_Beretvas_VandenNoortgate_2014">Moeyaert, Ugille, et al., 2014</a>; <a href="#ref-Moeyaert_Ferron_Beretvas_VandenNoortgate_2014">Moeyaert, Ferron, et al., 2014</a>; <a href="#ref-Owens_Ferron_2012">Owens &amp; Ferron, 2012</a>; <a href="#ref-VandenNoortgate2008multilevel">Van den Noortgate &amp; Onghena, 2008</a>)</span>.</p>
@@ -255,7 +336,7 @@ In this chapter, we describe when researchers should elect to use multilevel mod
 We then provide a set of the most common modeling options, along with a decision-making guide for selecting among the various multilevel modeling options (e.g., when there are/not baseline trends).</p>
 </div>
 <div id="when-to-use-multilevel-models-of-the-raw-data" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> When to Use Multilevel Models of the Raw Data<a href="raw-data.html#when-to-use-multilevel-models-of-the-raw-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">6.2</span> When to Use Multilevel Models of the Raw Data<a href="MLM-raw-data.html#when-to-use-multilevel-models-of-the-raw-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When researchers are synthesizing the literature in an area, the purpose or aims of the synthesis should guide their methodological choices.
 In some situations, researchers may want to explore the degree to which the effect changes over time.
 Yet, information about variation in intervention effect over time is lost when a single value is used to summarize the effect for a case (as with case-specific effect sizes) or for a full study (as with design-comparable effect sizes).
@@ -273,7 +354,7 @@ In a situation like this, the statistical models for each outcome are different,
 For this guide, we will focus on situations where the outcome is the same across cases and studies.</p>
 </div>
 <div id="what-we-assume-with-multilevel-models-of-the-raw-data" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> What We Assume with Multilevel Models of the Raw Data<a href="raw-data.html#what-we-assume-with-multilevel-models-of-the-raw-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">6.3</span> What We Assume with Multilevel Models of the Raw Data<a href="MLM-raw-data.html#what-we-assume-with-multilevel-models-of-the-raw-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are several assumptions underlying the multilevel modeling approach to the synthesis of single-case data.
 The overarching assumption is that a specific multilevel model describes the process by which the raw data were generated.
 If we have observations nested in cases, and those cases are nested within studies, we assume a specific three-level model.
@@ -286,15 +367,15 @@ Finally, the third level of the model accounts for variation between studies in 
 Again, the level-3 model is specified with the typical assumption that the parameters of these average study trajectories are normally distributed around the parameters of the overall across-study average trajectory.
 In the following sections, we more fully define and elaborate on the underlying assumptions for multilevel modeling of raw single-case data.</p>
 <div id="within-case-model-assumptions" class="section level3 hasAnchor" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> Within-Case Model Assumptions<a href="raw-data.html#within-case-model-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">6.3.1</span> Within-Case Model Assumptions<a href="MLM-raw-data.html#within-case-model-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The within-case model accounts for the variation in the outcome measurements over time within a case.
 We must model the distribution of the observations around the trend lines, specify the trend line for each phase, and choose the effect size metric on which to quantify changes due to intervention (e.g., changes in level and/or trend between baseline and intervention phases).
 When specifying the distribution of observations around the trend line, we consider several characteristics: distribution shape (e.g., normal versus some non-normal distribution), whether deviations from the trend line are independently distributed or serially dependent, and whether the variance is homogeneous or heterogeneous across the study (e.g., when the baseline phase variance is larger than that of the treatment phase).
 When specifying the trend lines, we consider the presence of trends and whether they are linear or follow some non-linear form.</p>
-<p>When making decisions about modeling the shape of the distribution of observations around the trend line, normality is the simplest and most common assumption <span class="citation">(e.g., <a href="#ref-Declercq_et_al_2019">Declercq et al., 2019</a>; <a href="#ref-Moeyaert_Ferron_Beretvas_VandenNoortgate_2014">Moeyaert, Ferron, et al., 2014</a>; <a href="#ref-van2003combining">Van den Noortgate &amp; Onghena, 2003</a>)</span>, and leads to estimation via linear mixed models (LMMs).
+<p>When making decisions about modeling the shape of the distribution of observations around the trend line, normality is the simplest and most common assumption <span class="citation">(e.g., <a href="#ref-Declercq2019">Declercq et al., 2019</a>; <a href="#ref-Moeyaert_Ferron_Beretvas_VandenNoortgate_2014">Moeyaert, Ferron, et al., 2014</a>; <a href="#ref-van2003combining">Van den Noortgate &amp; Onghena, 2003</a>)</span>, and leads to estimation via linear mixed models (LMMs).
 In some contexts, assuming a normal distribution aligns well with the single-case data.
 However, there are circumstances where it may not be appropriate to make such an assumption.
-For example, when an SCD study outcome is a count variable with a low mean for one of the phases (e.g., frequency of a target behavior having a treatment phase mean at or near zero), a non-normal distribution like a Poisson, quasi-Poisson<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>, or negative binomial may be more appropriate <span class="citation">(e.g., <a href="#ref-Declercq_et_al_2019">Declercq et al., 2019</a>; <a href="#ref-Li_Luo_Baek_Thompson_Lam_2023">Li et al., 2023</a>; <a href="#ref-Shadish_Kyse_Rindskopf_2013">Shadish et al., 2013</a>)</span>.</p>
+For example, when an SCD study outcome is a count variable with a low mean for one of the phases (e.g., frequency of a target behavior having a treatment phase mean at or near zero), a non-normal distribution like a Poisson, quasi-Poisson<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>, or negative binomial may be more appropriate <span class="citation">(e.g., <a href="#ref-Declercq2019">Declercq et al., 2019</a>; <a href="#ref-Li_Luo_Baek_Thompson_Lam_2023">Li et al., 2023</a>; <a href="#ref-Shadish_Kyse_Rindskopf_2013">Shadish et al., 2013</a>)</span>.</p>
 <p>In other circumstances, the study outcome may be a percentage (e.g., the percentage of academically engaged time) with a phase mean that is close to the minimum (0%) or maximum (100%).
 When a study phase mean for a percentage variable is near the minimum or maximum value possible, the resulting non-normal distribution might be better approximated with a binomial, quasi-binomial<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>, or beta-binomial distribution <span class="citation">(<a href="#ref-Li_Luo_Baek_Thompson_Lam_2023">Li et al., 2023</a>; <a href="#ref-Shadish_Kyse_Rindskopf_2013">Shadish et al., 2013</a>)</span>.
 Models involving non-normal probability distributions are known as generalized linear mixed models (GLMMs).</p>
@@ -307,7 +388,7 @@ Following the previous example, a case with an average baseline latency of 20 se
 In GLMMs for count outcomes, it is common to specify the model in terms of the natural logarithm of the expected outcome (using a log link function), so intervention effects are quantified as log response ratios.
 In GLMMs for proportion outcomes, it is common to specify the model in terms of the log of the odds of the expected outcome (using a logistic link function), so that intervention effects are quantified as log odds ratios.</p>
 <p>As an example, consider a multiple baseline study by <span class="citation">Ota &amp; DuPaul (<a href="#ref-ota2002Task">2002</a>)</span> that examined the impact of a mathematics software intervention on the percentage of intervals where students were off task.
-Figure <a href="raw-data.html#fig:otadupaul">6.1</a> presents the <span class="citation">Ota &amp; DuPaul (<a href="#ref-ota2002Task">2002</a>)</span> study data.
+Figure <a href="MLM-raw-data.html#fig:otadupaul">6.1</a> presents the <span class="citation">Ota &amp; DuPaul (<a href="#ref-ota2002Task">2002</a>)</span> study data.
 During baseline phases, observations appear somewhat normally distributed around the baseline means, with a pooled skewness value near 0 (<em>sk</em> = 0.15) and a pooled kurtosis value near 0 (<em>ku</em> = -0.77).
 However, non-normality is present in the treatment phases because the outcome occurs near the floor (0%) for much of the phase (<em>sk</em> = 1.86; <em>ku</em> = 4.99).</p>
 <div class="figure"><span style="display:block;" id="fig:otadupaul"></span>
@@ -316,7 +397,7 @@ However, non-normality is present in the treatment phases because the outcome oc
 Figure 6.1: Multiple Baseline Design Across Three Participants (Ota &amp; DuPaul, 2002)
 </p>
 </div>
-<p>There is some research suggesting that the simpler multilevel models based on the normality assumption (i.e., LMMs) can produce unbiased average effect estimates and accurate inferences, even when the data are not strictly normal <span class="citation">(<a href="#ref-Declercq_et_al_2019">Declercq et al., 2019</a>; <a href="#ref-Joo_Ferron_2019">Joo &amp; Ferron, 2019</a>)</span>.
+<p>There is some research suggesting that the simpler multilevel models based on the normality assumption (i.e., LMMs) can produce unbiased average effect estimates and accurate inferences, even when the data are not strictly normal <span class="citation">(<a href="#ref-Declercq2019">Declercq et al., 2019</a>; <a href="#ref-Joo_Ferron_2019">Joo &amp; Ferron, 2019</a>)</span>.
 However, at some point the departures can become so severe that methods accounting for non-normality (i.e., GLMMs) appear preferable.
 We expect that future research will better define the point at which researchers should move to these more complex models with non-normal probability distributions.
 We also anticipate that future research will further define the sample sizes (i.e., series lengths, number of cases, number of studies) needed for estimation of the more complex GLMMs.</p>
@@ -332,16 +413,16 @@ Research suggests that the impact of modeling and not modeling serial dependence
 For single-level models where serial dependence is present, a failure to model it does not bias the regression coefficient providing the point estimate of the treatment effect.
 However, not modeling serial dependence in a regression model can bias the standard error (SE), leading to substantial problems when making inferences about the treatment effect <span class="citation">(<a href="#ref-Ferron_2002">J. Ferron, 2002</a>; <a href="#ref-Greenwood_Matyas_1990">Greenwood &amp; Matyas, 1990</a>)</span>.
 Two-level models not accounting for serial dependence have less severe inferential problems than single-level models, but some problems still persist <span class="citation">(<a href="#ref-Ferron_Bell_Hess_Rendina-Gobioff_Hibbard_2009">J. M. Ferron et al., 2009</a>)</span>.
-However, for three-level models, the choice about modeling potential serial dependence appears to have minimal, if any, impact on the treatment effect estimates or inferences <span class="citation">(<a href="#ref-Joo_Ferron_Moeyaert_Beretvas_VandenNoortgate_2019">Joo et al., 2019</a>; <a href="#ref-Petit-Bois_2014">Petit-Bois, 2014</a>)</span>.
+However, for three-level models, the choice about modeling potential serial dependence appears to have minimal, if any, impact on the treatment effect estimates or inferences <span class="citation">(<a href="#ref-Joo_et_al_2019">Joo et al., 2019</a>; <a href="#ref-Petit-Bois_2014">Petit-Bois, 2014</a>)</span>.
 Furthermore, for two- and three-level models, inferential techniques such as robust variance estimation can be applied to provide some protection against mis-specified assumptions regarding error dependence.
 Because we are focusing on the application of multilevel models for synthesizing across studies (three-level models) in this methods guide, we will use the simpler models that assume independence in our illustrations.</p>
 <p>Next, when specifying the model for the distribution of observations around the trend line, the researchers must consider the degree to which the variability in those observations across phases is consistent (homogeneous) or different (heterogeneous).
 In GLMMs of count data, the variance is assumed to depend on the outcome level.
 However, for models assuming a normal distribution, it is typically assumed that the variance does not depend on the outcome level.
-In Figure <a href="raw-data.html#fig:otadupaul">6.1</a>, one might question not only the normality assumption (as previously noted), but also the difference in variance between the two phases (i.e., less variance in the treatment phases than the baseline phases).
+In Figure <a href="MLM-raw-data.html#fig:otadupaul">6.1</a>, one might question not only the normality assumption (as previously noted), but also the difference in variance between the two phases (i.e., less variance in the treatment phases than the baseline phases).
 When using models that assume a normal distribution of the outcomes, researchers can specify either that the variance is equal across phases or that the variance differs between the phases.
 The simpler homogeneous variance assumption may be a reasonable choice.
-Simulation research has demonstrated that when the Kenward Roger method was used for inference, the simpler model provided unbiased treatment effect estimates and accurate confidence intervals even when the treatment phase variance was up to four times that of the baseline variance <span class="citation">(<a href="#ref-Joo_Ferron_Moeyaert_Beretvas_VandenNoortgate_2019">Joo et al., 2019</a>)</span>.
+Simulation research has demonstrated that when the Kenward Roger method was used for inference, the simpler model provided unbiased treatment effect estimates and accurate confidence intervals even when the treatment phase variance was up to four times that of the baseline variance <span class="citation">(<a href="#ref-Joo_et_al_2019">Joo et al., 2019</a>)</span>.
 We anticipate that future research will help to provide more concrete guidance as to when changes in variance are substantial enough to warrant use of more complex models that assume heterogeneity.</p>
 <p>Finally, the within-case model specifies the form of the growth trajectory for each phase.
 The simplest trajectory is one without trend, but researchers can specify linear or non-linear trends within the multilevel modeling framework <span class="citation">(e.g., <a href="#ref-Hembry_Bunuan_Beretvas_Ferron_VandenNoortgate_2015">Hembry et al., 2015</a>; <a href="#ref-Rindskopf_2014">Rindskopf, 2014</a>; <a href="#ref-Swan_Pustejovsky_2018">Swan &amp; Pustejovsky, 2018</a>)</span>.
@@ -350,7 +431,7 @@ We also encourage researchers to visually analyze the data from each included SC
 Alternatively, when there is ambiguity about the appropriate model for the growth trajectory for the baseline and/or treatment phase, we suggest researchers estimate and contrast alternative plausible models to document the sensitivity of the effect estimate and inferences relative to the specification of the growth trajectory.</p>
 </div>
 <div id="case-similarity-assumptions" class="section level3 hasAnchor" number="6.3.2">
-<h3><span class="header-section-number">6.3.2</span> Case Similarity Assumptions<a href="raw-data.html#case-similarity-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">6.3.2</span> Case Similarity Assumptions<a href="MLM-raw-data.html#case-similarity-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>At level-2 of the multilevel model, we make assumptions about case similarity within a study.
 Generally, if we assume that the outcome for one case follows a normal distribution, we assume that the outcome for all cases within the study follows a normal distribution.
 Similarly, if we assume that the level-1 errors for one case are independent and homogenous, we assume that the errors for all cases are independent and homogeneous; and if we assume that trends are absent within a case, we assume a within-case model without trends is appropriate for all cases.</p>
@@ -363,13 +444,13 @@ Finally, for the regression coefficients that vary, we must consider whether the
 For example, if cases with lower baseline levels tend to show smaller treatment effects, there would be covariation between the coefficients. It is possible to specify multilevel models that assume covariation and models that do not.</p>
 <p>We encourage researchers to consider the plausibility of the case similarity assumptions prior to jumping into a multilevel modeling application.
 At this time, methodological research is limited regarding the degree to which the case similarity assumptions can be violated, and thus it is not clear when more complex models and estimation approaches are preferable.
-<span class="citation">Baek &amp; Ferron (<a href="#ref-baek_Ferron_2020">2020</a>)</span> provide a method for relaxing the assumption that the within-case variance is constant across cases within a study.
+<span class="citation">E. Baek &amp; Ferron (<a href="#ref-baek_Ferron_2020">2020</a>)</span> provide a method for relaxing the assumption that the within-case variance is constant across cases within a study.
 They also show that differences in the within-case variance can often be tolerated by models that assume homogeneity.
 For the illustrations in this methods guide, we assume that within-case variances are equal across cases, and that the regression coefficients that vary follow normal distributions.
 We anticipate that future research will continue to develop alternatives and guidance for contexts where these assumptions are not tenable.</p>
 </div>
 <div id="study-similarity-assumptions" class="section level3 hasAnchor" number="6.3.3">
-<h3><span class="header-section-number">6.3.3</span> Study Similarity Assumptions<a href="raw-data.html#study-similarity-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">6.3.3</span> Study Similarity Assumptions<a href="MLM-raw-data.html#study-similarity-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>At the third level of the multilevel model, we make assumptions about the similarity of the studies regarding the parameters at both of the first and second levels of the model.
 In terms of the model for observations nested within cases, we need to make assumptions about the similarity of distributions and variances.
 Typically, multilevel models and GLMMs assume that all outcomes from all studies follow a single distributional family (e.g., normal, negative binomial, beta-binomial).
@@ -387,7 +468,7 @@ Hopefully, future research will provide guidance about the degree to which multi
 </div>
 </div>
 <div id="comparison-to-other-synthesis-approaches" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Comparison to Other Synthesis Approaches<a href="raw-data.html#comparison-to-other-synthesis-approaches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">6.4</span> Comparison to Other Synthesis Approaches<a href="MLM-raw-data.html#comparison-to-other-synthesis-approaches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Compared to the other broad approaches to synthesis of single-case studies, the assumptions involved in the raw data synthesis approach have some commonalities and some unique features.
 Both the raw data synthesis approach and design-comparable effect size syntheses are based on multilevel modeling, as the latter entails specifying a separate multilevel model for the data from each study to estimate a study-level summary effect size on a scale-free metric.
 The resulting design-comparable effect size can then be compared to the effect size from a between-group design.
@@ -401,7 +482,7 @@ Because no case similarity assumptions are made, it is more difficult to accommo
 Thus, synthesis using case-specific effect size indices loses some flexibility but gains a degree of simplicity by avoiding the need to make so many assumptions.</p>
 </div>
 <div id="multilevel-modeling-options-for-synthesizing-single-case-research" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Multilevel Modeling Options for Synthesizing Single-Case Research<a href="raw-data.html#multilevel-modeling-options-for-synthesizing-single-case-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">6.5</span> Multilevel Modeling Options for Synthesizing Single-Case Research<a href="MLM-raw-data.html#multilevel-modeling-options-for-synthesizing-single-case-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We summarize in this section the decisions to be made when choosing a specific multilevel model for synthesizing single-case research.
 For the studies included in the synthesis, we suggest that meta-analysts first attend to the operationalization of the outcome variable(s).
 For multilevel modeling of the raw data across studies, recall that outcomes must be operationalized in the same way, or in a manner similar enough so that all included study outcomes can be transformed or standardized so they consistently use the same unit of measurement.
@@ -427,7 +508,7 @@ Because meta-analysts must use the same multilevel model when conducting a synth
 Finally, meta-analysts must determine when the effect should be indexed in the treatment phase, leading to decisions about how to center the time variable in the multilevel model.
 When centering or rescaling a time variable, meta-analysts effectively move the zero on the time scale so that it corresponds to the time at which they want to estimate the treatment effect.
 For example, a researcher who wants to estimate the immediate intervention effect will center time so that zero corresponds to the first treatment phase observation, whereas a researcher who wants to estimate the effect five sessions into intervention would center time so that zero corresponds to the fifth treatment phase observation.</p>
-<p>In Figure <a href="raw-data.html#fig:mlmapproach">6.2</a>, we arrange these considerations into a series of decision rules that researchers can use to select between LMMs and GLMMs, and models with and without trends.
+<p>In Figure <a href="MLM-raw-data.html#fig:mlmapproach">6.2</a>, we arrange these considerations into a series of decision rules that researchers can use to select between LMMs and GLMMs, and models with and without trends.
 Recent methodological research has started to develop more concrete guidance on the most appropriate modeling and estimation choices in contexts where non-normality is assumed and GLMMs are more appropriate <span class="citation">(<a href="#ref-Li_Luo_Baek_Thompson_Lam_2023">Li et al., 2023</a>)</span>.
 However, for the purposes of this guide, we illustrate the application of multilevel models for study contexts where it is reasonable to assume normality and thus LMMs are appropriate.
 We first consider the application of LMMs when expecting no trends (Chapter 7), and then address the more complex situation when anticipating trends (Chapter 8).</p>
@@ -445,7 +526,7 @@ Figure 6.2: Flow Chart for the Selection of Multilevel Modeling Approach
 <div id="ref-baek_Ferron_2020" class="csl-entry">
 Baek, E., &amp; Ferron, J. J. M. (2020). Modeling heterogeneity of the level-1 error covariance matrix in multilevel models for single-case data. <em>Methodology</em>, <em>16</em>(2), 166–185. <a href="https://doi.org/10.5964/meth.2817">https://doi.org/10.5964/meth.2817</a>
 </div>
-<div id="ref-Declercq_et_al_2019" class="csl-entry">
+<div id="ref-Declercq2019" class="csl-entry">
 Declercq, L., Jamshidi, L., Fernández-Castilla, B., Beretvas, S. N., Moeyaert, M., Ferron, J. M., &amp; Van den Noortgate, W. (2019). Analysis of single-case experimental count data using the linear mixed effects model: A simulation study. <em>Behavior Research Methods</em>, <em>51</em>(6), 2477–2497. <a href="https://doi.org/10.3758/s13428-018-1091-y">https://doi.org/10.3758/s13428-018-1091-y</a>
 </div>
 <div id="ref-Ferron_2002" class="csl-entry">
@@ -463,7 +544,7 @@ Hembry, I., Bunuan, R., Beretvas, S. N., Ferron, J. M., &amp; Van den Noortgate,
 <div id="ref-Joo_Ferron_2019" class="csl-entry">
 Joo, S.-H., &amp; Ferron, J. M. (2019). Application of the within- and between-series estimators to non-normal multiple-baseline data: Maximum likelihood and bayesian approaches. <em>Multivariate Behavioral Research</em>, <em>54</em>(5), 666–689. <a href="https://doi.org/10.1080/00273171.2018.1564877">https://doi.org/10.1080/00273171.2018.1564877</a>
 </div>
-<div id="ref-Joo_Ferron_Moeyaert_Beretvas_VandenNoortgate_2019" class="csl-entry">
+<div id="ref-Joo_et_al_2019" class="csl-entry">
 Joo, S.-H., Ferron, J. M., Moeyaert, M., Beretvas, S. N., &amp; Van den Noortgate, W. (2019). Approaches for specifying the level-1 error structure when synthesizing single-case data. <em>The Journal of Experimental Education</em>, <em>87</em>(1), 55–74. <a href="https://doi.org/10.1080/00220973.2017.1409181">https://doi.org/10.1080/00220973.2017.1409181</a>
 </div>
 <div id="ref-Li_Luo_Baek_Thompson_Lam_2023" class="csl-entry">
@@ -512,8 +593,8 @@ Van den Noortgate, W., &amp; Onghena, P. (2008). A multilevel meta-analysis of s
 <div class="footnotes">
 <hr />
 <ol start="4">
-<li id="fn4"><p>Strictly speaking, the quasi-Poisson is not a true probability distribution but rather only an approximation. However, it functions in effectively the same way as probability distributions such as the Poisson or negative binomial when developing a statistical model for count outcomes.<a href="raw-data.html#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>Similar to the quasi-Poisson, the quasi-binomial is not a true probability distribution but rather only an approximation.<a href="raw-data.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Strictly speaking, the quasi-Poisson is not a true probability distribution but rather only an approximation. However, it functions in effectively the same way as probability distributions such as the Poisson or negative binomial when developing a statistical model for count outcomes.<a href="MLM-raw-data.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Similar to the quasi-Poisson, the quasi-binomial is not a true probability distribution but rather only an approximation.<a href="MLM-raw-data.html#fnref5" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -522,7 +603,7 @@ Van den Noortgate, W., &amp; Onghena, P. (2008). A multilevel meta-analysis of s
         </div>
       </div>
 <a href="illustrate-D-CES-Btrends.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro-case-specific-es.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="MLM-NoTrend.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

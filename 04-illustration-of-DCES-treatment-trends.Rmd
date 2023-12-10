@@ -8,7 +8,7 @@ library(kableExtra)
 
 # Illustration of Design-Comparable Effect Sizes When Assuming Only Trends in The Treatment Phases {#illustrate-D-CES-Ttrends}
 
-This chapter illustrates the computation of design-comparable effect sizes in contexts where one assumes trends in the treatment phase only, with no trends in the baseline phase. Using data from two multiple baseline studies and a group study, we provide step-by-step instructions for selecting design-comparable effect sizes for the single-case studies and estimating them using the _scdhlm_ app. We also briefly discuss estimating the effect size for the group study and synthesizing the effect sizes across the single-case and group and design studies.
+_This chapter illustrates the computation of design-comparable effect sizes in contexts where one assumes trends in the treatment phase only, with no trends in the baseline phase. Using data from two multiple baseline studies and a group study, we provide step-by-step instructions for selecting design-comparable effect sizes for the single-case studies and estimating them using the _scdhlm_ app. We also briefly discuss estimating the effect size for the group study and synthesizing the effect sizes across the single-case and group and design studies._
 
 In this chapter, we demonstrate the computation of design-comparable effect sizes  using models with trends in the treatment phase(s) online (i.e., no baseline trend), as represented by Models 3 and 4 in Figure \@ref(fig:DC-ES-flow-chart). These models assume that: (a) baseline observations of the dependent variable for each case occur at a stable level and (b) intervention leads to a change in both level and _trajectory_ or growth rate in the treatment phase.
 

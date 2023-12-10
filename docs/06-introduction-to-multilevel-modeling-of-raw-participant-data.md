@@ -1,10 +1,10 @@
 
 
-# Introduction to Multilevel Modeling of Raw Participant Data {#raw-data}
+# Introduction to Multilevel Modeling of Raw Participant Data {#MLM-raw-data}
 
-This chapter provides background on multilevel modeling of the raw data from studies included in a synthesis of SCDs.
+_This chapter provides background on multilevel modeling of the raw data from studies included in a synthesis of SCDs.
 We describe when this approach is useful, then discuss various types of study outcomes (e.g., continuous, count, and percentage-based), corresponding assumptions (e.g., within-phase trends, normality), and modeling options for synthesizing findings using multilevel models of raw, individual participant data. 
-We conclude this chapter by providing a set of decision rules for meta-analysts to use when selecting among the currently available multilevel modeling options for synthesis of SCDs.
+We conclude this chapter by providing a set of decision rules for meta-analysts to use when selecting among the currently available multilevel modeling options for synthesis of SCDs._
 
 ## Background
 
@@ -56,10 +56,10 @@ We must model the distribution of the observations around the trend lines, speci
 When specifying the distribution of observations around the trend line, we consider several characteristics: distribution shape (e.g., normal versus some non-normal distribution), whether deviations from the trend line are independently distributed or serially dependent, and whether the variance is homogeneous or heterogeneous across the study (e.g., when the baseline phase variance is larger than that of the treatment phase). 
 When specifying the trend lines, we consider the presence of trends and whether they are linear or follow some non-linear form.
 
-When making decisions about modeling the shape of the distribution of observations around the trend line, normality is the simplest and most common assumption [e.g., @Declercq_et_al_2019; @Moeyaert_Ferron_Beretvas_VandenNoortgate_2014; @van2003combining], and leads to estimation via linear mixed models (LMMs). 
+When making decisions about modeling the shape of the distribution of observations around the trend line, normality is the simplest and most common assumption [e.g., @Declercq2019; @Moeyaert_Ferron_Beretvas_VandenNoortgate_2014; @van2003combining], and leads to estimation via linear mixed models (LMMs). 
 In some contexts, assuming a normal distribution aligns well with the single-case data.
 However, there are circumstances where it may not be appropriate to make such an assumption.
-For example, when an SCD study outcome is a count variable with a low mean for one of the phases (e.g., frequency of a target behavior having a treatment phase mean at or near zero), a non-normal distribution like a Poisson, quasi-Poisson^[Strictly speaking, the quasi-Poisson is not a true probability distribution but rather only an approximation. However, it functions in effectively the same way as probability distributions such as the Poisson or negative binomial when developing a statistical model for count outcomes.], or negative binomial may be more appropriate [e.g., @Declercq_et_al_2019; @Li_Luo_Baek_Thompson_Lam_2023; @Shadish_Kyse_Rindskopf_2013].
+For example, when an SCD study outcome is a count variable with a low mean for one of the phases (e.g., frequency of a target behavior having a treatment phase mean at or near zero), a non-normal distribution like a Poisson, quasi-Poisson^[Strictly speaking, the quasi-Poisson is not a true probability distribution but rather only an approximation. However, it functions in effectively the same way as probability distributions such as the Poisson or negative binomial when developing a statistical model for count outcomes.], or negative binomial may be more appropriate [e.g., @Declercq2019; @Li_Luo_Baek_Thompson_Lam_2023; @Shadish_Kyse_Rindskopf_2013].
 
 In other circumstances, the study outcome may be a percentage (e.g., the percentage of academically engaged time) with a phase mean that is close to the minimum (0%) or maximum (100%). 
 When a study phase mean for a percentage variable is near the minimum or maximum value possible, the resulting non-normal distribution might be better approximated with a binomial, quasi-binomial^[Similar to the quasi-Poisson, the quasi-binomial is not a true probability distribution but rather only an approximation.], or beta-binomial distribution [@Li_Luo_Baek_Thompson_Lam_2023; @Shadish_Kyse_Rindskopf_2013]. 
@@ -84,7 +84,7 @@ However, non-normality is present in the treatment phases because the outcome oc
 <p class="caption">(\#fig:otadupaul)Multiple Baseline Design Across Three Participants (Ota & DuPaul, 2002)</p>
 </div>
 
-There is some research suggesting that the simpler multilevel models based on the normality assumption (i.e., LMMs) can produce unbiased average effect estimates and accurate inferences, even when the data are not strictly normal [@Declercq_et_al_2019; @Joo_Ferron_2019].
+There is some research suggesting that the simpler multilevel models based on the normality assumption (i.e., LMMs) can produce unbiased average effect estimates and accurate inferences, even when the data are not strictly normal [@Declercq2019; @Joo_Ferron_2019].
 However, at some point the departures can become so severe that methods accounting for non-normality (i.e., GLMMs) appear preferable. 
 We expect that future research will better define the point at which researchers should move to these more complex models with non-normal probability distributions. 
 We also anticipate that future research will further define the sample sizes (i.e., series lengths, number of cases, number of studies) needed for estimation of the more complex GLMMs.
@@ -102,7 +102,7 @@ Research suggests that the impact of modeling and not modeling serial dependence
 For single-level models where serial dependence is present, a failure to model it does not bias the regression coefficient providing the point estimate of the treatment effect.
 However, not modeling serial dependence in a regression model can bias the standard error (SE), leading to substantial problems when making inferences about the treatment effect [@Ferron_2002; @Greenwood_Matyas_1990].
 Two-level models not accounting for serial dependence have less severe inferential problems than single-level models, but some problems still persist [@Ferron_Bell_Hess_Rendina-Gobioff_Hibbard_2009].
-However, for three-level models, the choice about modeling potential serial dependence appears to have minimal, if any, impact on the treatment effect estimates or inferences [@Joo_Ferron_Moeyaert_Beretvas_VandenNoortgate_2019; @Petit-Bois_2014].
+However, for three-level models, the choice about modeling potential serial dependence appears to have minimal, if any, impact on the treatment effect estimates or inferences [@Joo_et_al_2019; @Petit-Bois_2014].
 Furthermore, for two- and three-level models, inferential techniques such as robust variance estimation can be applied to provide some protection against mis-specified assumptions regarding error dependence. 
 Because we are focusing on the application of multilevel models for synthesizing across studies (three-level models) in this methods guide, we will use the simpler models that assume independence in our illustrations. 
 
@@ -112,7 +112,7 @@ However, for models assuming a normal distribution, it is typically assumed that
 In Figure \@ref(fig:otadupaul), one might question not only the normality assumption (as previously noted), but also the difference in variance between the two phases (i.e., less variance in the treatment phases than the baseline phases). 
 When using models that assume a normal distribution of the outcomes, researchers can specify either that the variance is equal across phases or that the variance differs between the phases. 
 The simpler homogeneous variance assumption may be a reasonable choice. 
-Simulation research has demonstrated that when the Kenward Roger method was used for inference, the simpler model provided unbiased treatment effect estimates and accurate confidence intervals even when the treatment phase variance was up to four times that of the baseline variance [@Joo_Ferron_Moeyaert_Beretvas_VandenNoortgate_2019].
+Simulation research has demonstrated that when the Kenward Roger method was used for inference, the simpler model provided unbiased treatment effect estimates and accurate confidence intervals even when the treatment phase variance was up to four times that of the baseline variance [@Joo_et_al_2019].
 We anticipate that future research will help to provide more concrete guidance as to when changes in variance are substantial enough to warrant use of more complex models that assume heterogeneity.
 
 Finally, the within-case model specifies the form of the growth trajectory for each phase.
