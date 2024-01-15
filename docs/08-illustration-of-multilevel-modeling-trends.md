@@ -26,25 +26,21 @@ In this illustration, the outcome is students' rate of correct word sequences wr
 
 We present the included study graphs in Figure \@ref(fig:Walker-2005) [@walker2005using], Figure \@ref(fig:Walker-2007) [@walker2007improving], Figure \@ref(fig:Stotz-2008) [@stotz2008Effects], and Figure \@ref(fig:Lewandowski-2011) [@lewandowski2011effects]. For each of these studies, we visually inspect the graphs to rule out obvious non-normality (i.e., constant values within a phase, or trend lines so close to the floor or ceiling that variation on one side of the trend line is notably different than on the other side). Visual analysis of the graphed data in Figures \@ref(fig:Walker-2005)-\@ref(fig:Lewandowski-2011) suggest variation around the trend lines that are not obviously non-normal. To better understand the potential degree of a normality assumption violation, we pooled the deviations from the ordinary least squares estimates of within-phase trend lines for each case included in the studies and estimated the skew and kurtosis of the distribution of the deviations. Resulting summary indices suggest moderate departures from normality in baseline ($sk = 1.56$; $ku = 7.43$), and a closer-to-normal distribution in the treatment phase ($sk = 0.11$; $ku = 4.79$). Because the distributions are not severely non-normal and research suggests that LMMs for SCD data can handle some non-normality in the outcomes [@Declercq2019; @Joo_Ferron_2019], we proceed with use of an LMM, which also allows us to illustrate the MultiSCED app.
 
-<div class="figure">
-<img src="images/Walker2005.png" alt="Effect of Intervention on Correct Word Sequences (Walker et al., 2005)" width="60%" />
-<p class="caption">(\#fig:Walker-2005)Effect of Intervention on Correct Word Sequences (Walker et al., 2005)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/Walker2005} \caption{Effect of Intervention on Correct Word Sequences (Walker et al., 2005)}(\#fig:Walker-2005)
+\end{figure}
 
-<div class="figure">
-<img src="images/Walker2007.png" alt="Effect of Intervention on Correct Word Sequences (Walker et al., 2007)" width="60%" />
-<p class="caption">(\#fig:Walker-2007)Effect of Intervention on Correct Word Sequences (Walker et al., 2007)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/Walker2007} \caption{Effect of Intervention on Correct Word Sequences (Walker et al., 2007)}(\#fig:Walker-2007)
+\end{figure}
 
-<div class="figure">
-<img src="images/Stotz2008.png" alt="Effect of Intervention on Correct Word Sequences (Stotz et al., 2008)" width="60%" />
-<p class="caption">(\#fig:Stotz-2008)Effect of Intervention on Correct Word Sequences (Stotz et al., 2008)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/Stotz2008} \caption{Effect of Intervention on Correct Word Sequences (Stotz et al., 2008)}(\#fig:Stotz-2008)
+\end{figure}
 
-<div class="figure">
-<img src="images/Lewandowski2011.png" alt="Effect of Intervention on Correct Word Sequences (Lewandowski, 2011)" width="60%" />
-<p class="caption">(\#fig:Lewandowski-2011)Effect of Intervention on Correct Word Sequences (Lewandowski, 2011)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/Lewandowski2011} \caption{Effect of Intervention on Correct Word Sequences (Lewandowski, 2011)}(\#fig:Lewandowski-2011)
+\end{figure}
 
 Next, we must decide whether to include trends in our model. The outcome in each study is the rate of writing correct word sequences. Using prior knowledge of this academic outcome and the context of the studies, it is plausible that some participants show a slight degree of improvement in the writing outcome during the baseline phase because students engage in writing activities in a variety of academic contexts. However, we do not anticipate a general positive linear trend to be present across all cases in all studies. Unlike our expectations for baseline data, we are more confident in our assumption that the interventions will result not only in an immediate and noticeable increase in students’ correctly written word sequences, but also in a change in the rate of growth. Therefore, we plan to model trends in the treatment phases. 
 
@@ -67,10 +63,9 @@ Second, we must decide how to center the $Time_{ijk}$ variable (i.e., at what po
 
 Then, after deciding to center $Time_{ijk}$ such that 0 corresponds to the first treatment observation, we can interpret $\beta_{0jk}$ as the expected baseline value for case $j$ of study $k$ if the baseline is extended to the first treatment observation. $\beta_{1jk}$ is then interpreted as the immediate effect of the intervention (i.e., the difference between the treatment phase trend line and the extended baseline trend line at time zero). Figure \@ref(fig:Walker-Darren) visually depicts these regression coefficients. The baseline slope is $\beta_{2jk}$, and the change in slope between baseline and treatment phases is $\beta_{3jk}$. 
 
-<div class="figure">
-<img src="images/Walker2005_Darren.png" alt="Illustration of Treatment Effect for Darren (Walker et al., 2005)" width="60%" />
-<p class="caption">(\#fig:Walker-Darren)Illustration of Treatment Effect for Darren (Walker et al., 2005)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/Walker2005_Darren} \caption{Illustration of Treatment Effect for Darren (Walker et al., 2005)}(\#fig:Walker-Darren)
+\end{figure}
 
 The between-case (level-2) model is:
 \begin{equation}
@@ -133,10 +128,9 @@ Figure \@ref(fig:Excel-Lewandowski) shows a screenshot of a portion of the origi
 
 To use the MultiSCED app, the session and outcome variables must be numerical values. However, the variables for study, case, and phase identifiers may be entered as alphanumeric (word labels) or numeric values. Because the app requires it, we organized the data using a long format with one row per time point per case per study, where we input the value of the outcome at each time point for a specific case below the cell containing the value at the previous time point. For each study (e.g., Lewandowski in Figure \@ref(fig:Excel-Lewandowski)), we first arranged cases by baseline length. In order of shortest to longest baseline length, we entered all observations for one case at a time, in order of time. After we entered all data for the case with the shortest baseline, we entered data for the case with the second-shortest baseline, and so on. After entering the data for all cases within a particular study, we repeated the process with the remaining studies; we entered the data from each successive study below the data from the previous study.
 
-<div class="figure">
-<img src="images/excel_Lewandowski2011.png" alt="Screenshot of Extracted Study Data Within the Original Excel Spreadsheet" width="60%" />
-<p class="caption">(\#fig:Excel-Lewandowski)Screenshot of Extracted Study Data Within the Original Excel Spreadsheet</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/excel_Lewandowski2011} \caption{Screenshot of Extracted Study Data Within the Original Excel Spreadsheet}(\#fig:Excel-Lewandowski)
+\end{figure}
 
 After organizing the data within the Excel spreadsheet, we then save the Excel spreadsheet as a tab delimited text file (.txt). We present a screenshot of a portion of the resulting text file in Figure \@ref(fig:Txt-Lewandowski). To prepare the data set for the MultiSCED app, one can follow the steps below.
 
@@ -160,40 +154,35 @@ For MacOS:
 
 It is important to note here that an error message will appear if attempting to save a spreadsheet with multiple worksheets. A pop-up will inform you that the workbook cannot be saved in the selected file format. If encountering this error, researchers should open a newly created file with one worksheet for the data needed in their analysis. 
 
-<div class="figure">
-<img src="images/raw_txt.file_Lewandowski2011.png" alt="Screenshot of Saved Tab Delimited Text File" width="60%" />
-<p class="caption">(\#fig:Txt-Lewandowski)Screenshot of Saved Tab Delimited Text File</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/raw_txt.file_Lewandowski2011} \caption{Screenshot of Saved Tab Delimited Text File}(\#fig:Txt-Lewandowski)
+\end{figure}
 
 After converting and saving the dataset as a tab delimited text file, we are prepared to use the MultiSCED app (http://34.251.13.245/MultiSCED/). Figure 8.8 is a screenshot of the Home page for the MultiSCED app. At the top of the page, one will see that the _Home_ link on the blue menu bar has a darker background than the other website page links. To access the app, we must move from the _Home_ page to the _Input_ page by clicking on the Input link in the website navigation menu bar. 
 
-<div class="figure">
-<img src="images/multiSCED.homepage.png" alt="Screenshot of the Website Navigation Menu and Home Page of the MultiSCED App" width="60%" />
-<p class="caption">(\#fig:MultiSCED-navigation-homepage)Screenshot of the Website Navigation Menu and Home Page of the MultiSCED App</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/multiSCED.homepage} \caption{Screenshot of the Website Navigation Menu and Home Page of the MultiSCED App}(\#fig:MultiSCED-navigation-homepage)
+\end{figure}
 
 A screenshot of the _Input_ page is shown in Figure \@ref(fig:MultiSCED-input-dataFile). After navigating to the _Input_ page, we find a sidebar menu with three additional links: _Data file_, _Variables_, and _Data summary_. We first select the sidebar option to choose the _Data file_ section. When it is highlighted in dark blue (as in Figure \@ref(fig:MultiSCED-input-dataFile)), we can upload our dataset (.txt or .csv) by clicking the _Browse_ button, selecting the folder where the data file is saved, and clicking _Open_. When we did this, two additional menus appeared in the _Upload_ box beneath the _Browse_ button: _Separator character_ and _Decimal character_. The default option for the _Separator character_ is tab. We keep the default setting because we already saved the dataset as a tab delimited text file. However, if your file is saved as a .csv file, you can select _comma_ under the _Separator character_ dropdown menu. Regarding the _Decimal character_ menu, the option for decimal representation defaults to dot, which is the standard choice in the U.S. However, for researchers located outside of the U.S. that use commas to mark decimals (e.g., EU countries), the setting will need to be changed from the default of dot to the comma option. We note here that researchers can use sample data to practice using the app. To access sample data, researchers should upload any file (which will not be used) and then click on the _Use testdata_ checkbox. Sample data information will be automatically input into the _Variables_ section which follows. After completing these actions, we transition to the _Variables_ section on the left side of the screen.
 
-<div class="figure">
-<img src="images/MultiSCED_input.datafile.png" alt="Screenshot of the Input Page of the MultiSCED App" width="60%" />
-<p class="caption">(\#fig:MultiSCED-input-dataFile)Screenshot of the Input Page of the MultiSCED App</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/MultiSCED_input.datafile} \caption{Screenshot of the Input Page of the MultiSCED App}(\#fig:MultiSCED-input-dataFile)
+\end{figure}
 
 As shown in Figure \@ref(fig:MultiSCED-input-variables-Lewandowski) of the MultiSCED app _Input_ page, the _Variables_ section appears as the second option in the left sidebar under _Data file_. When highlighted in dark blue, the _Variables_ page has two primary sections: _Base variables_ and _Moderator variables_. Using the drop-down menus in the _Base variables_ section, we select our outcome variable (i.e., CWSpM) from the _Response_ menu, case identifier from the _Case_ menu, study identifier from the _Study_ menu, and phase identifier from the _Phase_ menu. We also use the _Phase control group_ drop-down menu to define our dummy coded values for baseline observations and specify our time variable from the options in the _Time_ drop-down menu. Because we are modeling trends, we also check the box next to _Center time variable_. The app will center time for each case so that zero corresponds to the first intervention observation allowing the coefficient for _Intervention_ to index the immediate effect of the intervention. Figure \@ref(fig:MultiSCED-input-variables-Lewandowski) shows the _Variables_ tab, along with the appropriate menu selections for this model. 
 
-<div class="figure">
-<img src="images/MultiSCED_input.variables_Lewandowski2011.png" alt="Screenshot of the Variables Section Within the Input Page of the MultiSCED App" width="60%" />
-<p class="caption">(\#fig:MultiSCED-input-variables-Lewandowski)Screenshot of the Variables Section Within the Input Page of the MultiSCED App</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/MultiSCED_input.variables_Lewandowski2011} \caption{Screenshot of the Variables Section Within the Input Page of the MultiSCED App}(\#fig:MultiSCED-input-variables-Lewandowski)
+\end{figure}
 
 After specifying our variables, we navigate to the _Data summary_ section of the app. We show a screenshot for the _Data summary_ tab in Figure \@ref(fig:MultiSCED-input-datasummary-Lewandowski). At the top of the page, the app summarizes the data for each of the three levels in our model: the number of studies included (i.e., 4), the number of cases nested within these four studies (i.e., 15 cases), and the total number of observations nested within the cases that are nested within the studies (i.e., 442). These values all correspond with what we know about our dataset. 
 
 Under the column headers _Studies_ and _Cases_, the app defaults to include all studies and cases in the analysis, as indicated by the check marks (see Figure \@ref(fig:MultiSCED-input-datasummary-Lewandowski)). This is appropriate for our application, because for this methods guide, we intend to illustrate the synthesis of data across all cases and studies using a three-level analysis. As an aside, the MultiSCED app allows for statistical models for a single case or two-level models of the cases nested within a single study. Thus, it provides the option to click _(De)select all_ to allow researchers to only include the data from studies and cases on which they want to focus their analysis. 
 
-<div class="figure">
-<img src="images/MultiSCED_input.datasummary_Lewandowski2011.png" alt="Screenshot of the Data summary Section within the Input Page of the MultiSCED App" width="60%" />
-<p class="caption">(\#fig:MultiSCED-input-datasummary-Lewandowski)Screenshot of the Data summary Section within the Input Page of the MultiSCED App</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/MultiSCED_input.datasummary_Lewandowski2011} \caption{Screenshot of the Data summary Section within the Input Page of the MultiSCED App}(\#fig:MultiSCED-input-datasummary-Lewandowski)
+\end{figure}
 
 After examining the _Data summary_, we need to specify our multilevel model. To do so, we navigate to the _Model_ page (see Figure \@ref(fig:MultiSCED-modelspec-Lewandowski)). There are five sections to the _Model_ page: _Fixed effects_ and _Random effects_ on the left, and _One-level model_, _Two-level model_, and _Three-level model_ on the right side of the screen. In the _Fixed effects_ section, we find a list of four _Base variables_ that we can include in our model. To specify a model without trends, we leave the _Fixed effects_ section untouched, as the app includes _intercept_ and _Intervention_ by default (as noted by the checkmark next to each). Because we want to estimate a baseline slope and a change in slope that occurs with intervention, we manually check the boxes next to _Time_ and _Intervention X Time_. When we check these boxes, the app automatically adds more options [i.e., _(Time)^2^_ and _Intervention X (Time)^2^_]. However, because we anticipated linear trends and ruled out non-linear trends through visual analysis, we do not include (check) either of these additional boxes.
 
@@ -201,17 +190,15 @@ Under the _Random effects_ section, the app leaves all options unchecked. Theref
 
 At this point, we have specified a very complex model and do not anticipate good estimation of the (co)variance matrices, particularly for the study-level errors. Our model includes four study-level random effects, but the data include only four unique studies. Although our process thus far (e.g., including random effects on all four terms, thereby letting all coefficients vary freely) aligns with what has typically been done in prior methodological studies focused on evaluating the appropriateness of three-level models for single-case data, much of this research uses diagonal as opposed to unstructured covariance matrices [e.g., @Joo_et_al_2019; @Moeyaert_Ugille_Ferron_Beretvas_VandenNoortgate_2013; @Moeyaert_Ugille_Ferron_Beretvas_VanDenNoortgate_2016]. If meta-analysts encounter estimation problems that suggest some of the variances may be 0 or correlations are at the boundaries of 1 or -1, they will need to take further action, such as simplifying the variance structure (i.e., removing error terms with little to no variability) and changing the covariance structure specification. 
 
-<div class="figure">
-<img src="images/MultiSCED_model.modelspec_Lewandowski2011.png" alt="Screenshot of the Model Page of the MultiSCED App" width="60%" />
-<p class="caption">(\#fig:MultiSCED-modelspec-Lewandowski)Screenshot of the Model Page of the MultiSCED App</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/MultiSCED_model.modelspec_Lewandowski2011} \caption{Screenshot of the Model Page of the MultiSCED App}(\#fig:MultiSCED-modelspec-Lewandowski)
+\end{figure}
 
 After specifying the model, we use the header at the top of the website to navigate to our multilevel model results by clicking the _Three-level analysis_ link. In transitioning to the _Three-level analysis_ page, we may immediately note a blank page (i.e., no results) or view an error message. However, we usually encounter a small progress tracking bar in the far-right bottom of the page that conveys that estimation is in progress. It takes the MultiSCED app a few seconds to complete our model estimation and present the multilevel model results (see Figure \@ref(fig:MultiSCED-3Level-Lewandowski)). 
 
-<div class="figure">
-<img src="images/MultiSCED_3level_Lewandowski2011.png" alt="Screenshot of the Three-level analysis Page of the MultiSCED App" width="60%" />
-<p class="caption">(\#fig:MultiSCED-3Level-Lewandowski)Screenshot of the Three-level analysis Page of the MultiSCED App</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/MultiSCED_3level_Lewandowski2011} \caption{Screenshot of the Three-level analysis Page of the MultiSCED App}(\#fig:MultiSCED-3Level-Lewandowski)
+\end{figure}
 
 The multilevel model estimation results indicate that if baseline continued, the estimated across-case and across-study average correct word sequences written is 8.67 per minute at the time of the first treatment observation. The immediate treatment effect estimate was an increase of 1.41 correct writing sequences (CWS) per minute (i.e., the difference between the across-case and across-study average treatment phase trajectory and projected baseline trajectory at the time of the first treatment observation). The standard error (SE) of the estimate was 1.04, indicating substantial uncertainty in the size of the average immediate treatment effect. However, this was expected given the small number of studies we used to illustrate the MultiSCED app procedures, as more studies would have resulted in a more precise estimate [e.g., see @datchuk2020Level]. The estimated across-case and across-study average baseline slope was 0.036 ($\text{SE} = 0.078$), and estimated change in slope with intervention was 0.029 CWS per minute per intervention session ($\text{SE} = 0.133$). Although the small, positive slope estimate in baseline and the increase in slope with intervention align with our expectations, the sampling error in both estimates is too large to conclude that either of the corresponding population parameters differ from zero.
 
@@ -221,16 +208,14 @@ Next, examining the between-case variability within studies (i.e., _Study: ID_),
 
 To simplify the covariance structure for the study-level random effects, we go back to the _Model_ page and deselect some of the _Random effects_ options listed under the _Study level subheading_. As shown in Figure \@ref(fig:MultiSCED-modelspec-simpler-Lewandowski), we uncheck _Time_, _Intervention_, and _Intervention X Time_. Although conceptually any of these coefficients could vary from one study to the next, we only have four studies in our example, which is not sufficient to estimate so many variance components. 
 
-<div class="figure">
-<img src="images/MultiSCED_model.modelspec_simpler_Lewandowski2011.png" alt="Screenshot of the Re-Specified Model with Fewer Study-Level Random Effects (Model Page)" width="60%" />
-<p class="caption">(\#fig:MultiSCED-modelspec-simpler-Lewandowski)Screenshot of the Re-Specified Model with Fewer Study-Level Random Effects (Model Page)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/MultiSCED_model.modelspec_simpler_Lewandowski2011} \caption{Screenshot of the Re-Specified Model with Fewer Study-Level Random Effects (Model Page)}(\#fig:MultiSCED-modelspec-simpler-Lewandowski)
+\end{figure}
 
 We show the results from this simpler re-specified model in Figure \@ref(fig:MultiSCED-3Level-simpler-Lewandowski). With this model, the across-case and across-study average immediate effect is 1.03 ($\text{SE} = 0.64$) and the estimated effect of the intervention on the slope is -0.03 ($\text{SE} = 0.06$). The point estimates for the effects have changed, but the conclusion of a potential non-effect (i.e., the population effect parameters may be zero) remains the same. Although we eliminated the correlations of 1 and -1 in the study-level random effect estimates, the estimated variance for the study-level intercepts is 0, suggesting insufficient between-study variability necessary to obtain a non-zero estimate. 
 
-<div class="figure">
-<img src="images/MultiSCED_3level_simpler_Lewandowski2011.png" alt="Screenshot of the Three-level analysis Page for the Re-Specified Model with Fewer Study Level Random Effects" width="60%" />
-<p class="caption">(\#fig:MultiSCED-3Level-simpler-Lewandowski)Screenshot of the Three-level analysis Page for the Re-Specified Model with Fewer Study Level Random Effects</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/MultiSCED_3level_simpler_Lewandowski2011} \caption{Screenshot of the Three-level analysis Page for the Re-Specified Model with Fewer Study Level Random Effects}(\#fig:MultiSCED-3Level-simpler-Lewandowski)
+\end{figure}
 
 After comparing both models, we consider the degree to which we may obtain better treatment effect estimates from one model or another. For example, could we achieve better estimates if using a model that allows all effects to vary randomly across cases and studies, or a model with a covariance structure that is easier to estimate? Similarly, is it better to model heterogeneity in the error variance between cases and phases, and is it best to model autocorrelation among the case-level errors? Researchers have shown that the misspecification of the covariance structure as either too simple or too complex at any of the three levels introduces little to no bias in the average treatment effect estimates, leading to relatively accurate inferences about the average treatment effect [@baek_Ferron_2020; @Joo_Ferron_2019; @Moeyaert_Ugille_Ferron_Beretvas_VandenNoortgate_2013; @Moeyaert_Ugille_Ferron_Beretvas_VanDenNoortgate_2016; @Petit-Bois_2014; @Petit-Bois_Baek_VandenNoortgate_Beretvas_Ferron_2016]. However, this research examines a limited range of conditions. We hope that future research will serve to further clarify the optimal approach for estimating three-level LMMs for SCD study data. In addition, SCD studies will sometimes have outcomes that present more severe violations of the normality and homogeneity assumptions than we encountered here. Useful directions for future research include: (a) determining at what point the violations are severe enough and sample sizes large enough to prefer the use of GLMMs, (b) providing further guidance on the most appropriate ways to specify and estimate GLMMs [@Li_Luo_Baek_Thompson_Lam_2023], and (c) producing easy-to-use software to make GLMMs more readily accessible to SCD researchers. 

@@ -24,20 +24,17 @@ Ideally, we would make the choice between Model 3 and Model 4 based on a logic m
 
 The next step in the selection of design-comparable effect sizes for SCDs requires us to conduct visual inspection of each SCD study graph to see if our trend assumptions hold. We extracted data from the @delemere2018ParentImplemented study and present the multiple baseline across participant graphs in Figure \@ref(fig:Delemere-2018-MAJ) (three participants who received the bedtime fading intervention) and Figure \@ref(fig:Delemere-2018-NMT) (three participants who received the positive routines intervention). In Figure \@ref(fig:Gunning-2003), we extracted data from the @gunning2003Psychological study and present the multiple baseline design graph for the seven participants with the target outcome of reducing sleep onset. When visually analyzing the graphs, we consider whether the data are reasonably consistent with the homogeneity and normality assumptions underlying any of the models for design-comparable effect sizes. In Figures \@ref(fig:Delemere-2018-MAJ)-\@ref(fig:Gunning-2003), we observe similar variation between cases and variation across phases within each case and conclude that the assumption of homogeneous level-1 variance is tenable. In addition, we find no severe outlying data to suggest clear departures from non-normality. Therefore, our initial decision to use design-comparable effect sizes appears appropriate. 
 
-<div class="figure">
-<img src="images/DelemereDounavi2018_MartinAllenJohn.png" alt="Multiple Baseline Data for Martin, Alan, and John (Delemere &amp; Dounavi, 2018)" width="60%" />
-<p class="caption">(\#fig:Delemere-2018-MAJ)Multiple Baseline Data for Martin, Alan, and John (Delemere & Dounavi, 2018)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/DelemereDounavi2018_MartinAllenJohn} \caption{Multiple Baseline Data for Martin, Alan, and John (Delemere \& Dounavi, 2018)}(\#fig:Delemere-2018-MAJ)
+\end{figure}
 
-<div class="figure">
-<img src="images/DelemereDounavi2018_NiahmMaryThomas.png" alt="Multiple Baseline Data for Niahm, Mary, and Thomas (Delemere &amp; Dounavi, 2018)" width="60%" />
-<p class="caption">(\#fig:Delemere-2018-NMT)Multiple Baseline Data for Niahm, Mary, and Thomas (Delemere & Dounavi, 2018)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/DelemereDounavi2018_NiahmMaryThomas} \caption{Multiple Baseline Data for Niahm, Mary, and Thomas (Delemere \& Dounavi, 2018)}(\#fig:Delemere-2018-NMT)
+\end{figure}
 
-<div class="figure">
-<img src="images/Gunning&Espie2003.png" alt="Multiple Baseline Design Data from 7 Participants with the Target Outcome of Reducing Sleep Onset Latency (Gunning &amp; Espie, 2003)" width="60%" />
-<p class="caption">(\#fig:Gunning-2003)Multiple Baseline Design Data from 7 Participants with the Target Outcome of Reducing Sleep Onset Latency (Gunning & Espie, 2003)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/Gunning&Espie2003} \caption{Multiple Baseline Design Data from 7 Participants with the Target Outcome of Reducing Sleep Onset Latency (Gunning \& Espie, 2003)}(\#fig:Gunning-2003)
+\end{figure}
 
 Next, for our included studies, we consider the appropriateness of Models 3 and 4 that assume no trends in baseline. Visual inspection of the participants’ graphs in Figure \@ref(fig:Delemere-2018-MAJ) [@delemere2018ParentImplemented] appears to reinforce our assumption of no trend in baseline data. Similarly, as shown in Figure \@ref(fig:Gunning-2003) [@gunning2003Psychological], sleep onset latency neither increased nor decreased in the baseline condition for most participants. However, there are some exceptions to baseline stability observed. In Figure \@ref(fig:Gunning-2003), Case D appears to show some improvement during baseline. In Figure \@ref(fig:Delemere-2018-NMT), Niahm, Mary, and Thomas appear to have worsening sleep problems during the baseline phase. These trends are inconsistent with the typical pattern seen across cases in Figures \@ref(fig:Delemere-2018-MAJ) and \@ref(fig:Gunning-2003). Whether there are truly trends that would continue is questionable. Perhaps the trends are artifacts related to fidelity or reliability of parental data collection, and thus would not continue.
 
@@ -54,10 +51,9 @@ Y_{ij} = \beta_{0j} + \beta_{1j}Tx_{ij} + \beta_{2j}Tx_{ij}\times(Time_{ij}-k_j-
 \end{equation}
 where $Y_{ij}$ is the score on the outcome variable $Y$ at measurement occasion $i$ for case $j$, $Tx_{ij}$ is dummy coded with a value of $0$ for baseline observations and a value of $1$ for the treatment phase observations, $k_j$ is the last time-point before case $j$ enters the treatment phase, and $D$ is a centering constant that defines the focal time for indexing the treatment effect. The raw score treatment effect for case $j$ is indexed by $\beta_{1j}$, which is the distance between the treatment phase trend line and the baseline mean at the time where $(Time_{ij}-k_j-D)=0$. In Figure \@ref(fig:Delemere-2018-Martin), we portray the raw score treatment effect for Martin at a time of 5 observations into treatment. If we set $D<5$, the focal treatment effect would be smaller; if we set $D>5$, the focal treatment effect would be larger. The other coefficients of the within-case model are $\beta_{0j}$, which is the mean level of the outcome during baseline for case $j$, and $\beta_{2j}$, which is the slope of the treatment phase trend line for case $j$. The error ($e_{ij}$) is time-specific and case-specific and assumed normally distributed and first-order autoregressive with variance $\sigma_e^2$. 
 
-<div class="figure">
-<img src="images/DelemereDounavi2018_Martin.png" alt="Martin's Treatment Effect Five Observations into Treatment (Delemere &amp; Dounavi, 2018)" width="75%" />
-<p class="caption">(\#fig:Delemere-2018-Martin)Martin's Treatment Effect Five Observations into Treatment (Delemere & Dounavi, 2018)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/DelemereDounavi2018_Martin} \caption{Martin's Treatment Effect Five Observations into Treatment (Delemere \& Dounavi, 2018)}(\#fig:Delemere-2018-Martin)
+\end{figure}
 
 Because the effect varies over time in the treatment phase and we estimate it at a specific focal time (i.e., when $(Time_{ij}-k_j-D)=0$), it is important for us to consider what focal time we should select. For example, is it better to estimate the effect at the beginning of the treatment phase or between 3-10 observations into the treatment phase? Researchers should carefully consider their focal time selection by examining patterns in the typical treatment phase length in each SCD and group design study. For example, we chose to estimate the effect for the SCD studies 10 observations into the treatment phase for two reasons. First, 10 observations into treatment is closely aligned with the group design study time at posttest. Second, SCD studies in this area, like those used for this illustration, tend to have at least 10 treatment observations; a single exception in our studies can be seen for John [@delemere2018ParentImplemented], who has only seven treatment observations. 
 
@@ -118,31 +114,27 @@ We can estimate design-comparable effect sizes for any model in Figure \@ref(fig
 Although not required, we suggest that researchers arrange their data columns by order of variable appearance in the _scdhlm_ app, putting the _case identifier_ in the first column, _phase identifier_ in the second column and so on. We present this layout in Figure \@ref(fig:Gunning-2003-excel), representing data extracted for the study by @gunning2003Psychological. 
 In this illustration, for _phase identifier_, we use _b_ to indicate baseline observations and _i_ to indicate intervention observations. However, researchers can use any other labeling scheme that clearly distinguishes between baseline and intervention conditions (e.g., 0 and 1, respectively). Unlike the _phase identifier_ variable, _session number_ and _outcome_ variables must contain numerical values. We also recommend entering data into the spreadsheet first by case (e.g., enter all the rows of data for the first case before any of the rows of data for the second case), then by _session number_. 
 
-<div class="figure">
-<img src="images/excel_GunningEspie2003.png" alt="Snapshot of Spreadsheet Containing Extracted Gunning &amp; Espie (2003) Data" width="60%" />
-<p class="caption">(\#fig:Gunning-2003-excel)Snapshot of Spreadsheet Containing Extracted Gunning & Espie (2003) Data</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/excel_GunningEspie2003} \caption{Snapshot of Spreadsheet Containing Extracted Gunning \& Espie (2003) Data}(\#fig:Gunning-2003-excel)
+\end{figure}
 
 After starting the app, we use the _Load_ tab to load the data file, as illustrated in Figure \@ref(fig:Gunning-2003-load). 
 <!-- MC: I changed the Figure 23 in the word doc to Figure 4.6 here. -->
 The data file could be a .txt or .csv file that includes one dataset or could be an Excel (.xlsx) file that has either one spreadsheet (e.g., a data set for one study), or multiple spreadsheets (one spreadsheet for each of several studies). If using a .xlsx file with multiple spreadsheets, we can select the spreadsheet containing the data for the study of interest from the _Load_ tab. Then, we use the drop-down menus on the right of the screen to indicate the study design (_Treatment Reversal_ versus _Multiple Baseline/Multiple Probe across participants_) and define which variables in the data set correspond to the case identifier, _phase identifier_, session, and _outcome_ (see Figure \@ref(fig:Gunning-2003-load)).
 
-<div class="figure">
-<img src="images/app.load_GunningEspie2003.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab for Gunning &amp; Espie (2003)" width="60%" />
-<p class="caption">(\#fig:Gunning-2003-load)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab for Gunning & Espie (2003)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.load_GunningEspie2003} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab for Gunning \& Espie (2003)}(\#fig:Gunning-2003-load)
+\end{figure}
 
 After we load our data, we use the _Inspect_ tab to ensure that the raw data imported correctly and mapped to their corresponding variable names (Figure \@ref(fig:Gunning-2003-inspect-data)). In addition, we can use the Inspect tab to view a graph of the data (Figure \@ref(fig:Gunning-2003-inspect-graph)). At this point, we recommend that researchers compare these data with the graphed data from the original studies as an additional measure that ensures the study data uploaded to the app correctly (according to the selections on the _Load_ tab). Later, these graphed data can also be checked again for consistency with the tentatively selected model for estimating the design-comparable effect size. 
 
-<div class="figure">
-<img src="images/app.inspect.data_GunningEspie2003.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within the Inspect Tab for Gunning &amp; Espie (2003)" width="60%" />
-<p class="caption">(\#fig:Gunning-2003-inspect-data)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within the Inspect Tab for Gunning & Espie (2003)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.inspect.data_GunningEspie2003} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within the Inspect Tab for Gunning \& Espie (2003)}(\#fig:Gunning-2003-inspect-data)
+\end{figure}
 
-<div class="figure">
-<img src="images/app.inspect.graph_GunningEspie2003.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Graph Display within the Inspect Tab for Gunning &amp; Espie (2003)" width="60%" />
-<p class="caption">(\#fig:Gunning-2003-inspect-graph)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Graph Display within the Inspect Tab for Gunning & Espie (2003)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.inspect.graph_GunningEspie2003} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Graph Display within the Inspect Tab for Gunning \& Espie (2003)}(\#fig:Gunning-2003-inspect-graph)
+\end{figure}
 
 Upon completion of data inspection, we next specify the model for the design-comparable effect size using the _Model_ tab. Figure \@ref(fig:Gunning-2003-model) shows the specification for Model 4, the model that assumes no baseline trend, a trend in the treatment phase, and an effect that varies across cases. Specification begins with the _Baseline phase_ section, where we select _level_ under _Type of time trend_ because we assume that there are no time trends in the baseline phases. We then choose to include _level_ as a fixed effect, enabling the model to estimate the average baseline level. We also include _level_ as a random effect so that the baseline level can vary from case to case. 
 
@@ -152,19 +144,17 @@ We also select the option to include _change_ in level as a random effect to all
 and are used because they seem appropriate for this data set. 
 Also note that at the bottom of the screen (see Figure \@ref(fig:Gunning-2003-model)), the _scdhlm_ app provides a graph of the data with trend lines that are based on the specified model (Figure \@ref(fig:Gunning-2003-model)). We recommend that researchers inspect this graph to ensure that the trend lines fit the data reasonably well. If they do not, it raises questions about the model choice.
 
-<div class="figure">
-<img src="images/app.model.model4_GunningEspie2003.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 4 Specification for Gunning &amp; Espie (2003)" width="60%" />
-<p class="caption">(\#fig:Gunning-2003-model)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 4 Specification for Gunning & Espie (2003)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.model.model4_GunningEspie2003} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 4 Specification for Gunning \& Espie (2003)}(\#fig:Gunning-2003-model)
+\end{figure}
 
 For this data set, the a priori identified model provides trajectories that fit the data reasonably well, and thus we proceed to the _Effect size_ tab (Figure \@ref(fig:Gunning-2003-ES)). There are two sliders in the _Hypothetical experimental parameters_ section above the effect size estimates output: _Initial treatment time_ and _Follow-up time_. The numbers on each slider refer to the sessions or time points in the data series. Although the app populates times automatically, researchers can manipulate them manually to obtain an effect size estimate at a desired point in time. For models with trends in the baseline phase, it matters where we set the initial time. However, for models without baseline trends, only the distance between the two slider values matters. 
 
 We imagine a relatively typical SCD study with a baseline of 5; therefore, we use the sliding scale to set the _Initial treatment time_ for the @gunning2003Psychological study to 5 to represent the last session before initiation of the treatment. Next, we estimate the treatment effect 10 observations into treatment and move the _Follow-up time_ slider to the 15th observation. Given these Model 4 specifications for @gunning2003Psychological, we find that the estimated between-case standardized mean difference 10 observations into treatment is -1.12 with a standard error (SE) of 0.34 and $95\%$ confidence interval (CI) [-1.80, -0.45].
 
-<div class="figure">
-<img src="images/app.ES.model4_GunningEspie2003.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 4 Estimate for Gunning &amp; Espie (2003)" width="75%" />
-<p class="caption">(\#fig:Gunning-2003-ES)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 4 Estimate for Gunning & Espie (2003)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/app.ES.model4_GunningEspie2003} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 4 Estimate for Gunning \& Espie (2003)}(\#fig:Gunning-2003-ES)
+\end{figure}
 
 Now, if we lacked confidence in the a priori decision to select Model 4 and wanted to explore the Model 3 fit, we can re-run the study data without returning to the _Load_ tab. Instead, we go directly to the _Model_ tab to change our specification. To obtain Model 3, we remove (uncheck) _change in level_ and _change in linear trend_ as random effects, constraining the change in level and change in trend from baseline to treatment to be the same for each case. For Model 3, the estimated effect size is -1.10 with an SE of 0.17 and $95\%$ CI [-1.43, -0.76]. In this case, for the @gunning2003Psychological study, the effect size estimates for both Models are similar. However, with the more restrictive assumptions of Model 3, the CI is narrower. If we had used a model that allowed a change in level to vary randomly, but required a fixed slope change, the estimated effect size would be -1.07 with an SE of 0.28 and 95% CI [-1.63, -0.51]. 
 
@@ -178,19 +168,17 @@ After obtaining a design-comparable effect size for the first SCD [@gunning2003P
 3. Specify our selected model for the data (see Figure \@ref(fig:Delemere-model4) for Model 4).
 4. Estimate the design-comparable effect size.
 
-<div class="figure">
-<img src="images/app.model.model4_DelemereDounavi2018.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 4 Specification for Delemere and Dounavi (2018)" width="60%" />
-<p class="caption">(\#fig:Delemere-model4)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 4 Specification for Delemere and Dounavi (2018)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.model.model4_DelemereDounavi2018} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 4 Specification for Delemere and Dounavi (2018)}(\#fig:Delemere-model4)
+\end{figure}
 
 Proceeding with Model 4, we use the Effect size tab of the _scdhlm_ app to obtain a design-comparable effect size for the @delemere2018ParentImplemented study. As with the previous example, the effect size will depend on the time into intervention at which we estimate the effect size the focal time (indicated by the _scdhlm_ app variable named _Follow-up_ time). When estimating design-comparable effect sizes for SCD studies, researchers should hold the _Follow-up time_ constant across studies. Therefore, we use the _Initial treatment time_ and _Follow-up time_ sliders at the top of the screen to obtain an estimate of effect 10 observations into treatment (i.e., we set the _Initial_ and _Follow-up time_ sliders to five and 15, respectively). The resulting design-comparable effect size for the @delemere2018ParentImplemented study is -0.70 with an SE of 0.33 and 95% CI [-1.49, 0.09]. 
 
 Again, if we want to compare these results to those estimated using Model 3, we can go back to the _Model_ tab to change our specification. To obtain Model 3, we remove (uncheck) _change in level_ and _change in linear trend_ as random effects to obtain the same change in level and change in trend from baseline to treatment across cases. We keep all other modeling options the same (e.g., _Initial treatment time_ and _Follow-up time_). Figure \@ref(fig:Delemere-model3) shows the Model 3 specification for the @delemere2018ParentImplemented study. The estimated design-comparable effect size is -0.91 with an SE of 0.28 and 95% CI [-1.52, -0.29]. Comparing the fit of the trend lines obtained from Model 4 (Figure \@ref(fig:Delemere-model4)) to those from Model 3 (Figure \@ref(fig:Delemere-model3)), our originally specified Model 4 appears to provide a better fit for the primary study data. Because of this and because Model 4 is more consistent with both our a priori expectations and the data from our other SCD study [i.e., @gunning2003Psychological], it seems reasonable to proceed with the effect estimate from Model 4 (i.e., -0.70).
 
-<div class="figure">
-<img src="images/app.model.model3_DelemereDounavi2018.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 3 Specification for Delemere and Dounavi (2018)" width="60%" />
-<p class="caption">(\#fig:Delemere-model3)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 3 Specification for Delemere and Dounavi (2018)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.model.model3_DelemereDounavi2018} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 3 Specification for Delemere and Dounavi (2018)}(\#fig:Delemere-model3)
+\end{figure}
 
 ## Estimating the Design-Comparable Effect Size for the Group Studies
 
@@ -209,70 +197,37 @@ Column C of Table \@ref(tab:ES-est-chapter4) reports the inverse-variance weight
 
 [^SEnote]: The SE of the overall effect size is the square root of the inverse of the total weight.
 
-<table class=" lightable-classic" style='font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'>
-<caption>(\#tab:ES-est-chapter4)Fixed Effect Meta-Analysis Calculations for 
-             Example Sleep Intervention Studies</caption>
- <thead>
-  <tr>
-   <th style="text-align:left;"> Study </th>
-   <th style="text-align:center;"> Effect Size Estimate (A) </th>
-   <th style="text-align:center;"> Standard Error (B) </th>
-   <th style="text-align:center;"> Inverse-variance Weight (%) (C) </th>
-  </tr>
- </thead>
-<tbody>
-  <tr grouplength="4"><td colspan="4" style="border-bottom: 0;"><strong>Model 4</strong></td></tr>
-<tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Gunning &amp; Espie (2003) </td>
-   <td style="text-align:center;"> -1.12 </td>
-   <td style="text-align:center;"> 0.34 </td>
-   <td style="text-align:center;"> 8.65 (29.1) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Delemere &amp; Dounavi (2018) </td>
-   <td style="text-align:center;"> -0.70 </td>
-   <td style="text-align:center;"> 0.33 </td>
-   <td style="text-align:center;"> 9.18 (30.9) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Montgomery et al. (2004) </td>
-   <td style="text-align:center;"> -1.52 </td>
-   <td style="text-align:center;"> 0.29 </td>
-   <td style="text-align:center;"> 11.89 (40.0) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Fixed effect meta-analysis </td>
-   <td style="text-align:center;"> -1.15 </td>
-   <td style="text-align:center;"> 0.18 </td>
-   <td style="text-align:center;"> 29.72 (100) </td>
-  </tr>
-  <tr grouplength="4"><td colspan="4" style="border-bottom: 0;"><strong>Model 3</strong></td></tr>
-<tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Gunning &amp; Espie (2003) </td>
-   <td style="text-align:center;"> -1.10 </td>
-   <td style="text-align:center;"> 0.17 </td>
-   <td style="text-align:center;"> 34.60 (58.4) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Delemere &amp; Dounavi (2018) </td>
-   <td style="text-align:center;"> -0.91 </td>
-   <td style="text-align:center;"> 0.28 </td>
-   <td style="text-align:center;"> 12.76 (21.5) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Montgomery et al. (2004) </td>
-   <td style="text-align:center;"> -1.52 </td>
-   <td style="text-align:center;"> 0.29 </td>
-   <td style="text-align:center;"> 11.89 (20.1) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Fixed effect meta-analysis </td>
-   <td style="text-align:center;"> -1.14 </td>
-   <td style="text-align:center;"> 0.13 </td>
-   <td style="text-align:center;"> 59.25 (100) </td>
-  </tr>
-</tbody>
-</table>
+\begin{table}
+
+\caption{(\#tab:ES-est-chapter4)Fixed Effect Meta-Analysis Calculations for 
+             Example Sleep Intervention Studies}
+\centering
+\begin{tabular}[t]{l|c|c|c}
+\hline
+Study & Effect Size Estimate (A) & Standard Error (B) & Inverse-variance Weight (\%) (C)\\
+\hline
+\multicolumn{4}{l}{\textbf{Model 4}}\\
+\hline
+\hspace{1em}Gunning \& Espie (2003) & -1.12 & 0.34 & 8.65 (29.1)\\
+\hline
+\hspace{1em}Delemere \& Dounavi (2018) & -0.70 & 0.33 & 9.18 (30.9)\\
+\hline
+\hspace{1em}Montgomery et al. (2004) & -1.52 & 0.29 & 11.89 (40.0)\\
+\hline
+\hspace{1em}Fixed effect meta-analysis & -1.15 & 0.18 & 29.72 (100)\\
+\hline
+\multicolumn{4}{l}{\textbf{Model 3}}\\
+\hline
+\hspace{1em}Gunning \& Espie (2003) & -1.10 & 0.17 & 34.60 (58.4)\\
+\hline
+\hspace{1em}Delemere \& Dounavi (2018) & -0.91 & 0.28 & 12.76 (21.5)\\
+\hline
+\hspace{1em}Montgomery et al. (2004) & -1.52 & 0.29 & 11.89 (20.1)\\
+\hline
+\hspace{1em}Fixed effect meta-analysis & -1.14 & 0.13 & 59.25 (100)\\
+\hline
+\end{tabular}
+\end{table}
 
 The bottom panel of Table \@ref(tab:ES-est-chapter4) reports the same calculations but using the design-comparable effect size estimates based on Model 3 for the two SCD studies. The most notable difference is that Model 3 more precisely estimates the design-comparable effect size for the @gunning2003Psychological, resulting in more weight ($58\%$) assigned in the fixed effect meta-analysis. For Model 3, the overall average effect size is nearly identical to that obtained for Model 4 (-1.14), but the substantially smaller Model 3 design-comparable effect size for the @gunning2003Psychological study results in an SE of 0.13 and $95\%$ CI [-1.40, -0.89]. 
 

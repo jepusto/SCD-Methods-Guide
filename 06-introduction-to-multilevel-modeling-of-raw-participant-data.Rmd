@@ -81,7 +81,7 @@ Figure \@ref(fig:otadupaul) presents the @ota2002Task study data.
 During baseline phases, observations appear somewhat normally distributed around the baseline means, with a pooled skewness value near 0 (*sk* = 0.15) and a pooled kurtosis value near 0 (*ku* = -0.77). 
 However, non-normality is present in the treatment phases because the outcome occurs near the floor (0%) for much of the phase (*sk* = 1.86; *ku* = 4.99). 
 
-```{r otadupaul, fig.cap = "Multiple Baseline Design Across Three Participants (Ota & DuPaul, 2002)"}
+```{r otadupaul, fig.cap = "Multiple Baseline Design Across Three Participants (Ota \\& DuPaul, 2002)"}
 knitr::include_graphics("images/Ota.DuPaul2002.png")
 ```
 

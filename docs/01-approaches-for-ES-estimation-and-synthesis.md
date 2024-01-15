@@ -2,13 +2,14 @@
 
 # Approaches for Estimation and Synthesis of Single-Case Studies {#intro}
 
-_This chapter provides the background and purpose for the Methods Guide for Effect Estimation and Synthesis of Single-Case Studies.
+This chapter provides the background and purpose for the Methods Guide for Effect Estimation and Synthesis of Single-Case Studies.
 We provide an overview of the three major approaches for effect size estimation and synthesis of single-case studies: 
+
 (a) design-comparable effect sizes, 
 (b) multilevel modeling of raw individual participant interrupted time-series data, and 
 (c) case-specific effect sizes. 
 We describe the general motivation and rationale for each approach and provide a series of decision rules to guide researchers in their selection. 
-Subsequent chapters in this guide provide more detailed illustrations of the three major approaches._ 
+Subsequent chapters in this guide provide more detailed illustrations of the three major approaches. 
 
 ## Background
 Educational decisions made at the state, district, school, and student levels are expected to be informed by empirical evidence [@cook2014council; @whatworksclearinghouse2020What].
@@ -121,10 +122,9 @@ The choice between the latter two is related to the measurement of the dependent
 Where there is interest in variability in effects across cases and over time, researchers should consider multilevel modeling of the raw data series, so long as the outcome is measured consistently across cases. 
 However, if the aim is to examine how effects vary across the cases but the outcome measurements are non-equivalent and cannot be easily equated, then researchers should consider the options for estimating and synthesizing case-specific effect sizes.
 
-<div class="figure">
-<img src="images/flowchart_SynthesizingResults.png" alt="Approaches to Synthesizing Results from Single-Case Research" width="716" />
-<p class="caption">(\#fig:synthesis-flow-chart)Approaches to Synthesizing Results from Single-Case Research</p>
-</div>
+\begin{figure}
+\includegraphics[width=9.94in]{images/flowchart_SynthesizingResults} \caption{Approaches to Synthesizing Results from Single-Case Research}(\#fig:synthesis-flow-chart)
+\end{figure}
 
 ## Limitations in Selecting an Approach for Effect Estimation and Synthesis
 We emphasize that Figure \@ref(fig:synthesis-flow-chart) presents a heuristic, simplified procedure for selecting among the three general approaches to effect size estimation and synthesis, which cannot and does not cover every possible research context.

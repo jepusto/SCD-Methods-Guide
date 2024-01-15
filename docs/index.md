@@ -1,11 +1,11 @@
 --- 
 title: "Methods Guide for Effect Estimation and Synthesis of Single-Case Studies"
-date: "December 09, 2023"
+date: "January 15, 2024"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
-bibliography: [SCD-Methods-Guide.bib, packages.bib]
-biblio-style: apa
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
 csl: apa.csl
 link-citations: yes
 github-repo: jepusto/SCD-Methods-Guide
@@ -48,10 +48,9 @@ Rather, it is meant to provide easy-to-follow decision rules, along with step-by
 The guide is organized so that researchers can go immediately to the sections and chapters that are relevant to their immediate task, rather than having to read the guide sequentially from start to finish. 
 The first chapter provides background and a flow chart (also shown below) to help researchers select among three broad approaches to synthesizing results from single-case research. 
 
-<div class="figure">
-<img src="images/flowchart_SynthesizingResults.png" alt="Approaches to synthesizing findings from single-case research" width="100%" />
-<p class="caption">(\#fig:unnamed-chunk-2)Approaches to synthesizing findings from single-case research</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{images/flowchart_SynthesizingResults} \caption{Approaches to synthesizing findings from single-case research}(\#fig:unnamed-chunk-2)
+\end{figure}
 
 Those interested in synthesizing both single-case and group design studies should consider the design-comparable effect size approach and start by reading Chapter 2, which introduces this approach and its assumptions. 
 They can then turn to one of the more detailed chapters providing step-by-step illustrations of how to estimate design comparable effect sizes with a user-friendly app (Chapter 3 if there are no trends, Chapter 4 if there are trends only in the treatment phases, or Chapter 5 if there are trends in both the baseline and treatment phases).

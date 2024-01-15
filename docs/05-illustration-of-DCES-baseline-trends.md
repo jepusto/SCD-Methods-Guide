@@ -20,15 +20,13 @@ During visual analysis of the primary study graphs, we now need to determine the
 
 Next, we conduct a similar visual analysis of the treatment phases. For most of the cases, we see an immediate shift in performance along with a change in the trend. Richard, Danyell, and Kendrick (Figure \@ref(fig:Datchuk-raw-2016)) show an improvement in writing skills that generally increases over time in treatment (i.e., positive trend lines). Brett, Steve, and Denny (Figure \@ref(fig:Rodgers-raw-2021)) show a similar pattern of increasing improvement in writing skills. Because the design-comparable effect size assumes a common model across cases and estimates an average effect across the cases, we find it best to select a model that is consistent with the typical and expected pattern. Thus, it appears reasonable to proceed with a model that assumes a trend in baseline and a different trend in the treatment phases (i.e., Model 5 or Model 6 from Figure \@ref(fig:DC-ES-flow-chart)).
 
-<div class="figure">
-<img src="images/Datchuk2016.png" alt="Multiple Probe Data Extracted from Datchuk (2016)" width="60%" />
-<p class="caption">(\#fig:Datchuk-raw-2016)Multiple Probe Data Extracted from Datchuk (2016)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/Datchuk2016} \caption{Multiple Probe Data Extracted from Datchuk (2016)}(\#fig:Datchuk-raw-2016)
+\end{figure}
 
-<div class="figure">
-<img src="images/Rodgers2020.png" alt="Multiple Baseline Data Extracted from Rodgers et al. (2021)" width="60%" />
-<p class="caption">(\#fig:Rodgers-raw-2021)Multiple Baseline Data Extracted from Rodgers et al. (2021)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/Rodgers2020} \caption{Multiple Baseline Data Extracted from Rodgers et al. (2021)}(\#fig:Rodgers-raw-2021)
+\end{figure}
 
 ## Details of the Models for Design-Comparable Effect Sizes
 
@@ -39,10 +37,9 @@ Y_{ij} = \beta_{0j} + \beta_{1j}Tx_{ij} + \beta_{2j} (Time_{ij}-B)+ \beta_{3j}Tx
 \end{equation}
 where $Y_{ij}$ is the score on the outcome variable $Y$ at measurement occasion $i$ for case $j$, $Tx_{ij}$ is dummy coded with a value of 0 for baseline observations and a value of 1 for the treatment observations, $Time_{ij}$ is the time-point for measurement occasion $i$ for case $j$, $B$ is a centering constant that defines the focal follow up time for defining the effect size, $k_j$ is the last time-point before case $j$ begins their treatment phase, and $B-A$ corresponds to the treatment duration (i.e., the number of time points the case has been in intervention at the focal time). $\beta_{1j}$ indexes the raw score treatment effect for case $j$, which is the distance between the treatment phase trend line and the extended baseline phase trend line at the focal follow-up time. In addition, this model includes $\beta_{0j}$, which corresponds to the expected baseline value for case $j$ at the focal follow up time $B$, $\beta_{2j}$ is the slope of the baseline phase, and $\beta_{3j}$ is the change in slope that occurs with intervention (i.e., the difference between the treatment and baseline phase slopes for case $j$). Finally, the error ($e_{ij}$) is time- and case-specific, assumed to be normally distributed, and first-order autoregressive with variance $\sigma_e^2$. 
 
-<div class="figure">
-<img src="images/Datchuk2016_Danyell.png" alt="Illustration of Treatment Effect 5 Observations into Treatment for Danyell (Datchuk, 2016)" width="75%" height="75%" />
-<p class="caption">(\#fig:Datchuk-2016-Danyell)Illustration of Treatment Effect 5 Observations into Treatment for Danyell (Datchuk, 2016)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth,height=0.75\textheight]{images/Datchuk2016_Danyell} \caption{Illustration of Treatment Effect 5 Observations into Treatment for Danyell (Datchuk, 2016)}(\#fig:Datchuk-2016-Danyell)
+\end{figure}
 
 As shown in Figure \@ref(fig:Datchuk-2016-Danyell), 
 <!-- MC: Not sure if Figure 5.3 is what Figure 32 in the word doc refers to. -->
@@ -112,45 +109,39 @@ Before illustrating the estimation of the design-comparable effect size for our 
 
 We can estimate a design-comparable effect size for Models 5 or 6, as well as the other models suggested in Figure \@ref(fig:DC-ES-flow-chart), using a web-based calculator for design-comparable effect sizes [@pustejovsky2021scdhlm], which is available at https://jepusto.shinyapps.io/scdhlm. In using this application, we recommend that researchers have a data file that aligns with the format expected by the application, as shown in Figure \@ref(fig:Datchuk-2016-load) for the SCD study by @datchuk2016Writing. To use this app, the data file must be saved as an Excel file (.xlsx), comma delimited file (.csv), or text file (.txt). In addition, the data must include columns for the _case identifier_, _phase identifier_, _session number_, and _outcome_. We illustrate this arrangement in Figure \@ref(fig:Datchuk-2016-excel) for the @datchuk2016Writing study. For the _phase identifier_, we have used "baseline" to indicate baseline observations and “treatment” to indicate intervention observations. Researchers can also elect to use another labeling scheme if it clearly distinguishes between baseline and intervention conditions (e.g., 0 to indicate baseline observations and 1 to indicate intervention observations). Although the data format for the phase identifier variable is flexible (text or numeric), the _scdhlm_ app requires use of only numerical values for the _session number_ and _outcome_ variables. Additionally, we recommend that users arrange their data by first case (i.e., enter all the rows of data for the first case before any of the rows of data for the second case), followed by _session number_. 
 
-<div class="figure">
-<img src="images/Datchuk2016_Danyell.png" alt="Snapshot of Spreadsheet Containing Extracted Datchuk (2016) Data" width="75%" />
-<p class="caption">(\#fig:Datchuk-2016-excel)Snapshot of Spreadsheet Containing Extracted Datchuk (2016) Data</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/Datchuk2016_Danyell} \caption{Snapshot of Spreadsheet Containing Extracted Datchuk (2016) Data}(\#fig:Datchuk-2016-excel)
+\end{figure}
 
 After starting the app, we use the _Load_ tab to load the data file, as illustrated in Figure \@ref(fig:Datchuk-2016-load). The data file could be a .txt or .csv file that includes one dataset or could be an .xlsx file that has either one spreadsheet (e.g., a data set for one study), or multiple spreadsheets (one spreadsheet for each of several studies). If using an .xlsx file with multiple spreadsheets, we can select the spreadsheet containing the data for the study of interest from the _Load_ tab. Then, we use the drop-down menus on the right of the screen to indicate the study design (_Treatment Reversal_ or _Multiple Baseline/Multiple Probe across participants_) and define which variables in the data set correspond to the case identifier, _phase identifier_, session, and _outcome_ (see Figure \@ref(fig:Datchuk-2016-load)).
 
 After loading the data, we use the Inspect tab to ensure that the raw data were imported correctly and mapped to their corresponding variable names (Figure \@ref(fig:Datchuk-2016-inspect-data)). In addition, we can use the _Inspect_ tab to view a graph of the data (Figure \@ref(fig:Datchuk-2016-inspect-graph)). At this point, we recommend that researchers compare these data with the graphed data from the original study to ensure the study data uploaded to the app correctly. Later, we can check these graphed data for consistency with the tentatively selected model for the design-comparable effect size. 
 
-<div class="figure">
-<img src="images/app.load_Datchuk2016.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab for Datchuk (2016)" width="60%" />
-<p class="caption">(\#fig:Datchuk-2016-load)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab for Datchuk (2016)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.load_Datchuk2016} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab for Datchuk (2016)}(\#fig:Datchuk-2016-load)
+\end{figure}
 
-<div class="figure">
-<img src="images/app.inspect.data_Datchuk2016.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within the Inspect Tab for Datchuk (2016)" width="60%" />
-<p class="caption">(\#fig:Datchuk-2016-inspect-data)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within the Inspect Tab for Datchuk (2016)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.inspect.data_Datchuk2016} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within the Inspect Tab for Datchuk (2016)}(\#fig:Datchuk-2016-inspect-data)
+\end{figure}
 
-<div class="figure">
-<img src="images/app.inspect.graph_Datchuk2016.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Graph Display within the Inspect Tab for Datchuk (2016)" width="60%" />
-<p class="caption">(\#fig:Datchuk-2016-inspect-graph)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Graph Display within the Inspect Tab for Datchuk (2016)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.inspect.graph_Datchuk2016} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Graph Display within the Inspect Tab for Datchuk (2016)}(\#fig:Datchuk-2016-inspect-graph)
+\end{figure}
 
 After data inspection, we go to the Model tab to specify the model for the design-comparable effect size. Figure \@ref(fig:Datchuk-2016-model6) shows the specification for Model 6 (i.e., the model that assumes trends in baseline, different trends in treatment, and an effect that varies across cases). Starting with specification of the _Baseline phase_, we select _linear trend_ under _Type of time trend_ because we assume the presence of linear time trends in the baseline phases. We then include _level_ and _linear trend_ as fixed effects to enable model estimation for an across-case average linear trend line for the baseline phase. To allow the intercepts of the trend lines to vary from case to case, we select the option to include _level_ as a random effect. We also include _linear trend_ as a random effect to allow the baseline trends to vary across cases. 
 
 After _Baseline phase_ model specification, we attend to the specification of the _Treatment phase_. For _Type of time trend_, we select _change in linear trend_ because we assume trends differ across phases. We then elect to include _change in level_ and _change in linear trend_ as fixed effects to allow the across-case average trend line for the treatment phase to differ from the across-case average baseline phase trend line, in both level and slope. We also check the boxes to include _change in level_ and _change in linear trend_ as random effects to allow the changes in trend lines from baseline to treatment phase to vary across cases. Note the app allows us to make different potential assumptions about the correlation structure of the session-level errors. Shown are the default options of autoregressive and constant variance across phases. These defaults match the model presented in Equations \@ref(eq:M5M6-L1) and \@ref(eq:M6-L1) and were used because they seem appropriate for this data set.
 
-<div class="figure">
-<img src="images/app.model.model6_Datchuk2016.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 6 Specification for Datchuk (2016)" width="60%" />
-<p class="caption">(\#fig:Datchuk-2016-model6)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 6 Specification for Datchuk (2016)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.model.model6_Datchuk2016} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 6 Specification for Datchuk (2016)}(\#fig:Datchuk-2016-model6)
+\end{figure}
 
 For this data set, we see that our a priori identified model provides trajectories that fit the data reasonably well. Thus, we proceed to the _Effect Size_ tab, as shown in Figure \@ref(fig:Datchuk-2016-ES). On the _Effect Size_ tab screen, there are two sliders---_Initial treatment time_ and _Follow-up time_. Moving these, we can change the size of the effect size to specify how far into treatment we want to estimate an effect. In our example, we use the default slider value of 9 for the _Initial treatment time_, which corresponds with the time point after which we would introduce treatment in a hypothetical study (were each case to begin the treatment phase at the same time). Next, because we want to estimate the treatment effect 12 observations into the treatment phase, we set the second slider (_Follow-up time_) to 21. This number corresponds to the 12th observation of a treatment phase that started immediately after observation 9. Following these specifications, the design-comparable effect size estimate for this study is 1.48, with a standard error (SE) of 0.98, and $95\%$ confidence interval (CI) [-0.65, 3.62].
 
-<div class="figure">
-<img src="images/app.ES.model6_Datchuk2016.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 6 Estimate for Datchuk (2016)" width="75%" />
-<p class="caption">(\#fig:Datchuk-2016-ES)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 6 Estimate for Datchuk (2016)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/app.ES.model6_Datchuk2016} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 6 Estimate for Datchuk (2016)}(\#fig:Datchuk-2016-ES)
+\end{figure}
 
 The additional information reported on the _Effect size_ tab (Figure \@ref(fig:Datchuk-2016-ES)) includes estimates of other quantities from the model and information about the model specification and assumptions used in calculating the design-comparable effect size. The reported degrees of freedom are used in making a small-sample correction to the effect size estimate, analogous to the Hedges' $g$ correction used with group designs [@Hedges1981distribution]. Larger estimated degrees of freedom mean that the denominator of the design-comparable effect size is more precisely estimated, and that the small-sample correction is less consequential. Conversely, small degrees of freedom indicates that the denominator of the effect size is imprecisely estimated, and that the small-sample correction is more consequential. The reported autocorrelation is the estimate of the correlation between errors at the first level of the model for the same case that differ by one time-point (or session), based on a first-order autoregressive model. The reported intra-class correlation is an estimate of the between-case variance of the outcome as a proportion of the total variation in the outcome (including both between-case and within-case variance) as of the selected _Follow-up time_. Larger values of the intra-class correlation indicate that more of the variation in the outcome is between participants. The remaining information in the output (_Study design_, _Estimation method_, _Baseline specification_, _Treatment specification_, _Initial treatment time_, _Follow-up time_) describes the model specification and assumptions used in the effect size calculations. The app includes this information to allow for reproducibility of the calculations.
 
@@ -158,10 +149,9 @@ Having obtained our main design-comparable effect size estimate based on Model 6
 
 If our a priori arguments for selecting Model 6 were tenuous, or if some members of our research team thought we should consider Model 5, we can do so by going back to the _Model_ tab and changing our specification. Specifically, under the specification of the _Treatment phase_, we uncheck the boxes to exclude _change in level_ and _change in linear trend_ as random effects. By removing those two random effects, we constrain the treatment effect to be the same for all cases (i.e., the change in level and change in linear trend is the same for each case). We keep all other modeling options the same as Model 6 (e.g., time sliders). In Figure \@ref(fig:Datchuk-2016-model5), we can see that the simpler, more restrictive Model 5 specification has a slightly less desirable fit for the trend lines than those of Model 6. The estimated design-comparable effect size for Model 5 is 1.41, with an SE of 0.64, and $95\%$ CI [-0.09, 2.92]. Ultimately, if we had remaining SCD studies to be included in our synthesis, we would hold off selecting between Models 5 and 6 until fit was examined for the data from each of the SCD studies. 
 
-<div class="figure">
-<img src="images/app.model.model5_Datchuk2016.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 5 Specification for Datchuk (2016)" width="60%" />
-<p class="caption">(\#fig:Datchuk-2016-model5)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 5 Specification for Datchuk (2016)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.model.model5_Datchuk2016} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 5 Specification for Datchuk (2016)}(\#fig:Datchuk-2016-model5)
+\end{figure}
 
 ### Example 2: Multiple Baseline Study by @rodgers2021Effects
 
@@ -173,17 +163,15 @@ After estimating the design-comparable effect size for the first SCD study by @d
 
 As shown in Figure \@ref(fig:Rodgers-2021-model6), the Model 6 estimated trajectories fit the data reasonably well. After completing step 2, we proceed with use of Model 6 for the @rodgers2021Effects dataset (step 3) and then start the process of estimating the design-comparable effect size (step 4). On the _Effect Size_ tab, we need to make choices about the initial treatment time and follow-up time-points. Locating the shortest baseline (Brett), we leave the _Initial treatment time_ slider at the default value of 9—the last baseline observation for Brett. We set the _Follow-up time_ slider to 21, so that the treatment duration for the hypothetical study is 12 and consistent with the time specification for the previous SCD study [@datchuk2016Writing]. After defining the times, the resulting design-comparable effect size estimate is 0.76 with an SE of 0.74 and $95\%$ CI [-1.36, 2.88]. Finally, to check the sensitivity of our estimate to our specified times for between-case variability, we change the values of the _Initial treatment time_ and _Follow-up time_ sliders to 5 and 17, respectively. The resulting design-comparable effect size changes to 0.90 with an SE of 0.75 and $95\%$ CI [-1.06, 2.87].
 
-<div class="figure">
-<img src="images/app.model.model6_Rodgers2020.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 6 Specification for Rodgers (2021)" width="60%" />
-<p class="caption">(\#fig:Rodgers-2021-model6)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 6 Specification for Rodgers (2021)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.model.model6_Rodgers2020} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 6 Specification for Rodgers (2021)}(\#fig:Rodgers-2021-model6)
+\end{figure}
 
 If our a priori arguments for selecting Model 6 were tenuous, or if some members of our research team thought we should consider Model 5, we can do so by going back to the _Model_ tab for each of our SCD studies and changing our specification. Specifically, under the specification of the _Treatment phase_, we uncheck the boxes where we had previously included random effects for _change in level_ and _change in linear trend_. By removing those two random effects, we constrain the treatment effect to be the same for all cases (i.e., the change in level and change in linear trend is the same for each case). We keep all other modeling options the same. We show the Model 5 specification for the @rodgers2021Effects study in Figure \@ref(fig:Rodgers-2021-model5). With the more restrictive model, the fit of the trend lines is similar but not quite as good compared to those in the originally specified Model 6. For Model 5, the estimated design-comparable effect size is 0.46, with an SE of 0.40 and $95\%$ CI [-0.39, 1.31]. Across the included SCD studies, if the fit is similar across models or is better for the model selected a priori, then it is preferable for researchers to use the one that best aligns with their logic model. For this illustration, we move forward with the Model 6 estimates because this model is most consistent with our a priori expectations, and the resulting fit is similar to or slightly better than its Model 5 contrast.
 
-<div class="figure">
-<img src="images/app.model.model5_Rodgers2020.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 5 Specification for Rodgers (2021)" width="60%" />
-<p class="caption">(\#fig:Rodgers-2021-model5)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 5 Specification for Rodgers (2021)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/app.model.model5_Rodgers2020} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 5 Specification for Rodgers (2021)}(\#fig:Rodgers-2021-model5)
+\end{figure}
 
 ## Estimating the Design-Comparable Effect Size for the Group Study
 
@@ -200,70 +188,37 @@ Column C of Table \@ref(tab:ES-est-chapter5) reports the inverse variance weight
 
 [^SEnoteChapter5]: The SE of the overall effect size is the square root of the inverse of the total weight.
 
-<table class=" lightable-classic" style='font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'>
-<caption>(\#tab:ES-est-chapter5)Fixed Effect Meta-Analysis Calculations for 
-             Example Writing Intervention Studies</caption>
- <thead>
-  <tr>
-   <th style="text-align:left;"> Study </th>
-   <th style="text-align:center;"> Effect Size Estimate (A) </th>
-   <th style="text-align:center;"> Standard Error (B) </th>
-   <th style="text-align:center;"> Inverse-variance Weight (%) (C) </th>
-  </tr>
- </thead>
-<tbody>
-  <tr grouplength="4"><td colspan="4" style="border-bottom: 0;"><strong>Model 6</strong></td></tr>
-<tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Datchuk (2016) </td>
-   <td style="text-align:center;"> 1.48 </td>
-   <td style="text-align:center;"> 0.98 </td>
-   <td style="text-align:center;"> 1.04 (4.4) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Rodgers et al. (2020) </td>
-   <td style="text-align:center;"> 0.76 </td>
-   <td style="text-align:center;"> 0.74 </td>
-   <td style="text-align:center;"> 1.82 (7.8) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Hebert et al. (2018) </td>
-   <td style="text-align:center;"> 0.62 </td>
-   <td style="text-align:center;"> 0.22 </td>
-   <td style="text-align:center;"> 20.66 (87.8) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Fixed effect meta-analysis </td>
-   <td style="text-align:center;"> 0.67 </td>
-   <td style="text-align:center;"> 0.21 </td>
-   <td style="text-align:center;"> 25.53 (100) </td>
-  </tr>
-  <tr grouplength="4"><td colspan="4" style="border-bottom: 0;"><strong>Model 5</strong></td></tr>
-<tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Datchuk (2016) </td>
-   <td style="text-align:center;"> 1.41 </td>
-   <td style="text-align:center;"> 0.46 </td>
-   <td style="text-align:center;"> 2.44 (8.3) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Rodgers et al. (2020) </td>
-   <td style="text-align:center;"> 0.46 </td>
-   <td style="text-align:center;"> 0.40 </td>
-   <td style="text-align:center;"> 6.25 (21.3) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Hebert et al. (2018) </td>
-   <td style="text-align:center;"> 0.62 </td>
-   <td style="text-align:center;"> 0.22 </td>
-   <td style="text-align:center;"> 20.66 (70.4) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Fixed effect meta-analysis </td>
-   <td style="text-align:center;"> 0.65 </td>
-   <td style="text-align:center;"> 0.18 </td>
-   <td style="text-align:center;"> 29.35 (100) </td>
-  </tr>
-</tbody>
-</table>
+\begin{table}
+
+\caption{(\#tab:ES-est-chapter5)Fixed Effect Meta-Analysis Calculations for 
+             Example Writing Intervention Studies}
+\centering
+\begin{tabular}[t]{l|c|c|c}
+\hline
+Study & Effect Size Estimate (A) & Standard Error (B) & Inverse-variance Weight (\%) (C)\\
+\hline
+\multicolumn{4}{l}{\textbf{Model 6}}\\
+\hline
+\hspace{1em}Datchuk (2016) & 1.48 & 0.98 & 1.04 (4.4)\\
+\hline
+\hspace{1em}Rodgers et al. (2020) & 0.76 & 0.74 & 1.82 (7.8)\\
+\hline
+\hspace{1em}Hebert et al. (2018) & 0.62 & 0.22 & 20.66 (87.8)\\
+\hline
+\hspace{1em}Fixed effect meta-analysis & 0.67 & 0.21 & 25.53 (100)\\
+\hline
+\multicolumn{4}{l}{\textbf{Model 5}}\\
+\hline
+\hspace{1em}Datchuk (2016) & 1.41 & 0.46 & 2.44 (8.3)\\
+\hline
+\hspace{1em}Rodgers et al. (2020) & 0.46 & 0.40 & 6.25 (21.3)\\
+\hline
+\hspace{1em}Hebert et al. (2018) & 0.62 & 0.22 & 20.66 (70.4)\\
+\hline
+\hspace{1em}Fixed effect meta-analysis & 0.65 & 0.18 & 29.35 (100)\\
+\hline
+\end{tabular}
+\end{table}
 
 The bottom panel of Table \@ref(tab:ES-est-chapter5) reports the same calculations using the Model 5 design-comparable effect size estimates for the two SCD studies. For both @datchuk2016Writing and @rodgers2021Effects, Model 5 effect sizes appear to be more precisely estimated and therefore receive more weight in the fixed effect meta-analysis ($8\%$ and $21\%$, respectively). The overall average effect size based on Model 5 is quite like the average effect size based on Model 6, but is somewhat more precisely estimated, with an SE of 0.18 and a $95\%$ CI [0.29, 1.01], due to the smaller SEs in the SCD studies. 
 

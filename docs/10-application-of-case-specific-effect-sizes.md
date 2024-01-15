@@ -22,30 +22,27 @@ These three example studies used a range of different procedures for measuring o
 
 Using the decision rules in Figure \@ref(fig:CaseSpecificES-flowchart), we first select which of the types of case-specific effect sizes are viable for further consideration. Non-overlap indices can be computed with any type of outcome, so they are deemed initially viable. For the within-case standardized mean difference (SMD~W~), we need a non-zero within-case standard deviation. The graphs of the data from the studies are provided in Figures \@ref(fig:Byiers-2014) to \@ref(fig:Strasberger-2014). Inspection of Figure \@ref(fig:Byiers-2014) shows that each of the participants in @Byiers2014 has baseline variability, and as seen in Figure \@ref(fig:Casey-1978), the same is true for each participant reported in @Casey1978. However, examination of Figure \@ref(fig:Strasberger-2014) (data from @StrasbergerFerreri2014) shows that the first case (Parker) has only three baseline values and that those values are all the same, such that the estimated baseline standard deviation is 0. To compute a standardized mean difference for this case, we would have to consider estimating the within-case standard deviation by pooling the deviations across the baseline and treatment phases, something we will discuss in more detail later. For all other cases, the baselines show variation, and the typical approach of standardizing using the baseline standard deviation is feasible.
 
-<div class="figure">
-<img src="images/Byiers2014.png" alt="Effect of Intervention on Percent of Appropriate Responses (Byiers et al., 2014)" width="60%" />
-<p class="caption">(\#fig:Byiers-2014)Effect of Intervention on Percent of Appropriate Responses (Byiers et al., 2014)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/Byiers2014} \caption{Effect of Intervention on Percent of Appropriate Responses (Byiers et al., 2014)}(\#fig:Byiers-2014)
+\end{figure}
 
-<div class="figure">
-<img src="images/Casey1978.jpeg" alt="Effect of Intervention on Classroom Behavior (Casey, 1978)" width="60%" />
-<p class="caption">(\#fig:Casey-1978)Effect of Intervention on Classroom Behavior (Casey, 1978)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/Casey1978} \caption{Effect of Intervention on Classroom Behavior (Casey, 1978)}(\#fig:Casey-1978)
+\end{figure}
 
-<div class="figure">
-<img src="images/StrasbergerFerreri2014.png" alt="Effect of Intervention on Mands (Strasberger &amp; Ferreri, 2014)" width="60%" />
-<p class="caption">(\#fig:Strasberger-2014)Effect of Intervention on Mands (Strasberger & Ferreri, 2014)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/StrasbergerFerreri2014} \caption{Effect of Intervention on Mands (Strasberger \& Ferreri, 2014)}(\#fig:Strasberger-2014)
+\end{figure}
 
 Next, to determine if log response ratios (LRRs) are viable, we consider whether the outcomes are ratio-scale variables, which have a true zero and equal intervals (i.e., a unit at the lower end of the scale represents the same amount as a unit at the upper end of the scale). In @Byiers2014, the outcome is the percentage of switch-activated responses per session, in which zero would indicate absolutely no switch-activated responses and the intervals can be assumed equal. In @Casey1978, we used both the signed request and problem behavior outcomes reported in the study to create a new dependent variable: the mean proportion of communicative opportunities with a signed request (taught behavior) per observation interval, which has a true zero. Finally, the outcome in the @StrasbergerFerreri2014 study was the count of independent mands and responses per session, in which each session provided 10 opportunities. This count outcome has a true zero and is thus a ratio-scale variable. Because all outcomes are on a ratio scale, and none of the baselines are consistently zero, we determine that computing LRRs is feasible.
 
 To determine if computing percentage of goal obtained (PoGO) is a viable option, we consider whether the outcomes have a goal, a scale value that would correspond to the outcome of an optimally effective or ideal intervention. For the percentage of switch-activated behaviors in @Byiers2014, we determined the goal level to be 100 percent. For the @Casey1978 study, the proportion of communicative opportunities with a signed request had a goal level of 1.0. Finally, for the count of mands and responses per session in @StrasbergerFerreri2014, the goal was specified as 10, a positive response to each of the 10 total opportunities presented per session. Thus, PoGO could be computed for each case in each study because the ideal value for each outcome was known.
 
-Based on our initial consideration of the studies, each case-specific effect size category is potentially viable. The next decision we must make is whether to adjust for baseline trend. Based on our understanding of these outcomes, participants, and settings, we would expect stable baselines. When we visually analyze the plots in Figures \@ref(fig:Byiers-2014)-\@ref(fig:Strasberger-2014), the baselines appear stable for most cases, with the possible exceptions of Freddie and Lori in Figure \@ref(fig:Casey-1978). Because we did not see trends for most cases and have uncertainty as to whether Freddie and Lori have trends that would continue, we decide to not make baseline trend adjustments, and to interpret Freddie and Lori’s effect size estimates with caution and less confidence. Using \@ref(fig:multistudy-example-data) in Chapter 9 as our guide, we will estimate NAP for non-overlap, the SMD for standardizing, the LRR for response ratios (which we will transform to percentage change for interpretation), and PoGO~M~ for goal attainment. We illustrate the computation of each in the next section using the _Single-Case Effect Size Calculator_ [@pustejovsky2023singlecasees]. After computing each of the effect sizes, we will then consider whether the estimates align well with our visual analysis of participant graphs in Figures \@ref(fig:Byiers-2014)-\@ref(fig:Strasberger-2014). Indices that align poorly with our visual analysis will be given less focus in our synthesis, whereas indices that align well with our visual analysis will be used to illustrate the averaging of case-specific effect sizes and will figure more heavily into our interpretation. 
+Based on our initial consideration of the studies, each case-specific effect size category is potentially viable. The next decision we must make is whether to adjust for baseline trend. Based on our understanding of these outcomes, participants, and settings, we would expect stable baselines. When we visually analyze the plots in Figures \@ref(fig:Byiers-2014)-\@ref(fig:Strasberger-2014), the baselines appear stable for most cases, with the possible exceptions of Freddie and Lori in Figure \@ref(fig:Casey-1978). Because we did not see trends for most cases and have uncertainty as to whether Freddie and Lori have trends that would continue, we decide to not make baseline trend adjustments, and to interpret Freddie and Lori’s effect size estimates with caution and less confidence. Using \@ref(fig:multistudy-example-data) in Chapter 9 as our guide, we will estimate NAP for non-overlap, the SMD for standardizing, the LRR for response ratios (which we will transform to percentage change for interpretation), and PoGO~M~ for goal attainment. We illustrate the computation of each in the next section using the _Single-Case Effect Size Calculator_ [@pustejovsky2023SingleCaseES]. After computing each of the effect sizes, we will then consider whether the estimates align well with our visual analysis of participant graphs in Figures \@ref(fig:Byiers-2014)-\@ref(fig:Strasberger-2014). Indices that align poorly with our visual analysis will be given less focus in our synthesis, whereas indices that align well with our visual analysis will be used to illustrate the averaging of case-specific effect sizes and will figure more heavily into our interpretation. 
 
 ## Estimating the Case-Specific Effect Sizes for the Included AAC Intervention Studies
 
-We demonstrate calculation of the case-specific effect size estimates using the web application, Single-Case Effect Size Calculator [@pustejovsky2023singlecasees], which is a graphical user interface to the SingleCase R package. All calculation methods implemented in the app are documented at https://jepusto.github.io/SingleCaseES/.
+We demonstrate calculation of the case-specific effect size estimates using the web application, Single-Case Effect Size Calculator [@pustejovsky2023SingleCaseES], which is a graphical user interface to the SingleCase R package. All calculation methods implemented in the app are documented at https://jepusto.github.io/SingleCaseES/.
 
 Prior to using the app to estimate case-specific effect sizes, we show how the data from the three augmentative communication intervention studies are entered into an Excel data file. We then illustrate the process of accessing the app, uploading the Excel data file for analysis, defining the variables, examining graphs provided within the app, and estimating the case-specific effect sizes.
 
@@ -55,16 +52,15 @@ Figure \@ref(fig:multistudy-example-data) is a screenshot of the Excel data file
 
 The data in our spreadsheet are arranged using a long data format, which means that each row includes data for one observation of a participant in a given study. For example, the first row contains the first observation from the first case from the first study (e.g., Jan Session 1 in Figure \@ref(fig:multistudy-example-data)), and the second row contains the second observation from that case (Jan Session 2 in Figure \@ref(fig:multistudy-example-data)). After entering each of the observations from the first case of the first study, we enter each successive observation from the second case (e.g., Tammy in Figure \@ref(fig:multistudy-example-data)) of the first study, and continue until all observations for all cases in the first study have been entered. Then, beneath the data from the first study, we enter all values for the second study, again starting with the first observation from the first case and continuing through the last observation of the last case. All remaining studies are entered directly below the previous studies, with one row for each observation.
 
-<div class="figure">
-<img src="images/excel_multistudy.jpg" alt="Example Data Spreadsheet (.xlsx) Formatting" width="60%" />
-<p class="caption">(\#fig:multistudy-example-data)Example Data Spreadsheet (.xlsx) Formatting</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/excel_multistudy} \caption{Example Data Spreadsheet (.xlsx) Formatting}(\#fig:multistudy-example-data)
+\end{figure}
 
 The columns of the spreadsheet correspond to the variables the app will need to compute the case-specific effect sizes. Our study indicator variable appears in the first column, labeled StudyID. The values in this column can be either numeric or alphanumeric, but the variables should consistently represent the study from which the outcome observations were extracted. For example, all study data from @Byiers2014 are assigned a study identifier of 221, @Casey1978 data have study identifier 120, and @StrasbergerFerreri2014 have study identifier 158. The case indicator variable appears in our second column, labeled _Study_CaseID_. The values in this column can also be numeric or alphanumeric. All within-case observations should have the same case indicator variable, with a unique code for each case in each study. To make it easier to track which case came from which study, we use values for each case indicator that are a concatenation of the study identifier and the case name used by the study authors. The third column, labeled _Session_number_, represents the session number for each recorded outcome value. It should only contain numerical values, with no values repeated across rows for a given case. The _Condition_ column represents the phase indicator variable. It can be numeric or alphanumeric. Here we use _A_ to indicate a baseline observation and _B_ to indicate a treatment phase observation. The next column, _Outcome_, represents the value of our primary dependent variable in the synthesis-requests or mands. We have also included a goal level for each study, _Goal level_, which is needed to compute the PoGO~M~ effect sizes. Both outcome and goal-level values must be numeric. Finally, the last two columns, _Session_length_ and _Procedure_ allow us to include additional information regarding the measurement of the outcome, which can be useful in the estimation of some case-specific effect sizes. As seen in Figures \@ref(fig:Byiers-2014) and \@ref(fig:multistudy-example-data), the outcome for the first case from the first study (i.e., Jen) is based on a five-minute observation period, and the outcome is reported as a percentage of switch-activated responses per session. 
 
 ### Accessing the App
 
-We can estimate each of the case-specific effect sizes for each participant, as well as the associated standard errors (SEs) and confidence intervals (CIs), using the web-based Single-Case Effect Size Calculator [@pustejovsky2023singlecasees]. The app, shown in Figure \@ref(fig:SCDES), can be accessed at https://jepusto.shinyapps.io/SCD-effect-sizes/. For researchers comfortable using the R statistical computing environment, the app can also be accessed through the SingleCaseES R package (https://jepusto.github.io/SingleCaseES/). By running the app through R, one has the advantage of carrying out the calculations on their local computer, rather than on a cloud-based web server. As a result, the app will be faster and more responsive when run locally than when accessed via the website. Regardless of how it is accessed, the user interface and functioning of the app are the same.
+We can estimate each of the case-specific effect sizes for each participant, as well as the associated standard errors (SEs) and confidence intervals (CIs), using the web-based Single-Case Effect Size Calculator [@pustejovsky2023SingleCaseES]. The app, shown in Figure \@ref(fig:SCDES), can be accessed at https://jepusto.shinyapps.io/SCD-effect-sizes/. For researchers comfortable using the R statistical computing environment, the app can also be accessed through the SingleCaseES R package (https://jepusto.github.io/SingleCaseES/). By running the app through R, one has the advantage of carrying out the calculations on their local computer, rather than on a cloud-based web server. As a result, the app will be faster and more responsive when run locally than when accessed via the website. Regardless of how it is accessed, the user interface and functioning of the app are the same.
 
 At the top of the screen are headers for two distinct parts of the app. The _Single-Series Calculator_ allows users to calculate effect sizes for individual cases (i.e., entering the data for one participant at a time)[^SSCalcDemo]. The _Multiple-Series Calculator_ allows users to calculate effect sizes for several cases from one or more studies, all at once. The _Multiple-Series Calculator_ is also useful for calculating more than one effect size measure for the same set of data. Meta-analytic contexts include data from multiple cases and multiple studies. Therefore, we focus on the _Multiple-Series Calculator_ in this chapter[^MSCalcDemo]. Select the _Multiple-Series Calculator_ tab (as indicated with the arrow in Figure \@ref(fig:SCDES)) to enter this part of the app.
 
@@ -72,26 +68,23 @@ At the top of the screen are headers for two distinct parts of the app. The _Sin
 
 [^MSCalcDemo]: A video demonstration of the Multiple-Series Calculator is available at https://www.youtube.com/watch?v=DSW7wuFG7og.
 
-<div class="figure">
-<img src="images/SCDES.png" alt="Single-case effect size calculator web application (Pustejovsky et al., 2023)" width="75%" />
-<p class="caption">(\#fig:SCDES)Single-case effect size calculator web application (Pustejovsky et al., 2023)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/SCDES} \caption{Single-case effect size calculator web application (Pustejovsky et al., 2023)}(\#fig:SCDES)
+\end{figure}
 
 ### Loading the Data into the App
 
 After clicking on _Multiple-Series Calculator_, we get the screen shown in Figure \@ref(fig:initial-multipleseries). Towards the top are tabs for _Data, Variables, Plot, Estimate, and Syntax for R_. The first tab is _Data_, which appears black to indicate that it is the active tab, whereas the other, inactive tab labels are blue. The _Data_ section allows us to select a dataset to use for effect size calculations. To upload our dataset, it must be saved as a .txt, .csv, or .xlsx file.
 
-<div class="figure">
-<img src="images/multiseries_data.1.png" alt="Initial Multiple-Series Calculator screen" width="75%" />
-<p class="caption">(\#fig:initial-multipleseries)Initial Multiple-Series Calculator screen</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/multiseries_data.1} \caption{Initial Multiple-Series Calculator screen}(\#fig:initial-multipleseries)
+\end{figure}
 
 To load our Excel data file (.xlsx) into the _Data_ section of the app, we first select the choice "Upload data from a xlsx file" and then click the _Browse_ option in the app (see Figure \@ref(fig:multipleseries-data)) to locate and select the file as saved on our computer. The app will default to a checked box next to _File has a header?_. We leave this box checked because the top row of our Excel file contains our variable names. Because our file contains multiple spreadsheets, we must select a single sheet for analysis. Using the drop-down box, we select the sheet ALL that has the data from all three of the studies, as shown in Figure \@ref(fig:multipleseries-data). 
 
-<div class="figure">
-<img src="images/multiseries_data.2.png" alt="Initial Multiple-Series Calculator screen" width="75%" />
-<p class="caption">(\#fig:multipleseries-data)Initial Multiple-Series Calculator screen</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/multiseries_data.2} \caption{Initial Multiple-Series Calculator screen}(\#fig:multipleseries-data)
+\end{figure}
 
 Under the _Select a sheet_ field, there is a field titled _Filtering variables_. If we click the cursor in the empty field, a menu appears from which we can select one or more variable names to use in defining a subset of the dataset. This option can be helpful for researchers who want to analyze only specific studies, cases, or phases from a larger dataset. For example, if we only wanted to compute the effect sizes for the first study, @Byiers2014, we could select _Study_ID_ under filtering variables. Doing this would lead to an additional menu with the request _Please select the values for each filtering variable_. If we chose the value 120, the larger data set would be reduced to include only the data from study 120, and we could proceed to examine the graph for that specific study and to estimate the effect sizes for that specific study. As another example, some datasets might include studies with maintenance phases or multi-phase designs such as an ABCABC design. To calculate effect sizes for the comparison between phases A and B only, we could use the _Filtering variables_ field to exclude data from the maintenance phases or C phases.
 
@@ -101,10 +94,9 @@ For present purposes, we leave the _Filtering variables_ field empty because we 
 
 After uploading our data, the next step is to move to the _Variables_ tab. The menu, shown in Figure \@ref(fig:multipleseries-var-empty), guides us through the process of indicating which of the variables in the dataset correspond to the variables needed for analysis. 
 
-<div class="figure">
-<img src="images/multiseries_variables_empty.png" alt="Variables Section Menu" width="75%" />
-<p class="caption">(\#fig:multipleseries-var-empty)Variables Section Menu</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/multiseries_variables_empty} \caption{Variables Section Menu}(\#fig:multipleseries-var-empty)
+\end{figure}
 
 At the top of the menu, there is a checkbox allowing us to _Calculate phase pair numbers for ABAB designs_. We check this option because one of our studies [i.e., @Byiers2014] is an ABAB design replicated across several cases. After checking the box, a new identified variable _phase_pair_calculated_ is added to the dataset containing a label for each unique pair of sequential phases. Initially, the results in this variable will not make sense but they will be recalculated after we select unique identifier variables in the next step. 
 
@@ -120,19 +112,17 @@ The last item in the Variables section asks us to specify the expected direction
 
 At this point, we have completed all sections on the _Variables_ tab. As shown in Figure \@ref(fig:multipleseries-var-filled), we have specified which of the variables in the data set correspond to the study indicator variable, case indicator, phase indicator variable, outcome, etc. We are now ready to click on the _Plot_ tab in the left panel of the screen, so that we can visually inspect the data for each of the cases. 
 
-<div class="figure">
-<img src="images/multiseries_variables_filled.jpeg" alt="Multi-Series Calculator Variables tab" width="75%" />
-<p class="caption">(\#fig:multipleseries-var-filled)Multi-Series Calculator Variables tab</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/multiseries_variables_filled} \caption{Multi-Series Calculator Variables tab}(\#fig:multipleseries-var-filled)
+\end{figure}
 
 ### Examining the Graphs within the App
 
 The _Plot_ tab of the Multiple-Series Calculator displays a graph of outcomes by session number, differentiating baseline phases from treatment phases using green and red data paths, respectively. The _Display plots for each value of this variable_ field allows us to specify variables with which to group the data plots. By default, the field defaults to _None_, which results in the app plotting only those data for the first pair of AB phases from the first case appearing alphanumerically in our dataset. However, we want to view more than one case at a time and select _Study_Case_ID_ from the drop-down options under _Display plots for each value of this variable_. Then we can select a variable from the drop-down box under _Select a value for each grouping variable_ to plot certain values for the grouping variables (e.g., study 221; Figure \@ref(fig:multipleseries-graph)). The app plots all cases on the same scale, so if reviewing the plots for multiple studies at once or for a study in which cases have different outcomes, a case with a relatively small scale may appear to have near-zero levels of responding.
 
-<div class="figure">
-<img src="images/multiseries_plot.jpg" alt="Multiple-Series Calculator Plot Section" width="75%" />
-<p class="caption">(\#fig:multipleseries-graph)Multiple-Series Calculator Plot Section</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/multiseries_plot} \caption{Multiple-Series Calculator Plot Section}(\#fig:multipleseries-graph)
+\end{figure}
 
 At this point, with _Study_Case_ID_ selected from the _Display plots for each value of this variable_ drop-down menu, the app automatically populates _phase_pair_calculated_ under the header _Select a value for each grouping variable_, with the default set to 1. Thus, the plot shown is for the first AB phase pair of the selected case. Since the @Byiers2014 study is a replicated ABAB design (i.e., multiple AB phase pairs), we must change this menu option from 1 to 2 so we can examine the plot for the second AB phase pair. Although researchers will likely have already reviewed the plots from their primary studies to determine which case-specific effect sizes would be appropriate to calculate, it is useful to review them again here. An additional review of these data plots ensures that the app has read the data as intended and can verify researchers' judgements about trends or other features of the data series. 
 
@@ -140,10 +130,9 @@ At this point, with _Study_Case_ID_ selected from the _Display plots for each va
 
 After reviewing the plots, we move on to the estimation of case-specific effect size indices by selecting the _Estimate_ tab as shown in Figure \@ref(fig:multipleseries-est-empty). The effect sizes that can be computed are grouped into two categories: (a) Non-Overlap Effect Sizes, and (b) Parametric Effect Sizes. Researchers can select one or more of the effect size indices that they are interested in calculating. For the set of studies included in this illustrative example, we decided to estimate non-overlap of all pairs (NAP) as a non-parametric effect size. We also selected several parametric effect sizes to estimate, including the within-case standardized mean difference (SMD), log response ratio for increasing outcomes (LRRi), and percent of goal obtained (PoGOM). When we check the box next to each effect size index, the box turns blue (see Figure 10.12). For some effect size measures, additional estimation options also appear. For example, after checking the SMD box, the Standardize SMD field appears, asking us to select a quantity by which to standardize. Researchers should choose the option that is most appropriate for their synthesis, selecting either the first radio button to standardize the SMD using the standard deviation of baseline observations (baseline SD) or standardize the SMD using the standard deviation pooled across the baseline and treatment phases (pooled SD). We choose to leave the standardization to the default option, baseline SD, for this illustration. 
 
-<div class="figure">
-<img src="images/multiseries_estimate_empty.png" alt="Multiple-Series Calculator Estimate Section" width="60%" />
-<p class="caption">(\#fig:multipleseries-est-empty)Multiple-Series Calculator Estimate Section</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/multiseries_estimate_empty} \caption{Multiple-Series Calculator Estimate Section}(\#fig:multipleseries-est-empty)
+\end{figure}
 
 Additional fields also appear when we opt to calculate LRRi. These fields allow us to provide more detail about the nature of our outcome and to select additional output to aid in the interpretation of results. The first field, _Outcome Scale_, allows us to indicate how the outcome measurements are scaled. The menu defaults to count (i.e., all variables are measured by counts). However, the outcome measures vary across our included studies---for @Byiers2014 the outcome is a percentage, for @Casey1978 the outcome is a proportion, and for @StrasbergerFerreri2014 the outcome is a count. Therefore, to specify different outcome scales for our different cases, we choose the option _by series_ under _Outcome Scale_. When we do so, another menu labeled _Select variable identifying outcome scale_ appears. Here, we select the _Procedure_ variable, which indicates the outcome scale used for each case in the dataset. 
 
@@ -151,10 +140,9 @@ In some contexts, researchers may need to specify variables in their dataset usi
 
 Six more fields remain in the _Estimate_ section menu. Next, we move to specifications relevant to the PoGO~M~ case-specific effect size. Using the _Set the goal level for PoGO_ drop-down menu, we can opt to set the same goal for every series in the dataset (i.e., _common goal_) or to set a different goal for each series (i.e., _different goals across series_). Selecting _common goal_ triggers another field requesting us to select a single value that represents the goal level across all cases and studies. However, because we have three different studies, each with different goal levels, we select the alternative PoGO estimation option: _different goals across series_. Beneath this field, we then use the drop-down menu to specify the variable in our dataset that represents the goal level (e.g., _Goal_Level_; see Figure \@ref(fig:multipleseries-est-filled)). 
 
-<div class="figure">
-<img src="images/multiseries_estimate_filled.png" alt="Estimate Section of the Multiple-Series Calculator" width="60%" />
-<p class="caption">(\#fig:multipleseries-est-filled)Estimate Section of the Multiple-Series Calculator</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/multiseries_estimate_filled} \caption{Estimate Section of the Multiple-Series Calculator}(\#fig:multipleseries-est-filled)
+\end{figure}
 
 After selecting the effect size indices and providing the app with additional information needed for computation where relevant, we have four additional options to consider, as shown in Figure \@ref(fig:multipleseries-es-res). The _Weighting scheme to use for aggregating_ section defaults to _equal_. For our illustration, we are aggregating the effect sizes across the AB pairs in the ABAB design [@Byiers2014]. With the calculator default as _equal_, the app will average the effect sizes from the two AB pairs by assigning them equal weights. This default is typically recommended for most syntheses and is appropriate here, so there is no need to change it. However, if there are substantial differences in the information used to compute one effect size versus another (e.g., one effect size is calculated with a larger set of observations or substantially less variable data), other options may be more appropriate. For example, the multiple-series calculator allows researchers to weight the effect sizes by the number of observations in the baseline phase (option $nA$), or the inverse of the error variance (option $1/V$).
 
@@ -162,10 +150,9 @@ The next menu, labeled _Confidence level (for any effect size with standard erro
 
 Finally, the last menu _Long or wide format?_ in the Estimate section presents two options for how our output will be presented: long format or wide format. The app default is _Long_, which will arrange the output by cases, with each effect size appearing in a separate row. Since we opted to calculate four different effect size indices, there will be four rows per case. Alternatively, we can choose to view our output as _Wide_. Wide format organizes results with each case assigned to its own row, and each different effect size index represented by separate columns. In this scenario, we would view our cases in rows and scroll to the right to view each of the different effect sizes in a separate column. Although no format is better than the other, we present the wide format in Figure \@ref(fig:multipleseries-es-res). With a single line per data series, we can more easily complete across-case comparisons of specific effect size indices. With our data containing cases from multiple studies, the wide format will help us assess the degree to which one or more of the calculated effect size metrics provides estimates that align well with our visual analyses.
 
-<div class="figure">
-<img src="images/multiseries_ES.Results.png" alt="Estimate Section of the Multiple-Series Calculator" width="75%" />
-<p class="caption">(\#fig:multipleseries-es-res)Estimate Section of the Multiple-Series Calculator</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/multiseries_ES.Results} \caption{Estimate Section of the Multiple-Series Calculator}(\#fig:multipleseries-es-res)
+\end{figure}
 
 At this point, to view the results, we can click the _Estimate_ button at the bottom of the screen. By clicking this button, the multiple-series effect size calculator will display the results table with each effect size estimate and their corresponding SEs and confidence limits. Figure \@ref(fig:multipleseries-es-res) shows an example of the table that appears to the right of the _Select Effect Sizes_ options we selected in Figure \@ref(fig:multipleseries-est-filled). The table includes the NAP, SMD, LRRi, and PoGO~M~ estimates for each individual case across all three included studies, as well as associated 95$\%$ confidence intervals. Pressing the button labeled _Download results_ will download the output as a .csv file, which will be useful in the further processing of the effect sizes. 
 
@@ -175,10 +162,9 @@ The _Multiple-Case Effect Size Calculator_ also provides auto-generated R code, 
 
 [^SyntaxNote]: To do this using the popular RStudio program, click on the green plus button on the top left of the RStudio interface, select R script, and then paste the auto-generated code into the blank R script.
 
-<div class="figure">
-<img src="images/multiseries_Rsyntax.png" alt="Generated Syntax for R Script" width="75%" />
-<p class="caption">(\#fig:multipleseries-syntax)Generated Syntax for R Script</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/multiseries_Rsyntax} \caption{Generated Syntax for R Script}(\#fig:multipleseries-syntax)
+\end{figure}
 
 ## Examining the Alignment of the Case-Specific Effect Sizes with our Visual Analysis
 
@@ -220,164 +206,40 @@ PoGO~M~ effect estimates for all cases across all three studies are reported in 
 
 The @Casey1978 PoGO~M$\uparrow$~ effect estimates are also shown in Table \@ref(tab:case-es-est). Lori had the largest PoGO~M~ effect size of 72.0 with an SE of 13.3, followed by Freddie with a PoGO~M~ effect size of 65.3, SE of 10.1, and Eric with a PoGO~M~ effect size of 55.4 and SE of 12.9. Although Tommy had the largest treatment phase mean ($\beta = 0.87$), he also had the highest baseline phase mean ($\alpha = 0.83$). As a result, and consistent with the graphed observations in Figure \@ref(fig:Casey-1978), Tommy's change in level between baseline and treatment was much smaller in magnitude than any other participant, and the smaller effect was noted in the effect estimate of 26.2 with an SE of 21.6. When combined with the results of visual analysis indicating little data overlap between phases for Lori and Freddie, the larger difference in phase means aligned with their larger PoGO~M~ values.
 
-<table class=" lightable-paper lightable-striped" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
-<caption>(\#tab:case-es-est)Case-Specific Effect Size Estimation Results Across Studies</caption>
- <thead>
-<tr>
-<th style="empty-cells: hide;" colspan="2"></th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">NAP</div></th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">SMD~W~</div></th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">LRRi</div></th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">PoGO~M~</div></th>
-</tr>
-  <tr>
-   <th style="text-align:left;"> Study </th>
-   <th style="text-align:left;"> Case </th>
-   <th style="text-align:center;"> Est. (SE) </th>
-   <th style="text-align:center;"> 95% CI </th>
-   <th style="text-align:center;"> Est. (SE) </th>
-   <th style="text-align:center;"> 95% CI </th>
-   <th style="text-align:center;"> Est. (SE) </th>
-   <th style="text-align:center;"> 95% CI </th>
-   <th style="text-align:center;"> Est. (SE) </th>
-   <th style="text-align:center;"> 95% CI </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> Byiers et al., 2014 </td>
-   <td style="text-align:left;"> Jen </td>
-   <td style="text-align:center;"> .94 (.06) </td>
-   <td style="text-align:center;"> [0.82, 1.06] </td>
-   <td style="text-align:center;"> .99 (.37) </td>
-   <td style="text-align:center;"> [0.27, 1.71] </td>
-   <td style="text-align:center;"> .58 (.27) </td>
-   <td style="text-align:center;"> [0.05, 1.10] </td>
-   <td style="text-align:center;"> 34.52 (11.19) </td>
-   <td style="text-align:center;"> [12.58, 56.43] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Byiers et al., 2014 </td>
-   <td style="text-align:left;"> Tammy </td>
-   <td style="text-align:center;"> .92 (.07) </td>
-   <td style="text-align:center;"> [0.78, 1.05] </td>
-   <td style="text-align:center;"> 1.27 (.39) </td>
-   <td style="text-align:center;"> [0.50, 2.05] </td>
-   <td style="text-align:center;"> .82 (.32) </td>
-   <td style="text-align:center;"> [0.19, 1.46] </td>
-   <td style="text-align:center;"> 74.29 (23.12) </td>
-   <td style="text-align:center;"> [28.97, 119.61] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Byiers et al., 2014 </td>
-   <td style="text-align:left;"> Rose </td>
-   <td style="text-align:center;"> 1 (.04) </td>
-   <td style="text-align:center;"> [0.92, 1.08] </td>
-   <td style="text-align:center;"> 9.43 (2.2) </td>
-   <td style="text-align:center;"> [5.11, 13.74] </td>
-   <td style="text-align:center;"> 2.67 (.56) </td>
-   <td style="text-align:center;"> [1.57, 3.77] </td>
-   <td style="text-align:center;"> 64.81 (5.09) </td>
-   <td style="text-align:center;"> [54.83, 74.78] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Casey, 1978 </td>
-   <td style="text-align:left;"> Eric </td>
-   <td style="text-align:center;"> .91 (.05) </td>
-   <td style="text-align:center;"> [0.81, 1.02] </td>
-   <td style="text-align:center;"> 1.85 (.56) </td>
-   <td style="text-align:center;"> [0.75, 2.96] </td>
-   <td style="text-align:center;"> .53 (.13) </td>
-   <td style="text-align:center;"> [0.28, 0.78] </td>
-   <td style="text-align:center;"> 55.44 (12.89) </td>
-   <td style="text-align:center;"> [30.18, 80.71] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Casey, 1978 </td>
-   <td style="text-align:left;"> Freddie </td>
-   <td style="text-align:center;"> .97 (.03) </td>
-   <td style="text-align:center;"> [0.90, 1.03] </td>
-   <td style="text-align:center;"> 2.81 (.72) </td>
-   <td style="text-align:center;"> [1.39, 4.23] </td>
-   <td style="text-align:center;"> .69 (.12) </td>
-   <td style="text-align:center;"> [0.47, 0.92] </td>
-   <td style="text-align:center;"> 64.25 (10.08) </td>
-   <td style="text-align:center;"> [44.49, 84.01] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Casey, 1978 </td>
-   <td style="text-align:left;"> Lori </td>
-   <td style="text-align:center;"> .95 (.04) </td>
-   <td style="text-align:center;"> [0.87, 1.02] </td>
-   <td style="text-align:center;"> 2.29 (.56) </td>
-   <td style="text-align:center;"> [1.19, 3.39] </td>
-   <td style="text-align:center;"> .64 (.11) </td>
-   <td style="text-align:center;"> [0.42, 0.87] </td>
-   <td style="text-align:center;"> 71.97 (13.33) </td>
-   <td style="text-align:center;"> [45.84, 98.09] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Casey, 1978 </td>
-   <td style="text-align:left;"> Tommy </td>
-   <td style="text-align:center;"> .75 (.10) </td>
-   <td style="text-align:center;"> [0.55, 0.95] </td>
-   <td style="text-align:center;"> .60 (.51) </td>
-   <td style="text-align:center;"> [-0.41, 1.61] </td>
-   <td style="text-align:center;"> .05 (.04) </td>
-   <td style="text-align:center;"> [-0.03, 0.14] </td>
-   <td style="text-align:center;"> 26.21 (21.57) </td>
-   <td style="text-align:center;"> [-16.06, 68.48] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Strasberger &amp; Ferreri, 2014 </td>
-   <td style="text-align:left;"> Juan </td>
-   <td style="text-align:center;"> 1 (.02) </td>
-   <td style="text-align:center;"> [0.97, 1.03] </td>
-   <td style="text-align:center;"> 6.02 (1.65) </td>
-   <td style="text-align:center;"> [2.80, 9.24] </td>
-   <td style="text-align:center;"> 1.87 (.30) </td>
-   <td style="text-align:center;"> [1.27, 2.47] </td>
-   <td style="text-align:center;"> 36.17 (6.11) </td>
-   <td style="text-align:center;"> [24.19, 48.15] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Strasberger &amp; Ferreri, 2014 </td>
-   <td style="text-align:left;"> Kyle </td>
-   <td style="text-align:center;"> 1 (.05) </td>
-   <td style="text-align:center;"> [0.90, 1.10] </td>
-   <td style="text-align:center;"> 7.56 (2.29) </td>
-   <td style="text-align:center;"> [3.08, 12.05] </td>
-   <td style="text-align:center;"> 1.67 (.23) </td>
-   <td style="text-align:center;"> [1.22, 2.12] </td>
-   <td style="text-align:center;"> 88.0 (13.13) </td>
-   <td style="text-align:center;"> [62.27, 113.73] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Strasberger &amp; Ferreri, 2014 </td>
-   <td style="text-align:left;"> Parker </td>
-   <td style="text-align:center;"> .92 (.11) </td>
-   <td style="text-align:center;"> [0.71, 1.12] </td>
-   <td style="text-align:center;"> Inf </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> 1.22 (.20) </td>
-   <td style="text-align:center;"> [0.84, 1.61] </td>
-   <td style="text-align:center;"> 58.33 (15.70) </td>
-   <td style="text-align:center;"> [27.56, 89.11] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Strasberger &amp; Ferreri, 2014 </td>
-   <td style="text-align:left;"> Thomas </td>
-   <td style="text-align:center;"> .97 (.04) </td>
-   <td style="text-align:center;"> [0.90, 1.04] </td>
-   <td style="text-align:center;"> 6.27 (1.95) </td>
-   <td style="text-align:center;"> [2.45, 10.10] </td>
-   <td style="text-align:center;"> 2.20 (.50) </td>
-   <td style="text-align:center;"> [1.23, 3.18] </td>
-   <td style="text-align:center;"> 40.30 (7.46) </td>
-   <td style="text-align:center;"> [25.67, 54.92] </td>
-  </tr>
-</tbody>
-</table>
+\begin{table}
+
+\caption{(\#tab:case-es-est)Case-Specific Effect Size Estimation Results Across Studies}
+\centering
+\begin{tabular}[t]{l|l|c|c|c|c|c|c|c|c}
+\hline
+\multicolumn{2}{c|}{ } & \multicolumn{2}{c|}{NAP} & \multicolumn{2}{c|}{SMD\textasciitilde{}W\textasciitilde{}} & \multicolumn{2}{c|}{LRRi} & \multicolumn{2}{c}{PoGO\textasciitilde{}M\textasciitilde{}} \\
+\cline{3-4} \cline{5-6} \cline{7-8} \cline{9-10}
+Study & Case & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI\\
+\hline
+ & Jen & .94 (.06) & [0.82, 1.06] & .99 (.37) & [0.27, 1.71] & .58 (.27) & [0.05, 1.10] & 34.52 (11.19) & [12.58, 56.43]\\
+\cline{2-10}
+ & Tammy & .92 (.07) & [0.78, 1.05] & 1.27 (.39) & [0.50, 2.05] & .82 (.32) & [0.19, 1.46] & 74.29 (23.12) & [28.97, 119.61]\\
+\cline{2-10}
+\multirow[t]{-3}{*}{\raggedright\arraybackslash Byiers et al., 2014} & Rose & 1 (.04) & [0.92, 1.08] & 9.43 (2.2) & [5.11, 13.74] & 2.67 (.56) & [1.57, 3.77] & 64.81 (5.09) & [54.83, 74.78]\\
+\cline{1-10}
+ & Eric & .91 (.05) & [0.81, 1.02] & 1.85 (.56) & [0.75, 2.96] & .53 (.13) & [0.28, 0.78] & 55.44 (12.89) & [30.18, 80.71]\\
+\cline{2-10}
+ & Freddie & .97 (.03) & [0.90, 1.03] & 2.81 (.72) & [1.39, 4.23] & .69 (.12) & [0.47, 0.92] & 64.25 (10.08) & [44.49, 84.01]\\
+\cline{2-10}
+ & Lori & .95 (.04) & [0.87, 1.02] & 2.29 (.56) & [1.19, 3.39] & .64 (.11) & [0.42, 0.87] & 71.97 (13.33) & [45.84, 98.09]\\
+\cline{2-10}
+\multirow[t]{-4}{*}{\raggedright\arraybackslash Casey, 1978} & Tommy & .75 (.10) & [0.55, 0.95] & .60 (.51) & [-0.41, 1.61] & .05 (.04) & [-0.03, 0.14] & 26.21 (21.57) & [-16.06, 68.48]\\
+\cline{1-10}
+ & Juan & 1 (.02) & [0.97, 1.03] & 6.02 (1.65) & [2.80, 9.24] & 1.87 (.30) & [1.27, 2.47] & 36.17 (6.11) & [24.19, 48.15]\\
+\cline{2-10}
+ & Kyle & 1 (.05) & [0.90, 1.10] & 7.56 (2.29) & [3.08, 12.05] & 1.67 (.23) & [1.22, 2.12] & 88.0 (13.13) & [62.27, 113.73]\\
+\cline{2-10}
+ & Parker & .92 (.11) & [0.71, 1.12] & Inf &  & 1.22 (.20) & [0.84, 1.61] & 58.33 (15.70) & [27.56, 89.11]\\
+\cline{2-10}
+\multirow[t]{-4}{*}{\raggedright\arraybackslash Strasberger \& Ferreri, 2014} & Thomas & .97 (.04) & [0.90, 1.04] & 6.27 (1.95) & [2.45, 10.10] & 2.20 (.50) & [1.23, 3.18] & 40.30 (7.46) & [25.67, 54.92]\\
+\hline
+\end{tabular}
+\end{table}
 
 ## Averaging the Case-Specific Effect Sizes
 
@@ -389,80 +251,26 @@ First, researchers might wish to simply summarize the effect sizes across the ca
 
 Table \@ref(tab:FE-study-avg) reports the average effect size for each study and across all 11 cases included in the three studies. SEs and CIs are based on the fixed effects model. The average NAP effect size across all 11 cases is .94 with an SE of .02. The average NAP effect size appears similar across all three studies, ranging from .89 to .97. Both the study-level average and overall average suggest large intervention effect sizes, with relatively little overlap between treatment and baseline phases. The average SMD~W~ effect size across all 11 cases is 3.70 with an SE of 0.39. Study-level average effect sizes are more heterogeneous, ranging from 1.89 for @Casey1978 to 5.36 for @StrasbergerFerreri2014. The average LRR effect size across all 11 cases is 1.18 with an SE of 0.09, which corresponds to an average of a 225% increase from baseline to intervention, 95% CI [173%, 287%]. Study-level average LRR effect sizes appear heterogeneous, ranging from 0.48 (corresponding to a 62% increase) to 1.74 (corresponding to a 470% increase). Finally, the average PoGO~M~ across all 11 cases is 55.8 with an SE of 4.2, suggesting that, on average, intervention led to improvements that were about 56% of the way toward the goal levels. Average PoGO~M~ values appear quite consistent across studies, ranging from 54.5 for @Casey1978 to 57.9 for @Byiers2014. 
 
-<table class=" lightable-paper lightable-striped" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
-<caption>(\#tab:FE-study-avg)Study-Level Average and Overall Average Effect Sizes Across Studies Based on Fixed Effects Models with Equal Weights</caption>
- <thead>
-<tr>
-<th style="empty-cells: hide;" colspan="2"></th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">NAP</div></th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">SMD~W~</div></th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">LRRi</div></th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">PoGO~M~</div></th>
-</tr>
-  <tr>
-   <th style="text-align:left;"> Study </th>
-   <th style="text-align:left;"> N (Cases) </th>
-   <th style="text-align:center;"> Est. (SE) </th>
-   <th style="text-align:center;"> 95% CI </th>
-   <th style="text-align:center;"> Est. (SE) </th>
-   <th style="text-align:center;"> 95% CI </th>
-   <th style="text-align:center;"> Est. (SE) </th>
-   <th style="text-align:center;"> 95% CI </th>
-   <th style="text-align:center;"> Est. (SE) </th>
-   <th style="text-align:center;"> 95% CI </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> Byiers et al. (2014) </td>
-   <td style="text-align:left;"> 3 </td>
-   <td style="text-align:center;"> .95 (.03) </td>
-   <td style="text-align:center;"> [.89, 1.02] </td>
-   <td style="text-align:center;"> 3.90 (0.76) </td>
-   <td style="text-align:center;"> [2.42, 5.38] </td>
-   <td style="text-align:center;"> 1.36 (0.23) </td>
-   <td style="text-align:center;"> [0.90, 1.82] </td>
-   <td style="text-align:center;"> 57.9 (8.7) </td>
-   <td style="text-align:center;"> [40.8, 75.0] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Casey (1978) </td>
-   <td style="text-align:left;"> 4 </td>
-   <td style="text-align:center;"> .89 (.03) </td>
-   <td style="text-align:center;"> [.83, .96] </td>
-   <td style="text-align:center;"> 1.89 (0.30) </td>
-   <td style="text-align:center;"> [1.30, 2.47] </td>
-   <td style="text-align:center;"> 0.48 (0.05) </td>
-   <td style="text-align:center;"> [0.38, 0.58] </td>
-   <td style="text-align:center;"> 54.5 (7.5) </td>
-   <td style="text-align:center;"> [39.7, 69.3] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Strasberger &amp; Ferreri (2014) </td>
-   <td style="text-align:left;"> 3 </td>
-   <td style="text-align:center;"> .97 (.03) </td>
-   <td style="text-align:center;"> [.91, 1.03] </td>
-   <td style="text-align:center;"> 5.36 (0.88) </td>
-   <td style="text-align:center;"> [3.65, 7.08] </td>
-   <td style="text-align:center;"> 1.74 (0.16) </td>
-   <td style="text-align:center;"> [1.41, 2.06] </td>
-   <td style="text-align:center;"> 55.7 (5.7) </td>
-   <td style="text-align:center;"> [44.6, 66.8] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Overall Average </td>
-   <td style="text-align:left;"> 11 </td>
-   <td style="text-align:center;"> .94 (.02) </td>
-   <td style="text-align:center;"> [.90, .97] </td>
-   <td style="text-align:center;"> 3.70 (0.39) </td>
-   <td style="text-align:center;"> [2.93, 4.47] </td>
-   <td style="text-align:center;"> 1.18 (0.09) </td>
-   <td style="text-align:center;"> [1.00, 1.35] </td>
-   <td style="text-align:center;"> 55.8 (4.2) </td>
-   <td style="text-align:center;"> [55.8, 64.2] </td>
-  </tr>
-</tbody>
-</table>
+\begin{table}
+
+\caption{(\#tab:FE-study-avg)Study-Level Average and Overall Average Effect Sizes Across Studies Based on Fixed Effects Models with Equal Weights}
+\centering
+\begin{tabular}[t]{l|l|c|c|c|c|c|c|c|c}
+\hline
+\multicolumn{2}{c|}{ } & \multicolumn{2}{c|}{NAP} & \multicolumn{2}{c|}{SMD\textasciitilde{}W\textasciitilde{}} & \multicolumn{2}{c|}{LRRi} & \multicolumn{2}{c}{PoGO\textasciitilde{}M\textasciitilde{}} \\
+\cline{3-4} \cline{5-6} \cline{7-8} \cline{9-10}
+Study & N (Cases) & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI\\
+\hline
+Byiers et al. (2014) & 3 & .95 (.03) & [.89, 1.02] & 3.90 (0.76) & [2.42, 5.38] & 1.36 (0.23) & [0.90, 1.82] & 57.9 (8.7) & [40.8, 75.0]\\
+\cline{1-10}
+Casey (1978) & 4 & .89 (.03) & [.83, .96] & 1.89 (0.30) & [1.30, 2.47] & 0.48 (0.05) & [0.38, 0.58] & 54.5 (7.5) & [39.7, 69.3]\\
+\cline{1-10}
+Strasberger \& Ferreri (2014) & 3 & .97 (.03) & [.91, 1.03] & 5.36 (0.88) & [3.65, 7.08] & 1.74 (0.16) & [1.41, 2.06] & 55.7 (5.7) & [44.6, 66.8]\\
+\cline{1-10}
+Overall Average & 11 & .94 (.02) & [.90, .97] & 3.70 (0.39) & [2.93, 4.47] & 1.18 (0.09) & [1.00, 1.35] & 55.8 (4.2) & [55.8, 64.2]\\
+\hline
+\end{tabular}
+\end{table}
 
 Examining the results across effect size metrics, the effect size indices paint somewhat different pictures regarding the strength of the average treatment effect and the degree of variation from study to study. Looking at the overall average across participants, the NAP effect size is near the upper boundary of the scale, and the SMD~W~ and LRRi effect size both suggest strong effects. In contrast, the average PoGO~M~ effect size of 55.8 suggests a more moderate effect of moving outcomes less than 60% of the way towards goal levels. Furthermore, the average NAP values are quite similar across studies, as are the study-level average PoGO~M~ effect sizes. In contrast, the study-level SWM SMD~W~ and LRRi values suggest that the effects might be more variable across the three studies.
 
@@ -482,86 +290,28 @@ Finally, we also report prediction intervals as a further method of describing t
 
 [^PInote]: Note that prediction intervals and confidence intervals pertain to different inferences. Confidence intervals are interval estimates that will tend to cover the true average effect size in a population, whereas prediction intervals are interval estimates that will tend to cover the effect size for a new individual participant drawn from the population. Prediction intervals will therefore tend to be wider than confidence intervals with the same specified coverage level. 
 
-<table class=" lightable-paper lightable-striped" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
-<caption>(\#tab:RE-study-RVE)Overall Average Effect Sizes and Heterogeneity Estimates Based on Hierarchical Random Effects Models with Robust Variance Estimation</caption>
- <thead>
-<tr>
-<th style="empty-cells: hide;" colspan="1"></th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">NAP (equal weighting)</div></th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">SMD~W~ (equal weighting)</div></th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">LRRi (inverse-variance weighting)</div></th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">PoGO~M~ (equal weighting)</div></th>
-</tr>
-  <tr>
-   <th style="text-align:left;"> Parameter </th>
-   <th style="text-align:left;"> Est. (SE) </th>
-   <th style="text-align:center;"> 95% CI </th>
-   <th style="text-align:center;"> Est. (SE) </th>
-   <th style="text-align:center;"> 95% CI </th>
-   <th style="text-align:center;"> Est. (SE) </th>
-   <th style="text-align:center;"> 95% CI </th>
-   <th style="text-align:center;"> Est. (SE) </th>
-   <th style="text-align:center;"> 95% CI </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> Overall average effect size </td>
-   <td style="text-align:left;"> .94 (.03) </td>
-   <td style="text-align:center;"> [.82, 1.05] </td>
-   <td style="text-align:center;"> 3.70 (1.14) </td>
-   <td style="text-align:center;"> [-1.44, 8.83] </td>
-   <td style="text-align:center;"> 1.06 (0.36) </td>
-   <td style="text-align:center;"> [-.50, 2.61] </td>
-   <td style="text-align:center;"> 55.8 (1.1) </td>
-   <td style="text-align:center;"> [51.1, 60.6] </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Between-study SD ($\tau$) </td>
-   <td style="text-align:left;"> .02 </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> .88 </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> 0.56 </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> .00 </td>
-   <td style="text-align:center;">  </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Within-study SD ($\omega$) </td>
-   <td style="text-align:left;"> .00 </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> 2.01 </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> 0.36 </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> 14.1 </td>
-   <td style="text-align:center;">  </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Total heterogeneity $\Big(\sqrt{\tau^2 + \omega^2}\Big)$ </td>
-   <td style="text-align:left;"> .02 </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> 2.19 </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> 0.67 </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> 14.1 </td>
-   <td style="text-align:center;">  </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> 80% Prediction Interval </td>
-   <td style="text-align:left;"> [.88, 1.00] </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> [-.62, 8.02] </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> [-.38, 2.50 </td>
-   <td style="text-align:center;">  </td>
-   <td style="text-align:center;"> [30.6, 81.1 </td>
-   <td style="text-align:center;">  </td>
-  </tr>
-</tbody>
-</table>
+\begin{table}
+
+\caption{(\#tab:RE-study-RVE)Overall Average Effect Sizes and Heterogeneity Estimates Based on Hierarchical Random Effects Models with Robust Variance Estimation}
+\centering
+\begin{tabular}[t]{l|l|c|c|c|c|c|c|c}
+\hline
+\multicolumn{1}{c|}{ } & \multicolumn{2}{c|}{NAP (equal weighting)} & \multicolumn{2}{c|}{SMD\textasciitilde{}W\textasciitilde{} (equal weighting)} & \multicolumn{2}{c|}{LRRi (inverse-variance weighting)} & \multicolumn{2}{c}{PoGO\textasciitilde{}M\textasciitilde{} (equal weighting)} \\
+\cline{2-3} \cline{4-5} \cline{6-7} \cline{8-9}
+Parameter & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI\\
+\hline
+Overall average effect size & .94 (.03) & [.82, 1.05] & 3.70 (1.14) & [-1.44, 8.83] & 1.06 (0.36) & [-.50, 2.61] & 55.8 (1.1) & [51.1, 60.6]\\
+\cline{1-9}
+Between-study SD (\$\textbackslash{}tau\$) & .02 &  & .88 &  & 0.56 &  & .00 & \\
+\cline{1-9}
+Within-study SD (\$\textbackslash{}omega\$) & .00 &  & 2.01 &  & 0.36 &  & 14.1 & \\
+\cline{1-9}
+Total heterogeneity \$\textbackslash{}Big(\textbackslash{}sqrt\{\textbackslash{}tau\textasciicircum{}2 + \textbackslash{}omega\textasciicircum{}2\}\textbackslash{}Big)\$ & .02 &  & 2.19 &  & 0.67 &  & 14.1 & \\
+\cline{1-9}
+80\% Prediction Interval & [.88, 1.00] &  & [-.62, 8.02] &  & [-.38, 2.50 &  & [30.6, 81.1 & \\
+\hline
+\end{tabular}
+\end{table}
 
 Applying the hierarchical random effects model to data from a small number of studies will tend to produce estimates of average effects and heterogeneity SDs that are imprecisely estimated and, therefore, must be interpreted cautiously. Although our example dataset includes just three studies and 11 cases, we will report and interpret the model estimates to illustrate the unique insights to be gleaned from the random effects approach. However, we caution readers not to draw any substantive conclusions about the effects of AAC interventions from this small illustration.
 

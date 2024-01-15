@@ -35,7 +35,7 @@ knitr::include_graphics("images/Gage2018.png")
 knitr::include_graphics("images/CollierMeek2017.png")
 ```
 
-```{r SalleseVannest-raw-2022, out.width = "60%", fig.cap = "Effect of Intervention on the Rate of Behavior Specific Praise (Sallese & Vannest, 2022)"}
+```{r SalleseVannest-raw-2022, out.width = "60%", fig.cap = "Effect of Intervention on the Rate of Behavior Specific Praise (Sallese \\& Vannest, 2022)"}
 # Figure 7.3
 knitr::include_graphics("images/CollierMeek2017.png")
 ```

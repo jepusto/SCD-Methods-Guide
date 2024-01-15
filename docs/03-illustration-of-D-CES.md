@@ -24,20 +24,17 @@ We also consider other case examples. In Figure \@ref(fig:Peltier-2020), Gary's 
 
 Next, focusing on the treatment phases, we conduct similar analyses. In Figures \@ref(fig:Case-1992) and \@ref(fig:Lambert-2006), where there is an immediate shift in performance and no trend in the treatment phases, we find patterns that match our hypothesized treatment trend expectations. In Figure \@ref(fig:Peltier-2020), we again see a typical pattern where the shift in performance is immediate and stable over time. While here there are a few exceptions where cases appear to have a decline in performance toward the end of the intervention phase (e.g., Andy and Ellie), we find it best to select a model consistent with the typical and expected pattern. We proceed with a model that assumes no trend in baseline and treatment phases (i.e., Model 1 or Model 2 from Figure \@ref(fig:DC-ES-flow-chart)) because the design-comparable effect sizes assume a common model across cases and estimate an average effect across cases.
 
-<div class="figure">
-<img src="images/Case1992.png" alt="Multiple Baseline Data Extracted from Case et al. (1992)" width="50%" />
-<p class="caption">(\#fig:Case-1992)Multiple Baseline Data Extracted from Case et al. (1992)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{images/Case1992} \caption{Multiple Baseline Data Extracted from Case et al. (1992)}(\#fig:Case-1992)
+\end{figure}
 
-<div class="figure">
-<img src="images/Peltier2020.png" alt="Multiple Baseline Data Extracted from Peltier et al. (2020)" width="50%" height="75%" />
-<p class="caption">(\#fig:Peltier-2020)Multiple Baseline Data Extracted from Peltier et al. (2020)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth,height=0.75\textheight]{images/Peltier2020} \caption{Multiple Baseline Data Extracted from Peltier et al. (2020)}(\#fig:Peltier-2020)
+\end{figure}
 
-<div class="figure">
-<img src="images/Lambert2006.png" alt="Replicated ABAB Data Extracted from Lambert et al. (2006)" width="50%" height="75%" />
-<p class="caption">(\#fig:Lambert-2006)Replicated ABAB Data Extracted from Lambert et al. (2006)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth,height=0.75\textheight]{images/Lambert2006} \caption{Replicated ABAB Data Extracted from Lambert et al. (2006)}(\#fig:Lambert-2006)
+\end{figure}
 
 ## Details of the No Trend Models for Design-Comparable Effect Sizes
 
@@ -48,10 +45,9 @@ Y_{ij} = \beta_{0j} + \beta_{1j}Tx_{ij} + e_{ij},
 \end{equation}
 where $Y_ij$ is the score on the outcome variable $Y$ at measurement occasion $i$ for case $j$, and $Tx_{ij}$ is dummy coded with a value of 0 for baseline observations and a value of 1 for the treatment phase observations. The mean baseline level for case $j$ is $\beta_{0j}$ (see Figure \@ref(fig:Peltier-Asher-2020) for a visual representation of $\beta_{0j}$ and $\beta_{1j}$). The raw score treatment effect for case $j$ is indexed by $\beta_{1j}$, which is the difference between the treatment phase outcome mean and the baseline phase mean. The error ($e_{ij}$) is time- and case-specific and assumed normally distributed and first-order autoregressive with variance $\sigma_e^2$.
 
-<div class="figure">
-<img src="images/Peltier2020_Asher.png" alt="Illustration of Treatment Effect for Asher (Peltier et al., 2020)" width="75%" />
-<p class="caption">(\#fig:Peltier-Asher-2020)Illustration of Treatment Effect for Asher (Peltier et al., 2020)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/Peltier2020_Asher} \caption{Illustration of Treatment Effect for Asher (Peltier et al., 2020)}(\#fig:Peltier-Asher-2020)
+\end{figure}
 
 For Model 1, the between-case model is:
 \begin{equation}
@@ -100,29 +96,25 @@ Because we tentatively selected Model 2 based on our a priori considerations, we
 We can estimate design-comparable effect sizes for all models suggested in Figure \@ref(fig:Peltier-Asher-2020), using a web-based calculator for design-comparable effect sizes (_scdhlm_\; @pustejovsky2021scdhlm). The scdhlm app is available at https://jepusto.shinyapps.io/scdhlm/. To use this app, researchers must store their dataset in an Excel file (.xlsx), comma delimited file (.csv), or text file (.txt). In addition, we recommend that users inspect their data to ensure the inclusion of the following variables: case identifier, phase identifier, session number, and the outcome. Although not required, researchers may want to arrange the data columns by order of variable appearance in the app. 
 We show this arrangement for the @case1992Improving study in Figure \@ref(fig:Excel-Case-1992). There, we demonstrate the following order of column headers with case identifier representing data in the first column, followed by variables in this order (left-to-right): phase identifier, session number, and the outcomes in the fourth column. Researchers have the flexibility to use any labeling scheme that clearly distinguishes between baseline and intervention conditions. For example, for the phase identifier, one can use $b$ or 0 to indicate baseline observations and $i$ or 1 to indicate intervention observations. However, the app requires that numerical values be used for both session number and outcome. Finally, we recommend that users arrange the data first by case (i.e., enter all the rows of data for the first case before any of the rows of data for the second case) and then by session number.
 
-<div class="figure">
-<img src="images/excel_Case1992.jpeg" alt="Illustration of Treatment Effect for Asher (Peltier et al., 2020)" width="50%" height="75%" />
-<p class="caption">(\#fig:Excel-Case-1992)Illustration of Treatment Effect for Asher (Peltier et al., 2020)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth,height=0.75\textheight]{images/excel_Case1992} \caption{Illustration of Treatment Effect for Asher (Peltier et al., 2020)}(\#fig:Excel-Case-1992)
+\end{figure}
 
 After starting the app, we use the Load tab to load the data file, as illustrated in Figure \@ref(fig:Load-Case-1992). As mentioned previously, the data file can be a .txt or .csv file that includes one dataset, or an Excel (.xlsx) file that has either one (e.g., a data set for one study) or multiple spreadsheets (one spreadsheet for each of several studies). If using a .xlsx file with multiple spreadsheets, the _scdhlm_ app allows us to select the spreadsheet containing the data for the study of interest from the _Load_ tab. Then, we use the drop-down menus on the right of the screen to indicate the study design (_treatment reversal_ versus _Multiple Baseline/Multiple Probe across participants_) and which variables in the data set correspond to the case identifier, phase identifier, session, and outcome (see Figure \@ref(fig:Load-Case-1992)).
 
-<div class="figure">
-<img src="images/app.load_Case1992.jpeg" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab" width="50%" />
-<p class="caption">(\#fig:Load-Case-1992)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{images/app.load_Case1992} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Load Tab}(\#fig:Load-Case-1992)
+\end{figure}
 
 After loading our data, we use the _Inspect_ tab to ensure the accurate import of raw data into the app and assigned variable names are accurate (Figure \@ref(fig:Inspect-Case-1992)). In addition, we can use the _Inspect_ tab to view a graph of the data (Figure \@ref(fig:Graph-Case-1992)). We recommend that researchers compare these data with the graphed data from the original studies to ensure accuracy in uploading the data and specifying the design and variable names on the _Load_ tab. Check the graphed data again for consistency with the (tentatively) selected model for the design-comparable effect size.
 
-<div class="figure">
-<img src="images/app.inspect.data_Case1992.jpeg" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within Inspect Tab for Case et al. (1992)" width="50%" height="75%" />
-<p class="caption">(\#fig:Inspect-Case-1992)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within Inspect Tab for Case et al. (1992)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth,height=0.75\textheight]{images/app.inspect.data_Case1992} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Data Tab within Inspect Tab for Case et al. (1992)}(\#fig:Inspect-Case-1992)
+\end{figure}
 
-<div class="figure">
-<img src="images/app.inspect.graph_Case1992.jpeg" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Graph Tab Within Inspect Tab for Case et al. (1992)" width="75%" />
-<p class="caption">(\#fig:Graph-Case-1992)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Graph Tab Within Inspect Tab for Case et al. (1992)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/app.inspect.graph_Case1992} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Graph Tab Within Inspect Tab for Case et al. (1992)}(\#fig:Graph-Case-1992)
+\end{figure}
 
 After inspecting the data, we next specify the model for the design-comparable effect size using the _Model_ tab. Figure \@ref(fig:Model2-Case-1992) shows our specification for Model 2 (i.e., the model that assumes no trends and an effect that varies across cases). The specification process begins with the selection of trend type for the baseline phase. For this example, under _Type of time trend_, we select _level_ because we assume no time trends in the baseline phases. Then, we opt to include _level_ as a fixed effect and check the box to enable the model estimation of the average baseline level (i.e., $\gamma_{00}$ from Equation \@ref(eq:M2-intercept)). 
 <!-- MC: I corrected the Equation number. James, please double check.-->
@@ -132,10 +124,9 @@ Finally, we choose to include _change in level_ as a random effect to allow the 
 
 At the bottom of the screen, the _scdhlm_ app provides a graph of the data with trend lines based on the specified model. We recommend that users inspect this graph to ensure that the trend lines fit the data reasonably well. If the trend lines do not fit the data well, a question about model selection arises. For example, we find the baseline trend line for Abernathy is relatively high compared to their actual baseline observations. However, other model specifications (e.g., Model 1 shown later) did not improve the fit of Abernathy’s baseline trend line. So, we decide to proceed with estimation because most other trend lines look appropriate, and the model is consistent with our a priori expectations. Throughout this process, researchers should maintain a high standard for transparency in decision-making when reporting methods and results. 
 
-<div class="figure">
-<img src="images/app.model.model2_Case1992.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 2 Specification for Case et al. (1992)" width="50%" />
-<p class="caption">(\#fig:Model2-Case-1992)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 2 Specification for Case et al. (1992)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{images/app.model.model2_Case1992} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 2 Specification for Case et al. (1992)}(\#fig:Model2-Case-1992)
+\end{figure}
 
 For the @case1992Improving data set, the a priori-identified Model 2 provides trajectories that fit the data reasonably well[^reasonablynote]. Thus, we proceed to the _Effect size_ tab. As shown in Figure \@ref(fig:ES-Model2-Case-1992), the estimated design-comparable effect size for this study is 2.57 with a standard error (SE) of 0.45 and $95\%$ confidence interval (CI) [1.65, 3.50].
 
@@ -143,17 +134,15 @@ For the @case1992Improving data set, the a priori-identified Model 2 provides tr
 
 Additional information reported on the _Effect size_ tab include estimates of other quantities from the model, information about the model specification, and the assumed time-points used in calculating the design-comparable effect size. The reported degrees of freedom are used in making a small-sample correction to the effect size estimate, analogous to the Hedges' _g_ correction used with group designs [@Hedges1981distribution]. Larger estimated degrees of freedom imply more precision in estimating the denominator of the design-comparable effect size, making the small-sample correction less consequential. Conversely, smaller degrees of freedom are indicative of imprecise design-comparable effect size denominator estimation, making the small-sample correction more consequential. The _Effect size_ tab, shown in \@ref(fig:ES-Model2-Case-1992), also reports autocorrelation, which is the estimate of the correlation between level-1 errors of the model for the same case, differing by one time point (i.e., session) based on a first-order autoregressive model. Given the selected follow-up time, the reported intra-class correlation is an estimate of the between-case variance of the outcome as a proportion of the total variation in the outcome (including both between-case and within-case variance). Larger values of the intra-class correlation indicate that more of the variation in the outcome is between participants. The remaining output information (_Study design_, _Estimation method_, _Baseline specification_, _Treatment specification_, _Initial treatment time_, _Follow-up time_) describe the model specification and assumptions used in the effect size calculations. The _scdhlm_ app includes such to allow for reproducibility of the calculations. 
 
-<div class="figure">
-<img src="images/app.ES.model2_Case1992.jpeg" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 2 Estimate for Case et al. (1992)" width="75%" />
-<p class="caption">(\#fig:ES-Model2-Case-1992)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 2 Estimate for Case et al. (1992)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.75\linewidth]{images/app.ES.model2_Case1992} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Effect size Tab Showing Model 2 Estimate for Case et al. (1992)}(\#fig:ES-Model2-Case-1992)
+\end{figure}
 
 If our a priori arguments for selecting Model 2 were weak, or we wanted to consider Model 1, we can easily compute the results of a different model by going back to the _Model_ tab and changing our specification. The only difference is that Model 1 does not include _change in level_ as a random effect for the treatment phase. For illustration purposes, we present Model 1 specification results for this study in Figure \@ref(fig:Model1-Case-1992). As before, we keep the _level_ option selected as the _Type of time trend_ for the baseline phase, as both a fixed effect and a random effect. In the treatment phase, we keep _change in level_ as the _Type of time trend_ but select only _change in level_ as a fixed effect. The Model 1 trend lines fit similarly to those from Model 2; the Model 1 design-comparable effect size is 2.59 with an SE of 0.41 and $95\%$ CI [1.76, 3.42]. This suggests that the effect size estimate is not sensitive to our decision about whether the treatment effect varies across cases. Despite this information, we proceed with the Model 2 estimate because it is consistent with our expectations for the research in this area. 
 
-<div class="figure">
-<img src="images/app.model.model1_Case1992.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 1 Specification for Case et al. (1992)" width="50%" height="75%" />
-<p class="caption">(\#fig:Model1-Case-1992)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 1 Specification for Case et al. (1992)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth,height=0.75\textheight]{images/app.model.model1_Case1992} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model Tab Showing Model 1 Specification for Case et al. (1992)}(\#fig:Model1-Case-1992)
+\end{figure}
 
 ### Example 2: Multiple Baseline Study by @peltier2020Effects
 
@@ -165,10 +154,9 @@ We now have a design-comparable effect size for the first single-case study by @
 
 After performing these steps, we found that the estimated model trajectories for the Model 2 specification fit the @peltier2020Effects data well, as shown in Figure \@ref(fig:Model2-Peltier-2020). For the @peltier2020Effects study, the design-comparable effect size is 2.95 with an SE of 0.28 and $95\%$ CI [2.42, 3.53]. We then estimated the effect for Model 1 (i.e., we remove the check next to _change in level_ under _include random effect_), which is the more restrictive model that does not allow the treatment effect to vary across cases. Model 1 produced a design-comparable effect size estimate of 2.83 with an SE of 0.24 and $95\%$ CI [2.34, 3.31], like the Model 2 design-comparable effect size. 
 
-<div class="figure">
-<img src="images/app.model.model2_Peltier2020.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 2 Specification for Peltier et al. (2020)" width="50%" height="75%" />
-<p class="caption">(\#fig:Model2-Peltier-2020)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 2 Specification for Peltier et al. (2020)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth,height=0.75\textheight]{images/app.model.model2_Peltier2020} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 2 Specification for Peltier et al. (2020)}(\#fig:Model2-Peltier-2020)
+\end{figure}
 
 ### Example 3: Replicated ABAB Design by @lambert2006effects
 
@@ -176,10 +164,9 @@ For the third SCD study, we illustrate use of the _scdhlm_ app using data from a
 
 After specifying the model, we view the Effect size tab to obtain the design-comparable effect size (see Figure \@ref(fig:Model2-Lambert-2006)). For @lambert2006effects, the estimated Model 2 design-comparable effect size is 6.37 with an SE of 0.39 and $95\%$ CI [5.60, 7.14]. Like the previous SCD studies, we also estimate the effect for Model 1, which is the more restrictive model that does not allow the treatment effect to vary across cases. Model 1 produces an estimate of 6.34 with an SE of 0.37 and $95\%$ CI [5.61, 7.08], a similar result to the Model 2 design-comparable effect size. 
 
-<div class="figure">
-<img src="images/app.model.model2_Lambert2006.png" alt="Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 2 Specification for Lambert et al. (2006)" width="50%" height="75%" />
-<p class="caption">(\#fig:Model2-Lambert-2006)Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 2 Specification for Lambert et al. (2006)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth,height=0.75\textheight]{images/app.model.model2_Lambert2006} \caption{Between-Case Standardized Mean Difference Estimator (scdhlm, v. 0.6.0) Model 2 Specification for Lambert et al. (2006)}(\#fig:Model2-Lambert-2006)
+\end{figure}
 
 ## Estimating the Design-Comparable Effect Size for the Group Studies
 
@@ -191,50 +178,27 @@ After we have obtained effect sizes from each single-case and group study, we ca
 
 Table \@ref(tab:ES-est) reports the effect size estimates, SEs, and fixed effect meta-analysis calculations for our four included studies. In fixed effect meta-analysis, the overall average effect size estimate is a weighted average of the effect size estimates from the individual studies, with weights proportional to the inverse of the sampling variance (squared SE) of each effect size estimate. Further, the SE of the overall effect size is the square root of the inverse of the total weight. In Table \@ref(tab:ES-est), column C reports the inverse variance weight assigned to each study, with the percentage of the total weight listed in parentheses. For instance, the effect size estimate from @peltier2020Effects receives 43.7% of the total weight, while the effect size estimates from @case1992Improving and @hutchinson1993Effects each receive 16.9% of the total weight. The total inverse variance weight is 29.21. The overall average effect size estimate is 3.28 with an SE of 0.18  and an approximate $95\%$ CI [2.91, 3.64]. The _Q_-test for heterogeneity is highly significant, Q(3) = 99.3, p < .0001, indicating that the included effect size estimates are more variable than we would expect due to sampling error alone. In other words, it is unlikely that we would observe such a wide dispersion of effect size estimates if the studies were all estimating the same true effect size parameter.
 
-<table class=" lightable-classic" style='font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'>
-<caption>(\#tab:ES-est)Fixed Effect Meta-Analysis Calculations for 
-             Example Math Invervention Studies</caption>
- <thead>
-  <tr>
-   <th style="text-align:left;"> Study </th>
-   <th style="text-align:center;"> Effect Size Estimate (A) </th>
-   <th style="text-align:center;"> Standard Error (B) </th>
-   <th style="text-align:center;"> Inverse-variance Weight (%) (C) </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> Case et al. (1992) </td>
-   <td style="text-align:center;"> 2.57 </td>
-   <td style="text-align:center;"> 0.45 </td>
-   <td style="text-align:center;"> 4.94 (16.9) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Peltier et al. (2020) </td>
-   <td style="text-align:center;"> 2.95 </td>
-   <td style="text-align:center;"> 0.28 </td>
-   <td style="text-align:center;"> 12.76 (43.7) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Lambert et al. (2006) </td>
-   <td style="text-align:center;"> 6.37 </td>
-   <td style="text-align:center;"> 0.39 </td>
-   <td style="text-align:center;"> 6.57 (22.5) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;border-bottom: 1px solid;"> Hutchinson (1993) </td>
-   <td style="text-align:center;border-bottom: 1px solid;"> 0.71 </td>
-   <td style="text-align:center;border-bottom: 1px solid;"> 0.45 </td>
-   <td style="text-align:center;border-bottom: 1px solid;"> 4.94 (16.9) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Fixed effect meta-analysis </td>
-   <td style="text-align:center;"> 3.28 </td>
-   <td style="text-align:center;"> 0.19 </td>
-   <td style="text-align:center;"> 29.21 (100) </td>
-  </tr>
-</tbody>
-</table>
+\begin{table}
+
+\caption{(\#tab:ES-est)Fixed Effect Meta-Analysis Calculations for 
+             Example Math Invervention Studies}
+\centering
+\begin{tabular}[t]{l|c|c|c}
+\hline
+Study & Effect Size Estimate (A) & Standard Error (B) & Inverse-variance Weight (\%) (C)\\
+\hline
+Case et al. (1992) & 2.57 & 0.45 & 4.94 (16.9)\\
+\hline
+Peltier et al. (2020) & 2.95 & 0.28 & 12.76 (43.7)\\
+\hline
+Lambert et al. (2006) & 6.37 & 0.39 & 6.57 (22.5)\\
+\hline
+Hutchinson (1993) & 0.71 & 0.45 & 4.94 (16.9)\\
+\hline
+Fixed effect meta-analysis & 3.28 & 0.19 & 29.21 (100)\\
+\hline
+\end{tabular}
+\end{table}
 
 In fixed effect meta-analysis, the overall average effect size estimate is a summary of the effect size estimates across the included studies, where studies are treated as fixed. Therefore, the SE and CI in fixed effect meta-analysis account for the uncertainty in the process of effect size estimation that occurs in each of the individual studies. However, they do not account for uncertainty in the process of identifying studies for inclusion in the meta-analysis [@konstantopoulos2019statistically; @Rice_Higgins_Lumley_2018], nor do they provide a basis for generalization beyond the included studies. When conducting syntheses of larger bodies of literature---and especially of studies with heterogeneous populations, design features, or dependent effect sizes---researchers will often prefer to use random effects models [@Hedges_Vevea_1998] or their further extensions [@PustejovskyTipton2021; @van2013three]. 
 

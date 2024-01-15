@@ -79,10 +79,9 @@ Figure \@ref(fig:otadupaul) presents the @ota2002Task study data.
 During baseline phases, observations appear somewhat normally distributed around the baseline means, with a pooled skewness value near 0 (*sk* = 0.15) and a pooled kurtosis value near 0 (*ku* = -0.77). 
 However, non-normality is present in the treatment phases because the outcome occurs near the floor (0%) for much of the phase (*sk* = 1.86; *ku* = 4.99). 
 
-<div class="figure">
-<img src="images/Ota.DuPaul2002.png" alt="Multiple Baseline Design Across Three Participants (Ota &amp; DuPaul, 2002)" width="420" />
-<p class="caption">(\#fig:otadupaul)Multiple Baseline Design Across Three Participants (Ota & DuPaul, 2002)</p>
-</div>
+\begin{figure}
+\includegraphics[width=5.83in]{images/Ota.DuPaul2002} \caption{Multiple Baseline Design Across Three Participants (Ota \& DuPaul, 2002)}(\#fig:otadupaul)
+\end{figure}
 
 There is some research suggesting that the simpler multilevel models based on the normality assumption (i.e., LMMs) can produce unbiased average effect estimates and accurate inferences, even when the data are not strictly normal [@Declercq2019; @Joo_Ferron_2019].
 However, at some point the departures can become so severe that methods accounting for non-normality (i.e., GLMMs) appear preferable. 
@@ -210,8 +209,7 @@ Recent methodological research has started to develop more concrete guidance on 
 However, for the purposes of this guide, we illustrate the application of multilevel models for study contexts where it is reasonable to assume normality and thus LMMs are appropriate.
 We first consider the application of LMMs when expecting no trends (Chapter 7), and then address the more complex situation when anticipating trends (Chapter 8). 
 
-<div class="figure">
-<img src="images/flowchart_MLMApproach.png" alt="Flow Chart for the Selection of Multilevel Modeling Approach" width="1176" />
-<p class="caption">(\#fig:mlmapproach)Flow Chart for the Selection of Multilevel Modeling Approach</p>
-</div>
+\begin{figure}
+\includegraphics[width=16.34in]{images/flowchart_MLMApproach} \caption{Flow Chart for the Selection of Multilevel Modeling Approach}(\#fig:mlmapproach)
+\end{figure}
 
