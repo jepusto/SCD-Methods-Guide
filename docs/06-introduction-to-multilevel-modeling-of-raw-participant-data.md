@@ -1,6 +1,7 @@
 
 
 # Introduction to Multilevel Modeling of Raw Participant Data {#MLM-raw-data}
+\chaptermark{Introduction to MLM of Raw Data}
 
 _This chapter provides background on multilevel modeling of the raw data from studies included in a synthesis of SCDs.
 We describe when this approach is useful, then discuss various types of study outcomes (e.g., continuous, count, and percentage-based), corresponding assumptions (e.g., within-phase trends, normality), and modeling options for synthesizing findings using multilevel models of raw, individual participant data. 
@@ -210,6 +211,6 @@ However, for the purposes of this guide, we illustrate the application of multil
 We first consider the application of LMMs when expecting no trends (Chapter 7), and then address the more complex situation when anticipating trends (Chapter 8). 
 
 \begin{figure}
-\includegraphics[width=16.34in]{images/flowchart_MLMApproach} \caption{Flow Chart for the Selection of Multilevel Modeling Approach}(\#fig:mlmapproach)
+\includegraphics[width=0.75\linewidth]{images/flowchart_MLMApproach} \caption{Flow Chart for the Selection of Multilevel Modeling Approach}(\#fig:mlmapproach)
 \end{figure}
 

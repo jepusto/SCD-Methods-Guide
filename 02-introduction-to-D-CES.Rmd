@@ -3,6 +3,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.retina = 2)
 ```
 
 # Introduction to Design-Comparable Effect Sizes {#D-CES}
+\chaptermark{Introduction to D-CES}
 
 _This chapter provides background on design-comparable effect sizes, describes when to use them, and explains the key assumptions behind their use.
 We highlight both the assumptions for using design-comparable effect sizes in meta-analytic synthesis and the assumptions for estimation of these effect sizes from primary study data. 

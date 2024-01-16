@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2024-01-15" />
+<meta name="date" content="2024-01-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -255,7 +255,7 @@ div.csl-indent {
 <li class="chapter" data-level="7.4.2" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#r-code"><i class="fa fa-check"></i><b>7.4.2</b> R Code</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="MLM-Trend.html"><a href="MLM-Trend.html"><i class="fa fa-check"></i><b>8</b> Illustration of Multilevel Modeling When No Trends Are Assumed</a>
+<li class="chapter" data-level="8" data-path="MLM-Trend.html"><a href="MLM-Trend.html"><i class="fa fa-check"></i><b>8</b> Illustration of Multilevel Modeling When Trends Are Assumed</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="MLM-Trend.html"><a href="MLM-Trend.html#selecting-a-multilevel-model-for-the-single-case-studies-1"><i class="fa fa-check"></i><b>8.1</b> Selecting a Multilevel Model for the Single-Case Studies</a></li>
 <li class="chapter" data-level="8.2" data-path="MLM-Trend.html"><a href="MLM-Trend.html#details-of-the-multilevel-model-with-trends"><i class="fa fa-check"></i><b>8.2</b> Details of the Multilevel Model with Trends</a></li>
@@ -325,10 +325,11 @@ div.csl-indent {
 <p><em>This chapter illustrates the application of case-specific effect sizes in the synthesis of single-case studies. We provide step-by-step instructions to demonstrate the selection of the case-specific effect sizes that initially appear appropriate for the synthesis context. We then illustrate the computation of each of those effect sizes using the Single-Case Effect Size Calculator and compare the resulting effect sizes to our visual analysis. Finally, for the effect sizes that align with our visual analysis, we provide a demonstration of synthesis using meta-analytic models.</em></p>
 <p>In this chapter, we illustrate the calculation and use of case-specific effect sizes in the synthesis of single-case studies. Case-specific effect sizes provide a measure of effect for each participant from each study on a common scale. Thus, these methods are particularly useful when researchers are interested in understanding variation (heterogeneity) of treatment effects across individual participants and where the outcome measurement procedures vary substantially across the included participants and studies. We present an example scenario where we want to synthesize evidence from several single-case design (SCD) studies that examine the effects of augmentative communication interventions (AAC; e.g., sign language, picture exchange communication systems, speech-generating devices) on increasing the independent requests (mands) of individuals with developmental and intellectual disabilities. For purposes of illustration, we selected three studies from the meta-analysis by <span class="citation">(<a href="#ref-Ganz_et_al_2023">Ganz et al., 2023</a>)</span>.</p>
 <p>The first study, <span class="citation">Byiers et al. (<a href="#ref-Byiers2014">2014</a>)</span>, used a reversal design to investigate the effects of an AAC intervention on increasing three adult participants’ use of a switch device to communicate their desire for preferred items or activities while decreasing incidents of inappropriate behavior hypothesized to function as a request. For simplicity, we created a single outcome by combining both outcomes using this formula:
-<span class="math display">\[
+<span class="math display" id="eq:Byiers-out-formula">\[\begin{equation}
+\tag{10.1}
 \% \ switch \ activated \ responses = \frac{appropriate \ responses \ per \ minute}{inappropriate \ + \ appropriate \ responses \ per \ minute}\times 100
-\]</span>
-Participants received between 4 and 10 five-minute intervention sessions per day, with Jen and Tammy participating in sessions across three days and Rose completing all sessions in two days. The intervention sessions focused on switch training, which was “considered complete when the participant produced the response independently within 1 min on five consecutive opportunities,” <span class="citation">(<a href="#ref-Byiers2014">Byiers et al., 2014, p. 344</a>)</span>. Therefore, we defined the outcome goal as use of the communication switch device on 100<span class="math inline">\(\%\)</span> of opportunities per session.</p>
+\end{equation}\]</span></p>
+<p>Participants received between 4 and 10 five-minute intervention sessions per day, with Jen and Tammy participating in sessions across three days and Rose completing all sessions in two days. The intervention sessions focused on switch training, which was “considered complete when the participant produced the response independently within 1 min on five consecutive opportunities,” <span class="citation">(<a href="#ref-Byiers2014">Byiers et al., 2014, p. 344</a>)</span>. Therefore, we defined the outcome goal as use of the communication switch device on 100<span class="math inline">\(\%\)</span> of opportunities per session.</p>
 <p>The second study by <span class="citation">Casey (<a href="#ref-Casey1978">1978</a>)</span> included four student participants and used a multiple baseline design to examine AAC intervention effects on increasing the mean proportion of signed target requests in a classroom setting while simultaneously reducing the proportion of intervals engaged in problem behavior. The manual signing intervention was implemented by all classroom staff (one teacher, three aides) across the school day. The research team conducted observations of the participants during the first 30 minutes each morning at school across five weeks. Each participant’s targeted behaviors were measured across a five-minute period using partial interval recording methods, in which observers checked a box next to any or all of the target behaviors that they observed at any point within a 10-second interval. The study goal was to reduce the proportion of intervals that each student engaged in problem behavior to zero (0) and increase positive communication skills to 1.0. We combined these outcomes to create a new outcome measure representing the proportion of communicative opportunities with signed requests.</p>
 <p>The third study, by <span class="citation">Strasberger &amp; Ferreri (<a href="#ref-StrasbergerFerreri2014">2014</a>)</span>, also used a multiple baseline design. The researchers examined the impact of a peer-mediated intervention along with an iPod-based speech-generating device to teach communication skills to four autistic students aged 5-12 years old who had limited or no vocal or verbal behavior and no existing successful use of an alternative or augmentative communication system. The primary outcomes were the number of independent mands (e.g., “I want juice.”) as well as independent responses to a direct question (e.g., “I want juice.” In response to “What do you want?”). Intervention consisted of peer assisted communication application (PACA), in which five typically developing children between 7-13 years old delivered communication training sessions with the participants that mirrored the six Picture Exchange Communication System (PECS) phases. Researchers collected frequency data on independent and prompted mands and responses to questions by each participant for as many as three sessions daily, with each session consisting of 10 trials to request known preferred items and answer the questions.</p>
 <p>These three example studies used a range of different procedures for measuring outcomes and measured behaviors over sessions of different length. For example, <span class="citation">Byiers et al. (<a href="#ref-Byiers2014">2014</a>)</span> used frequency or count measures of the dependent variable during five-minute sessions (between four and 10 sessions per day) per participant, whereas <span class="citation">Strasberger &amp; Ferreri (<a href="#ref-StrasbergerFerreri2014">2014</a>)</span> collected data on no more than three 10-trial sessions per day (session duration was not specified). The outcomes from these studies are on a variety of different scales, and responses to these AAC interventions could vary across individual participants. Thus, it is advantageous to use case-specific effect sizes to synthesize results from these studies.</p>
@@ -471,7 +472,7 @@ Figure 10.13: Estimate Section of the Multiple-Series Calculator
 <h2><span class="header-section-number">10.3</span> Syntex for R<a href="app-case-specific-es.html#syntex-for-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <em>Multiple-Case Effect Size Calculator</em> also provides auto-generated R code, which can be useful for reproducing the effect size calculations carried out through the menu-driven interface. If we want to obtain R code, we click on the <em>Syntax for R</em> tab, as shown in Figure <a href="app-case-specific-es.html#fig:multipleseries-syntax">10.14</a>. After clicking on the Copy button at the top of the script field, we can paste the auto-generated code into an R script<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a>. We can then save the script to our computer for use in future analyses or for replicating the calculations carried out within the app.</p>
 <div class="figure"><span style="display:block;" id="fig:multipleseries-syntax"></span>
-<img src="images/multiseries_Rsyntax.png" alt="Generated Syntax for R Script" width="75%" />
+<img src="images/multiseries_Rsyntax.png" alt="Generated Syntax for R Script" width="100%" />
 <p class="caption">
 Figure 10.14: Generated Syntax for R Script
 </p>
@@ -504,31 +505,31 @@ Figure 10.14: Generated Syntax for R Script
 <h3><span class="header-section-number">10.4.4</span> PoGO<sub>M<span class="math inline">\(\uparrow\)</span></sub><a href="app-case-specific-es.html#pogomuparrow" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>PoGO<sub>M</sub> effect estimates for all cases across all three studies are reported in Table <a href="app-case-specific-es.html#tab:case-es-est">10.1</a>. Starting with the <span class="citation">Byiers et al. (<a href="#ref-Byiers2014">2014</a>)</span> study participants, the case-specific estimates in order from smallest to largest are as follows: Jen had a PoGO<sub>M</sub> effect size of 34.5 with an SE of 11.2, Tammy had a PoGO<sub>M</sub> effect size of 74.3 with an SE of 23.1, and Rose had a PoGO<sub>M</sub> effect size estimate of 64.8 with an SE of 5.1. Visual inspection of the participants’ graphs in Figure <a href="app-case-specific-es.html#fig:Byiers-2014">10.1</a> showed variability in effects across cases, with more of Tammy’s treatment phase (B) observations at or approaching the goal level (100%) than other participants. This is consistent with the PoGO<sub>M</sub> effect size results (74.3) obtained in the app. Similarly, the smallest PoGO<sub>M</sub> effect size estimate for Jen (34.5) is also aligned with the data graphed in Figure <a href="app-case-specific-es.html#fig:Byiers-2014">10.1</a>. However, for one participant, the PoGO<sub>M</sub> results ranked from smallest effect (Jen) to largest (Tammy) are somewhat in conflict with what we see in Figure <a href="app-case-specific-es.html#fig:Byiers-2014">10.1</a>; Rose’s PoGO<sub>M</sub> effect size was estimated smaller than Tammy’s, despite having graphs portraying the largest between-phase level change and no data overlap between phases.</p>
 <p>The <span class="citation">Casey (<a href="#ref-Casey1978">1978</a>)</span> PoGO<sub>M<span class="math inline">\(\uparrow\)</span></sub> effect estimates are also shown in Table <a href="app-case-specific-es.html#tab:case-es-est">10.1</a>. Lori had the largest PoGO<sub>M</sub> effect size of 72.0 with an SE of 13.3, followed by Freddie with a PoGO<sub>M</sub> effect size of 65.3, SE of 10.1, and Eric with a PoGO<sub>M</sub> effect size of 55.4 and SE of 12.9. Although Tommy had the largest treatment phase mean (<span class="math inline">\(\beta = 0.87\)</span>), he also had the highest baseline phase mean (<span class="math inline">\(\alpha = 0.83\)</span>). As a result, and consistent with the graphed observations in Figure <a href="app-case-specific-es.html#fig:Casey-1978">10.2</a>, Tommy’s change in level between baseline and treatment was much smaller in magnitude than any other participant, and the smaller effect was noted in the effect estimate of 26.2 with an SE of 21.6. When combined with the results of visual analysis indicating little data overlap between phases for Lori and Freddie, the larger difference in phase means aligned with their larger PoGO<sub>M</sub> values.</p>
-<table class=" lightable-paper lightable-striped" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:case-es-est">Table 10.1: </span>Case-Specific Effect Size Estimation Results Across Studies
 </caption>
 <thead>
 <tr>
-<th style="empty-cells: hide;" colspan="2">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="2">
 </th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
-<div style="TRUE">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 NAP
 </div>
 </th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
-<div style="TRUE">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 SMD<sub>W</sub>
 </div>
 </th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
-<div style="TRUE">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 LRRi
 </div>
 </th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
-<div style="TRUE">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 PoGO<sub>M</sub>
 </div>
 </th>
@@ -929,31 +930,31 @@ Thomas
 <h3><span class="header-section-number">10.5.1</span> Fixed Effects Meta-Analysis<a href="app-case-specific-es.html#fixed-effects-meta-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>First, researchers might wish to simply summarize the effect sizes across the cases in each study, or across all 11 cases from the three studies. For this purpose, a fixed effects meta-analysis is a convenient approach. In fixed effects meta-analysis, we draw inferences only about the cases and studies included in the summary, without generalizing beyond the observed participants. Results are summarized by taking an average of the effect sizes across cases and calculating SEs and CIs to represent the uncertainty in the average effect <em>for these particular cases</em>—but not for any broader population of cases or studies. Conventional fixed effects meta-analysis uses a weighted average with weights inversely proportional to the squared SE of the effect size estimates (i.e., inverse-variance weighting or precision weighting). However, for some of the case-specific effect size indices we have calculated, the SEs can be correlated with the effect size estimators. Moreover, the effect size estimators and SEs are based on very few observations per phase, making inverse-variance weighting methods less appropriate. Instead, we use simple, equally-weighted averages to summarize the effect sizes for each of the studies.</p>
 <p>Table <a href="app-case-specific-es.html#tab:FE-study-avg">10.2</a> reports the average effect size for each study and across all 11 cases included in the three studies. SEs and CIs are based on the fixed effects model. The average NAP effect size across all 11 cases is .94 with an SE of .02. The average NAP effect size appears similar across all three studies, ranging from .89 to .97. Both the study-level average and overall average suggest large intervention effect sizes, with relatively little overlap between treatment and baseline phases. The average SMD<sub>W</sub> effect size across all 11 cases is 3.70 with an SE of 0.39. Study-level average effect sizes are more heterogeneous, ranging from 1.89 for <span class="citation">Casey (<a href="#ref-Casey1978">1978</a>)</span> to 5.36 for <span class="citation">Strasberger &amp; Ferreri (<a href="#ref-StrasbergerFerreri2014">2014</a>)</span>. The average LRR effect size across all 11 cases is 1.18 with an SE of 0.09, which corresponds to an average of a 225% increase from baseline to intervention, 95% CI [173%, 287%]. Study-level average LRR effect sizes appear heterogeneous, ranging from 0.48 (corresponding to a 62% increase) to 1.74 (corresponding to a 470% increase). Finally, the average PoGO<sub>M</sub> across all 11 cases is 55.8 with an SE of 4.2, suggesting that, on average, intervention led to improvements that were about 56% of the way toward the goal levels. Average PoGO<sub>M</sub> values appear quite consistent across studies, ranging from 54.5 for <span class="citation">Casey (<a href="#ref-Casey1978">1978</a>)</span> to 57.9 for <span class="citation">Byiers et al. (<a href="#ref-Byiers2014">2014</a>)</span>.</p>
-<table class=" lightable-paper lightable-striped" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:FE-study-avg">Table 10.2: </span>Study-Level Average and Overall Average Effect Sizes Across Studies Based on Fixed Effects Models with Equal Weights
 </caption>
 <thead>
 <tr>
-<th style="empty-cells: hide;" colspan="2">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="2">
 </th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
-<div style="TRUE">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 NAP
 </div>
 </th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
-<div style="TRUE">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 SMD<sub>W</sub>
 </div>
 </th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
-<div style="TRUE">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 LRRi
 </div>
 </th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
-<div style="TRUE">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 PoGO<sub>M</sub>
 </div>
 </th>
@@ -1132,31 +1133,31 @@ Overall Average
 <p>For estimating an overall average effect size using the hierarchical random effects model, the conventional approach is to take an inverse-variance weighted average. However, inverse-variance weighting is less appropriate when effect size estimates are based on very limited numbers of observations and when the SE of the effect size is a function of the magnitude of effect size. <span class="citation">M. Chen &amp; Pustejovsky (<a href="#ref-Chen_Pustejovsky_2022">2022</a>)</span> evaluated different approaches to meta-analyzing several case-specific effect size indices, including NAP, SMD<sub>W</sub>, and LRRi, in an extensive simulation study. They found that using an inverse-variance weighted average was appropriate for LRRi (and LRRd) effect size indices, but not for NAP or for SMD<sub>W</sub>. For the latter two indices, the strong connection between the SE and the magnitude of effect size led to bias when inverse-variance weighting was used for estimation of overall average effects. <span class="citation">M. Chen &amp; Pustejovsky (<a href="#ref-Chen_Pustejovsky_2022">2022</a>)</span> also found that using simple weighted averages led to less biased estimates, and although they did not evaluate meta-analyses of PoGO<sub>M</sub>, the fact that its SE is related to the magnitude of effect size suggests that a similar pattern may hold. We therefore use simple weighted averages for summarizing NAP, SMD<sub>W</sub>, and PoGO<sub>M</sub> based on the hierarchical random effects model. As a result, the summary effect sizes here are identical to those based on the fixed effects model-only the SEs and confidence intervals differ. For LRRi, we follow the recommendations from <span class="citation">M. Chen &amp; Pustejovsky (<a href="#ref-Chen_Pustejovsky_2022">2022</a>)</span> and use inverse-variance weighting.</p>
 <p>A further complication involved in synthesizing case-specific effect sizes is that the SEs of the effect size estimates assume that each observation is independent. If there is autocorrelation in the data series, where observations that are more closely spaced in time tend to be more predictive of future observations, this assumption will be violated, and the calculated SEs will tend to understate the true degree of uncertainty. However, <span class="citation">M. Chen &amp; Pustejovsky (<a href="#ref-Chen_Pustejovsky_2022">2022</a>)</span> found that this problem can be mitigated by using robust variance estimation methods for calculating SEs and CIs. Robust SEs and CIs provide accurate quantifications of uncertainty in overall average effect size estimates even for autocorrelated data series. When summarizing results for each of the four effect size metrics, we therefore report robust SEs and robust 95% CIs for overall average effect sizes. The robust SEs and robust CIs incorporate small-sample corrections <span class="citation">(<a href="#ref-Tipton_2015">Tipton, 2015</a>; <a href="#ref-Tipton_Pustejovsky_2015">Tipton &amp; Pustejovsky, 2015</a>)</span> so that they perform well even when based on a very limited number of studies.</p>
 <p>Finally, we also report prediction intervals as a further method of describing the degree of heterogeneity in effect sizes. A prediction interval is an estimate of the range of effect sizes observed across a specified part of the hypothetical population of studies and participants. Another way to think about this is that the prediction interval is a range in which we would expect to observe the effect size for a new study with a new participant drawn from the population<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a>. If a prediction interval is quite wide, it means that we expect the population distribution of effect sizes to be heterogeneous. Such prediction intervals are an especially helpful approach to describing heterogeneity because they can be transformed into different scales, such as by transforming from the LRR scale to percentage change. For each effect size metric, we calculated 80% prediction intervals to describe the range of effect sizes that we would expect to observe in the middle 80% of the population.</p>
-<table class=" lightable-paper lightable-striped" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:RE-study-RVE">Table 10.3: </span>Overall Average Effect Sizes and Heterogeneity Estimates Based on Hierarchical Random Effects Models with Robust Variance Estimation
 </caption>
 <thead>
 <tr>
-<th style="empty-cells: hide;" colspan="1">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
 </th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
-<div style="TRUE">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 NAP (equal weighting)
 </div>
 </th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
-<div style="TRUE">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 SMD<sub>W</sub> (equal weighting)
 </div>
 </th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
-<div style="TRUE">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 LRRi (inverse-variance weighting)
 </div>
 </th>
-<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
-<div style="TRUE">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 PoGO<sub>M</sub> (equal weighting)
 </div>
 </th>
@@ -1362,10 +1363,10 @@ Dowdy, A., Tincani, M., &amp; Schneider, W. J. (2020). Evaluation of publication
 Gage, N. A., Cook, B. G., &amp; Reichow, B. (2017). Publication bias in special education meta-analyses. <em>Exceptional Children</em>, <em>83</em>(4), 428–445. <a href="https://doi.org/10.1177/0014402917691016">https://doi.org/10.1177/0014402917691016</a>
 </div>
 <div id="ref-Ganz_et_al_2023" class="csl-entry">
-Ganz, J. B., Pustejovsky, J. E., Reichle, J., Vannest, K. J., Foster, M., Pierson, L. M., Wattanawongwan, S., Bernal, A. J., Chen, M., Haas, A. N., Liao, C.-Y., Sallese, M. R., Skov, R., &amp; Smith, S. D. (2023). Participant characteristics predicting communication outcomes in AAC implementation for individuals with ASD and IDD: A systematic review and meta-analysis. <em>Augmentative and Alternative Communication</em>, <em>39</em>(1), 7–22. <a href="https://doi.org/10.1080/07434618.2022.2116355">https://doi.org/10.1080/07434618.2022.2116355</a>
+Ganz, J. B., Pustejovsky, J. E., Reichle, J., Vannest, K. J., Foster, M., Pierson, L. M., Wattanawongwan, S., Bernal, A. J., Chen, M., Haas, A. N., Liao, C.-Y., Sallese, M. R., Skov, R., &amp; Smith, S. D. (2023). Participant characteristics predicting communication outcomes in AAC implementation for individuals with ASD and IDD: A systematic review and meta-analysis. <em>Augmentative and Alternative Communication</em>, <em>39</em>, 7–22. <a href="https://doi.org/10.1080/07434618.2022.2116355">https://doi.org/10.1080/07434618.2022.2116355</a>
 </div>
 <div id="ref-konstantopoulos2019statistically" class="csl-entry">
-Konstantopoulos, S., &amp; Hedges, L. V. (2019). Statistically analyzing effect sizes: Fixed-and random-effects models. In H. Cooper Harris &amp; J. C. Valentine (Eds.), <em>The handbook of research synthesis and meta-analysis</em> (3rd Edition, pp. 246–280). Russell Sage Foundation.
+Konstantopoulos, S., &amp; Hedges, L. V. (2019). Statistically analyzing effect sizes: Fixed-and random-effects models. In H. Cooper, L. V. Hedges, &amp; J. C. Valentine (Eds.), <em>The handbook of research synthesis and meta-analysis</em> (3rd Edition, pp. 246–280). Russell Sage Foundation.
 </div>
 <div id="ref-Moeyaert_Ferron_Beretvas_VandenNoortgate_2014" class="csl-entry">
 Moeyaert, M., Ferron, J. M., Beretvas, S. N., &amp; Van den Noortgate, W. (2014). From a single-level analysis to a multilevel analysis of single-case experimental designs. <em>Journal of School Psychology</em>, <em>52</em>(2), 191–211. <a href="https://doi.org/10.1016/j.jsp.2013.11.003">https://doi.org/10.1016/j.jsp.2013.11.003</a>

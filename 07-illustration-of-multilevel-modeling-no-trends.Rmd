@@ -7,6 +7,7 @@ library(kableExtra)
 ```
 
 # Illustration of Multilevel Modeling When No Trends Are Assumed {#MLM-NoTrend}
+\chaptermark{Illustration of MLM Without Trends}
 
 _This chapter illustrates the application of multilevel models in contexts where one does not expect trends in either baseline or treatment phases. We provide instruction for using the MultiSCED app to specify and estimate the multilevel model to synthesize results from a set of single-case studies. We offer step-by-step instructions using data from four multiple baseline design studies examining methods to improve use of behavior-specific praise in classroom contexts._ 
 
@@ -216,9 +217,9 @@ table_7.1 <- data.frame(
 knitr::kable(table_7.1, 
              align=c("l","c","c","c","c"),
              col.names = c("", "", "", "LL", "UL"),
-             caption = "Estimates Obtained Across Model Variations") %>%
-  # kable_classic() %>% 
-  kable_paper("striped") %>%
+             caption = "Estimates Obtained Across Model Variations",
+             booktabs = TRUE) %>%
+  kable_styling(latex_options = c("scale_down")) %>% 
   add_header_above(c("Model" = 1, "Effect Estimate" = 1, "SE" = 1, "95% CI" = 2))
 ```
 

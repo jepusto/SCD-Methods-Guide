@@ -7,6 +7,7 @@ library(kableExtra)
 ```
 
 # Illustration of Design-Comparable Effect Sizes When Assuming Trends in Baseline and Different Trends in Treatment {#illustrate-D-CES-Btrends}
+\chaptermark{Illustration of D-CES With Baseline Trends}
 
 _Chapter 5 illustrates the computation of design-comparable effect sizes in contexts where one assumes time trends in baseline and that the treatment will lead to changes in both the level and slope of the time trends. We demonstrate the calculations using data from a multiple probe study, a multiple baseline study, and a group study. For the single-case studies, we provide step-by-step instructions for selecting design-comparable effect sizes and estimating them using the _scdhlm_ app. We also discuss estimating the effect size for the group study and synthesizing the effect sizes across the group and single-case studies._
 
@@ -225,8 +226,9 @@ knitr::kable(table_5.1,
                            "Standard Error (B)",
                            "Inverse-variance Weight (%) (C)"),
              caption = "Fixed Effect Meta-Analysis Calculations for 
-             Example Writing Intervention Studies") %>%
-  kable_classic() %>% 
+             Example Writing Intervention Studies",
+             booktabs = TRUE) %>%
+  kable_styling(latex_options = c("scale_down")) %>%  
   pack_rows("Model 6", 1, 4) %>%
   pack_rows("Model 5", 5, 8)
 ```

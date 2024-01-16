@@ -1,6 +1,7 @@
 
 
 # Illustration of Design-Comparable Effect Sizes When Assuming Only Trends in The Treatment Phases {#illustrate-D-CES-Ttrends}
+\chaptermark{Illustration of D-CES With Treatment Trends}
 
 _This chapter illustrates the computation of design-comparable effect sizes in contexts where one assumes trends in the treatment phase only, with no trends in the baseline phase. Using data from two multiple baseline studies and a group study, we provide step-by-step instructions for selecting design-comparable effect sizes for the single-case studies and estimating them using the _scdhlm_ app. We also briefly discuss estimating the effect size for the group study and synthesizing the effect sizes across the single-case and group and design studies._
 
@@ -202,31 +203,25 @@ Column C of Table \@ref(tab:ES-est-chapter4) reports the inverse-variance weight
 \caption{(\#tab:ES-est-chapter4)Fixed Effect Meta-Analysis Calculations for 
              Example Sleep Intervention Studies}
 \centering
-\begin{tabular}[t]{l|c|c|c}
-\hline
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{lccc}
+\toprule
 Study & Effect Size Estimate (A) & Standard Error (B) & Inverse-variance Weight (\%) (C)\\
-\hline
+\midrule
+\addlinespace[0.3em]
 \multicolumn{4}{l}{\textbf{Model 4}}\\
-\hline
 \hspace{1em}Gunning \& Espie (2003) & -1.12 & 0.34 & 8.65 (29.1)\\
-\hline
 \hspace{1em}Delemere \& Dounavi (2018) & -0.70 & 0.33 & 9.18 (30.9)\\
-\hline
 \hspace{1em}Montgomery et al. (2004) & -1.52 & 0.29 & 11.89 (40.0)\\
-\hline
 \hspace{1em}Fixed effect meta-analysis & -1.15 & 0.18 & 29.72 (100)\\
-\hline
+\addlinespace[0.3em]
 \multicolumn{4}{l}{\textbf{Model 3}}\\
-\hline
 \hspace{1em}Gunning \& Espie (2003) & -1.10 & 0.17 & 34.60 (58.4)\\
-\hline
 \hspace{1em}Delemere \& Dounavi (2018) & -0.91 & 0.28 & 12.76 (21.5)\\
-\hline
 \hspace{1em}Montgomery et al. (2004) & -1.52 & 0.29 & 11.89 (20.1)\\
-\hline
 \hspace{1em}Fixed effect meta-analysis & -1.14 & 0.13 & 59.25 (100)\\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabular}}
 \end{table}
 
 The bottom panel of Table \@ref(tab:ES-est-chapter4) reports the same calculations but using the design-comparable effect size estimates based on Model 3 for the two SCD studies. The most notable difference is that Model 3 more precisely estimates the design-comparable effect size for the @gunning2003Psychological, resulting in more weight ($58\%$) assigned in the fixed effect meta-analysis. For Model 3, the overall average effect size is nearly identical to that obtained for Model 4 (-1.14), but the substantially smaller Model 3 design-comparable effect size for the @gunning2003Psychological study results in an SE of 0.13 and $95\%$ CI [-1.40, -0.89]. 

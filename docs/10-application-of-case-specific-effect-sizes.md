@@ -1,15 +1,18 @@
 
 
 # Application of Case-Specific Effect Sizes {#app-case-specific-es}
+\chaptermark{Application of Case-Specific ES}
 
 _This chapter illustrates the application of case-specific effect sizes in the synthesis of single-case studies. We provide step-by-step instructions to demonstrate the selection of the case-specific effect sizes that initially appear appropriate for the synthesis context. We then illustrate the computation of each of those effect sizes using the Single-Case Effect Size Calculator and compare the resulting effect sizes to our visual analysis. Finally, for the effect sizes that align with our visual analysis, we provide a demonstration of synthesis using meta-analytic models._
 
 In this chapter, we illustrate the calculation and use of case-specific effect sizes in the synthesis of single-case studies. Case-specific effect sizes provide a measure of effect for each participant from each study on a common scale. Thus, these methods are particularly useful when researchers are interested in understanding variation (heterogeneity) of treatment effects across individual participants and where the outcome measurement procedures vary substantially across the included participants and studies. We present an example scenario where we want to synthesize evidence from several single-case design (SCD) studies that examine the effects of augmentative communication interventions (AAC; e.g., sign language, picture exchange communication systems, speech-generating devices) on increasing the independent requests (mands) of individuals with developmental and intellectual disabilities. For purposes of illustration, we selected three studies from the meta-analysis by [@Ganz_et_al_2023].
 
 The first study, @Byiers2014, used a reversal design to investigate the effects of an AAC intervention on increasing three adult participants' use of a switch device to communicate their desire for preferred items or activities while decreasing incidents of inappropriate behavior hypothesized to function as a request. For simplicity, we created a single outcome by combining both outcomes using this formula: 
-$$
+\begin{equation}
+(\#eq:Byiers-out-formula)
 \% \ switch \ activated \ responses = \frac{appropriate \ responses \ per \ minute}{inappropriate \ + \ appropriate \ responses \ per \ minute}\times 100
-$$
+\end{equation}
+
 Participants received between 4 and 10 five-minute intervention sessions per day, with Jen and Tammy participating in sessions across three days and Rose completing all sessions in two days. The intervention sessions focused on switch training, which was "considered complete when the participant produced the response independently within 1 min on five consecutive opportunities," [@Byiers2014, p. 344]. Therefore, we defined the outcome goal as use of the communication switch device on 100$\%$ of opportunities per session. 
 
 The second study by @Casey1978 included four student participants and used a multiple baseline design to examine AAC intervention effects on increasing the mean proportion of signed target requests in a classroom setting while simultaneously reducing the proportion of intervals engaged in problem behavior. The manual signing intervention was implemented by all classroom staff (one teacher, three aides) across the school day. The research team conducted observations of the participants during the first 30 minutes each morning at school across five weeks. Each participant's targeted behaviors were measured across a five-minute period using partial interval recording methods, in which observers checked a box next to any or all of the target behaviors that they observed at any point within a 10-second interval. The study goal was to reduce the proportion of intervals that each student engaged in problem behavior to zero (0) and increase positive communication skills to 1.0. We combined these outcomes to create a new outcome measure representing the proportion of communicative opportunities with signed requests. 
@@ -163,7 +166,7 @@ The _Multiple-Case Effect Size Calculator_ also provides auto-generated R code, 
 [^SyntaxNote]: To do this using the popular RStudio program, click on the green plus button on the top left of the RStudio interface, select R script, and then paste the auto-generated code into the blank R script.
 
 \begin{figure}
-\includegraphics[width=0.75\linewidth]{images/multiseries_Rsyntax} \caption{Generated Syntax for R Script}(\#fig:multipleseries-syntax)
+\includegraphics[width=1\linewidth]{images/multiseries_Rsyntax} \caption{Generated Syntax for R Script}(\#fig:multipleseries-syntax)
 \end{figure}
 
 ## Examining the Alignment of the Case-Specific Effect Sizes with our Visual Analysis
@@ -206,40 +209,43 @@ PoGO~M~ effect estimates for all cases across all three studies are reported in 
 
 The @Casey1978 PoGO~M$\uparrow$~ effect estimates are also shown in Table \@ref(tab:case-es-est). Lori had the largest PoGO~M~ effect size of 72.0 with an SE of 13.3, followed by Freddie with a PoGO~M~ effect size of 65.3, SE of 10.1, and Eric with a PoGO~M~ effect size of 55.4 and SE of 12.9. Although Tommy had the largest treatment phase mean ($\beta = 0.87$), he also had the highest baseline phase mean ($\alpha = 0.83$). As a result, and consistent with the graphed observations in Figure \@ref(fig:Casey-1978), Tommy's change in level between baseline and treatment was much smaller in magnitude than any other participant, and the smaller effect was noted in the effect estimate of 26.2 with an SE of 21.6. When combined with the results of visual analysis indicating little data overlap between phases for Lori and Freddie, the larger difference in phase means aligned with their larger PoGO~M~ values.
 
-\begin{table}
+
+\begin{landscape}\begin{table}
 
 \caption{(\#tab:case-es-est)Case-Specific Effect Size Estimation Results Across Studies}
 \centering
-\begin{tabular}[t]{l|l|c|c|c|c|c|c|c|c}
-\hline
-\multicolumn{2}{c|}{ } & \multicolumn{2}{c|}{NAP} & \multicolumn{2}{c|}{SMD\textasciitilde{}W\textasciitilde{}} & \multicolumn{2}{c|}{LRRi} & \multicolumn{2}{c}{PoGO\textasciitilde{}M\textasciitilde{}} \\
-\cline{3-4} \cline{5-6} \cline{7-8} \cline{9-10}
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llcccccccc}
+\toprule
+\multicolumn{2}{c}{ } & \multicolumn{2}{c}{NAP} & \multicolumn{2}{c}{SMD\textasciitilde{}W\textasciitilde{}} & \multicolumn{2}{c}{LRRi} & \multicolumn{2}{c}{PoGO\textasciitilde{}M\textasciitilde{}} \\
+\cmidrule(l{3pt}r{3pt}){3-4} \cmidrule(l{3pt}r{3pt}){5-6} \cmidrule(l{3pt}r{3pt}){7-8} \cmidrule(l{3pt}r{3pt}){9-10}
 Study & Case & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI\\
-\hline
- & Jen & .94 (.06) & [0.82, 1.06] & .99 (.37) & [0.27, 1.71] & .58 (.27) & [0.05, 1.10] & 34.52 (11.19) & [12.58, 56.43]\\
-\cline{2-10}
- & Tammy & .92 (.07) & [0.78, 1.05] & 1.27 (.39) & [0.50, 2.05] & .82 (.32) & [0.19, 1.46] & 74.29 (23.12) & [28.97, 119.61]\\
-\cline{2-10}
-\multirow[t]{-3}{*}{\raggedright\arraybackslash Byiers et al., 2014} & Rose & 1 (.04) & [0.92, 1.08] & 9.43 (2.2) & [5.11, 13.74] & 2.67 (.56) & [1.57, 3.77] & 64.81 (5.09) & [54.83, 74.78]\\
-\cline{1-10}
- & Eric & .91 (.05) & [0.81, 1.02] & 1.85 (.56) & [0.75, 2.96] & .53 (.13) & [0.28, 0.78] & 55.44 (12.89) & [30.18, 80.71]\\
-\cline{2-10}
- & Freddie & .97 (.03) & [0.90, 1.03] & 2.81 (.72) & [1.39, 4.23] & .69 (.12) & [0.47, 0.92] & 64.25 (10.08) & [44.49, 84.01]\\
-\cline{2-10}
- & Lori & .95 (.04) & [0.87, 1.02] & 2.29 (.56) & [1.19, 3.39] & .64 (.11) & [0.42, 0.87] & 71.97 (13.33) & [45.84, 98.09]\\
-\cline{2-10}
-\multirow[t]{-4}{*}{\raggedright\arraybackslash Casey, 1978} & Tommy & .75 (.10) & [0.55, 0.95] & .60 (.51) & [-0.41, 1.61] & .05 (.04) & [-0.03, 0.14] & 26.21 (21.57) & [-16.06, 68.48]\\
-\cline{1-10}
- & Juan & 1 (.02) & [0.97, 1.03] & 6.02 (1.65) & [2.80, 9.24] & 1.87 (.30) & [1.27, 2.47] & 36.17 (6.11) & [24.19, 48.15]\\
-\cline{2-10}
- & Kyle & 1 (.05) & [0.90, 1.10] & 7.56 (2.29) & [3.08, 12.05] & 1.67 (.23) & [1.22, 2.12] & 88.0 (13.13) & [62.27, 113.73]\\
-\cline{2-10}
- & Parker & .92 (.11) & [0.71, 1.12] & Inf &  & 1.22 (.20) & [0.84, 1.61] & 58.33 (15.70) & [27.56, 89.11]\\
-\cline{2-10}
-\multirow[t]{-4}{*}{\raggedright\arraybackslash Strasberger \& Ferreri, 2014} & Thomas & .97 (.04) & [0.90, 1.04] & 6.27 (1.95) & [2.45, 10.10] & 2.20 (.50) & [1.23, 3.18] & 40.30 (7.46) & [25.67, 54.92]\\
-\hline
-\end{tabular}
+\midrule
+ & Jen & .94 (.06) & {}[0.82, 1.06] & .99 (.37) & {}[0.27, 1.71] & .58 (.27) & {}[0.05, 1.10] & 34.52 (11.19) & {}[12.58, 56.43]\\
+\cmidrule{2-10}
+ & Tammy & .92 (.07) & {}[0.78, 1.05] & 1.27 (.39) & {}[0.50, 2.05] & .82 (.32) & {}[0.19, 1.46] & 74.29 (23.12) & {}[28.97, 119.61]\\
+\cmidrule{2-10}
+\multirow[t]{-3}{*}{\raggedright\arraybackslash Byiers et al., 2014} & Rose & 1 (.04) & {}[0.92, 1.08] & 9.43 (2.2) & {}[5.11, 13.74] & 2.67 (.56) & {}[1.57, 3.77] & 64.81 (5.09) & {}[54.83, 74.78]\\
+\cmidrule{1-10}
+ & Eric & .91 (.05) & {}[0.81, 1.02] & 1.85 (.56) & {}[0.75, 2.96] & .53 (.13) & {}[0.28, 0.78] & 55.44 (12.89) & {}[30.18, 80.71]\\
+\cmidrule{2-10}
+ & Freddie & .97 (.03) & {}[0.90, 1.03] & 2.81 (.72) & {}[1.39, 4.23] & .69 (.12) & {}[0.47, 0.92] & 64.25 (10.08) & {}[44.49, 84.01]\\
+\cmidrule{2-10}
+ & Lori & .95 (.04) & {}[0.87, 1.02] & 2.29 (.56) & {}[1.19, 3.39] & .64 (.11) & {}[0.42, 0.87] & 71.97 (13.33) & {}[45.84, 98.09]\\
+\cmidrule{2-10}
+\multirow[t]{-4}{*}{\raggedright\arraybackslash Casey, 1978} & Tommy & .75 (.10) & {}[0.55, 0.95] & .60 (.51) & {}[-0.41, 1.61] & .05 (.04) & {}[-0.03, 0.14] & 26.21 (21.57) & {}[-16.06, 68.48]\\
+\cmidrule{1-10}
+ & Juan & 1 (.02) & {}[0.97, 1.03] & 6.02 (1.65) & {}[2.80, 9.24] & 1.87 (.30) & {}[1.27, 2.47] & 36.17 (6.11) & {}[24.19, 48.15]\\
+\cmidrule{2-10}
+ & Kyle & 1 (.05) & {}[0.90, 1.10] & 7.56 (2.29) & {}[3.08, 12.05] & 1.67 (.23) & {}[1.22, 2.12] & 88.0 (13.13) & {}[62.27, 113.73]\\
+\cmidrule{2-10}
+ & Parker & .92 (.11) & {}[0.71, 1.12] & Inf &  & 1.22 (.20) & {}[0.84, 1.61] & 58.33 (15.70) & {}[27.56, 89.11]\\
+\cmidrule{2-10}
+\multirow[t]{-4}{*}{\raggedright\arraybackslash Strasberger \& Ferreri, 2014} & Thomas & .97 (.04) & {}[0.90, 1.04] & 6.27 (1.95) & {}[2.45, 10.10] & 2.20 (.50) & {}[1.23, 3.18] & 40.30 (7.46) & {}[25.67, 54.92]\\
+\bottomrule
+\end{tabular}}
 \end{table}
+\end{landscape}
 
 ## Averaging the Case-Specific Effect Sizes
 
@@ -255,21 +261,22 @@ Table \@ref(tab:FE-study-avg) reports the average effect size for each study and
 
 \caption{(\#tab:FE-study-avg)Study-Level Average and Overall Average Effect Sizes Across Studies Based on Fixed Effects Models with Equal Weights}
 \centering
-\begin{tabular}[t]{l|l|c|c|c|c|c|c|c|c}
-\hline
-\multicolumn{2}{c|}{ } & \multicolumn{2}{c|}{NAP} & \multicolumn{2}{c|}{SMD\textasciitilde{}W\textasciitilde{}} & \multicolumn{2}{c|}{LRRi} & \multicolumn{2}{c}{PoGO\textasciitilde{}M\textasciitilde{}} \\
-\cline{3-4} \cline{5-6} \cline{7-8} \cline{9-10}
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llcccccccc}
+\toprule
+\multicolumn{2}{c}{ } & \multicolumn{2}{c}{NAP} & \multicolumn{2}{c}{SMD\textasciitilde{}W\textasciitilde{}} & \multicolumn{2}{c}{LRRi} & \multicolumn{2}{c}{PoGO\textasciitilde{}M\textasciitilde{}} \\
+\cmidrule(l{3pt}r{3pt}){3-4} \cmidrule(l{3pt}r{3pt}){5-6} \cmidrule(l{3pt}r{3pt}){7-8} \cmidrule(l{3pt}r{3pt}){9-10}
 Study & N (Cases) & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI\\
-\hline
-Byiers et al. (2014) & 3 & .95 (.03) & [.89, 1.02] & 3.90 (0.76) & [2.42, 5.38] & 1.36 (0.23) & [0.90, 1.82] & 57.9 (8.7) & [40.8, 75.0]\\
-\cline{1-10}
-Casey (1978) & 4 & .89 (.03) & [.83, .96] & 1.89 (0.30) & [1.30, 2.47] & 0.48 (0.05) & [0.38, 0.58] & 54.5 (7.5) & [39.7, 69.3]\\
-\cline{1-10}
-Strasberger \& Ferreri (2014) & 3 & .97 (.03) & [.91, 1.03] & 5.36 (0.88) & [3.65, 7.08] & 1.74 (0.16) & [1.41, 2.06] & 55.7 (5.7) & [44.6, 66.8]\\
-\cline{1-10}
-Overall Average & 11 & .94 (.02) & [.90, .97] & 3.70 (0.39) & [2.93, 4.47] & 1.18 (0.09) & [1.00, 1.35] & 55.8 (4.2) & [55.8, 64.2]\\
-\hline
-\end{tabular}
+\midrule
+Byiers et al. (2014) & 3 & .95 (.03) & {}[.89, 1.02] & 3.90 (0.76) & {}[2.42, 5.38] & 1.36 (0.23) & {}[0.90, 1.82] & 57.9 (8.7) & {}[40.8, 75.0]\\
+\cmidrule{1-10}
+Casey (1978) & 4 & .89 (.03) & {}[.83, .96] & 1.89 (0.30) & {}[1.30, 2.47] & 0.48 (0.05) & {}[0.38, 0.58] & 54.5 (7.5) & {}[39.7, 69.3]\\
+\cmidrule{1-10}
+Strasberger \& Ferreri (2014) & 3 & .97 (.03) & {}[.91, 1.03] & 5.36 (0.88) & {}[3.65, 7.08] & 1.74 (0.16) & {}[1.41, 2.06] & 55.7 (5.7) & {}[44.6, 66.8]\\
+\cmidrule{1-10}
+Overall Average & 11 & .94 (.02) & {}[.90, .97] & 3.70 (0.39) & {}[2.93, 4.47] & 1.18 (0.09) & {}[1.00, 1.35] & 55.8 (4.2) & {}[55.8, 64.2]\\
+\bottomrule
+\end{tabular}}
 \end{table}
 
 Examining the results across effect size metrics, the effect size indices paint somewhat different pictures regarding the strength of the average treatment effect and the degree of variation from study to study. Looking at the overall average across participants, the NAP effect size is near the upper boundary of the scale, and the SMD~W~ and LRRi effect size both suggest strong effects. In contrast, the average PoGO~M~ effect size of 55.8 suggests a more moderate effect of moving outcomes less than 60% of the way towards goal levels. Furthermore, the average NAP values are quite similar across studies, as are the study-level average PoGO~M~ effect sizes. In contrast, the study-level SWM SMD~W~ and LRRi values suggest that the effects might be more variable across the three studies.
@@ -294,23 +301,24 @@ Finally, we also report prediction intervals as a further method of describing t
 
 \caption{(\#tab:RE-study-RVE)Overall Average Effect Sizes and Heterogeneity Estimates Based on Hierarchical Random Effects Models with Robust Variance Estimation}
 \centering
-\begin{tabular}[t]{l|l|c|c|c|c|c|c|c}
-\hline
-\multicolumn{1}{c|}{ } & \multicolumn{2}{c|}{NAP (equal weighting)} & \multicolumn{2}{c|}{SMD\textasciitilde{}W\textasciitilde{} (equal weighting)} & \multicolumn{2}{c|}{LRRi (inverse-variance weighting)} & \multicolumn{2}{c}{PoGO\textasciitilde{}M\textasciitilde{} (equal weighting)} \\
-\cline{2-3} \cline{4-5} \cline{6-7} \cline{8-9}
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llccccccc}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{2}{c}{NAP (equal weighting)} & \multicolumn{2}{c}{SMD\textasciitilde{}W\textasciitilde{} (equal weighting)} & \multicolumn{2}{c}{LRRi (inverse-variance weighting)} & \multicolumn{2}{c}{PoGO\textasciitilde{}M\textasciitilde{} (equal weighting)} \\
+\cmidrule(l{3pt}r{3pt}){2-3} \cmidrule(l{3pt}r{3pt}){4-5} \cmidrule(l{3pt}r{3pt}){6-7} \cmidrule(l{3pt}r{3pt}){8-9}
 Parameter & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI & Est. (SE) & 95\% CI\\
-\hline
-Overall average effect size & .94 (.03) & [.82, 1.05] & 3.70 (1.14) & [-1.44, 8.83] & 1.06 (0.36) & [-.50, 2.61] & 55.8 (1.1) & [51.1, 60.6]\\
-\cline{1-9}
+\midrule
+Overall average effect size & .94 (.03) & {}[.82, 1.05] & 3.70 (1.14) & {}[-1.44, 8.83] & 1.06 (0.36) & {}[-.50, 2.61] & 55.8 (1.1) & {}[51.1, 60.6]\\
+\cmidrule{1-9}
 Between-study SD (\$\textbackslash{}tau\$) & .02 &  & .88 &  & 0.56 &  & .00 & \\
-\cline{1-9}
+\cmidrule{1-9}
 Within-study SD (\$\textbackslash{}omega\$) & .00 &  & 2.01 &  & 0.36 &  & 14.1 & \\
-\cline{1-9}
+\cmidrule{1-9}
 Total heterogeneity \$\textbackslash{}Big(\textbackslash{}sqrt\{\textbackslash{}tau\textasciicircum{}2 + \textbackslash{}omega\textasciicircum{}2\}\textbackslash{}Big)\$ & .02 &  & 2.19 &  & 0.67 &  & 14.1 & \\
-\cline{1-9}
-80\% Prediction Interval & [.88, 1.00] &  & [-.62, 8.02] &  & [-.38, 2.50 &  & [30.6, 81.1 & \\
-\hline
-\end{tabular}
+\cmidrule{1-9}
+80\% Prediction Interval & {}[.88, 1.00] &  & {}[-.62, 8.02] &  & {}[-.38, 2.50 &  & {}[30.6, 81.1 & \\
+\bottomrule
+\end{tabular}}
 \end{table}
 
 Applying the hierarchical random effects model to data from a small number of studies will tend to produce estimates of average effects and heterogeneity SDs that are imprecisely estimated and, therefore, must be interpreted cautiously. Although our example dataset includes just three studies and 11 cases, we will report and interpret the model estimates to illustrate the unique insights to be gleaned from the random effects approach. However, we caution readers not to draw any substantive conclusions about the effects of AAC interventions from this small illustration.

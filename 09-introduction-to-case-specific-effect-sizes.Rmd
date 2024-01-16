@@ -7,6 +7,7 @@ library(kableExtra)
 ```
 
 # Introduction to Case-Specific Effect Sizes {#intro-case-specific-es}
+\chaptermark{Intro to Case-Specific ES}
 
 _This chapter provides background on case-specific effect sizes and describes when this approach is useful in the synthesis of single-case research. We discuss different case-specific effect size metrics, their underlying assumptions, and when it is appropriate to use them. We conclude this chapter by providing a set of decision rules for meta-analysts to use when selecting among the various available case-specific effect sizes._
 
@@ -118,7 +119,7 @@ For the approaches still under consideration, the meta-analyst should evaluate t
 
 If any of these effect size approaches result in estimates conflicting with visual analysis, we suggest that the approach and its results be ruled out for consideration in the overall synthesis. However, it would be beneficial for future researchers to have access to such computations and results. Thus, we encourage researchers to be transparent and make the effect sizes available in supplemental materials (or in an archive of replication materials) so that readers can assess for themselves the lack of alignment and decision to drop the index. At this point, a meta-analyst is left with only the effect size estimation approaches that align reasonably well to visual analysis. Figure \@ref(fig:CaseSpecificES-flowchart) depicts a set of decision rules that correspond with these recommendations.
 
-```{r CaseSpecificES-flowchart, out.width = "60%", fig.cap = "Flow Chart for the Selection of Case-Specific Effect Size(s)"}
+```{r CaseSpecificES-flowchart, out.width = "80%", fig.cap = "Flow Chart for the Selection of Case-Specific Effect Size(s)"}
 # Figure 9.4
 knitr::include_graphics("images/flowchart_CaseSpecificES.jpeg")
 ```

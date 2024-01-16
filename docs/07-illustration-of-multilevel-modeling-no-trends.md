@@ -1,6 +1,7 @@
 
 
 # Illustration of Multilevel Modeling When No Trends Are Assumed {#MLM-NoTrend}
+\chaptermark{Illustration of MLM Without Trends}
 
 _This chapter illustrates the application of multilevel models in contexts where one does not expect trends in either baseline or treatment phases. We provide instruction for using the MultiSCED app to specify and estimate the multilevel model to synthesize results from a set of single-case studies. We offer step-by-step instructions using data from four multiple baseline design studies examining methods to improve use of behavior-specific praise in classroom contexts._ 
 
@@ -187,19 +188,18 @@ Although the MultiSCED app provides the overall results, its ability to estimate
 
 \caption{(\#tab:ES-est-chapter7)Estimates Obtained Across Model Variations}
 \centering
-\begin{tabular}[t]{l|c|c|c|c}
-\hline
-\multicolumn{1}{c|}{Model} & \multicolumn{1}{c|}{Effect Estimate} & \multicolumn{1}{c|}{SE} & \multicolumn{2}{c}{95\% CI} \\
-\cline{1-1} \cline{2-2} \cline{3-3} \cline{4-5}
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{lcccc}
+\toprule
+\multicolumn{1}{c}{Model} & \multicolumn{1}{c}{Effect Estimate} & \multicolumn{1}{c}{SE} & \multicolumn{2}{c}{95\% CI} \\
+\cmidrule(l{3pt}r{3pt}){1-1} \cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-5}
  &  &  & LL & UL\\
-\hline
+\midrule
 Original specification & 7.95 & 3.41 & -2.92 & 18.83\\
-\hline
 Within-case heterogeneity + autocorrelation & 7.94 & 3.40 & -2.93 & 18.81\\
-\hline
 Within-case heterogeneity + autocorrelation + diagonal covariance matrices & 7.93 & 3.38 & -2.87 & 18.73\\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabular}}
 \end{table}
 
 Generally, we reach the same conclusion—the point estimate of the average treatment effect is similar across models, and we cannot rule out the possibility that the overall average effect is zero. Research shows treatment effect estimates and inferences from LMMs of SCD data are relatively robust to violations of distributional assumptions, particularly when they incorporate Kenward-Roger-based small sample size adjustments [@Joo_et_al_2019; @Moeyaert_Ugille_Ferron_Beretvas_VandenNoortgate_2013; @Owens_Ferron_2012]. Therefore, we anticipated similarity in results across modeling options. In some contexts, however, the assumption violations will be more severe than what we encountered here. Relevant directions for future research include: (a) determining the point at which violations are severe enough and sample sizes large enough to warrant movement from LMMs to GLMMs, (b) identifying the most appropriate methods for specifying and estimating GLMMs, and (c) producing easy-to-use software to make GLMMs more readily accessible to single-case researchers. 

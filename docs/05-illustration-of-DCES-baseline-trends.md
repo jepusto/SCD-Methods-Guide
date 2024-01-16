@@ -1,6 +1,7 @@
 
 
 # Illustration of Design-Comparable Effect Sizes When Assuming Trends in Baseline and Different Trends in Treatment {#illustrate-D-CES-Btrends}
+\chaptermark{Illustration of D-CES With Baseline Trends}
 
 _Chapter 5 illustrates the computation of design-comparable effect sizes in contexts where one assumes time trends in baseline and that the treatment will lead to changes in both the level and slope of the time trends. We demonstrate the calculations using data from a multiple probe study, a multiple baseline study, and a group study. For the single-case studies, we provide step-by-step instructions for selecting design-comparable effect sizes and estimating them using the _scdhlm_ app. We also discuss estimating the effect size for the group study and synthesizing the effect sizes across the group and single-case studies._
 
@@ -193,31 +194,25 @@ Column C of Table \@ref(tab:ES-est-chapter5) reports the inverse variance weight
 \caption{(\#tab:ES-est-chapter5)Fixed Effect Meta-Analysis Calculations for 
              Example Writing Intervention Studies}
 \centering
-\begin{tabular}[t]{l|c|c|c}
-\hline
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{lccc}
+\toprule
 Study & Effect Size Estimate (A) & Standard Error (B) & Inverse-variance Weight (\%) (C)\\
-\hline
+\midrule
+\addlinespace[0.3em]
 \multicolumn{4}{l}{\textbf{Model 6}}\\
-\hline
 \hspace{1em}Datchuk (2016) & 1.48 & 0.98 & 1.04 (4.4)\\
-\hline
 \hspace{1em}Rodgers et al. (2020) & 0.76 & 0.74 & 1.82 (7.8)\\
-\hline
 \hspace{1em}Hebert et al. (2018) & 0.62 & 0.22 & 20.66 (87.8)\\
-\hline
 \hspace{1em}Fixed effect meta-analysis & 0.67 & 0.21 & 25.53 (100)\\
-\hline
+\addlinespace[0.3em]
 \multicolumn{4}{l}{\textbf{Model 5}}\\
-\hline
 \hspace{1em}Datchuk (2016) & 1.41 & 0.46 & 2.44 (8.3)\\
-\hline
 \hspace{1em}Rodgers et al. (2020) & 0.46 & 0.40 & 6.25 (21.3)\\
-\hline
 \hspace{1em}Hebert et al. (2018) & 0.62 & 0.22 & 20.66 (70.4)\\
-\hline
 \hspace{1em}Fixed effect meta-analysis & 0.65 & 0.18 & 29.35 (100)\\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabular}}
 \end{table}
 
 The bottom panel of Table \@ref(tab:ES-est-chapter5) reports the same calculations using the Model 5 design-comparable effect size estimates for the two SCD studies. For both @datchuk2016Writing and @rodgers2021Effects, Model 5 effect sizes appear to be more precisely estimated and therefore receive more weight in the fixed effect meta-analysis ($8\%$ and $21\%$, respectively). The overall average effect size based on Model 5 is quite like the average effect size based on Model 6, but is somewhat more precisely estimated, with an SE of 0.18 and a $95\%$ CI [0.29, 1.01], due to the smaller SEs in the SCD studies. 

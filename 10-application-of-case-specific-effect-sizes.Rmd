@@ -7,15 +7,18 @@ library(kableExtra)
 ```
 
 # Application of Case-Specific Effect Sizes {#app-case-specific-es}
+\chaptermark{Application of Case-Specific ES}
 
 _This chapter illustrates the application of case-specific effect sizes in the synthesis of single-case studies. We provide step-by-step instructions to demonstrate the selection of the case-specific effect sizes that initially appear appropriate for the synthesis context. We then illustrate the computation of each of those effect sizes using the Single-Case Effect Size Calculator and compare the resulting effect sizes to our visual analysis. Finally, for the effect sizes that align with our visual analysis, we provide a demonstration of synthesis using meta-analytic models._
 
 In this chapter, we illustrate the calculation and use of case-specific effect sizes in the synthesis of single-case studies. Case-specific effect sizes provide a measure of effect for each participant from each study on a common scale. Thus, these methods are particularly useful when researchers are interested in understanding variation (heterogeneity) of treatment effects across individual participants and where the outcome measurement procedures vary substantially across the included participants and studies. We present an example scenario where we want to synthesize evidence from several single-case design (SCD) studies that examine the effects of augmentative communication interventions (AAC; e.g., sign language, picture exchange communication systems, speech-generating devices) on increasing the independent requests (mands) of individuals with developmental and intellectual disabilities. For purposes of illustration, we selected three studies from the meta-analysis by [@Ganz_et_al_2023].
 
 The first study, @Byiers2014, used a reversal design to investigate the effects of an AAC intervention on increasing three adult participants' use of a switch device to communicate their desire for preferred items or activities while decreasing incidents of inappropriate behavior hypothesized to function as a request. For simplicity, we created a single outcome by combining both outcomes using this formula: 
-$$
+\begin{equation}
+(\#eq:Byiers-out-formula)
 \% \ switch \ activated \ responses = \frac{appropriate \ responses \ per \ minute}{inappropriate \ + \ appropriate \ responses \ per \ minute}\times 100
-$$
+\end{equation}
+
 Participants received between 4 and 10 five-minute intervention sessions per day, with Jen and Tammy participating in sessions across three days and Rose completing all sessions in two days. The intervention sessions focused on switch training, which was "considered complete when the participant produced the response independently within 1 min on five consecutive opportunities," [@Byiers2014, p. 344]. Therefore, we defined the outcome goal as use of the communication switch device on 100$\%$ of opportunities per session. 
 
 The second study by @Casey1978 included four student participants and used a multiple baseline design to examine AAC intervention effects on increasing the mean proportion of signed target requests in a classroom setting while simultaneously reducing the proportion of intervals engaged in problem behavior. The manual signing intervention was implemented by all classroom staff (one teacher, three aides) across the school day. The research team conducted observations of the participants during the first 30 minutes each morning at school across five weeks. Each participant's targeted behaviors were measured across a five-minute period using partial interval recording methods, in which observers checked a box next to any or all of the target behaviors that they observed at any point within a 10-second interval. The study goal was to reduce the proportion of intervals that each student engaged in problem behavior to zero (0) and increase positive communication skills to 1.0. We combined these outcomes to create a new outcome measure representing the proportion of communicative opportunities with signed requests. 
@@ -181,7 +184,7 @@ The _Multiple-Case Effect Size Calculator_ also provides auto-generated R code, 
 
 [^SyntaxNote]: To do this using the popular RStudio program, click on the green plus button on the top left of the RStudio interface, select R script, and then paste the auto-generated code into the blank R script.
 
-```{r multipleseries-syntax, out.width = "75%", fig.cap = "Generated Syntax for R Script"}
+```{r multipleseries-syntax, out.width = "100%", fig.cap = "Generated Syntax for R Script"}
 # Figure 10.14
 knitr::include_graphics("images/multiseries_Rsyntax.png")
 ```
@@ -261,11 +264,12 @@ knitr::kable(table_caseSpec_res,
                            "Est. (SE)", "95% CI",
                            "Est. (SE)", "95% CI",
                            "Est. (SE)", "95% CI"),
-             caption = "Case-Specific Effect Size Estimation Results Across Studies") %>%
-  # kable_classic() %>% 
-  kable_paper("striped") %>%
+             caption = "Case-Specific Effect Size Estimation Results Across Studies",
+             booktabs = TRUE) %>%
+  kable_styling(latex_options = c("scale_down")) %>% 
   collapse_rows(columns = 1, valign = "top") %>% 
-  add_header_above(c(" " = 2, "NAP" = 2, "SMD~W~" = 2, "LRRi" = 2, "PoGO~M~" = 2))
+  add_header_above(c(" " = 2, "NAP" = 2, "SMD~W~" = 2, "LRRi" = 2, "PoGO~M~" = 2)) %>% 
+  landscape()
 ```
 
 ## Averaging the Case-Specific Effect Sizes
@@ -296,8 +300,9 @@ knitr::kable(table_FE_study_avg,
              align = c("l", "l", rep("c", 8)),
              col.names = c("Study", "N (Cases)", 
                            rep(c("Est. (SE)", "95% CI"), 4)),
-             caption = "Study-Level Average and Overall Average Effect Sizes Across Studies Based on Fixed Effects Models with Equal Weights") %>%
-  kable_paper("striped") %>%
+             caption = "Study-Level Average and Overall Average Effect Sizes Across Studies Based on Fixed Effects Models with Equal Weights",
+             booktabs = TRUE) %>%
+  kable_styling(latex_options = c("scale_down")) %>% 
   collapse_rows(columns = 1, valign = "top") %>% 
   add_header_above(c(" " = 2, "NAP" = 2, "SMD~W~" = 2, "LRRi" = 2, "PoGO~M~" = 2))
 ```
@@ -345,8 +350,9 @@ knitr::kable(table_RE_study_RVE,
              align = c("l", "l", rep("c", 8)),
              col.names = c("Parameter", 
                            rep(c("Est. (SE)", "95% CI"), 4)),
-             caption = "Overall Average Effect Sizes and Heterogeneity Estimates Based on Hierarchical Random Effects Models with Robust Variance Estimation") %>%
-  kable_paper("striped") %>%
+             caption = "Overall Average Effect Sizes and Heterogeneity Estimates Based on Hierarchical Random Effects Models with Robust Variance Estimation",
+             booktabs = TRUE) %>%
+  kable_styling(latex_options = c("scale_down")) %>% 
   collapse_rows(columns = 1, valign = "top") %>% 
   add_header_above(c(" " = 1, "NAP (equal weighting)" = 2, "SMD~W~ (equal weighting)" = 2, "LRRi (inverse-variance weighting)" = 2, "PoGO~M~ (equal weighting)" = 2))
 ```

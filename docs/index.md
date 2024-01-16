@@ -1,10 +1,10 @@
 --- 
 title: "Methods Guide for Effect Estimation and Synthesis of Single-Case Studies"
-date: "January 15, 2024"
+date: "January 16, 2024"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography: [SCD-Methods-Guide.bib, packages.bib]
 biblio-style: apalike
 csl: apa.csl
 link-citations: yes

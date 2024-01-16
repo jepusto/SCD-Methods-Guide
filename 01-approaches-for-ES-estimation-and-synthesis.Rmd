@@ -3,6 +3,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.retina = 2)
 ```
 
 # Approaches for Estimation and Synthesis of Single-Case Studies {#intro}
+\chaptermark{Estimation and Synthesis of SCDs}
 
 This chapter provides the background and purpose for the Methods Guide for Effect Estimation and Synthesis of Single-Case Studies.
 We provide an overview of the three major approaches for effect size estimation and synthesis of single-case studies: 

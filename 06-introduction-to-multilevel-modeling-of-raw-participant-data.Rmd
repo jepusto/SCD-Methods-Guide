@@ -3,6 +3,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.retina = 2)
 ```
 
 # Introduction to Multilevel Modeling of Raw Participant Data {#MLM-raw-data}
+\chaptermark{Introduction to MLM of Raw Data}
 
 _This chapter provides background on multilevel modeling of the raw data from studies included in a synthesis of SCDs.
 We describe when this approach is useful, then discuss various types of study outcomes (e.g., continuous, count, and percentage-based), corresponding assumptions (e.g., within-phase trends, normality), and modeling options for synthesizing findings using multilevel models of raw, individual participant data. 
@@ -211,7 +212,7 @@ Recent methodological research has started to develop more concrete guidance on 
 However, for the purposes of this guide, we illustrate the application of multilevel models for study contexts where it is reasonable to assume normality and thus LMMs are appropriate.
 We first consider the application of LMMs when expecting no trends (Chapter 7), and then address the more complex situation when anticipating trends (Chapter 8). 
 
-```{r mlmapproach, fig.cap = "Flow Chart for the Selection of Multilevel Modeling Approach"}
+```{r mlmapproach, out.width = "75%", fig.cap = "Flow Chart for the Selection of Multilevel Modeling Approach"}
 knitr::include_graphics("images/flowchart_MLMApproach.png")
 ```
 

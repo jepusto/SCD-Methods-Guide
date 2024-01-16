@@ -7,6 +7,7 @@ library(kableExtra)
 ```
 
 # Illustration of Design-Comparable Effect Sizes When No Trends Are Assumed {#illustrate-D-CES}
+\chaptermark{Illustration of D-CES Without Trends}
 
 _This chapter illustrates the computation of design-comparable effect sizes in contexts where we assume no trend in either baseline or treatment phases. We provide step-by-step instructions to demonstrate the selection and estimation of design-comparable effect sizes, using two multiple baseline studies, a replicated ABAB study, and a group design study. We use the _scdhlm_ app to show how to estimate the design-comparable effect sizes for the single-case studies and discuss estimating the effect size for the group study. Then, we illustrate how to combine the effects using a fixed effect meta-analysis._
 
@@ -212,9 +213,9 @@ knitr::kable(table_3.1,
                            "Standard Error (B)",
                            "Inverse-variance Weight (%) (C)"),
              caption = "Fixed Effect Meta-Analysis Calculations for 
-             Example Math Invervention Studies") %>%
-  # kable_styling() %>% 
-  # kable_classic(full_width = F) %>% 
+             Example Math Invervention Studies",
+             booktabs = TRUE) %>%
+  kable_styling(latex_options = c("scale_down")) %>%  
   kable_classic() %>% 
   kableExtra::row_spec(4, extra_css = "border-bottom: 1px solid;")
 ```

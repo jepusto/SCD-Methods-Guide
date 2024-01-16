@@ -1,6 +1,7 @@
 
 
 # Introduction to Case-Specific Effect Sizes {#intro-case-specific-es}
+\chaptermark{Intro to Case-Specific ES}
 
 _This chapter provides background on case-specific effect sizes and describes when this approach is useful in the synthesis of single-case research. We discuss different case-specific effect size metrics, their underlying assumptions, and when it is appropriate to use them. We conclude this chapter by providing a set of decision rules for meta-analysts to use when selecting among the various available case-specific effect sizes._
 
@@ -110,7 +111,7 @@ For the approaches still under consideration, the meta-analyst should evaluate t
 If any of these effect size approaches result in estimates conflicting with visual analysis, we suggest that the approach and its results be ruled out for consideration in the overall synthesis. However, it would be beneficial for future researchers to have access to such computations and results. Thus, we encourage researchers to be transparent and make the effect sizes available in supplemental materials (or in an archive of replication materials) so that readers can assess for themselves the lack of alignment and decision to drop the index. At this point, a meta-analyst is left with only the effect size estimation approaches that align reasonably well to visual analysis. Figure \@ref(fig:CaseSpecificES-flowchart) depicts a set of decision rules that correspond with these recommendations.
 
 \begin{figure}
-\includegraphics[width=0.6\linewidth]{images/flowchart_CaseSpecificES} \caption{Flow Chart for the Selection of Case-Specific Effect Size(s)}(\#fig:CaseSpecificES-flowchart)
+\includegraphics[width=0.8\linewidth]{images/flowchart_CaseSpecificES} \caption{Flow Chart for the Selection of Case-Specific Effect Size(s)}(\#fig:CaseSpecificES-flowchart)
 \end{figure}
 
 After working through the decision rules, situations may arise in which multiple approaches are under consideration. At this point, a researcher must determine whether one or more indices will be selected for the meta-analysis. For example, the researcher could decide to estimate effect sizes and conduct meta-analyses using each of the viable effect size indices. The argument for including more than one index is that each has its own strengths and limitations, and using multiple indices allows us to check the sensitivity of our conclusions to the choice of effect metric [@Kratochwill2010single]. For those who prefer to select a single metric, we suggest selecting the index that best aligns with the visual analysis, or if no index aligns much better than the others, selecting the index that tends to function the best within a meta-analytic model. For example, a study by @Chen_Pustejovsky_2022 synthesizing NAP, SMD~W~, and LRR found the LRR case-specific effect size functioned best (e.g., showed little to no bias and relatively accurate confidence intervals) across a variety of conditions for frequency count outcomes, followed by NAP. The SMD~W~ metric led to the most substantial problems. Thus, if viable, the LRR effect size is preferred over NAP, and NAP is preferred over SMD~W~.

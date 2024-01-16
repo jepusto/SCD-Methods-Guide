@@ -1,6 +1,7 @@
 
 
 # Illustration of Design-Comparable Effect Sizes When No Trends Are Assumed {#illustrate-D-CES}
+\chaptermark{Illustration of D-CES Without Trends}
 
 _This chapter illustrates the computation of design-comparable effect sizes in contexts where we assume no trend in either baseline or treatment phases. We provide step-by-step instructions to demonstrate the selection and estimation of design-comparable effect sizes, using two multiple baseline studies, a replicated ABAB study, and a group design study. We use the _scdhlm_ app to show how to estimate the design-comparable effect sizes for the single-case studies and discuss estimating the effect size for the group study. Then, we illustrate how to combine the effects using a fixed effect meta-analysis._
 
@@ -183,21 +184,18 @@ Table \@ref(tab:ES-est) reports the effect size estimates, SEs, and fixed effect
 \caption{(\#tab:ES-est)Fixed Effect Meta-Analysis Calculations for 
              Example Math Invervention Studies}
 \centering
-\begin{tabular}[t]{l|c|c|c}
-\hline
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{lccc}
+\toprule
 Study & Effect Size Estimate (A) & Standard Error (B) & Inverse-variance Weight (\%) (C)\\
-\hline
+\midrule
 Case et al. (1992) & 2.57 & 0.45 & 4.94 (16.9)\\
-\hline
 Peltier et al. (2020) & 2.95 & 0.28 & 12.76 (43.7)\\
-\hline
 Lambert et al. (2006) & 6.37 & 0.39 & 6.57 (22.5)\\
-\hline
 Hutchinson (1993) & 0.71 & 0.45 & 4.94 (16.9)\\
-\hline
 Fixed effect meta-analysis & 3.28 & 0.19 & 29.21 (100)\\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabular}}
 \end{table}
 
 In fixed effect meta-analysis, the overall average effect size estimate is a summary of the effect size estimates across the included studies, where studies are treated as fixed. Therefore, the SE and CI in fixed effect meta-analysis account for the uncertainty in the process of effect size estimation that occurs in each of the individual studies. However, they do not account for uncertainty in the process of identifying studies for inclusion in the meta-analysis [@konstantopoulos2019statistically; @Rice_Higgins_Lumley_2018], nor do they provide a basis for generalization beyond the included studies. When conducting syntheses of larger bodies of literature---and especially of studies with heterogeneous populations, design features, or dependent effect sizes---researchers will often prefer to use random effects models [@Hedges_Vevea_1998] or their further extensions [@PustejovskyTipton2021; @van2013three]. 

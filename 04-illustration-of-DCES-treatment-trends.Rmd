@@ -7,6 +7,7 @@ library(kableExtra)
 ```
 
 # Illustration of Design-Comparable Effect Sizes When Assuming Only Trends in The Treatment Phases {#illustrate-D-CES-Ttrends}
+\chaptermark{Illustration of D-CES With Treatment Trends}
 
 _This chapter illustrates the computation of design-comparable effect sizes in contexts where one assumes trends in the treatment phase only, with no trends in the baseline phase. Using data from two multiple baseline studies and a group study, we provide step-by-step instructions for selecting design-comparable effect sizes for the single-case studies and estimating them using the _scdhlm_ app. We also briefly discuss estimating the effect size for the group study and synthesizing the effect sizes across the single-case and group and design studies._
 
@@ -235,8 +236,9 @@ knitr::kable(table_4.1,
                            "Standard Error (B)",
                            "Inverse-variance Weight (%) (C)"),
              caption = "Fixed Effect Meta-Analysis Calculations for 
-             Example Sleep Intervention Studies") %>%
-  kable_classic() %>% 
+             Example Sleep Intervention Studies",
+             booktabs = TRUE) %>%
+  kable_styling(latex_options = c("scale_down")) %>% 
   pack_rows("Model 4", 1, 4) %>%
   pack_rows("Model 3", 5, 8)
 ```

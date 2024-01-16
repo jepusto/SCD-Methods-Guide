@@ -4,25 +4,25 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Illustration of Multilevel Modeling When No Trends Are Assumed | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</title>
+  <title>Chapter 8 Illustration of Multilevel Modeling When Trends Are Assumed | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Illustration of Multilevel Modeling When No Trends Are Assumed | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
+  <meta property="og:title" content="Chapter 8 Illustration of Multilevel Modeling When Trends Are Assumed | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="jepusto/SCD-Methods-Guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Illustration of Multilevel Modeling When No Trends Are Assumed | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
+  <meta name="twitter:title" content="Chapter 8 Illustration of Multilevel Modeling When Trends Are Assumed | Methods Guide for Effect Estimation and Synthesis of Single-Case Studies" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
 
 
 
-<meta name="date" content="2024-01-15" />
+<meta name="date" content="2024-01-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -255,7 +255,7 @@ div.csl-indent {
 <li class="chapter" data-level="7.4.2" data-path="MLM-NoTrend.html"><a href="MLM-NoTrend.html#r-code"><i class="fa fa-check"></i><b>7.4.2</b> R Code</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="MLM-Trend.html"><a href="MLM-Trend.html"><i class="fa fa-check"></i><b>8</b> Illustration of Multilevel Modeling When No Trends Are Assumed</a>
+<li class="chapter" data-level="8" data-path="MLM-Trend.html"><a href="MLM-Trend.html"><i class="fa fa-check"></i><b>8</b> Illustration of Multilevel Modeling When Trends Are Assumed</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="MLM-Trend.html"><a href="MLM-Trend.html#selecting-a-multilevel-model-for-the-single-case-studies-1"><i class="fa fa-check"></i><b>8.1</b> Selecting a Multilevel Model for the Single-Case Studies</a></li>
 <li class="chapter" data-level="8.2" data-path="MLM-Trend.html"><a href="MLM-Trend.html#details-of-the-multilevel-model-with-trends"><i class="fa fa-check"></i><b>8.2</b> Details of the Multilevel Model with Trends</a></li>
@@ -321,7 +321,7 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="MLM-Trend" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Illustration of Multilevel Modeling When No Trends Are Assumed<a href="MLM-Trend.html#MLM-Trend" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapter 8</span> Illustration of Multilevel Modeling When Trends Are Assumed<a href="MLM-Trend.html#MLM-Trend" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><em>This chapter demonstrates the application of multilevel models that include time trends in the baseline and/or treatment phases. For illustrative purposes, we use data from four single-case studies examining interventions for improving student writing. We provide step-by-step instructions to demonstrate organization of the data, necessary coding of variables, appropriate multilevel model selection, and model specification and estimation using the MultiSCED app.</em></p>
 <p>In this chapter, we illustrate the application of multilevel modeling in contexts where one expects single-case design (SCD) study data to include time trends. Just as in the previous chapter, the approach presented in this chapter assumes that all included SCD studies measured the dependent variable in the same way, or in ways that can be standardized so that the outcomes and measures of time are operationalized using a common scale. Unique to this chapter, we demonstrate the specification and analysis process for a model in which the dependent variable is expected to systematically increase or decrease during a phase, and the intervention is expected to impact the outcome’s level and rate of change over time. As a running example, we imagine a scenario where our goal is to synthesize evidence from SCDs studies that examine intervention effects on writing outcomes—specifically on students’ rate of correct word sequences written per minute.</p>
 <p>Writing interventions are often necessary when students’ writing skill lags behind their peers. Due to natural school-based instructional activities, we anticipate that some students may show slight improvement during baseline. However, only when the struggling writers begin intervention do we expect an immediate increase in the production of correct word sequences, and an increase in their rate of improvement over time. To illustrate the steps for applying multilevel models in contexts where trends are expected, we use a set of four multiple probe and multiple baseline SCDs previously included in a larger review of intervention effects on student writing outcomes <span class="citation">(<a href="#ref-datchuk2020Level">Datchuk et al., 2020</a>)</span>. In a real, full-scale meta-analysis project, we would synthesize all studies meeting the inclusion criteria. However, our illustrations include only four studies from the larger review to succinctly illustrate the details of the modeling process that includes visually analyzing the data of each primary study for consistency with our expectations and with the assumptions of the selected multilevel model.</p>
@@ -565,7 +565,7 @@ Owens, C. M., &amp; Ferron, J. M. (2012). Synthesizing single-case studies: A mo
 Petit-Bois, M. (2014). <em>A monte carlo study: The consequences of the misspecification of the level-1 error structure</em> [PhD thesis]. <a href="https://scholarcommons.usf.edu/etd/5341">https://scholarcommons.usf.edu/etd/5341</a>
 </div>
 <div id="ref-Petit-Bois_Baek_VandenNoortgate_Beretvas_Ferron_2016" class="csl-entry">
-Petit-Bois, M., Baek, E. K., Van den Noortgate, W., Beretvas, S. N., &amp; Ferron, J. M. (2016). The consequences of modeling autocorrelation when synthesizing single-case studies using a three-level model. <em>Behavior Research Methods</em>, <em>48</em>(2), 803–812. <a href="https://doi.org/10.3758/s13428-015-0612-1">https://doi.org/10.3758/s13428-015-0612-1</a>
+Petit-Bois, M., Baek, E. K., Van den Noortgate, W., Beretvas, S. N., &amp; Ferron, J. M. (2016). The consequences of modeling autocorrelation when synthesizing single-case studies using a three-level model. <em>Behavior Research Methods</em>, <em>48</em>, 803–812. <a href="https://doi.org/10.3758/s13428-015-0612-1">https://doi.org/10.3758/s13428-015-0612-1</a>
 </div>
 <div id="ref-stotz2008Effects" class="csl-entry">
 Stotz, K. E., Itoi, M., Konrad, M., &amp; Alber-Morgan, S. R. (2008). Effects of <span class="nocase">Self-graphing</span> on <span>Written Expression</span> of <span>Fourth Grade Students</span> with <span>High-Incidence Disabilities</span>. <em>Journal of Behavioral Education</em>, <em>17</em>(2), 172–186. <a href="https://doi.org/10.1007/s10864-007-9055-9">https://doi.org/10.1007/s10864-007-9055-9</a>

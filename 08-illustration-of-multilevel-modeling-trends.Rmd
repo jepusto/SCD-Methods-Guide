@@ -6,7 +6,8 @@ library(knitr)
 library(kableExtra)
 ```
 
-# Illustration of Multilevel Modeling When No Trends Are Assumed {#MLM-Trend}
+# Illustration of Multilevel Modeling When Trends Are Assumed {#MLM-Trend}
+\chaptermark{Illustration of MLM With Trends}
 
 _This chapter demonstrates the application of multilevel models that include time trends in the baseline and/or treatment phases. For illustrative purposes, we use data from four single-case studies examining interventions for improving student writing. We provide step-by-step instructions to demonstrate organization of the data, necessary coding of variables, appropriate multilevel model selection, and model specification and estimation using the MultiSCED app._ 
 
