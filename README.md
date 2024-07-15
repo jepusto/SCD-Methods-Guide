@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/rstudio/bookdown-demo.svg?branch=master)](https://travis-ci.com/rstudio/bookdown-demo)
+This is the repository for _Methods Guide for Effect Estimation and Synthesis of Single-Case Studies_, which can be viewed at (https://jepusto.github.io/SCD-Methods-Guide/). The guide is written using R Markdown and [bookdown](https://bookdown.org/).
 
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "[Get Started](https://bookdown.org/yihui/bookdown/get-started.html)" at https://bookdown.org/yihui/bookdown/ for how to compile this example into HTML. You may generate a copy of the book in `bookdown::pdf_book` format by calling `bookdown::render_book('index.Rmd', 'bookdown::pdf_book')`. More detailed instructions are available here https://bookdown.org/yihui/bookdown/build-the-book.html.
-
-You can find the preview of this example at https://bookdown.org/yihui/bookdown-demo/.
+[![Build Status](https://api.netlify.com/api/v1/badges/944b89c9-20e6-467f-acaa-e98912e882d4/deploy-status)](https://app.netlify.com/sites/single-case-synthesis/deploys)
